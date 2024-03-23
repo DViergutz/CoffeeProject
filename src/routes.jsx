@@ -9,11 +9,13 @@ import Dashboard from "./components/Dashboard";
 import Signup from "./components/Signup";
 import LoginUser from "./components/LoginUser";
 import AboutThisProject from "./components/AboutThisProject";
+import NotFound from "./components/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <NotFound />,
   },
   {
     path: "/products",
