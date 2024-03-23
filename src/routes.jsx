@@ -10,28 +10,31 @@ import Signup from "./components/Signup";
 import LoginUser from "./components/LoginUser";
 import AboutThisProject from "./components/AboutThisProject";
 import NotFound from "./components/NotFound";
+import MainLayout from "./components/MainLayout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <MainLayout />,
     errorElement: <NotFound />,
-  },
-  {
-    path: "/products",
-    element: <ProductsAll />,
-  },
-  {
-    path: "/products/:category",
-    element: <ProductsCategory />,
-  },
-  {
-    path: "/shop/:productDetail",
-    element: <ProductDetail />,
-  },
-  {
-    path: "/checkout",
-    element: <Checkout />,
+    children: [
+      {
+        path: "/products",
+        element: <ProductsAll />,
+      },
+      {
+        path: "/products/:category",
+        element: <ProductsCategory />,
+      },
+      {
+        path: "/shop/:productDetail",
+        element: <ProductDetail />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />,
+      },
+    ],
   },
   {
     path: "/admin/login",
