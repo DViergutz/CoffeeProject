@@ -22,14 +22,14 @@
 
 .social {
   display: flex;
-  bottom: 1rem;
   right: 50%;
   z-index: 800;
   align-items: center;
-  padding: 1rem;
+
   gap: 1.5rem;
   justify-content: center;
   height: 3rem;
+  align-items: flex-start;
 }
 
 body > div > main > div.social > a {
@@ -50,4 +50,9 @@ body > div > main > div.social > a {
 
 .textFooter {
   font-weight: bold;
+}
+
+.textRoutesFooter a {
+  text-decoration: none;
+  color: black;
 }
