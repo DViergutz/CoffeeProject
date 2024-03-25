@@ -1,6 +1,53 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --color: #dcb288;
+}
+
+.footer {
+  width: 100vw;
+  height: 11rem;
+  padding: 1.5rem;
+  /* background-color: #dcb288; */
+  background-image: url("./assets/img/granoCafe.jpg");
+  background-position: bottom;
+  background-size: 20rem;
+  position: absolute;
+  bottom: 0;
+  justify-content: space-between;
+}
+
+.divCointainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  bottom: 1rem;
+  right: 50%;
+  z-index: 800;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.5rem;
+  justify-content: center;
+  height: 3rem;
+}
+
+body > div > main > div.social > a {
+  display: flex;
+  align-items: flex-start;
+}
+
+.social-icon {
+  cursor: pointer;
+  color: black;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  /*     color: var(--color-brand-primary);
+*/
+}
+
+.textFooter {
+  font-weight: bold;
 }
