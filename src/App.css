@@ -158,7 +158,6 @@ h4 {
   color: #fff;
 }
 
-<<<<<<< HEAD
 .img-checkout {
   height: 85px;
   width: 20px;
@@ -166,7 +165,7 @@ h4 {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-=======
+}
 /* product Detail */
 
 .productDetailImage {
@@ -174,5 +173,4 @@ h4 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
->>>>>>> b89782762fbb62afb9af3fd894593eb1a3c0b6ef
 }
