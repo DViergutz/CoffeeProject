@@ -10,7 +10,6 @@
   background-image: url("./assets/img/granoCafe.jpg");
   background-position: bottom;
   background-size: 20rem;
-  position: absolute;
   bottom: 0;
   justify-content: space-between;
 }
@@ -58,11 +57,76 @@ body > div > main > div.social > a {
 }
 
 .hero-section {
-  height: 100vh;
+  padding-left: 120px;
+  padding-right: 120px;
   position: relative;
-  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
   background-image: url("https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  background-color: blue;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  text-align: left;
+}
+
+h1 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 64px;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 48px;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+h4 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.hero-subheading {
+  max-width: 700px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 140px;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 600px;
+  background-image: url("https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -77,10 +141,4 @@ body > div > main > div.social > a {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   padding: 20px;
   z-index: 1; /* Ensure navbar is above hero image */
-}
-
-.hero-info {
-  position: absolute;
-  top: 50%;
-  color: white;
 }
