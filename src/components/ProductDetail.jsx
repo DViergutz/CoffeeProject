@@ -14,13 +14,15 @@ function ProductDetail() {
           <div className="col-6 productDetailImage"></div>
           <div className="col-6 ">
             <div className="product border rounded p-2">
-              <h2 className="text-decoration-underline">Product Name</h2>
-              <p className="fs-2 fw-bold text-center">$250</p>
+              <h3 className="text-decoration-underline text-center">
+                Product Name
+              </h3>
+              <p className="fs-4 fw-bold text-center">$250</p>
               <hr />
               <div className="d-flex flex-column align-items-center">
-                <p className="fs-2 fw-bold">Quantity</p>
+                <p className="fs-4 fw-bold">Quantity</p>
                 <div className="w-100 d-flex justify-content-center">
-                  <button className="w-25 fs-3 btn btn-dark rounded-pill">
+                  <button className="w-25 fs-2 btn btn-dark rounded-pill">
                     -
                   </button>
                   <span className="p-2  rounded mx-2 fs-3">2</span>
@@ -29,15 +31,15 @@ function ProductDetail() {
                   </button>
                 </div>
                 <hr />
-                <button className="w-100 rounded-pill p-2 fs-3">
+                <button className="w-50 rounded-pill p-2 fs-4">
                   Add to cart
                 </button>
               </div>
             </div>
             <div className="p-2">
-              <h4 className="text-dark">
+              <h5 className="text-dark fw-bold">
                 Experience our clean, sweet Product Name
-              </h4>
+              </h5>
               <p>
                 Product description Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Illo obcaecati laudantium libero fuga maiores
@@ -64,7 +66,7 @@ function ProductDetail() {
           <h3>Related Products</h3>
           <div className="row mb-5">
             <div className="col-3">
-              <Card style={{ width: "18rem" }}>
+              <Card>
                 <Card.Img variant="top" src={imageSrc} />
                 <Card.Body>
                   <Card.Title>Product Name</Card.Title>
@@ -79,7 +81,7 @@ function ProductDetail() {
               </Card>
             </div>
             <div className="col-3">
-              <Card style={{ width: "18rem" }}>
+              <Card>
                 <Card.Img variant="top" src={imageSrc} />
                 <Card.Body>
                   <Card.Title>Product Name</Card.Title>
@@ -96,7 +98,7 @@ function ProductDetail() {
               </Card>
             </div>
             <div className="col-3">
-              <Card style={{ width: "18rem" }}>
+              <Card>
                 <Card.Img variant="top" src={imageSrc} />
                 <Card.Body>
                   <Card.Title>Product Name</Card.Title>
@@ -113,7 +115,7 @@ function ProductDetail() {
               </Card>
             </div>
             <div className="col-3">
-              <Card style={{ width: "18rem" }}>
+              <Card>
                 <Card.Img variant="top" src={imageSrc} />
                 <Card.Body>
                   <Card.Title>Product Name</Card.Title>

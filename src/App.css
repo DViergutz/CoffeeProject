@@ -134,6 +134,7 @@ h4 {
   background-repeat: no-repeat;
 }
 
+/* navbar */
 .main-navbar {
   height: 126px;
   position: sticky;
@@ -141,8 +142,21 @@ h4 {
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  padding: 20px;
+  /* padding: 20px; */
   z-index: 1; /* Ensure navbar is above hero image */
+}
+.UticaBrandLogo {
+  height: 126;
+  width: 126px;
+}
+.nav-link:hover {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: #343a40;
+  color: #fff;
 }
 
 .img-checkout {
