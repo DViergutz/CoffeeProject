@@ -9,7 +9,7 @@ function ProductDetail() {
   const params = useParams();
   return (
     <>
-      <div className="container ">
+      <div className="main-section ">
         <div className="row d-flex mt-2 ">
           <div className="col-6 productDetailImage"></div>
           <div className="col-6 ">
