@@ -119,6 +119,7 @@ h4 {
   padding-left: 120px;
   padding-right: 120px;
   padding-top: 140px;
+  padding-bottom: 32px;
 }
 
 .category {
@@ -144,7 +145,6 @@ h4 {
   z-index: 1; /* Ensure navbar is above hero image */
 }
 
-<<<<<<< HEAD
 .img-checkout {
   height: 85px;
   width: 20px;
@@ -152,7 +152,19 @@ h4 {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-=======
+}
+
+.btn-checkout {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.btn-checkout:hover {
+  background-color: #333;
+}
 /* product Detail */
 
 .productDetailImage {
@@ -160,5 +172,4 @@ h4 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
->>>>>>> b89782762fbb62afb9af3fd894593eb1a3c0b6ef
 }
