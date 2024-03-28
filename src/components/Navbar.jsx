@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="main-navbar">
       <div>Navbar in process...</div>
     </nav>
   );

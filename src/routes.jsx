@@ -10,6 +10,7 @@ import LoginUser from "./components/LoginUser";
 import AboutThisProject from "./components/AboutThisProject";
 import NotFound from "./components/NotFound";
 import MainLayout from "./components/MainLayout";
+import Home from "./components/Home";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     errorElement: <NotFound />,
     children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
       {
         path: "/products",
         element: <ProductsAll />,
