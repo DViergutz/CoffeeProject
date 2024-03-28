@@ -142,3 +142,12 @@ h4 {
   padding: 20px;
   z-index: 1; /* Ensure navbar is above hero image */
 }
+
+/* product Detail */
+
+.productDetailImage {
+  background-image: url("./assets/img/BlendsArtOfDarkness.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
