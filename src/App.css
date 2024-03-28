@@ -118,7 +118,7 @@ h4 {
   width: 100%;
   padding-left: 120px;
   padding-right: 120px;
-  padding-top: 140px;
+  padding-top: 24px;
   padding-bottom: 32px;
 }
 
@@ -145,6 +145,7 @@ h4 {
   /* padding: 20px; */
   z-index: 1; /* Ensure navbar is above hero image */
 }
+
 .UticaBrandLogo {
   height: 126;
   width: 126px;
