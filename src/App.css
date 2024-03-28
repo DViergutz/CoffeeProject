@@ -134,7 +134,7 @@ h4 {
 
 .main-navbar {
   height: 126px;
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
