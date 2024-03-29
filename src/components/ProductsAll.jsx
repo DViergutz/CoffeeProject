@@ -39,7 +39,7 @@ function ProductsAll() {
                 products.map((product) => (
                   <div className="col-3" key={product.id}>
                     <Card>
-                      <Card.Img variant="top" src={imageSrc} />
+                      <Card.Img variant="top" src={product.image} />
                       <Card.Body>
                         <Card.Title>{product.name}</Card.Title>{" "}
                         <Card.Text>

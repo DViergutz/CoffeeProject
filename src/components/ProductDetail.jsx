@@ -53,7 +53,17 @@ function ProductDetail() {
     <>
       <div className="main-section ">
         <div className="row d-flex mt-2 ">
-          <div className="col-6 productDetailImage"></div>
+          <div className="col-6  ">
+            {oneProduct ? (
+              <img
+                src={oneProduct.image}
+                className="oneProductImg"
+                alt={oneProduct.image}
+              />
+            ) : (
+              <div>Loading...</div>
+            )}
+          </div>
           <div className="col-6 ">
             <div className="product border rounded p-2">
               <h3 className="text-decoration-underline text-center">
@@ -137,7 +147,7 @@ function ProductDetail() {
               relatedProducts.map((product) => (
                 <div className="col-3" key={product.id}>
                   <Card>
-                    <Card.Img variant="top" src={imageSrc} />
+                    <Card.Img variant="top" src={product.image} />
                     <Card.Body>
                       <Card.Title>{product.name}</Card.Title>{" "}
                       <Card.Text>
