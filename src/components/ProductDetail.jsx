@@ -48,7 +48,6 @@ function ProductDetail() {
     fetchRelatedProducts();
   }, [oneProduct]);
 
-  const params = useParams();
   return (
     <>
       <div className="main-section ">
@@ -64,19 +63,6 @@ function ProductDetail() {
               <div>Loading...</div>
             )}
           </div>
-          {oneProduct ? (
-            <div className="col-6">
-              {" "}
-              <img
-                src={oneProduct.image}
-                alt=""
-                style={{ width: "500px", height: "700px" }}
-              />
-            </div>
-          ) : (
-            <div>Loading...</div>
-          )}
-
           <div className="col-6 ">
             <div className="product border rounded p-2">
               <h3 className="text-decoration-underline text-center">
