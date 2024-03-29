@@ -25,13 +25,13 @@ function Navigation() {
             <Nav.Link href="/products">All Products</Nav.Link>
             <Nav.Link href="/products/2">One Product</Nav.Link>
             <NavDropdown title="Categories" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/category/flavored">
+              <NavDropdown.Item href="/categories/flavored">
                 Flavored
               </NavDropdown.Item>
-              <NavDropdown.Item href="/category/blends">
+              <NavDropdown.Item href="/categories/blends">
                 Blends
               </NavDropdown.Item>
-              <NavDropdown.Item href="/category/singleOrigin">
+              <NavDropdown.Item href="/categories/singleOrigin">
                 Single Origin
               </NavDropdown.Item>
               {/* <NavDropdown.Divider />

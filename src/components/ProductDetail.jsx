@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import imageSrc from "../assets/img/BlendsArtOfDarkness.png";
+import axios from "axios";
+import { ReactDOM } from "react";
 
 function ProductDetail() {
+  const [oneProduct, setOneProduct] = useState();
+  const { productId } = useParams();
+
+  useEffect(() => {
+    const fetchOneProduct = async () => {
+      try {
+        const response = await axios({
+          method: "GET",
+          url: `http://localhost:3000/products/${productId}`,
+        });
+        console.log("Response:", response.data);
+        setOneProduct(response.data);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+
+    fetchOneProduct();
+  }, [productId]);
+
   const params = useParams();
   return (
     <>
@@ -15,9 +37,19 @@ function ProductDetail() {
           <div className="col-6 ">
             <div className="product border rounded p-2">
               <h3 className="text-decoration-underline text-center">
-                Product Name
+                {oneProduct ? (
+                  <div>{oneProduct.name}</div>
+                ) : (
+                  <div>Loading...</div>
+                )}
               </h3>
-              <p className="fs-4 fw-bold text-center">$250</p>
+              <p className="fs-4 fw-bold text-center">
+                {oneProduct ? (
+                  <div>${oneProduct.price}</div>
+                ) : (
+                  <div>Loading...</div>
+                )}
+              </p>
               <hr />
               <div className="d-flex flex-column align-items-center">
                 <p className="fs-4 fw-bold">Quantity</p>
@@ -38,12 +70,21 @@ function ProductDetail() {
             </div>
             <div className="p-2">
               <h5 className="text-dark fw-bold">
-                Experience our clean, sweet Product Name
+                Experience the taste of our famous
+                {oneProduct ? (
+                  <div className="text-decoration-underline">
+                    {oneProduct.name}
+                  </div>
+                ) : (
+                  <div>Loading...</div>
+                )}
               </h5>
               <p>
-                Product description Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Illo obcaecati laudantium libero fuga maiores
-                omnis!
+                {oneProduct ? (
+                  <div>{oneProduct.description}</div>
+                ) : (
+                  <div>Loading...</div>
+                )}
               </p>
               <section className="d-flex">
                 <strong>Tasting Notes:&nbsp;</strong>
@@ -55,7 +96,14 @@ function ProductDetail() {
               </section>
               <section className="d-flex">
                 <strong>Type:&nbsp;</strong>
-                <p>Blend</p>
+                <p>
+                  {" "}
+                  {oneProduct ? (
+                    <div>{oneProduct.category.name}</div>
+                  ) : (
+                    <div>Loading...</div>
+                  )}
+                </p>
               </section>
             </div>
           </div>
