@@ -3,14 +3,15 @@ import { useEffect, useState } from "react";
 import { FaAngleDoubleUp } from "react-icons/fa";
 
 function ScrollToTop() {
-  const [showScrollTopButton, setShowScrollTopButton] = useState(false);
+  const [showScrollTopButton, setShowScrollTopButton] = useState(true);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.screenY > 300) {
+      if (window.scrollY > 900) {
         setShowScrollTopButton(true);
       } else {
-        setShowScrollTopButton(true);
+        setShowScrollTopButton(false);
       }
+      console.log(showScrollTopButton);
     });
   }, []);
 
