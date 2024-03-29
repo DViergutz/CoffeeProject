@@ -43,7 +43,7 @@ function Navigation() {
           <Nav>
             <Nav.Link href="/checkout">Shopping Cart</Nav.Link>
             <Nav.Link href="/user/login">Login</Nav.Link>
-            <Nav.Link href="/user/register">Register</Nav.Link>
+            <Nav.Link href="/user/sign-up">Register</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
