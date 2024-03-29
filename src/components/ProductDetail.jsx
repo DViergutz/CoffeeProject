@@ -52,11 +52,17 @@ function ProductDetail() {
     <>
       <div className="main-section ">
         <div className="row d-flex mt-2 ">
-          <div className="col-6  ">
+          <div className="col-6 text-center">
             {oneProduct ? (
               <img
                 src={oneProduct.image}
-                className="oneProductImg"
+                className="img-fluid"
+                style={{
+                  maxWidth: "100%",
+                  height: "",
+                  maxHeight: "600px",
+                  // marginTop: "-50px",
+                }} // Adjust size to fit the container
                 alt={oneProduct.image}
               />
             ) : (
@@ -115,6 +121,7 @@ function ProductDetail() {
                   <div>Loading...</div>
                 )}
               </div>
+              <hr />
               <section className="d-flex">
                 <strong>Tasting Notes:&nbsp;</strong>
                 <p>Mild nuttiness, chocolate</p>
@@ -144,16 +151,21 @@ function ProductDetail() {
           <div className="row mb-5">
             {relatedProducts ? (
               relatedProducts.map((product) => (
-                <div className="col-3" key={product.id}>
+                <div
+                  className="col-3 align-items-stretch d-flex"
+                  key={product.id}
+                >
                   <Card>
                     <Card.Img variant="top" src={product.image} />
-                    <Card.Body>
-                      <Card.Title>{product.name}</Card.Title>{" "}
+                    <Card.Body className="d-flex flex-column justify-content-between">
+                      <Card.Title className="text-decoration-underline">
+                        {product.name}
+                      </Card.Title>{" "}
                       <Card.Text>
                         {/* Description of the product */}
                         {product.description}
                       </Card.Text>
-                      <div className="d-flex justify-content-center">
+                      <div className="d-flex justify-content-center mt-auto">
                         <a href={`/products/${product.id}`}>
                           <Button variant="dark">View Product</Button>
                         </a>
