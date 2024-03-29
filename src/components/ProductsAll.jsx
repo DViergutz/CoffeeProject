@@ -26,41 +26,38 @@ function ProductsAll() {
   }, []);
 
   return (
-    <div>
-      <h2>Estamos en Products All</h2>
-      <div className="relatedProducts mt-5">
-        <div className="main-section">
-          <h3>All Products</h3>
-          <div>
-            <div className="row mb-5 ">
-              {/* start card 1 */}
+    <div className="main-section">
+      <h3>All Products</h3>
+      <div>
+        <div className="row mb-5 ">
+          {/* start card 1 */}
 
-              {products ? (
-                products.map((product) => (
-                  <div className="col-3" key={product.id}>
-                    <Card>
-                      <Card.Img variant="top" src={product.image} />
-                      <Card.Body>
-                        <Card.Title>{product.name}</Card.Title>{" "}
-                        <Card.Text>
-                          {/* Description of the product */}
-                          {product.description}
-                        </Card.Text>
-                        <div className="d-flex justify-content-center">
-                          <a href={`/products/${product.id}`}>
-                            <Button variant="dark">View Product</Button>
-                          </a>
-                        </div>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                ))
-              ) : (
-                <div>Loading...</div>
-              )}
-              {/* end card 1 */}
-            </div>
-          </div>
+          {products ? (
+            products.map((product) => (
+              <div
+                className="col-3 d-flex align-items-stretch my-2"
+                key={product.id}
+              >
+                <Card>
+                  <Card.Img variant="top" src={product.image} />
+                  <Card.Body className="d-flex flex-column justify-content-between">
+                    <Card.Title className="text-decoration-underline">
+                      {product.name}
+                    </Card.Title>{" "}
+                    <Card.Text>{product.description}</Card.Text>
+                    <div className="d-flex justify-content-center mt-auto">
+                      <a href={`/products/${product.id}`}>
+                        <Button variant="dark">View Product</Button>
+                      </a>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </div>
+            ))
+          ) : (
+            <div>Loading...</div>
+          )}
+          {/* end card 1 */}
         </div>
       </div>
     </div>
