@@ -346,6 +346,9 @@ h4 {
   /* padding: 20px; */
   z-index: 1; /* Ensure navbar is above hero image */
 }
+.navLink {
+  font-size: 1.2rem;
+}
 
 .UticaBrandLogo {
   height: 126;

@@ -121,6 +121,7 @@ function ProductDetail() {
                   <div>Loading...</div>
                 )}
               </div>
+              <hr />
               <section className="d-flex">
                 <strong>Tasting Notes:&nbsp;</strong>
                 <p>Mild nuttiness, chocolate</p>
