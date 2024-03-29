@@ -383,9 +383,8 @@ h4 {
 }
 /* product Detail */
 
-.productDetailImage {
-  background-image: url("./assets/img/BlendsArtOfDarkness.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.oneProductImg {
+  /* background-image: url("./assets/img/BlendsArtOfDarkness.png"); */
+  height: 400px;
+  width: 200px;
 }
