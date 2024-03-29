@@ -56,6 +56,32 @@ body > div > main > div.social > a {
   color: black;
 }
 
+/* /////// navigation in home ////// */
+.top-btn-position {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+}
+.top-btn-style {
+  height: 40px;
+  width: 40px;
+  border: radius 50%;
+  border: 2px solid rgb(5, 5, 5);
+  background-color: beige;
+  color: rgb(56, 58, 57);
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: inline;
+  padding: 20px 20px;
+  font-weight: 700;
+  font-size: large;
+  cursor: pointer;
+}
+/* /////// */
+
 .hero-section {
   padding-left: 120px;
   padding-right: 120px;
