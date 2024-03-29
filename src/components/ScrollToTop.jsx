@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { FaAngleDoubleUp } from "react-icons/fa";
+import { RiArrowUpDoubleFill } from "react-icons/ri";
 
 function ScrollToTop() {
   const [showScrollTopButton, setShowScrollTopButton] = useState(true);
@@ -25,7 +25,7 @@ function ScrollToTop() {
   return (
     <div>
       {showScrollTopButton && (
-        <FaAngleDoubleUp
+        <RiArrowUpDoubleFill
           className="top-btn-position top-btn-style"
           onClick={scrollTop}
         />

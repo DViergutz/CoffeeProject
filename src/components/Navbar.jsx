@@ -21,17 +21,27 @@ function Navigation() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="collapse">
           <Nav className="me-auto">
-            <Nav.Link href="/about-this-project">About this Project</Nav.Link>
-            <Nav.Link href="/products">All Products</Nav.Link>
-            <Nav.Link href="/products/2">One Product</Nav.Link>
-            <NavDropdown title="Categories" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/categories/flavored">
+            <Nav.Link className="navLink" href="/about-this-project">
+              About this Project
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/products">
+              All Products
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/products/2">
+              One Product
+            </Nav.Link>
+            <NavDropdown
+              className="navLink"
+              title="Categories"
+              id="navbarScrollingDropdown"
+            >
+              <NavDropdown.Item href="/category/flavored">
                 Flavored
               </NavDropdown.Item>
-              <NavDropdown.Item href="/categories/blends">
+              <NavDropdown.Item href="/category/blends">
                 Blends
               </NavDropdown.Item>
-              <NavDropdown.Item href="/categories/singleOrigin">
+              <NavDropdown.Item href="/category/singleOrigin">
                 Single Origin
               </NavDropdown.Item>
               {/* <NavDropdown.Divider />
@@ -41,9 +51,21 @@ function Navigation() {
             </NavDropdown>
           </Nav>
           <Nav>
+<<<<<<< HEAD
             <Nav.Link href="/checkout">Shopping Cart</Nav.Link>
             <Nav.Link href="/user/login">Login</Nav.Link>
             <Nav.Link href="/user/sign-up">Register</Nav.Link>
+=======
+            <Nav.Link className="navLink" href="/checkout">
+              Shopping Cart
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/user/login">
+              Login
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/user/register">
+              Register
+            </Nav.Link>
+>>>>>>> ad8104d92e1aeec7dacc7fc5d320720ddbd47a8b
           </Nav>
         </Navbar.Collapse>
       </Container>

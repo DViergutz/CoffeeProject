@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import ScrollToTop from "./ScrollToTop";
 import "../App.css";
+import { GoDot } from "react-icons/go";
 
 function Home() {
   const categories = useRef(null);
@@ -24,16 +25,16 @@ function Home() {
             onClick={() => scrollToSection(categories)}
             className="nav-link-home"
           >
-            Categories
+            <GoDot />
           </li>
           <li
             onClick={() => scrollToSection(specialProducts)}
             className="nav-link-home"
           >
-            Special Products
+            <GoDot />{" "}
           </li>
           <li onClick={() => scrollToSection(blog)} className="nav-link-home">
-            Blog
+            <GoDot />
           </li>
         </ul>
       </div>
@@ -50,17 +51,17 @@ function Home() {
         <h2>Our Categories</h2>
         <div className="row">
           <div className="col">
-            <div className="category">
+            <div className="category-flavored">
               <h4>Flavored</h4>
             </div>
           </div>
           <div className="col">
-            <div className="category">
+            <div className="category-blends">
               <h4>Blends</h4>
             </div>
           </div>
           <div className="col">
-            <div className="category">
+            <div className="category-singleOrigin">
               <h4>Single Origin</h4>
             </div>
           </div>

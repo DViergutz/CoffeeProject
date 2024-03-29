@@ -235,6 +235,12 @@ body > div > main > div.social > a {
 }
 
 /* /////// navigation in home ////// */
+.navigation-menu {
+  color: #f0f2dc;
+  position: fixed;
+  z-index: 1000;
+}
+
 .top-btn-position {
   position: fixed;
   bottom: 15px;
@@ -243,10 +249,8 @@ body > div > main > div.social > a {
 .top-btn-style {
   height: 40px;
   width: 40px;
-  border: radius 50%;
-  border: 2px solid rgb(5, 5, 5);
-  background-color: beige;
-  color: rgb(56, 58, 57);
+  border: 2px solid rgb(160, 160, 155);
+  color: rgb(13, 14, 13);
   cursor: pointer;
 }
 
@@ -326,6 +330,39 @@ h4 {
   padding-top: 24px;
   padding-bottom: 32px;
 }
+.category-flavored {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 600px;
+  background-image: url("/src/assets/img/category-img/flavored.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.category-blends {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 600px;
+  background-image: url("/src/assets/img/category-img/blends.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.category-singleOrigin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 600px;
+  background-image: url("/src/assets/img/category-img/Single-Origin.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 .category {
   display: flex;
@@ -349,6 +386,9 @@ h4 {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   /* padding: 20px; */
   z-index: 1; /* Ensure navbar is above hero image */
+}
+.navLink {
+  font-size: 1.2rem;
 }
 
 .UticaBrandLogo {
@@ -387,11 +427,9 @@ h4 {
 }
 /* product Detail */
 
-.productDetailImage {
-  background-image: url("./assets/img/BlendsArtOfDarkness.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+.oneProductImg {
+  height: 420;
+  width: 300;
 }
 
 /* About this Project */
