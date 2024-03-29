@@ -11,7 +11,7 @@ function ProductDetail() {
   const [oneProduct, setOneProduct] = useState();
   const [relatedProducts, setRelatedProducts] = useState();
   const { productId } = useParams();
-
+  const params = useParams();
   useEffect(() => {
     const fetchOneProduct = async () => {
       try {
@@ -48,7 +48,6 @@ function ProductDetail() {
     fetchRelatedProducts();
   }, [oneProduct]);
 
-  const params = useParams();
   return (
     <>
       <div className="main-section ">
