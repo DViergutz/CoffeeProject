@@ -136,14 +136,16 @@ h4 {
 }
 
 .main-section {
+  background-color: rgb(203, 203, 143);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+  justify-content: start;
+  min-height: 100vh;
   width: 100%;
   padding-left: 120px;
   padding-right: 120px;
-  padding-top: 140px;
+  padding-top: 24px;
+  padding-bottom: 32px;
 }
 
 .category {
@@ -158,6 +160,7 @@ h4 {
   background-repeat: no-repeat;
 }
 
+/* navbar */
 .main-navbar {
   height: 126px;
   position: sticky;
@@ -165,6 +168,49 @@ h4 {
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  padding: 20px;
+  /* padding: 20px; */
   z-index: 1; /* Ensure navbar is above hero image */
+}
+
+.UticaBrandLogo {
+  height: 126;
+  width: 126px;
+}
+.nav-link:hover {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.img-checkout {
+  height: 85px;
+  width: 20px;
+  background-image: url("https://uticacoffeeroasting.com/cdn/shop/products/Adirondack10oz_720x.png?v=1617817727");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.btn-checkout {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.btn-checkout:hover {
+  background-color: #333;
+}
+/* product Detail */
+
+.productDetailImage {
+  background-image: url("./assets/img/BlendsArtOfDarkness.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
