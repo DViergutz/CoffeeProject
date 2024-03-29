@@ -1,13 +1,16 @@
 :root {
   --color: #dcb288;
 }
-
+.bold {
+  font-weight: 700;
+}
 .footer {
   width: 100vw;
   height: 11rem;
   padding: 1.5rem;
   /* background-color: #dcb288; */
-  background-image: url("./assets/img/granoCafe.jpg");
+  /* background-image: url("./assets/img/granoCafe.jpg"); */
+  background-color: black;
   background-position: bottom;
   background-size: 20rem;
   bottom: 0;
@@ -38,7 +41,7 @@ body > div > main > div.social > a {
 
 .social-icon {
   cursor: pointer;
-  color: black;
+  color: white;
 }
 
 .social-icon:hover {
@@ -53,7 +56,176 @@ body > div > main > div.social > a {
 
 .textRoutesFooter a {
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+.logoUticaFooter {
+  width: 8rem;
+}
+.HeadingsFooter {
+  color: white;
+}
+
+/* DASHBOARD ADMIN*/
+
+.mainAdmin {
+  display: flex;
+  height: 100vh;
+}
+
+.firstSectionDashboard {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(54, 41, 41, 0.863);
+  width: 20vw;
+  height: 100vh;
+}
+.imgLogoUticaDashboard {
+  width: 8rem;
+  height: 8rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstSectionDashboard a {
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+.imgDashboard {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(54, 41, 41);
+}
+
+.secondSectionDashboard {
+  width: 80vw;
+  overflow: hidden;
+}
+
+.administrationPanel {
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border-bottom: 1px solid rgb(54, 41, 41);
+  font-size: 1.2rem;
+}
+
+.administrationPanelMain {
+  padding: 2rem;
+  overflow: scroll;
+  height: 100%;
+}
+.profileImg {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profileImg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.dashboardCard {
+  width: 30%;
+  min-width: 300px;
+  border-radius: 10px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.dashboardCard > p {
+  background-color: rgba(128, 128, 128, 0.329);
+  padding: 1rem 2rem;
+  margin-bottom: 0;
+  color: blue;
+  font-weight: 500;
+}
+
+.cardDetails {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cardDetails > p {
+  margin: 0;
+}
+.numberDashboard {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.numberDashboard > span {
+  color: green;
+  font-size: 1rem;
+  margin: 0;
+}
+.dashboardCard > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  height: 8rem;
+}
+.dashboardIconContainer {
+  height: 100%;
+  aspect-ratio: 1/1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  border-radius: 10px;
+}
+.dashboardIcon {
+  width: 100%;
+}
+
+.lastOrders {
+  margin-top: 2rem;
+}
+.dashboardTable {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid grey;
+}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+.tableHeader > p {
+  width: 30%;
+  margin: 0;
+  padding: 0.5rem 1rem;
+
+  height: 100%;
+}
+
+.tableHeader > a {
+  margin-left: 1rem;
+  color: blue !important;
 }
 
 /* /////// navigation in home ////// */

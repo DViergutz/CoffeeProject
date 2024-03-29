@@ -5,12 +5,18 @@ import oca from "../assets/img/oca.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import logoUtica from "../assets/img/logoUtica.png";
 
 function Footer() {
   return (
     <footer className="footer text-black">
       <div className="divCointainer">
+        <div>
+          <img src={logoUtica} alt="" className="logoUticaFooter" />
+        </div>
+
         <div className="d-flex justify-content-center social">
+          <h6 className="HeadingsFooter">Get in touch</h6>
           <a href={""} target="_blank">
             <WhatsAppIcon className="social-icon" fontSize="large" />
           </a>
@@ -61,10 +67,6 @@ function Footer() {
           />
         </div>
       </div>
-
-      <p className="d-flex justify-content-center mt-3 textFooter">
-        Coffee Break
-      </p>
     </footer>
   );
 }
