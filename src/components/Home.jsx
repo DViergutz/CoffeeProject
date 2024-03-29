@@ -20,16 +20,19 @@ function Home() {
       <ScrollToTop />
       <div className="navigation-menu">
         <ul>
-          <li onClick={() => scrollToSection(categories)} className="nav-link">
+          <li
+            onClick={() => scrollToSection(categories)}
+            className="nav-link-home"
+          >
             Categories
           </li>
           <li
             onClick={() => scrollToSection(specialProducts)}
-            className="nav-link"
+            className="nav-link-home"
           >
             Special Products
           </li>
-          <li onClick={() => scrollToSection(blog)} className="nav-link">
+          <li onClick={() => scrollToSection(blog)} className="nav-link-home">
             Blog
           </li>
         </ul>
