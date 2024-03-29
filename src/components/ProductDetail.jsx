@@ -9,6 +9,7 @@ import { ReactDOM } from "react";
 
 function ProductDetail() {
   const [oneProduct, setOneProduct] = useState();
+  const [relatedProducts, setRelatedProducts] = useState();
   const { productId } = useParams();
 
   useEffect(() => {
@@ -18,7 +19,6 @@ function ProductDetail() {
           method: "GET",
           url: `http://localhost:3000/products/${productId}`,
         });
-        console.log("Response:", response.data);
         setOneProduct(response.data);
       } catch (error) {
         console.error("Error:", error);
@@ -27,6 +27,26 @@ function ProductDetail() {
 
     fetchOneProduct();
   }, [productId]);
+
+  useEffect(() => {
+    const fetchRelatedProducts = async () => {
+      try {
+        const response = await axios({
+          method: "GET",
+          url: `http://localhost:3000/category/${oneProduct.category.name}`,
+        });
+        // Filter out the oneProduct from the related products
+        const filteredRelatedProducts = response.data.filter(
+          (product) => product.name !== oneProduct.name
+        );
+        setRelatedProducts(filteredRelatedProducts);
+        console.log(filteredRelatedProducts);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+    fetchRelatedProducts();
+  }, [oneProduct]);
 
   const params = useParams();
   return (
@@ -43,13 +63,13 @@ function ProductDetail() {
                   <div>Loading...</div>
                 )}
               </h3>
-              <p className="fs-4 fw-bold text-center">
+              <div className="fs-4 fw-bold text-center">
                 {oneProduct ? (
                   <div>${oneProduct.price}</div>
                 ) : (
                   <div>Loading...</div>
                 )}
-              </p>
+              </div>
               <hr />
               <div className="d-flex flex-column align-items-center">
                 <p className="fs-4 fw-bold">Quantity</p>
@@ -79,13 +99,13 @@ function ProductDetail() {
                   <div>Loading...</div>
                 )}
               </h5>
-              <p>
+              <div>
                 {oneProduct ? (
                   <div>{oneProduct.description}</div>
                 ) : (
                   <div>Loading...</div>
                 )}
-              </p>
+              </div>
               <section className="d-flex">
                 <strong>Tasting Notes:&nbsp;</strong>
                 <p>Mild nuttiness, chocolate</p>
@@ -96,14 +116,14 @@ function ProductDetail() {
               </section>
               <section className="d-flex">
                 <strong>Type:&nbsp;</strong>
-                <p>
+                <div>
                   {" "}
                   {oneProduct ? (
                     <div>{oneProduct.category.name}</div>
                   ) : (
                     <div>Loading...</div>
                   )}
-                </p>
+                </div>
               </section>
             </div>
           </div>
@@ -113,72 +133,29 @@ function ProductDetail() {
         <div className="relatedProducts mt-5">
           <h3>Related Products</h3>
           <div className="row mb-5">
-            <div className="col-3">
-              <Card>
-                <Card.Img variant="top" src={imageSrc} />
-                <Card.Body>
-                  <Card.Title>Product Name</Card.Title>
-                  <Card.Text>
-                    Decription of the product, notes, aromas, sabor, etc. Algo
-                    corto que ocupe dos línes de texto.
-                  </Card.Text>
-                  <div className="d-flex justify-content-center">
-                    <Button variant="dark">View Product</Button>
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-            <div className="col-3">
-              <Card>
-                <Card.Img variant="top" src={imageSrc} />
-                <Card.Body>
-                  <Card.Title>Product Name</Card.Title>
-                  <Card.Text>
-                    Decription of the product, notes, aromas, sabor, etc. Algo
-                    corto que ocupe dos línes de texto.
-                  </Card.Text>
-                  <div className="d-flex justify-content-center">
-                    <a href="/products/3">
-                      <Button variant="dark">View Product</Button>
-                    </a>{" "}
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-            <div className="col-3">
-              <Card>
-                <Card.Img variant="top" src={imageSrc} />
-                <Card.Body>
-                  <Card.Title>Product Name</Card.Title>
-                  <Card.Text>
-                    Decription of the product, notes, aromas, sabor, etc. Algo
-                    corto que ocupe dos línes de texto.
-                  </Card.Text>
-                  <div className="d-flex justify-content-center">
-                    <a href="/products/3">
-                      <Button variant="dark">View Product</Button>
-                    </a>{" "}
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
-            <div className="col-3">
-              <Card>
-                <Card.Img variant="top" src={imageSrc} />
-                <Card.Body>
-                  <Card.Title>Product Name</Card.Title>
-                  <Card.Text>
-                    Decription of the product, notes, aromas, sabor, etc. Algo
-                    corto que ocupe dos línes de texto.
-                  </Card.Text>
-                  <div className="d-flex justify-content-center">
-                    <a href="/products/3">
-                      <Button variant="dark">View Product</Button>
-                    </a>
-                  </div>
-                </Card.Body>
-              </Card>
-            </div>
+            {relatedProducts ? (
+              relatedProducts.map((product) => (
+                <div className="col-3" key={product.id}>
+                  <Card>
+                    <Card.Img variant="top" src={imageSrc} />
+                    <Card.Body>
+                      <Card.Title>{product.name}</Card.Title>{" "}
+                      <Card.Text>
+                        {/* Description of the product */}
+                        {product.description}
+                      </Card.Text>
+                      <div className="d-flex justify-content-center">
+                        <a href={`/products/${product.id}`}>
+                          <Button variant="dark">View Product</Button>
+                        </a>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </div>
+              ))
+            ) : (
+              <div>Loading...</div>
+            )}
           </div>
         </div>
       </div>
