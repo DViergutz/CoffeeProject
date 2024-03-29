@@ -229,6 +229,11 @@ body > div > main > div.social > a {
 }
 
 /* /////// navigation in home ////// */
+.navigation-menu {
+  background-color: #0d0d0d;
+  color: #f0f2dc;
+}
+
 .top-btn-position {
   position: fixed;
   bottom: 15px;
@@ -237,10 +242,8 @@ body > div > main > div.social > a {
 .top-btn-style {
   height: 40px;
   width: 40px;
-  border: radius 50%;
-  border: 2px solid rgb(5, 5, 5);
-  background-color: beige;
-  color: rgb(56, 58, 57);
+  border: 2px solid rgb(160, 160, 155);
+  color: rgb(13, 14, 13);
   cursor: pointer;
 }
 
