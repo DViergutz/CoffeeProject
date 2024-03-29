@@ -41,7 +41,7 @@ function Navigation() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="/shoppingCart">Shopping Cart</Nav.Link>
+            <Nav.Link href="/checkout">Shopping Cart</Nav.Link>
             <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="/register">Register</Nav.Link>
           </Nav>
