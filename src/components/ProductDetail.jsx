@@ -10,7 +10,7 @@ import { ReactDOM } from "react";
 function ProductDetail() {
   const [oneProduct, setOneProduct] = useState();
   const { productId } = useParams();
-
+  const params = useParams();
   useEffect(() => {
     const fetchOneProduct = async () => {
       try {
@@ -28,12 +28,23 @@ function ProductDetail() {
     fetchOneProduct();
   }, [productId]);
 
-  const params = useParams();
   return (
     <>
       <div className="main-section ">
         <div className="row d-flex mt-2 ">
-          <div className="col-6 productDetailImage"></div>
+          {oneProduct ? (
+            <div className="col-6">
+              {" "}
+              <img
+                src={oneProduct.image}
+                alt=""
+                style={{ width: "500px", height: "700px" }}
+              />
+            </div>
+          ) : (
+            <div>Loading...</div>
+          )}
+
           <div className="col-6 ">
             <div className="product border rounded p-2">
               <h3 className="text-decoration-underline text-center">
@@ -43,13 +54,13 @@ function ProductDetail() {
                   <div>Loading...</div>
                 )}
               </h3>
-              <p className="fs-4 fw-bold text-center">
+              <div className="fs-4 fw-bold text-center">
                 {oneProduct ? (
                   <div>${oneProduct.price}</div>
                 ) : (
                   <div>Loading...</div>
                 )}
-              </p>
+              </div>
               <hr />
               <div className="d-flex flex-column align-items-center">
                 <p className="fs-4 fw-bold">Quantity</p>
@@ -79,13 +90,13 @@ function ProductDetail() {
                   <div>Loading...</div>
                 )}
               </h5>
-              <p>
+              <div>
                 {oneProduct ? (
                   <div>{oneProduct.description}</div>
                 ) : (
                   <div>Loading...</div>
                 )}
-              </p>
+              </div>
               <section className="d-flex">
                 <strong>Tasting Notes:&nbsp;</strong>
                 <p>Mild nuttiness, chocolate</p>
@@ -96,14 +107,14 @@ function ProductDetail() {
               </section>
               <section className="d-flex">
                 <strong>Type:&nbsp;</strong>
-                <p>
+                <div>
                   {" "}
                   {oneProduct ? (
                     <div>{oneProduct.category.name}</div>
                   ) : (
                     <div>Loading...</div>
                   )}
-                </p>
+                </div>
               </section>
             </div>
           </div>
