@@ -17,7 +17,7 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className="align-navigation-menu">
       <ScrollToTop />
       <div className="navigation-menu">
         <ul>
