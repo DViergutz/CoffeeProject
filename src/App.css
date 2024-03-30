@@ -283,6 +283,9 @@ body > div > main > div.social > a {
   max-width: 800px;
   text-align: left;
 }
+p {
+  color: white;
+}
 
 h1 {
   color: white;
