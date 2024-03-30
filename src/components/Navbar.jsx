@@ -51,11 +51,6 @@ function Navigation() {
             </NavDropdown>
           </Nav>
           <Nav>
-<<<<<<< HEAD
-            <Nav.Link href="/checkout">Shopping Cart</Nav.Link>
-            <Nav.Link href="/user/login">Login</Nav.Link>
-            <Nav.Link href="/user/sign-up">Register</Nav.Link>
-=======
             <Nav.Link className="navLink" href="/checkout">
               Shopping Cart
             </Nav.Link>
@@ -65,7 +60,6 @@ function Navigation() {
             <Nav.Link className="navLink" href="/user/register">
               Register
             </Nav.Link>
->>>>>>> ad8104d92e1aeec7dacc7fc5d320720ddbd47a8b
           </Nav>
         </Navbar.Collapse>
       </Container>
