@@ -49,20 +49,42 @@ function Home() {
       </div>
       <div id="categories" ref={categories} className="main-section">
         <h2>Our Categories</h2>
-        <div className="row">
-          <div className="col">
-            <div className="category-flavored">
-              <h4>Flavored</h4>
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="category-flavored " onclick="location.href='#'">
+              <h2 class="category-title">Flavored</h2>
             </div>
           </div>
-          <div className="col">
-            <div className="category-blends">
-              <h4>Blends</h4>
+          <div class="col-md-4">
+            <div class="category-blends " onclick="location.href='#'">
+              <h2 class="category-title">Blends</h2>
             </div>
           </div>
-          <div className="col">
-            <div className="category-singleOrigin">
-              <h4>Single Origin</h4>
+          <div class="col-md-4">
+            <div class="category-singleOrigin " onclick="location.href='#'">
+              <h2 class="category-title">Single Origin</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="categories" ref={categories} className="main-section">
+        <h2>Our Categories</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="category-card category-flavored">
+                <h3 class="category-title">Flavored</h3>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="category-card category-blends">
+                <h3 class="category-title">Blends</h3>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="category-card category-single-origin">
+                <h3 class="category-title">Single Origin</h3>
+              </div>
             </div>
           </div>
         </div>
