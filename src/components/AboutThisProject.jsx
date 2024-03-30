@@ -33,22 +33,21 @@ function AboutThisProject() {
         <div className="about-info text-center d-flex flex-column align-items-center">
           <h2 className="text-light">Technologies & Tools</h2>
           <p>
-            Throughout the coding bootcamp, we delved into a wide range of
-            technologies encompassing both backend and front end development. We
-            also gained hands-on experience with databases and leveraged
-            practical tools to optimize our workflow. To ensure efficient task
-            allocation within our team, we utilized Trello as our project
-            management tool.
+            During our coding bootcamp journey, we immersed ourselves in a
+            diverse array of technologies spanning both backend and frontend
+            development. We actively engaged with databases, honing our skills,
+            and employed practical tools to streamline our workflow effectively.
           </p>
           <p>
-            The project was divided into three sprints, with Github serving as
-            our primary collaboration platform. Discord played a crucial role in
-            facilitating seamless communication throughout the development
-            process.
+            Our project underwent meticulous segmentation into three sprints,
+            with Github serving as our central collaboration hub. Discord
+            emerged as an indispensable platform, enabling seamless
+            communication throughout every phase of the development journey.
           </p>
           <p>
-            For this project, we handpicked the following set of tools to boost
-            our productivity.
+            In pursuit of heightened productivity for this project, we curated a
+            select ensemble of tools designed to elevate our efficiency and
+            innovation.
           </p>
         </div>
         <div>
@@ -158,16 +157,133 @@ function AboutThisProject() {
           </div>
         </div>
       </div>
+      <div className="main-section">
+        <div className="about-info text-center d-flex flex-column align-items-center">
+          <h2 className="text-light">Project Organization - MER</h2>
+          <p>
+            Setting the Foundation for Backend Excellence! Our initial focus was
+            on delineating the essential backend requirements. We meticulously
+            crafted an entity relationship diagram, mapping out key associations
+            among pivotal entities: Users, Products, Orders and Admins. This
+            served as our blueprint for building a robust backend
+            infrastructure.
+          </p>
+        </div>
+      </div>
+      <div className="main-section">
+        <div className="about-info text-center d-flex flex-column align-items-center">
+          <h2 className="text-light">Product Design</h2>
+          <p>
+            Building the Architecture of Information for our e-commerce endeavor
+            is a journey that demands our utmost care and attention. It's not
+            just about organizing content—it's about crafting an experience that
+            speaks directly to our users' needs and desires. Join us as we
+            embark on this journey, where every decision we make is driven by
+            our commitment to creating a seamless and personalized journey for
+            our visitors."
+          </p>
+        </div>
+      </div>
+      <div className="main-section">
+        <div className="about-info text-center d-flex flex-column align-items-center">
+          <h2 className="text-light">Admin Dashboard</h2>
+          <p>
+            In our e-commerce platform, the admin dashboard enables users to
+            delete, update, or create products, categories, and customers, while
+            also providing oversight of order statuses.
+          </p>
+        </div>
+      </div>
+      <div className="main-section">
+        <div className="text-center d-flex flex-column align-items-center">
+          <h2 className="text-light mb-4">Meet Our Team</h2>
+          <p className="about-info">
+            Discover the Faces Behind Our Success! Get to know the talented
+            individuals who bring creativity, expertise, and passion to our
+            team. Meet our dedicated team members below and learn more about
+            their unique contributions.
+          </p>
+          <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4">
+            <div className="col mb-4">
+              <div className="card h-100">
+                <img
+                  src="https://media.istockphoto.com/id/1386479313/es/foto/feliz-mujer-de-negocios-afroamericana-millennial-posando-aislada-en-blanco.jpg?s=2048x2048&w=is&k=20&c=AVZP51f6LngIhk-BPEw_HEyog_EIMWuqUZNvZt_hRuY="
+                  className="card-img-top"
+                  alt="Team Member 1"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">John Doe</h5>
+                  <a href="#" className="btn btn-primary">
+                    LinkedIn Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="card h-100">
+                <img
+                  src="https://media.istockphoto.com/id/1301037555/es/foto/hombre-joven-de-raza-mixta-guapo-con-ropa-casual-sonriendo-con-dientes-aislados-sobre-fondo.jpg?s=2048x2048&w=is&k=20&c=lZHAvbmSq3V9WVzjH27DICdI7erqj5j7xqvzy9EPWfQ="
+                  className="card-img-top"
+                  alt="Team Member 2"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">Jane Smith</h5>
+                  <a href="#" className="btn btn-primary">
+                    LinkedIn Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="card h-100">
+                <img
+                  src="https://media.istockphoto.com/id/1212514593/es/foto/hombre-afroamericano-con-trenzas-con-su%C3%A9ter-verde-sobre-fondo-blanco-aislado-con-expresi%C3%B3n.jpg?s=2048x2048&w=is&k=20&c=Rs5l2EaS-gqIuDKPHWltuw5ho4Sh0FEEE0ENE3B6Q5w="
+                  className="card-img-top"
+                  alt="Team Member 3"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">Alice Johnson</h5>
+                  <a href="#" className="btn btn-primary">
+                    LinkedIn Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="card h-100">
+                <img
+                  src="https://media.istockphoto.com/id/542703430/es/foto/sonriente-hombre.jpg?s=2048x2048&w=is&k=20&c=3ZmbfwZk4PyOkEX_a2Rl4yH6zuwOEl0DHeZEytXszKA="
+                  className="card-img-top"
+                  alt="Team Member 4"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">Bob Williams</h5>
+                  <a href="#" className="btn btn-primary">
+                    LinkedIn Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="card h-100">
+                <img
+                  src="https://media.istockphoto.com/id/1311406968/es/foto/retrato-del-guapo-joven-cauc%C3%A1sico-con-ropa-casual-sonriendo-y-mirando-a-la-c%C3%A1mara-sobre-el.jpg?s=2048x2048&w=is&k=20&c=fjJC9fq7QLEmw4z_-MVOwoJRT1YhMi327X72kuZA3w8="
+                  className="card-img-top"
+                  alt="Team Member 5"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">Emily Brown</h5>
+                  <a href="#" className="btn btn-primary">
+                    LinkedIn Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default AboutThisProject;
-
-{
-  /* <img
-  className="about-icons"
-  src="/src/assets/img/about-icons/bootstrap.png"
-  alt=""
-/>; */
-}

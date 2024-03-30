@@ -44,7 +44,7 @@ function Home() {
           <p className="hero-subheading">
             Embark on a journey through our finest selection of coffee bean bags
           </p>
-          <button className="btn btn-primary">Explore our products</button>
+          <button className="btn-hero">Explore our products</button>
         </div>
       </div>
       <div id="categories" ref={categories} className="main-section">

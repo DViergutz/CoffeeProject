@@ -327,7 +327,7 @@ h4 {
   width: 100%;
   padding-left: 120px;
   padding-right: 120px;
-  padding-top: 24px;
+  padding-top: 150px;
   padding-bottom: 32px;
 }
 .category-flavored {
@@ -449,6 +449,21 @@ h4 {
   background-repeat: no-repeat;
 }
 
+.btn-hero {
+  background-color: #ee7828;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #d96c21;
+}
+
 .about-heading {
   text-align: start;
   color: rgb(255, 255, 255);
@@ -459,7 +474,8 @@ h4 {
 }
 
 .about-info {
-  max-width: 750px;
+  max-width: 700px;
+  margin-bottom: 32px;
 }
 
 .about-subheading {
