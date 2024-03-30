@@ -69,26 +69,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="special-products" ref={specialProducts} className="main-section">
-        <h2>Special Products</h2>
-        <div className="row d-flex justify-content-center">
-          <div className="col-lg-3">
-            <div className="category">
-              <h4>Flavored</h4>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="category">
-              <h4>Blends</h4>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="category">
-              <h4>Single Origin</h4>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div id="special-products" ref={specialProducts} className="main-section">
         <h2>Special Products</h2>
         <div className="container">
