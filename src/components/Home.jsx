@@ -49,41 +49,21 @@ function Home() {
       </div>
       <div id="categories" ref={categories} className="main-section">
         <h2>Our Categories</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-4">
-            <div class="category-flavored " onclick="location.href='#'">
-              <h2 class="category-title">Flavored</h2>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="category-blends " onclick="location.href='#'">
-              <h2 class="category-title">Blends</h2>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="category-singleOrigin " onclick="location.href='#'">
-              <h2 class="category-title">Single Origin</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="categories" ref={categories} className="main-section">
-        <h2>Our Categories</h2>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="category-card category-flavored">
-                <h3 class="category-title">Flavored</h3>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4">
+              <div className="category-card category-flavored">
+                <h3 className="category-title">Flavored</h3>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="category-card category-blends">
-                <h3 class="category-title">Blends</h3>
+            <div className="col-md-4">
+              <div className="category-card category-blends">
+                <h3 className="category-title">Blends</h3>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="category-card category-single-origin">
-                <h3 class="category-title">Single Origin</h3>
+            <div className="col-md-4">
+              <div className="category-card category-single-origin">
+                <h3 className="category-title">Single Origin</h3>
               </div>
             </div>
           </div>
@@ -105,6 +85,67 @@ function Home() {
           <div className="col-3">
             <div className="category">
               <h4>Single Origin</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="special-products" ref={specialProducts} className="main-section">
+        <h2>Special Products</h2>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4">
+              <div className="special-product-card">
+                <div className="special-product-1 mb-2"></div>
+                <div className="text-start">
+                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                    nihil aliquid a cupiditate error neque adipisci, dolorum rem
+                    asperiores!
+                  </p>
+                  <p className="fs-3 fw-semibold">$250</p>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <button className="btn btn-view-product">View Product</button>
+                  <span>Add to Cart Icon</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="special-product-card">
+                <div className="special-product-2 mb-2"></div>
+                <div className="text-start">
+                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                    nihil aliquid a cupiditate error neque adipisci, dolorum rem
+                    asperiores!
+                  </p>
+                  <p className="fs-3 fw-semibold">$250</p>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <button className="btn btn-view-product">View Product</button>
+                  <span>Add to Cart Icon</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="special-product-card">
+                <div className="special-product-3 mb-2"></div>
+                <div className="text-start">
+                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                    nihil aliquid a cupiditate error neque adipisci, dolorum rem
+                    asperiores!
+                  </p>
+                  <p className="fs-3 fw-semibold">$250</p>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <button className="btn btn-view-product">View Product</button>
+                  <span>Add to Cart Icon</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

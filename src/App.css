@@ -294,10 +294,17 @@ h1 {
 
 h2 {
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: myFont;
   font-size: 64px;
   margin-bottom: 32px;
+  font-weight: 600;
+}
+
+h3 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
   font-weight: 600;
 }
 
@@ -318,7 +325,7 @@ h4 {
 }
 
 .main-section {
-  background-color: rgb(203, 203, 143);
+  background-color: #3b3028;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -375,6 +382,64 @@ h4 {
 
 .category-single-origin {
   background-image: url("/src/assets/img/category-img/Cat\ 3.png"); /* Background image for Single Origin category */
+}
+
+/* Special Products Home   */
+
+.special-product-card {
+  background-color: rgba(255, 255, 255, 0.199);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.btn-view-product {
+  background-color: #ee7828;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view-product:hover {
+  background-color: #d96c21; /* Darker shade on hover */
+}
+
+.special-product-1 {
+  background-image: url("/src/assets/img/Blends-ArtOfDarkness.png");
+  background-size: contain;
+  background-position: center;
+  border-radius: 8px; /* Ensure the border radius matches the card */
+  height: 300px; /* Adjust the height as needed */
+  background-repeat: no-repeat;
+}
+.special-product-2 {
+  background-image: url("/src/assets/img/Flavored-ChocolateAmaretto.png");
+  background-size: contain;
+  background-position: center;
+  border-radius: 8px; /* Ensure the border radius matches the card */
+  height: 300px; /* Adjust the height as needed */
+  background-repeat: no-repeat;
+}
+
+.special-product-3 {
+  background-image: url("/src/assets/img/SingleOrigin-Colombia.png");
+  background-size: contain;
+  background-position: center;
+  border-radius: 8px; /* Ensure the border radius matches the card */
+  height: 300px; /* Adjust the height as needed */
+  background-repeat: no-repeat;
 }
 
 /* navbar */

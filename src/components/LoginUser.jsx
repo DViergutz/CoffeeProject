@@ -37,26 +37,26 @@ function LoginUser() {
       <h2>Estamos en LoginUser</h2>
       <div>
         <form onSubmit={handleSubmit}>
-          <div class="mb-3">
-            <label for="username" class="form-label">
+          <div className="mb-3">
+            <label for="username" className="form-label">
               Username
             </label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="username"
               name="username"
               value={formData.username}
               onChange={handleChange}
             />
           </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">
+          <div className="mb-3">
+            <label for="password" className="form-label">
               Password
             </label>
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="password"
               name="password"
               value={formData.password}
@@ -64,7 +64,7 @@ function LoginUser() {
             />
           </div>
 
-          <button type="submit" class="btn btn-success">
+          <button type="submit" className="btn btn-success">
             Save
           </button>
         </form>
