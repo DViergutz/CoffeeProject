@@ -5,12 +5,16 @@ import ProductDetail from "./components/ProductDetail";
 import Checkout from "./components/Checkout";
 import LoginAdmin from "./components/LoginAdmin";
 import Dashboard from "./components/Dashboard";
+import DashboardProduct from "./components/DashboardProduct";
+import DashboardUser from "./components/DashboardUser";
+import DashboardOrder from "./components/DashboardOrder";
 import Signup from "./components/Signup";
 import LoginUser from "./components/LoginUser";
 import AboutThisProject from "./components/AboutThisProject";
 import NotFound from "./components/NotFound";
 import MainLayout from "./components/MainLayout";
 import Home from "./components/Home";
+import AdminLayout from "./components/AdminLayout";
 
 const router = createBrowserRouter([
   {
@@ -44,16 +48,38 @@ const router = createBrowserRouter([
       },
     ],
   },
+  //------- ADMIN LAYOUT --------
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        path: "/admin",
+        element: <Dashboard />,
+      },
+      {
+        path: "/admin/products",
+        element: <DashboardProduct />,
+      },
+      {
+        path: "/admin/users",
+        element: <DashboardUser />,
+      },
+      {
+        path: "/admin/orders",
+        element: <DashboardOrder />,
+      },
+    ],
+
+    // ---------- FIN DASHBOARD ADMIN ----------
+  },
   {
     path: "/admin/login",
     element: <LoginAdmin />,
   },
   {
-    path: "/dashboard",
-    element: <Dashboard />,
-  },
-  {
-    path: "user/sign-up",
+    path: "/sign-up",
     element: <Signup />,
   },
   {
