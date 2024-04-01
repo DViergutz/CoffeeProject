@@ -51,7 +51,9 @@ function Home() {
               Embark on a journey through our finest selection of coffee bean
               bags
             </p>
-            <button className="btn-hero">Explore our products</button>
+            <button className="btn-hero">
+              Explore our products <i className="bi bi-arrow-right ms-2"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -126,8 +128,10 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div className="mt-5">
-              <button className="btn-hero">Explore our products</button>
+            <div className="mt-5 d-flex justify-content-end">
+              <button className="btn-hero">
+                Explore our products <i className="bi bi-arrow-right ms-2"></i>
+              </button>
             </div>
           </div>
         </div>
