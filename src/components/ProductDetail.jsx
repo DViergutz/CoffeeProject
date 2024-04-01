@@ -166,10 +166,14 @@ function ProductDetail() {
                       <Card.Title className="text-decoration-underline">
                         {product.name}
                       </Card.Title>{" "}
-                      <Card.Text>{product.description}</Card.Text>
+                      <Card.Text className="text-dark">
+                        {product.description}
+                      </Card.Text>
                       <div className="d-flex justify-content-center mt-auto">
                         <a href={`/products/${product.id}`}>
-                          <Button variant="dark">View Product</Button>
+                          <Button variant="dark" className="text-warning">
+                            View Product
+                          </Button>
                         </a>
                       </div>
                     </Card.Body>

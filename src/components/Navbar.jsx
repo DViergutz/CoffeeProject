@@ -8,7 +8,7 @@ function Navigation() {
       expand="lg"
       bg="dark"
       variant="dark"
-      className="navbar-collapse main-navbar bg-light "
+      className="navbar-collapse main-navbar bg-light py-0 "
     >
       <Container>
         <Navbar.Brand href="/" className="m-0 p-0">

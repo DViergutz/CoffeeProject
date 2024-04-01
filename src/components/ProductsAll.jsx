@@ -49,7 +49,9 @@ function ProductsAll() {
                     </Card.Text>
                     <div className="d-flex justify-content-center mt-auto">
                       <a href={`/products/${product.id}`}>
-                        <Button variant="dark">View Product</Button>
+                        <Button variant="dark" className="text-warning">
+                          View Product
+                        </Button>
                       </a>
                     </div>
                   </Card.Body>
