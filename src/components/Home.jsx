@@ -23,6 +23,10 @@ function Home() {
       <ScrollToTop />
       <div className="navigation-menu">
         <ul>
+          {" "}
+          <li onClick={() => scrollToSection(about)} className="nav-link-home">
+            <GoDot />
+          </li>
           <li
             onClick={() => scrollToSection(categories)}
             className="nav-link-home"
@@ -57,7 +61,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="about" className="main-section d-flex flex-row">
+      <div id="about" ref={about} className="main-section d-flex flex-row">
         <div className="col-6">
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
