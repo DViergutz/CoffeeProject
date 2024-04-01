@@ -172,7 +172,7 @@ function Home() {
                   <p className="fs-3 fw-semibold">
                     $250{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
+                      $270
                     </span>
                   </p>
                 </div>
@@ -197,7 +197,7 @@ function Home() {
                   <p className="fs-3 fw-semibold">
                     $250{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
+                      $270
                     </span>
                   </p>
                 </div>
@@ -222,7 +222,7 @@ function Home() {
                   <p className="fs-3 fw-semibold">
                     $250{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
+                      $270
                     </span>
                   </p>
                 </div>
@@ -247,7 +247,7 @@ function Home() {
                   <p className="fs-3 fw-semibold">
                     $250{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
+                      $270
                     </span>
                   </p>
                 </div>
