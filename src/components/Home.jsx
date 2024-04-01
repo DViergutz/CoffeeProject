@@ -70,7 +70,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div id="special-products" ref={specialProducts} className="main-section">
         <div className="container">
           <h2 className="text-center">Special Products</h2>
@@ -158,25 +157,35 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="blog" ref={blog} className="main-section">
-        <h2>Latest Blogs</h2>
-        <div className="row">
-          <div className="col">
-            <div className="category">
-              <h4>Flavored</h4>
+      <div id="blog" ref={blog} className="main-section background-newsletter">
+        <section className="py-5">
+          <div className="container">
+            <div className="text-center">
+              <h2 className="mb-3">We have more to tell you</h2>
+              <p className="mb-4">
+                Subscribe to our newsletter to receive updates and special
+                offers!
+              </p>
             </div>
+            <form>
+              <div className="row justify-content-center">
+                <div className="col-md-6">
+                  <div className="input-group mb-3">
+                    <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Your email address"
+                      required
+                    />
+                    <button type="button" className="btn btn-primary">
+                      Subscribe
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
-          <div className="col">
-            <div className="category">
-              <h4>Blends</h4>
-            </div>
-          </div>
-          <div className="col">
-            <div className="category">
-              <h4>Single Origin</h4>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   );
