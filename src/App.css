@@ -327,20 +327,20 @@ h5 {
 .category-title {
   position: relative;
   z-index: 2;
-  /font-size: 24px;
+  /*font-size: 24px;*/
   color: white;
 }
 
 .category-flavored {
-  background-image: url("/src/assets/img/category-img/Cat\ 1.png"); /* Background image for Flavored category */
+  background-image: url("/src/assets/img/category-img/Cat%201.png"); /* Background image for Flavored category */
 }
 
 .category-blends {
-  background-image: url("/src/assets/img/category-img/Cat\ 2.png"); /* Background image for Blends category */
+  background-image: url("/src/assets/img/category-img/Cat%202.png"); /* Background image for Blends category */
 }
 
 .category-single-origin {
-  background-image: url("/src/assets/img/category-img/Cat\ 3.png"); /* Background image for Single Origin category */
+  background-image: url("/src/assets/img/category-img/Cat%203.png"); /* Background image for Single Origin category */
 }
 
 /* Special Products Home   */
@@ -400,12 +400,38 @@ h5 {
   height: 300px;
   background-repeat: no-repeat;
 }
+
+.special-product-4 {
+  background-image: url("/src/assets/img/Blends-ItalianRoast.png");
+  background-size: contain;
+  background-position: center;
+  border-radius: 8px;
+  height: 300px;
+  background-repeat: no-repeat;
+}
 /* Blog section/newsletter */
 
 .background-newsletter {
   background-image: url("/src/assets/img/background-home.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.btn-subscribe {
+  background-color: #ee7828;
+}
+
+.btn-subscribe:hover {
+  background-color: #d96c21; /* Lighter shade for hover effect */
+}
+.input-group {
+  width: 100%;
+}
+
+.subscribe-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
 }
 
 /* navbar */

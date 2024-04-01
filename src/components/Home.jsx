@@ -136,7 +136,7 @@ function Home() {
             </div>
             <div className="col-md-3">
               <div className="special-product-card">
-                <div className="special-product-3 mb-2"></div>
+                <div className="special-product-4 mb-2"></div>
                 <div className="text-start">
                   <p className="fs-3 fw-semibold">Product 1</p>
                   <p>
@@ -161,8 +161,8 @@ function Home() {
         <section className="py-5">
           <div className="container">
             <div className="text-center">
-              <h2 className="mb-3">We have more to tell you</h2>
-              <p className="mb-4">
+              <h2 className="mb-4">We have more to tell you</h2>
+              <p className="mb-4 fs-5 mb-5">
                 Subscribe to our newsletter to receive updates and special
                 offers!
               </p>
@@ -173,11 +173,14 @@ function Home() {
                   <div className="input-group mb-3">
                     <input
                       type="email"
-                      className="form-control"
+                      className="form-control subscribe-input"
                       placeholder="Your email address"
                       required
                     />
-                    <button type="button" className="btn btn-primary">
+                    <button
+                      type="button"
+                      className="btn btn-subscribe" // Custom class for styling
+                    >
                       Subscribe
                     </button>
                   </div>
