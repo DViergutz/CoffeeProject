@@ -142,7 +142,7 @@ function Home() {
             </div>
             <div className="col-md-3">
               <div className="special-product-card">
-                <div className="special-product-3 mb-2"></div>
+                <div className="special-product-4 mb-2"></div>
                 <div className="text-start">
                   <p className="fs-3 fw-semibold">Product 1</p>
                   <p>
@@ -163,25 +163,38 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="blog" ref={blog} className="main-section">
-        <h2>Latest Blogs</h2>
-        <div className="row">
-          <div className="col">
-            <div className="category">
-              <h4>Flavored</h4>
+      <div id="blog" ref={blog} className="main-section background-newsletter">
+        <section className="py-5">
+          <div className="container">
+            <div className="text-center">
+              <h2 className="mb-4">We have more to tell you</h2>
+              <p className="mb-4 fs-5 mb-5">
+                Subscribe to our newsletter to receive updates and special
+                offers!
+              </p>
             </div>
+            <form>
+              <div className="row justify-content-center">
+                <div className="col-md-6">
+                  <div className="input-group mb-3">
+                    <input
+                      type="email"
+                      className="form-control subscribe-input"
+                      placeholder="Your email address"
+                      required
+                    />
+                    <button
+                      type="button"
+                      className="btn btn-subscribe" // Custom class for styling
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
-          <div className="col">
-            <div className="category">
-              <h4>Blends</h4>
-            </div>
-          </div>
-          <div className="col">
-            <div className="category">
-              <h4>Single Origin</h4>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   );
