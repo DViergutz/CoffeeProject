@@ -9,6 +9,7 @@ function Home() {
   const categories = useRef(null);
   const specialProducts = useRef(null);
   const blog = useRef(null);
+  const about = useRef(null);
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -51,6 +52,86 @@ function Home() {
               bags
             </p>
             <button className="btn-hero">Explore our products</button>
+          </div>
+        </div>
+      </div>
+      <div id="about" className="main-section">
+        <div className="row mb-4">
+          <div className="col-lg-6 offset-lg-6 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+            <h2 className="text-start">
+              Everything starts with <span>Coffee</span>
+            </h2>
+            <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
+              <div className="mr-md-3 mb-md-0 mb-3">
+                <img
+                  src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                  alt="Big Coffee Image"
+                  className="img-fluid about-icon"
+                />
+              </div>
+              <div className="ms-3">
+                {" "}
+                {/* Reduced the margin to ms-3 */}
+                <h5 className="fw-semibold">Our Mission</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                  fuga maiores sequi magni perspiciatis quisquam dolor modi,
+                  itaque magnam aliquam illo, natus praesentium iusto accusamus
+                  dicta officiis neque? Ut vel hic ipsum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row mb-4">
+          <div className="col-lg-6 offset-lg-6 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+            <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
+              <div className="mr-md-3 mb-md-0 mb-3">
+                <img
+                  src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                  alt="Big Coffee Image"
+                  className="img-fluid about-icon"
+                />
+              </div>
+              <div className=" ms-3">
+                {" "}
+                {/* Reduced the margin to ms-3 */}
+                <h5 className="fw-semibold">Our Mission</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                  fuga maiores sequi magni perspiciatis quisquam dolor modi,
+                  itaque magnam aliquam illo, natus praesentium iusto accusamus
+                  dicta officiis neque? Ut vel hic ipsum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-lg-6 offset-lg-6 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+            <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
+              <div className="mr-md-3 mb-md-0 mb-3">
+                <img
+                  src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                  alt="Big Coffee Image"
+                  className="img-fluid about-icon"
+                />
+              </div>
+              <div className=" ms-3">
+                {" "}
+                {/* Reduced the margin to ms-3 */}
+                <h5 className="fw-semibold">Our Mission</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                  fuga maiores sequi magni perspiciatis quisquam dolor modi,
+                  itaque magnam aliquam illo, natus praesentium iusto accusamus
+                  dicta officiis neque? Ut vel hic ipsum.
+                </p>
+              </div>
+            </div>
+            <div className="mt-5">
+              <button className="btn-view-product">Explore our products</button>
+            </div>
           </div>
         </div>
       </div>

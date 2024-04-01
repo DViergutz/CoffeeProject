@@ -307,7 +307,8 @@ h5 {
 }
 
 .main-section {
-  background-color: #3b3028;
+  position: relative;
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -364,6 +365,27 @@ h5 {
 
 .category-single-origin {
   background-image: url("/src/assets/img/category-img/Cat%203.png"); /* Background image for Single Origin category */
+}
+
+/* About section */
+
+.about-icon {
+  background-size: contain;
+  background-position: center center;
+  border-radius: 50%;
+  height: auto;
+  width: 65%;
+  margin-bottom: 16px;
+}
+
+#about {
+  height: 50%;
+  width: auto;
+  background-image: url("https://i.pinimg.com/564x/79/f3/d4/79f3d4e522788861b185a8c2dc39f64b.jpg");
+  background-size: auto 100%; /* Adjusted background size */
+  background-position: left center; /* Positioned on the left */
+  background-repeat: no-repeat;
+  margin-left: -50px; /* Cut off with left margin */
 }
 
 /* Special Products Home   */
