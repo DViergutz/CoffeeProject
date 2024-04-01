@@ -13,7 +13,16 @@
 
 footer {
   background-color: black;
-  padding-top: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.logo-footer {
+  height: 150px;
+  width: auto;
+  background-image: url("./assets/img/logo-utica-white.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 /* DASHBOARD ADMIN*/
@@ -267,7 +276,7 @@ h2 {
   color: rgb(255, 255, 255);
   font-family: myFont;
   font-size: 56px;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
   font-weight: 600;
 }
 
@@ -289,6 +298,7 @@ h5 {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 24px;
+  margin-bottom: 8px;
 }
 
 .hero-subheading {
@@ -490,7 +500,7 @@ h5 {
 /* Blog section/newsletter */
 
 .background-newsletter {
-  background-image: url("/src/assets/img/background-home.jpg");
+  background-image: url("/src/assets/img/newsletter-background.png");
   background-size: cover;
   background-position: center;
 }
