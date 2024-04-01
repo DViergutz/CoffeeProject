@@ -159,7 +159,7 @@ function Home() {
         <div className="container">
           <h2 className="text-center">Special Products</h2>
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="special-product-card">
                 <div className="special-product-1 mb-2"></div>
                 <div className="text-start">
@@ -172,19 +172,19 @@ function Home() {
                   <p className="fs-3 fw-semibold">
                     $250{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
+                      $270
                     </span>
                   </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <div className="secondary-button">
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="special-product-card">
                 <div className="special-product-2 mb-2"></div>
                 <div className="text-start">
@@ -197,19 +197,19 @@ function Home() {
                   <p className="fs-3 fw-semibold">
                     $250{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
+                      $270
                     </span>
                   </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <div className="secondary-button">
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="special-product-card">
                 <div className="special-product-3 mb-2"></div>
                 <div className="text-start">
@@ -222,19 +222,19 @@ function Home() {
                   <p className="fs-3 fw-semibold">
                     $250{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
+                      $270
                     </span>
                   </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <div className="secondary-button">
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="special-product-card">
                 <div className="special-product-4 mb-2"></div>
                 <div className="text-start">
@@ -247,13 +247,13 @@ function Home() {
                   <p className="fs-3 fw-semibold">
                     $250{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
+                      $270
                     </span>
                   </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <div className="secondary-button">
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
                   </div>
                 </div>
