@@ -59,7 +59,7 @@ function Home() {
         <div className="row mb-4">
           <div className="col-lg-6 offset-lg-6 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
             <h2 className="text-start">
-              Everything starts with <span>Coffee</span>
+              Everything starts with <span className="text-orange">Coffee</span>
             </h2>
             <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
               <div className="mr-md-3 mb-md-0 mb-3">
@@ -94,7 +94,6 @@ function Home() {
               </div>
               <div className=" ms-3">
                 {" "}
-                {/* Reduced the margin to ms-3 */}
                 <h5 className="fw-semibold">The Utica Coffe Brand</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed

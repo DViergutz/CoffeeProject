@@ -573,6 +573,9 @@ h5 {
 }
 
 /* About this Project */
+.text-orange {
+  color: #ee7828;
+}
 
 .hero-about {
   padding-left: 120px;
