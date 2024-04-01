@@ -128,7 +128,7 @@ function Home() {
               </div>
             </div>
             <div className="mt-5">
-              <button className="btn-our-products">Explore our products</button>
+              <button className="btn-hero">Explore our products</button>
             </div>
           </div>
         </div>
