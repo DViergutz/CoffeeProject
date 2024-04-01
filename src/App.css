@@ -604,6 +604,21 @@ h5 {
   background-color: #d96c21;
 }
 
+.btn-cart {
+  background-color: #ee7828;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cart:hover {
+  background-color: #d96c21;
+}
+
 .about-heading {
   text-align: start;
   color: rgb(255, 255, 255);
