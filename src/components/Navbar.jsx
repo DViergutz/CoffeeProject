@@ -6,9 +6,9 @@ function Navigation() {
   return (
     <Navbar
       expand="lg"
-      bg="secondary"
+      bg="dark"
       variant="dark"
-      className="navbar-collapse main-navbar "
+      className="navbar-collapse main-navbar bg-light "
     >
       <Container>
         <Navbar.Brand href="/" className="m-0 p-0">
@@ -19,7 +19,10 @@ function Navigation() {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="collapse">
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="collapse bg-dark ps-3"
+        >
           <Nav className="me-auto">
             <Nav.Link className="navLink" href="/about-this-project">
               About this Project
