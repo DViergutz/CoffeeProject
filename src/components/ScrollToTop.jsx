@@ -11,7 +11,6 @@ function ScrollToTop() {
       } else {
         setShowScrollTopButton(false);
       }
-      console.log(showScrollTopButton);
     });
   }, []);
 

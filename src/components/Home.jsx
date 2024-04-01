@@ -38,14 +38,20 @@ function Home() {
             <GoDot />
           </li>
         </ul>
-      </div>
-      <div id="hero" className="hero-section">
-        <div className="content-wrapper">
-          <h1>Discover the Essence of Fresh Coffee</h1>
-          <p className="hero-subheading">
-            Embark on a journey through our finest selection of coffee bean bags
-          </p>
-          <button className="btn-hero">Explore our products</button>
+      </div>{" "}
+      <div className="background-video">
+        <video autoPlay loop muted>
+          <source src="src\assets\img\videoplayback.mp4" type="video/mp4" />
+        </video>
+        <div id="hero" className="hero-section">
+          <div className="content-wrapper">
+            <h1>Discover the Essence of Fresh Coffee</h1>
+            <p className="hero-subheading">
+              Embark on a journey through our finest selection of coffee bean
+              bags
+            </p>
+            <button className="btn-hero">Explore our products</button>
+          </div>
         </div>
       </div>
       <div id="categories" ref={categories} className="main-section">
@@ -70,7 +76,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div id="special-products" ref={specialProducts} className="main-section">
         <div className="container">
           <h2 className="text-center">Special Products</h2>
