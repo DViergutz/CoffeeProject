@@ -388,14 +388,16 @@ h5 {
   margin-bottom: 16px;
 }
 
+.img-sack {
+  height: 1100px;
+  width: 1200px;
+  opacity: 70%;
+  margin-left: -500px;
+}
 #about {
+  margin-top: -200px;
   height: 50%;
   width: auto;
-  background-image: url("/src/assets/img/sack.png");
-  background-size: auto 90%; /* Adjusted background size */
-  background-position: left center; /* Positioned on the left */
-  background-repeat: no-repeat;
-  margin-left: -90px; /* Cut off with left margin */
 }
 
 /* Special Products Home   */
