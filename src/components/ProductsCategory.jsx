@@ -25,13 +25,13 @@ function ProductsCategory() {
 
   return (
     <>
-      <div className="productsOfCategory main-section">
+      <div className="productsOfCategory main-section bg-fondo3 ">
         <h3>Products of {params.categoryName}</h3>
-        <div className="row mb-5">
+        <div className="row mb-5 d-flex justify-content-center">
           {productsOfCategory ? (
             productsOfCategory.map((product) => (
               <div
-                className="col-lg-3 col-md-6 col-sm-12 align-items-stretch d-flex g-3"
+                className="col-lg-4 col-md-6 col-sm-12 align-items-stretch d-flex g-3"
                 key={product.id}
               >
                 <Card>
