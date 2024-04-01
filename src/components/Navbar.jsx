@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import UticaBrandLogo from "../assets/img/logo_utica-removebg.png"; // Adjust the path as needed
+import UticaBrandLogo from "../assets/img/logo_utica-removebg.png";
 
 function Navigation() {
   return (

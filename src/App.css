@@ -476,15 +476,21 @@ h5 {
   height: 126;
   width: 126px;
 }
+.nav-link {
+  color: #fff;
+}
 .nav-link:hover {
   background-color: #343a40;
-  color: #fff;
+  color: #f0f2dc;
+  padding-left: 1.5rem;
 }
 
 .dropdown-item:hover {
   background-color: #343a40;
-  color: #fff;
+  color: #f0f2dc;
+  padding-left: 2rem;
 }
+/* end navbar */
 
 .img-checkout {
   height: 85px;

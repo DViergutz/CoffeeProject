@@ -41,10 +41,12 @@ function ProductsAll() {
                 <Card>
                   <Card.Img variant="top" src={product.image} />
                   <Card.Body className="d-flex flex-column justify-content-between">
-                    <Card.Title className="text-decoration-underline">
+                    <Card.Title className="text-decoration-underline text-secondary">
                       {product.name}
-                    </Card.Title>{" "}
-                    <Card.Text>{product.description}</Card.Text>
+                    </Card.Title>
+                    <Card.Text className="text-dark">
+                      {product.description}
+                    </Card.Text>
                     <div className="d-flex justify-content-center mt-auto">
                       <a href={`/products/${product.id}`}>
                         <Button variant="dark">View Product</Button>
