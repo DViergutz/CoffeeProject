@@ -163,13 +163,18 @@ function Home() {
               <div className="special-product-card">
                 <div className="special-product-1 mb-2"></div>
                 <div className="text-start">
-                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p className="fs-3 fw-semibold">Art of Darkness</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                     nihil aliquid a cupiditate error neque adipisci, dolorum rem
                     asperiores!
                   </p>
-                  <p className="fs-3 fw-semibold">$250</p>
+                  <p className="fs-3 fw-semibold">
+                    $250{" "}
+                    <span className="text-decoration-line-through fs-5 fw-light">
+                      $220
+                    </span>
+                  </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
@@ -183,13 +188,18 @@ function Home() {
               <div className="special-product-card">
                 <div className="special-product-2 mb-2"></div>
                 <div className="text-start">
-                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p className="fs-3 fw-semibold">Chocolate Amaretto</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                     nihil aliquid a cupiditate error neque adipisci, dolorum rem
                     asperiores!
                   </p>
-                  <p className="fs-3 fw-semibold">$250</p>
+                  <p className="fs-3 fw-semibold">
+                    $250{" "}
+                    <span className="text-decoration-line-through fs-5 fw-light">
+                      $220
+                    </span>
+                  </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
@@ -203,13 +213,18 @@ function Home() {
               <div className="special-product-card">
                 <div className="special-product-3 mb-2"></div>
                 <div className="text-start">
-                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p className="fs-3 fw-semibold">Colombia Organic</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                     nihil aliquid a cupiditate error neque adipisci, dolorum rem
                     asperiores!
                   </p>
-                  <p className="fs-3 fw-semibold">$250</p>
+                  <p className="fs-3 fw-semibold">
+                    $250{" "}
+                    <span className="text-decoration-line-through fs-5 fw-light">
+                      $220
+                    </span>
+                  </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
@@ -223,13 +238,18 @@ function Home() {
               <div className="special-product-card">
                 <div className="special-product-4 mb-2"></div>
                 <div className="text-start">
-                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p className="fs-3 fw-semibold">Italian Roast</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                     nihil aliquid a cupiditate error neque adipisci, dolorum rem
                     asperiores!
                   </p>
-                  <p className="fs-3 fw-semibold">$250</p>
+                  <p className="fs-3 fw-semibold">
+                    $250{" "}
+                    <span className="text-decoration-line-through fs-5 fw-light">
+                      $220
+                    </span>
+                  </p>
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
