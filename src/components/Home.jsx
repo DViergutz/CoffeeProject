@@ -175,9 +175,9 @@ function Home() {
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <span>
+                  <div className="secondary-button">
                     <i className="bi bi-cart"></i>
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -195,9 +195,9 @@ function Home() {
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <span>
+                  <div className="secondary-button">
                     <i className="bi bi-cart"></i>
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -215,9 +215,9 @@ function Home() {
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <span>
+                  <div className="secondary-button">
                     <i className="bi bi-cart"></i>
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -235,9 +235,9 @@ function Home() {
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <span>
+                  <div className="secondary-button">
                     <i className="bi bi-cart"></i>
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
