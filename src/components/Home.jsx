@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import ScrollToTop from "./ScrollToTop";
 import "../App.css";
 import { GoDot } from "react-icons/go";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Home() {
   const categories = useRef(null);
@@ -48,7 +49,7 @@ function Home() {
         </div>
       </div>
       <div id="categories" ref={categories} className="main-section">
-        <h2>Our Categories</h2>
+        <h2>Our Coffee Collections</h2>
         <div className="container">
           <div className="row">
             <div className="col-md-4">
@@ -71,8 +72,8 @@ function Home() {
       </div>
 
       <div id="special-products" ref={specialProducts} className="main-section">
-        <h2>Special Products</h2>
         <div className="container">
+          <h2 className="text-center">Special Products</h2>
           <div className="row">
             <div className="col-md-3">
               <div className="special-product-card">
@@ -88,7 +89,9 @@ function Home() {
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <span>Add to Cart Icon</span>
+                  <span>
+                    <i className="bi bi-cart"></i>
+                  </span>
                 </div>
               </div>
             </div>
@@ -106,7 +109,9 @@ function Home() {
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <span>Add to Cart Icon</span>
+                  <span>
+                    <i className="bi bi-cart"></i>
+                  </span>
                 </div>
               </div>
             </div>
@@ -124,7 +129,29 @@ function Home() {
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <span>Add to Cart Icon</span>
+                  <span>
+                    <i className="bi bi-cart"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="special-product-card">
+                <div className="special-product-3 mb-2"></div>
+                <div className="text-start">
+                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                    nihil aliquid a cupiditate error neque adipisci, dolorum rem
+                    asperiores!
+                  </p>
+                  <p className="fs-3 fw-semibold">$250</p>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <button className="btn btn-view-product">View Product</button>
+                  <span>
+                    <i className="bi bi-cart"></i>
+                  </span>
                 </div>
               </div>
             </div>
