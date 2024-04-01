@@ -301,13 +301,16 @@ h5 {
 }
 
 .align-navigation-menu {
+  background-image: url("./assets/img/POSIBLEFONDO7.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .main-section {
-  background-color: #3b3028;
   display: flex;
   flex-direction: column;
   align-items: center;
