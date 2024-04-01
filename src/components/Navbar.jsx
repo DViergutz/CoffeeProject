@@ -41,7 +41,7 @@ function Navigation() {
               <NavDropdown.Item href="/category/blends">
                 Blends
               </NavDropdown.Item>
-              <NavDropdown.Item href="/category/singleOrigin">
+              <NavDropdown.Item href="/category/single Origin">
                 Single Origin
               </NavDropdown.Item>
               {/* <NavDropdown.Divider />

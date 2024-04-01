@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import imageSrc from "../assets/img/BlendsArtOfDarkness.png";
 import axios from "axios";
-import { ReactDOM } from "react";
 
 function ProductDetail() {
   const [oneProduct, setOneProduct] = useState();
   const [relatedProducts, setRelatedProducts] = useState();
   const { productId } = useParams();
   const params = useParams();
+
   useEffect(() => {
     const fetchOneProduct = async () => {
       try {
@@ -51,7 +49,9 @@ function ProductDetail() {
     <>
       <div className="main-section ">
         <div className="row d-flex mt-2 ">
-          <div className="col-6 text-center">
+          <div className="col-lg-6 col-md-6 col-sm-12 text-center">
+            {" "}
+            {/* Added responsive classes */}
             {oneProduct ? (
               <img
                 src={oneProduct.image}
@@ -68,7 +68,9 @@ function ProductDetail() {
               <div>Loading...</div>
             )}
           </div>
-          <div className="col-6 ">
+          <div className="col-lg-6 col-md-6 col-sm-12 ">
+            {" "}
+            {/* Added responsive classes */}
             <div className="product border rounded p-2">
               <h3 className="text-decoration-underline text-center">
                 {oneProduct ? (
@@ -151,19 +153,20 @@ function ProductDetail() {
             {relatedProducts ? (
               relatedProducts.map((product) => (
                 <div
-                  className="col-3 align-items-stretch d-flex"
+                  className="col-lg-3 col-md-6 col-sm-12 align-items-stretch d-flex g-2" // Added responsive classes
                   key={product.id}
                 >
                   <Card>
-                    <Card.Img variant="top" src={product.image} />
+                    <Card.Img
+                      variant="top"
+                      src={product.image}
+                      id="relatedProductImg"
+                    />
                     <Card.Body className="d-flex flex-column justify-content-between">
                       <Card.Title className="text-decoration-underline">
                         {product.name}
                       </Card.Title>{" "}
-                      <Card.Text>
-                        {/* Description of the product */}
-                        {product.description}
-                      </Card.Text>
+                      <Card.Text>{product.description}</Card.Text>
                       <div className="d-flex justify-content-center mt-auto">
                         <a href={`/products/${product.id}`}>
                           <Button variant="dark">View Product</Button>
