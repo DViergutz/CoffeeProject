@@ -51,7 +51,9 @@ function Home() {
               Embark on a journey through our finest selection of coffee bean
               bags
             </p>
-            <button className="btn-hero">Explore our products</button>
+            <button className="btn-hero">
+              Explore our products <i className="bi bi-arrow-right ms-2"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -176,15 +178,17 @@ function Home() {
                     asperiores!
                   </p>
                   <p className="fs-3 fw-semibold">
-                    $250{" "}
+                    <span className="text-orange">$250</span>{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
                       $220
                     </span>
                   </p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product">View Product</button>
-                  <div className="secondary-button">
+                  <button className="btn btn-view-product w-100 me-2">
+                    View Product
+                  </button>
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
                   </div>
                 </div>
@@ -201,15 +205,17 @@ function Home() {
                     asperiores!
                   </p>
                   <p className="fs-3 fw-semibold">
-                    $250{" "}
+                    <span className="text-orange">$250</span>{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
                       $220
                     </span>
                   </p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product">View Product</button>
-                  <div className="secondary-button">
+                  <button className="btn btn-view-product w-100 me-2">
+                    View Product
+                  </button>
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
                   </div>
                 </div>
@@ -226,7 +232,7 @@ function Home() {
                     asperiores!
                   </p>
                   <p className="fs-3 fw-semibold">
-                    $250{" "}
+                    <span className="text-orange">$250</span>{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
                       $220
                     </span>
@@ -234,7 +240,7 @@ function Home() {
                 </div>
                 <div className="d-flex justify-content-between">
                   <button className="btn btn-view-product">View Product</button>
-                  <div className="secondary-button">
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
                   </div>
                 </div>
@@ -251,15 +257,17 @@ function Home() {
                     asperiores!
                   </p>
                   <p className="fs-3 fw-semibold">
-                    $250{" "}
+                    <span className="text-orange">$250</span>{" "}
                     <span className="text-decoration-line-through fs-5 fw-light">
                       $220
                     </span>
                   </p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product">View Product</button>
-                  <div className="secondary-button">
+                  <button className="btn btn-view-product w-100 me-2">
+                    View Product
+                  </button>
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
                   </div>
                 </div>
