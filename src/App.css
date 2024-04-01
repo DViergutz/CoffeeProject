@@ -55,15 +55,38 @@ footer {
   display: flex;
   align-items: center;
   justify-content: start;
-  background-image: url("https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  /* background-image: url("https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  z-index: 1;
+}
+
+.background-video {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
 }
 
 .content-wrapper {
   max-width: 800px;
   text-align: left;
+  z-index: 1;
 }
 p {
   color: white;
@@ -142,7 +165,7 @@ h5 {
   justify-content: center;
   text-align: center;
   border-radius: 10px;
-  overflow: hidden; /* Hide overflow to ensure the mask covers the entire card */
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -153,32 +176,32 @@ h5 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark mask */
-  transition: background-color 0.3s ease; /* Smooth transition */
-  z-index: 1; /* Ensure the mask is behind the text */
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  z-index: 1;
 }
 
 .category-card:hover::before {
-  background-color: rgba(0, 0, 0, 0); /* Lighten up on hover */
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .category-title {
   position: relative;
-  z-index: 2; /* Ensure the text is above the mask */
-  font-size: 24px;
+  z-index: 2;
+  /*font-size: 24px;*/
   color: white;
 }
 
 .category-flavored {
-  background-image: url("/src/assets/img/category-img/Cat\ 1.png"); /* Background image for Flavored category */
+  background-image: url("/src/assets/img/category-img/Cat%201.png"); /* Background image for Flavored category */
 }
 
 .category-blends {
-  background-image: url("/src/assets/img/category-img/Cat\ 2.png"); /* Background image for Blends category */
+  background-image: url("/src/assets/img/category-img/Cat%202.png"); /* Background image for Blends category */
 }
 
 .category-single-origin {
-  background-image: url("/src/assets/img/category-img/Cat\ 3.png"); /* Background image for Single Origin category */
+  background-image: url("/src/assets/img/category-img/Cat%203.png"); /* Background image for Single Origin category */
 }
 
 /* Special Products Home   */
@@ -217,16 +240,16 @@ h5 {
   background-image: url("/src/assets/img/Blends-ArtOfDarkness.png");
   background-size: contain;
   background-position: center;
-  border-radius: 8px; /* Ensure the border radius matches the card */
-  height: 300px; /* Adjust the height as needed */
+  border-radius: 8px;
+  height: 300px;
   background-repeat: no-repeat;
 }
 .special-product-2 {
   background-image: url("/src/assets/img/Flavored-ChocolateAmaretto.png");
   background-size: contain;
   background-position: center;
-  border-radius: 8px; /* Ensure the border radius matches the card */
-  height: 300px; /* Adjust the height as needed */
+  border-radius: 8px;
+  height: 300px;
   background-repeat: no-repeat;
 }
 
@@ -234,9 +257,42 @@ h5 {
   background-image: url("/src/assets/img/SingleOrigin-Colombia.png");
   background-size: contain;
   background-position: center;
-  border-radius: 8px; /* Ensure the border radius matches the card */
-  height: 300px; /* Adjust the height as needed */
+  border-radius: 8px;
+  height: 300px;
   background-repeat: no-repeat;
+}
+
+.special-product-4 {
+  background-image: url("/src/assets/img/Blends-ItalianRoast.png");
+  background-size: contain;
+  background-position: center;
+  border-radius: 8px;
+  height: 300px;
+  background-repeat: no-repeat;
+}
+/* Blog section/newsletter */
+
+.background-newsletter {
+  background-image: url("/src/assets/img/background-home.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-subscribe {
+  background-color: #ee7828;
+}
+
+.btn-subscribe:hover {
+  background-color: #d96c21; /* Lighter shade for hover effect */
+}
+.input-group {
+  width: 100%;
+}
+
+.subscribe-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
 }
 
 /* navbar */
@@ -246,9 +302,9 @@ h5 {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.5);
   /* padding: 20px; */
-  z-index: 1; /* Ensure navbar is above hero image */
+  z-index: 10; /* Ensure navbar is above hero image */
 }
 .navLink {
   font-size: 1.2rem;
