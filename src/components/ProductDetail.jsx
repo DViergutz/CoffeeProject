@@ -50,8 +50,6 @@ function ProductDetail() {
       <div className="main-section ">
         <div className="row d-flex mt-2 ">
           <div className="col-lg-6 col-md-6 col-sm-12 text-center">
-            {" "}
-            {/* Added responsive classes */}
             {oneProduct ? (
               <img
                 src={oneProduct.image}
@@ -60,8 +58,7 @@ function ProductDetail() {
                   maxWidth: "100%",
                   height: "",
                   maxHeight: "600px",
-                  // marginTop: "-50px",
-                }} // Adjust size to fit the container
+                }}
                 alt={oneProduct.image}
               />
             ) : (
@@ -69,8 +66,6 @@ function ProductDetail() {
             )}
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 ">
-            {" "}
-            {/* Added responsive classes */}
             <div className="product border rounded p-2">
               <h3 className="text-decoration-underline text-center">
                 {oneProduct ? (
@@ -81,34 +76,34 @@ function ProductDetail() {
               </h3>
               <div className="fs-4 fw-bold text-center">
                 {oneProduct ? (
-                  <div>${oneProduct.price}</div>
+                  <div className="text-warning">${oneProduct.price}</div>
                 ) : (
                   <div>Loading...</div>
                 )}
               </div>
-              <hr />
+              <hr className="text-light" />
               <div className="d-flex flex-column align-items-center">
-                <p className="fs-4 fw-bold">Quantity</p>
+                <p className="fs-4 fw-bold text-light">Quantity</p>
                 <div className="w-100 d-flex justify-content-center">
                   <button className="w-25 fs-2 btn btn-dark rounded-pill">
                     -
                   </button>
-                  <span className="p-2  rounded mx-2 fs-3">2</span>
+                  <span className="p-2  rounded mx-2 fs-3 text-light">2</span>
                   <button className="w-25 fs-3 btn btn-dark rounded-pill">
                     +
                   </button>
                 </div>
-                <hr />
+                <hr className="text-light" />
                 <button className="w-50 rounded-pill p-2 fs-4">
                   Add to cart
                 </button>
               </div>
             </div>
             <div className="p-2">
-              <h5 className="text-dark fw-bold">
+              <h5 className="text-light fw-bold">
                 Experience the taste of our famous
                 {oneProduct ? (
-                  <div className="text-decoration-underline">
+                  <div className="text-decoration-underline text-warning">
                     {oneProduct.name}
                   </div>
                 ) : (
@@ -117,23 +112,23 @@ function ProductDetail() {
               </h5>
               <div>
                 {oneProduct ? (
-                  <div>{oneProduct.description}</div>
+                  <div className="text-light">{oneProduct.description}</div>
                 ) : (
                   <div>Loading...</div>
                 )}
               </div>
-              <hr />
+              <hr className="text-light" />
               <section className="d-flex">
-                <strong>Tasting Notes:&nbsp;</strong>
+                <strong className="text-warning">Tasting Notes:&nbsp;</strong>
                 <p>Mild nuttiness, chocolate</p>
               </section>
               <section className="d-flex">
-                <strong>Origin:&nbsp;</strong>
+                <strong className="text-warning">Origin:&nbsp;</strong>
                 <p>Peru, Columbia</p>
               </section>
               <section className="d-flex">
-                <strong>Type:&nbsp;</strong>
-                <div>
+                <strong className="text-warning">Type:&nbsp;</strong>
+                <div className="text-light">
                   {" "}
                   {oneProduct ? (
                     <div>{oneProduct.category.name}</div>
@@ -166,10 +161,14 @@ function ProductDetail() {
                       <Card.Title className="text-decoration-underline">
                         {product.name}
                       </Card.Title>{" "}
-                      <Card.Text>{product.description}</Card.Text>
+                      <Card.Text className="text-dark">
+                        {product.description}
+                      </Card.Text>
                       <div className="d-flex justify-content-center mt-auto">
                         <a href={`/products/${product.id}`}>
-                          <Button variant="dark">View Product</Button>
+                          <Button variant="dark" className="text-warning">
+                            View Product
+                          </Button>
                         </a>
                       </div>
                     </Card.Body>

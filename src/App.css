@@ -287,7 +287,7 @@ h4 {
 
 h5 {
   color: white;
-  font-family: myFont;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 24px;
 }
 
@@ -367,6 +367,27 @@ h5 {
 
 .category-single-origin {
   background-image: url("/src/assets/img/category-img/Cat%203.png"); /* Background image for Single Origin category */
+}
+
+/* About section */
+
+.about-icon {
+  background-size: contain;
+  background-position: center center;
+  border-radius: 50%;
+  height: auto;
+  width: 65%;
+  margin-bottom: 16px;
+}
+
+#about {
+  height: 50%;
+  width: auto;
+  background-image: url("/src/assets/img/coffee-beans-background.png");
+  background-size: auto 100%; /* Adjusted background size */
+  background-position: left center; /* Positioned on the left */
+  background-repeat: no-repeat;
+  margin-left: -50px; /* Cut off with left margin */
 }
 
 /* Special Products Home   */

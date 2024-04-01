@@ -1,14 +1,14 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import UticaBrandLogo from "../assets/img/logo_utica-removebg.png"; // Adjust the path as needed
+import UticaBrandLogo from "../assets/img/logo_utica-removebg.png";
 
 function Navigation() {
   return (
     <Navbar
       expand="lg"
-      bg="secondary"
+      bg="dark"
       variant="dark"
-      className="navbar-collapse main-navbar "
+      className="navbar-collapse main-navbar bg-light py-0 "
     >
       <Container>
         <Navbar.Brand href="/" className="m-0 p-0">
@@ -19,7 +19,10 @@ function Navigation() {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="collapse">
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="collapse bg-dark ps-3"
+        >
           <Nav className="me-auto">
             <Nav.Link className="navLink" href="/about-this-project">
               About this Project
@@ -31,17 +34,23 @@ function Navigation() {
               One Product
             </Nav.Link>
             <NavDropdown
-              className="navLink"
+              className="navLink z-index9999"
               title="Categories"
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item href="/category/flavored">
+              <NavDropdown.Item
+                className="z-index9999"
+                href="/category/flavored"
+              >
                 Flavored
               </NavDropdown.Item>
-              <NavDropdown.Item href="/category/blends">
+              <NavDropdown.Item className="z-index9999" href="/category/blends">
                 Blends
               </NavDropdown.Item>
-              <NavDropdown.Item href="/category/single Origin">
+              <NavDropdown.Item
+                className="z-index9999"
+                href="/category/single Origin"
+              >
                 Single Origin
               </NavDropdown.Item>
               {/* <NavDropdown.Divider />
