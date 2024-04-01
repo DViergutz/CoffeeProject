@@ -50,8 +50,6 @@ function ProductDetail() {
       <div className="main-section ">
         <div className="row d-flex mt-2 ">
           <div className="col-lg-6 col-md-6 col-sm-12 text-center">
-            {" "}
-            {/* Added responsive classes */}
             {oneProduct ? (
               <img
                 src={oneProduct.image}
@@ -60,8 +58,7 @@ function ProductDetail() {
                   maxWidth: "100%",
                   height: "",
                   maxHeight: "600px",
-                  // marginTop: "-50px",
-                }} // Adjust size to fit the container
+                }}
                 alt={oneProduct.image}
               />
             ) : (
@@ -69,8 +66,6 @@ function ProductDetail() {
             )}
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 ">
-            {" "}
-            {/* Added responsive classes */}
             <div className="product border rounded p-2">
               <h3 className="text-decoration-underline text-center">
                 {oneProduct ? (

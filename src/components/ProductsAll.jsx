@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import imageSrc from "../assets/img/BlendsArtOfDarkness.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 

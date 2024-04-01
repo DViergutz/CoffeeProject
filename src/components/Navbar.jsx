@@ -34,17 +34,23 @@ function Navigation() {
               One Product
             </Nav.Link>
             <NavDropdown
-              className="navLink"
+              className="navLink z-index9999"
               title="Categories"
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item href="/category/flavored">
+              <NavDropdown.Item
+                className="z-index9999"
+                href="/category/flavored"
+              >
                 Flavored
               </NavDropdown.Item>
-              <NavDropdown.Item href="/category/blends">
+              <NavDropdown.Item className="z-index9999" href="/category/blends">
                 Blends
               </NavDropdown.Item>
-              <NavDropdown.Item href="/category/single Origin">
+              <NavDropdown.Item
+                className="z-index9999"
+                href="/category/single Origin"
+              >
                 Single Origin
               </NavDropdown.Item>
               {/* <NavDropdown.Divider />
