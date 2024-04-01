@@ -66,7 +66,8 @@ function Home() {
           <div className="row mb-4">
             <div className="">
               <h2 className="text-start">
-                Everything starts with <span>Coffee</span>
+                Everything starts with{" "}
+                <span className="text-orange">Coffee</span>
               </h2>
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
                 <div className="mr-md-3 mb-md-0 mb-3">
@@ -101,7 +102,6 @@ function Home() {
                 </div>
                 <div className=" ms-3">
                   {" "}
-                  {/* Reduced the margin to ms-3 */}
                   <h5 className="fw-semibold">The Utica Coffe Brand</h5>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
@@ -133,9 +133,6 @@ function Home() {
                     accusamus dicta officiis neque? Ut vel hic ipsum.
                   </p>
                 </div>
-              </div>
-              <div className="mt-5">
-                <button className="btn-hero">Explore our products</button>
               </div>
             </div>
           </div>
@@ -239,7 +236,9 @@ function Home() {
                   </p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product">View Product</button>
+                  <button className="btn btn-view-product w-100 me-2">
+                    View Product
+                  </button>
                   <div className="btn-cart">
                     <i className="bi bi-cart"></i>
                   </div>
