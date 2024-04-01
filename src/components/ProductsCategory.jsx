@@ -32,7 +32,7 @@ function ProductsCategory() {
           {productsOfCategory ? (
             productsOfCategory.map((product) => (
               <div
-                className="col-lg-3 col-md-6 col-sm-12 align-items-stretch d-flex g-2" // Added responsive classes
+                className="col-lg-3 col-md-6 col-sm-12 align-items-stretch d-flex g-3"
                 key={product.id}
               >
                 <Card>
@@ -42,10 +42,12 @@ function ProductsCategory() {
                     id="relatedProductImg"
                   />
                   <Card.Body className="d-flex flex-column justify-content-between">
-                    <Card.Title className="text-decoration-underline">
+                    <Card.Title className="text-decoration-underline text-warning">
                       {product.name}
-                    </Card.Title>{" "}
-                    <Card.Text>{product.description}</Card.Text>
+                    </Card.Title>
+                    <Card.Text className="text-dark">
+                      {product.description}
+                    </Card.Text>
                     <div className="d-flex justify-content-center mt-auto">
                       <a href={`/products/${product.id}`}>
                         <Button variant="dark">View Product</Button>
