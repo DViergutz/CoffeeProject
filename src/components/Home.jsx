@@ -71,7 +71,6 @@ function Home() {
               </div>
               <div className="ms-3">
                 {" "}
-                {/* Reduced the margin to ms-3 */}
                 <h5 className="fw-semibold">Our Mission</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
@@ -119,7 +118,6 @@ function Home() {
               </div>
               <div className=" ms-3">
                 {" "}
-                {/* Reduced the margin to ms-3 */}
                 <h5 className="fw-semibold">The Best Part?</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
@@ -130,7 +128,7 @@ function Home() {
               </div>
             </div>
             <div className="mt-5">
-              <button className="btn-view-product">Explore our products</button>
+              <button className="btn-our-products">Explore our products</button>
             </div>
           </div>
         </div>

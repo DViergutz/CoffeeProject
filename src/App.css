@@ -417,6 +417,17 @@ h5 {
   border-radius: 8px;
 }
 
+.btn-our-products {
+  background-color: transparent;
+  color: #ee7828;
+  border: 1px solid #ee77281d;
+  padding: 8px 30px;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .btn-view-product {
   background-color: transparent;
   color: #ee7828;
