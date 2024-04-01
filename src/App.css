@@ -393,13 +393,15 @@ h5 {
 /* Special Products Home   */
 
 .special-product-card {
-  background-color: rgba(255, 255, 255, 0.199);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ee772855; /* Use button color for the border */
   border-radius: 10px;
   padding: 16px;
   text-align: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 16px;
+  margin-top: 80px;
 }
 
 .product-image {
@@ -429,6 +431,7 @@ h5 {
   border-radius: 8px;
   height: 300px;
   background-repeat: no-repeat;
+  margin-top: -80px;
 }
 .special-product-2 {
   background-image: url("/src/assets/img/Flavored-ChocolateAmaretto.png");
@@ -437,6 +440,7 @@ h5 {
   border-radius: 8px;
   height: 300px;
   background-repeat: no-repeat;
+  margin-top: -80px;
 }
 
 .special-product-3 {
@@ -446,6 +450,7 @@ h5 {
   border-radius: 8px;
   height: 300px;
   background-repeat: no-repeat;
+  margin-top: -80px;
 }
 
 .special-product-4 {
@@ -455,6 +460,7 @@ h5 {
   border-radius: 8px;
   height: 300px;
   background-repeat: no-repeat;
+  margin-top: -80px;
 }
 /* Blog section/newsletter */
 
@@ -496,18 +502,22 @@ h5 {
   font-size: 1.2rem;
 }
 
-.UticaBrandLogo {
-  height: 126;
+.brand-logo {
+  height: 126px;
   width: 126px;
+  background-color: #dee2e6;
 }
+
 .nav-link:hover {
   background-color: #343a40;
-  color: #fff;
+  color: #f0f2dc;
+  padding-left: 1.5rem;
 }
 
 .dropdown-item:hover {
   background-color: #343a40;
-  color: #fff;
+  color: #f0f2dc;
+  padding-left: 2rem;
 }
 
 .img-checkout {

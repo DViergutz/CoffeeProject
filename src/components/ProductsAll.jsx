@@ -14,7 +14,6 @@ function ProductsAll() {
           method: "GET",
           url: `http://localhost:3000/products`,
         });
-        console.log("Response:", response.data);
         setproducts(response.data);
       } catch (error) {
         console.error("Error:", error);

@@ -7,7 +7,6 @@ import Button from "react-bootstrap/Button";
 function ProductsCategory() {
   const params = useParams();
   const [productsOfCategory, setproductsOfCategory] = useState();
-  console.log(params.categoryName);
 
   useEffect(() => {
     const fetchProductsOfCategory = async () => {
