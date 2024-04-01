@@ -226,7 +226,7 @@ footer {
 
 .background-video {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -322,6 +322,14 @@ h5 {
   padding-top: 150px;
   padding-bottom: 32px;
 }
+
+.bg-fondo3 {
+  background-image: url("./assets/img/Fondo3.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .category-card {
   position: relative;
   height: 500px;

@@ -47,7 +47,7 @@ function ProductDetail() {
 
   return (
     <>
-      <div className="main-section ">
+      <div className="main-section bg-fondo3  ">
         <div className="row d-flex mt-2 ">
           <div className="col-lg-6 col-md-6 col-sm-12 text-center">
             {oneProduct ? (
