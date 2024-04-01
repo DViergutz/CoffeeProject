@@ -391,11 +391,11 @@ h5 {
 #about {
   height: 50%;
   width: auto;
-  background-image: url("/src/assets/img/coffee-beans-background.png");
-  background-size: auto 100%; /* Adjusted background size */
+  background-image: url("/src/assets/img/sack.png");
+  background-size: auto 90%; /* Adjusted background size */
   background-position: left center; /* Positioned on the left */
   background-repeat: no-repeat;
-  margin-left: -50px; /* Cut off with left margin */
+  margin-left: -90px; /* Cut off with left margin */
 }
 
 /* Special Products Home   */
