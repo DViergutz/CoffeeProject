@@ -159,7 +159,7 @@ function Home() {
         <div className="container">
           <h2 className="text-center">Special Products</h2>
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="special-product-card">
                 <div className="special-product-1 mb-2"></div>
                 <div className="text-start">
@@ -184,7 +184,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="special-product-card">
                 <div className="special-product-2 mb-2"></div>
                 <div className="text-start">
@@ -209,7 +209,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="special-product-card">
                 <div className="special-product-3 mb-2"></div>
                 <div className="text-start">
@@ -234,7 +234,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-6 col-lg-3">
               <div className="special-product-card">
                 <div className="special-product-4 mb-2"></div>
                 <div className="text-start">
