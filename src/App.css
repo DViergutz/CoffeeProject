@@ -301,14 +301,16 @@ h5 {
 }
 
 .align-navigation-menu {
+  background-image: url("./assets/img/POSIBLEFONDO7.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .main-section {
-  position: relative;
-  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -500,18 +502,22 @@ h5 {
   font-size: 1.2rem;
 }
 
-.UticaBrandLogo {
-  height: 126;
+.brand-logo {
+  height: 126px;
   width: 126px;
+  background-color: #dee2e6;
 }
+
 .nav-link:hover {
   background-color: #343a40;
-  color: #fff;
+  color: #f0f2dc;
+  padding-left: 1.5rem;
 }
 
 .dropdown-item:hover {
   background-color: #343a40;
-  color: #fff;
+  color: #f0f2dc;
+  padding-left: 2rem;
 }
 
 .img-checkout {
