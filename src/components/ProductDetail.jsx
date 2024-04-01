@@ -40,7 +40,6 @@ function ProductDetail() {
           (product) => product.name !== oneProduct.name
         );
         setRelatedProducts(filteredRelatedProducts);
-        console.log(filteredRelatedProducts);
       } catch (error) {
         console.error("Error:", error);
       }

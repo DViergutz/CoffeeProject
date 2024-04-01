@@ -49,7 +49,7 @@ function Home() {
         </div>
       </div>
       <div id="categories" ref={categories} className="main-section">
-        <h2>Our Categories</h2>
+        <h2>Our Coffee Collections</h2>
         <div className="container">
           <div className="row">
             <div className="col-md-4">

@@ -10,66 +10,10 @@
 .bold {
   font-weight: 700;
 }
-.footer {
-  width: 100vw;
-  height: 11rem;
-  padding: 1.5rem;
-  /* background-color: #dcb288; */
-  /* background-image: url("./assets/img/granoCafe.jpg"); */
+
+footer {
   background-color: black;
-  background-position: bottom;
-  background-size: 20rem;
-  bottom: 0;
-  justify-content: space-between;
-}
-
-.divCointainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.social {
-  display: flex;
-  right: 50%;
-  z-index: 800;
-  align-items: center;
-
-  gap: 1.5rem;
-  justify-content: center;
-  height: 3rem;
-  align-items: flex-start;
-}
-
-body > div > main > div.social > a {
-  display: flex;
-  align-items: flex-start;
-}
-
-.social-icon {
-  cursor: pointer;
-  color: white;
-}
-
-.social-icon:hover {
-  transform: scale(1.1);
-  /*     color: var(--color-brand-primary);
-*/
-}
-
-.textFooter {
-  font-weight: bold;
-}
-
-.textRoutesFooter a {
-  text-decoration: none;
-  color: white;
-}
-
-.logoUticaFooter {
-  width: 8rem;
-}
-.HeadingsFooter {
-  color: white;
+  padding-top: 2rem;
 }
 
 /* /////// navigation in home ////// */
@@ -154,6 +98,12 @@ h4 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 32px;
   font-weight: 600;
+}
+
+h5 {
+  color: white;
+  font-family: myFont;
+  font-size: 24px;
 }
 
 .hero-subheading {
