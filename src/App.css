@@ -287,7 +287,7 @@ h4 {
 
 h5 {
   color: white;
-  font-family: myFont;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 24px;
 }
 
@@ -381,7 +381,7 @@ h5 {
 #about {
   height: 50%;
   width: auto;
-  background-image: url("https://i.pinimg.com/564x/79/f3/d4/79f3d4e522788861b185a8c2dc39f64b.jpg");
+  background-image: url("/src/assets/img/coffee-beans-background.png");
   background-size: auto 100%; /* Adjusted background size */
   background-position: left center; /* Positioned on the left */
   background-repeat: no-repeat;
@@ -490,39 +490,23 @@ h5 {
   /* padding: 20px; */
   z-index: 10; /* Ensure navbar is above hero image */
 }
-
-.z-index9999 {
-  z-index: 9999;
-}
-
 .navLink {
   font-size: 1.2rem;
 }
 
-.brand-logo {
-  height: 126px;
+.UticaBrandLogo {
+  height: 126;
   width: 126px;
-  background-color: #dee2e6;
-}
-
-.brand-logo:hover {
-  background-color: #f0f2dc;
-}
-.nav-link {
-  color: #dee2e6;
 }
 .nav-link:hover {
   background-color: #343a40;
-  color: #f0f2dc;
-  padding-left: 1.5rem;
+  color: #fff;
 }
 
 .dropdown-item:hover {
   background-color: #343a40;
-  color: #f0f2dc;
-  padding-left: 2rem;
+  color: #fff;
 }
-/* end navbar */
 
 .img-checkout {
   height: 85px;

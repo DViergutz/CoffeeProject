@@ -96,7 +96,7 @@ function Home() {
               <div className=" ms-3">
                 {" "}
                 {/* Reduced the margin to ms-3 */}
-                <h5 className="fw-semibold">Our Mission</h5>
+                <h5 className="fw-semibold">The Utica Coffe Brand</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
                   fuga maiores sequi magni perspiciatis quisquam dolor modi,
@@ -120,7 +120,7 @@ function Home() {
               <div className=" ms-3">
                 {" "}
                 {/* Reduced the margin to ms-3 */}
-                <h5 className="fw-semibold">Our Mission</h5>
+                <h5 className="fw-semibold">The Best Part?</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
                   fuga maiores sequi magni perspiciatis quisquam dolor modi,
