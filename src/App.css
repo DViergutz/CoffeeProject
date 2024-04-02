@@ -376,6 +376,11 @@ h5 {
 }
 
 .card-img {
+<<<<<<< Updated upstream
+=======
+  border: none !important;
+  border-radius: 8px;
+>>>>>>> Stashed changes
   height: 300px;
   width: auto;
   margin-top: -80px;
@@ -460,21 +465,33 @@ h5 {
   z-index: 10;
 }
 
+.brand-logo-no-hover:hover {
+  background-color: transparent !important;
+}
+
 .navLink {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   color: white;
 }
 
+.navDropdown:hover {
+  color: #d96c21 !important;
+}
+
 .navLink:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
-  color: #d96c21;
+  color: #d96c21 !important;
 }
 
 .brand-logo {
   height: 100px;
   width: 100px;
+}
+
+.brand-logo:hover {
+  background-color: transparent !important;
 }
 
 .nav-link {
@@ -485,6 +502,13 @@ h5 {
 }
 
 .nav-link:hover {
+<<<<<<< Updated upstream
+=======
+  background-color: #343a40;
+  color: #f0f2dc;
+  background-color: transparent !important;
+  padding-left: 1.5rem;
+>>>>>>> Stashed changes
   color: #d96c21;
   padding-left: 16px;
 }

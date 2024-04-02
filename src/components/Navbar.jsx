@@ -6,7 +6,7 @@ function Navigation() {
   return (
     <Navbar expand="lg" className="navbar-collapse main-navbar">
       <Container>
-        <Navbar.Brand href="/" className="m-0 p-0">
+        <Navbar.Brand href="/" className="m-0 p-0 brand-logo-no-hover">
           <img
             src={UticaBrandLogo}
             alt="Utica Brand Logo"
@@ -23,23 +23,24 @@ function Navigation() {
               ALL PRODUCTS
             </Nav.Link>
             <NavDropdown
-              className="navLink z-index9999"
+              className="navLink  navDropdown"
               title="CATEGORIES"
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item
-                className="z-index9999"
-                href="/category/flavored"
-              >
+              <NavDropdown.Item className="" href="/category/flavored">
                 Flavored
               </NavDropdown.Item>
-              <NavDropdown.Item className="z-index9999" href="/category/blends">
+              <NavDropdown.Item className="" href="/category/blends">
                 Blends
               </NavDropdown.Item>
+<<<<<<< HEAD
+              <NavDropdown.Item className="" href="/category/single-origin">
+=======
               <NavDropdown.Item
                 className="z-index9999"
                 href="/category/Single Origin"
               >
+>>>>>>> f9ad3617efe19d3d2a78e5a4826c16143c29a270
                 Single Origin
               </NavDropdown.Item>
             </NavDropdown>
