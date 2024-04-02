@@ -376,9 +376,20 @@ h5 {
 }
 
 .card-img {
-  height: 300px;
+  border: none !important;
+  border-radius: 8px;
   width: auto;
   margin-top: -80px;
+}
+
+@media screen and (max-width: 1000px) {
+  .card-img {
+    border: none !important;
+    border-radius: 8px;
+    height: 300px;
+    width: auto;
+    margin-top: -80px;
+  }
 }
 
 .special-product-2 {
@@ -460,21 +471,33 @@ h5 {
   z-index: 10;
 }
 
+.brand-logo-no-hover:hover {
+  background-color: transparent !important;
+}
+
 .navLink {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   color: white;
 }
 
+.navDropdown:hover {
+  color: #d96c21 !important;
+}
+
 .navLink:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
-  color: #d96c21;
+  color: #d96c21 !important;
 }
 
 .brand-logo {
   height: 100px;
   width: 100px;
+}
+
+.brand-logo:hover {
+  background-color: transparent !important;
 }
 
 .nav-link {
@@ -485,6 +508,10 @@ h5 {
 }
 
 .nav-link:hover {
+  background-color: #343a40;
+  color: #f0f2dc;
+  background-color: transparent !important;
+  padding-left: 1.5rem;
   color: #d96c21;
   padding-left: 16px;
 }
