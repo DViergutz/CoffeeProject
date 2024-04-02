@@ -4,6 +4,7 @@ import ScrollToTop from "./ScrollToTop";
 import "../App.css";
 import { GoDot } from "react-icons/go";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Card from "react-bootstrap/Card";
 
 function Home() {
   const categories = useRef(null);
@@ -168,114 +169,146 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="special-products" ref={specialProducts} className="main-section">
+      <div id="special-products" className="main-section">
         <div className="container">
           <h2 className="text-center">Special Products</h2>
           <div className="row">
-            <div className="col-md-3">
-              <div className="special-product-card">
-                <div className="special-product-1 mb-2"></div>
-                <div className="text-start">
-                  <p className="fs-3 fw-semibold">Art of Darkness</p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                    nihil aliquid a cupiditate error neque adipisci, dolorum rem
-                    asperiores!
-                  </p>
-                  <p className="fs-3 fw-semibold">
-                    <span className="text-orange">$250</span>{" "}
-                    <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
-                    </span>
-                  </p>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product w-100 me-2">
-                    View Product
-                  </button>
-                  <div className="btn-cart">
-                    <i className="bi bi-cart"></i>
+            <div className="col-md-6 col-lg-6 col-xl-3 ">
+              <div className="d-flex flex-column h-100 ">
+                <div className="special-product-card h-100 d-flex flex-column">
+                  <div className="special-product-1"></div>
+                  {/* <Card.Img variant="top" className="special-product-1 " /> */}
+                  <div className="text-start ">
+                    <p className="fs-3 fw-semibold">Art of Darkness</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
+                      corrupti est odio repellat voluptatibus praesentium
+                      distinctio dicta!
+                    </p>
+                  </div>
+                  <div className="mt-auto">
+                    <p className="fs-3 fw-semibold text-start">
+                      <span className="text-orange me-3 fs-2">$190</span>
+                      <span className="text-decoration-line-through fs-5">
+                        $250
+                      </span>
+                    </p>
+                    <div className="d-flex justify-content-between">
+                      <a href="/products/9" className="me-2">
+                        <button className="btn btn-view-product height65">
+                          View Product
+                        </button>
+                      </a>
+                      <button className="btn rounded-circle btn-cart">
+                        <i className="bi bi-cart"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
-              <div className="special-product-card">
-                <div className="special-product-2 mb-2"></div>
-                <div className="text-start">
-                  <p className="fs-3 fw-semibold">Chocolate Amaretto</p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                    nihil aliquid a cupiditate error neque adipisci, dolorum rem
-                    asperiores!
-                  </p>
-                  <p className="fs-3 fw-semibold">
-                    <span className="text-orange">$250</span>{" "}
-                    <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
-                    </span>
-                  </p>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product w-100 me-2">
-                    View Product
-                  </button>
-                  <div className="btn-cart">
-                    <i className="bi bi-cart"></i>
+            <div className="col-md-6 col-lg-6 col-xl-3 ">
+              <div className="d-flex flex-column h-100 ">
+                <div className="special-product-card h-100 d-flex flex-column">
+                  <div className="special-product-2"></div>
+                  {/* <Card.Img variant="top" className="special-product-1 " /> */}
+                  <div className="text-start ">
+                    <p className="fs-3 fw-semibold">Chocolate Amaretto</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
+                      corrupti est odio repellat voluptatibus praesentium
+                      distinctio dicta!
+                    </p>
+                  </div>
+                  <div className="mt-auto">
+                    <p className="fs-3 fw-semibold text-start">
+                      <span className="text-orange me-3 fs-2">$190</span>
+                      <span className="text-decoration-line-through fs-5">
+                        $250
+                      </span>
+                    </p>
+                    <div className="d-flex justify-content-between">
+                      <a href="/products/3" className="">
+                        <button className="btn btn-view-product height65">
+                          View Product
+                        </button>
+                      </a>
+                      <button className="btn rounded-circle btn-cart">
+                        <i className="bi bi-cart"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
-              <div className="special-product-card">
-                <div className="special-product-3 mb-2"></div>
-                <div className="text-start">
-                  <p className="fs-3 fw-semibold">Colombia Organic</p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                    nihil aliquid a cupiditate error neque adipisci, dolorum rem
-                    asperiores!
-                  </p>
-                  <p className="fs-3 fw-semibold">
-                    <span className="text-orange">$250</span>{" "}
-                    <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
-                    </span>
-                  </p>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product w-100 me-2">
-                    View Product
-                  </button>
-                  <div className="btn-cart">
-                    <i className="bi bi-cart"></i>
+            <div className="col-md-6 col-lg-6 col-xl-3 ">
+              <div className="d-flex flex-column h-100 ">
+                <div className="special-product-card h-100 d-flex flex-column">
+                  <div className="special-product-3"></div>
+                  {/* <Card.Img variant="top" className="special-product-1 " /> */}
+                  <div className="text-start ">
+                    <p className="fs-3 fw-semibold">Colombia Organic</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
+                      corrupti est odio repellat voluptatibus praesentium
+                      distinctio dicta!
+                    </p>
+                  </div>
+                  <div className="mt-auto">
+                    <p className="fs-3 fw-semibold text-start">
+                      <span className="text-orange me-3 fs-2">$190</span>
+                      <span className="text-decoration-line-through fs-5">
+                        $250
+                      </span>
+                    </p>
+                    <div className="d-flex justify-content-between">
+                      <a href="/products/11" className="">
+                        <button className="btn btn-view-product height65">
+                          View Product
+                        </button>
+                      </a>
+                      <button className="btn rounded-circle btn-cart">
+                        <i className="bi bi-cart"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
-              <div className="special-product-card">
-                <div className="special-product-4 mb-2"></div>
-                <div className="text-start">
-                  <p className="fs-3 fw-semibold">Italian Roast</p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                    nihil aliquid a cupiditate error neque adipisci, dolorum rem
-                    asperiores!
-                  </p>
-                  <p className="fs-3 fw-semibold">
-                    <span className="text-orange">$250</span>{" "}
-                    <span className="text-decoration-line-through fs-5 fw-light">
-                      $220
-                    </span>
-                  </p>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product w-100 me-2">
-                    View Product
-                  </button>
-                  <div className="btn-cart">
-                    <i className="bi bi-cart"></i>
+            <div className="col-md-6 col-lg-6 col-xl-3 ">
+              <div className="d-flex flex-column h-100 ">
+                <div className="special-product-card h-100 d-flex flex-column">
+                  <div className="special-product-4"></div>
+                  {/* <Card.Img variant="top" className="special-product-1 " /> */}
+                  <div className="text-start ">
+                    <p className="fs-3 fw-semibold">Italian Roast</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
+                      corrupti est odio repellat voluptatibus praesentium
+                      distinctio dicta!
+                    </p>
+                  </div>
+                  <div className="mt-auto">
+                    <p className="fs-3 fw-semibold text-start">
+                      <span className="text-orange me-3 fs-2">$190</span>
+                      <span className="text-decoration-line-through fs-5">
+                        $250
+                      </span>
+                    </p>
+                    <div className="d-flex justify-content-between">
+                      <a href="/products/7" className="">
+                        <button className="btn btn-view-product height65">
+                          View Product
+                        </button>
+                      </a>
+                      <button className="btn rounded-circle btn-cart">
+                        <i className="bi bi-cart"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

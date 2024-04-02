@@ -371,12 +371,12 @@ h5 {
   border-radius: 8px;
   height: 300px;
   width: auto;
-
   background-repeat: no-repeat;
   margin-top: -80px;
 }
 
 .card-img {
+  border: none !important;
   border-radius: 8px;
   height: 300px;
   width: auto;
@@ -570,6 +570,7 @@ h5 {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .height65 {
   height: 65px;
 }
