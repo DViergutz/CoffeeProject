@@ -455,9 +455,10 @@ h5 {
 /* Blog section/newsletter */
 
 .background-newsletter {
-  background-image: url("/src/assets/img/newsletter-background.png");
+  background-image: url("/src/assets/img/premium6.png");
   background-size: cover;
   background-position: center;
+  opacity: 80%;
 }
 
 .btn-subscribe {
