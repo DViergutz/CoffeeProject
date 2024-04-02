@@ -169,7 +169,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="special-products" className="main-section">
+      <div id="special-products" ref={specialProducts} className="main-section">
         <div className="container">
           <h2 className="text-center">Special Products</h2>
           <div className="row">
