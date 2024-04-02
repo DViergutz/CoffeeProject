@@ -7,6 +7,7 @@ import user from "../assets/img/user.svg";
 import cart from "../assets/img/cart.svg";
 import burger from "../assets/img/burger.svg";
 import close from "../assets/img/close.svg";
+import backHome from "../assets/img/return.svg";
 
 function PanelAdmin() {
   const [mobileNav, setMobileNav] = useState(false);
@@ -52,7 +53,7 @@ function PanelAdmin() {
         <div className="secondSectionDashboard">
           <div className="administrationPanel">
             <img src={burger} alt="" onClick={() => setMobileNav(true)} />
-            <p>Administration Panel</p>
+            <p className="titlePanel">Administration Panel</p>
             <div className="profileImg">
               <img src={profile} alt="" />
             </div>
@@ -93,7 +94,10 @@ function PanelAdmin() {
               </div>
               <hr />
               <div className="returnToWebsite">
-                <a href="/">Return to Website</a>
+                <a href="/">
+                  {/* <img src={backHome} alt="" /> */}
+                  Return to Website
+                </a>
               </div>
             </div>
           )}

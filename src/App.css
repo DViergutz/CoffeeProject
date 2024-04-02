@@ -550,8 +550,13 @@ h5 {
 }
 
 .navbar > a > img {
-  width: 2rem;
+  width: 1.6rem;
 }
+
+.returnToWebsite > a > img {
+  width: 1.6rem;
+}
+
 .navbar > a {
   display: flex;
   gap: 1rem;
@@ -568,7 +573,7 @@ h5 {
   background-color: rgba(128, 128, 128, 0.096);
 }
 
-/* DASHBOARD ADMIN*/
+/* PANEL ADMIN*/
 
 .mainAdmin {
   display: flex;
@@ -586,9 +591,14 @@ h5 {
   width: 20vw;
   height: 100vh;
 }
+
+.titlePanel {
+  font-size: 1.5rem;
+}
+
 .imgLogoUticaDashboard {
-  width: 8rem;
-  height: 8rem;
+  width: 6.8rem;
+  height: 6.8rem;
 }
 
 .navbar {
@@ -612,6 +622,7 @@ h5 {
   display: flex;
   justify-content: center;
   background-color: rgb(54, 41, 41);
+  height: 13vh;
 }
 
 .secondSectionDashboard {
@@ -630,6 +641,12 @@ h5 {
 .infoDashboard p {
   color: black;
 }
+.infoDashboard h5 {
+  color: black;
+  font-family: var(--bs-body-font-family);
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
 
 .administrationPanel {
   height: 13vh;
@@ -637,8 +654,9 @@ h5 {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  border-bottom: 1px solid rgb(54, 41, 41);
+
   font-size: 1.2rem;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.164); /* Sombra */
 }
 
 .administrationPanelMain {
@@ -647,6 +665,17 @@ h5 {
   height: 100%;
   background-color: rgba(128, 128, 128, 0.062);
 }
+
+.administrationPanelMainDashboard {
+  background-color: rgba(128, 128, 128, 0.062);
+  padding: 2rem;
+  height: 100%;
+}
+
+.tableHeadDashboard {
+  background-color: rgba(128, 128, 128, 0.096);
+}
+
 .profileImg {
   height: 3rem;
   width: 3rem;
@@ -670,7 +699,7 @@ h5 {
   width: 30%;
   min-width: 300px;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.281);
   overflow: hidden;
 }
 .dashboardCard > a {
@@ -754,6 +783,10 @@ h5 {
 .close {
   display: none;
 }
+
+/* -- -- --*/
+
+/* MOBILE VERSION */
 
 @media screen and (max-width: 500px) {
   .firstSectionDashboard {

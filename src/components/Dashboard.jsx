@@ -29,7 +29,7 @@ function Dashboard() {
               </div>
               <a href="">View all</a>
             </div>
-            <div className="dashboardCard">
+            <div className="dashboardCard shadow">
               <div>
                 <div className="dashboardIconContainer">
                   <img src={bag2} alt="bag-icon" className="dashboardIcon" />
@@ -60,61 +60,100 @@ function Dashboard() {
               <a href="">View all</a>
             </div>
           </div>
+
+          {/* TABLE */}
+
           <div className="lastOrders">
             <p>Last 10 orders</p>
-            <div className="dashboardTable">
-              <div className="tableHeader">
-                <p>Id</p>
-                <p>User</p>
-                <p>Total Price</p>
-              </div>
-              <div className="tableHeader">
-                <p>2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128</p>
-                <p>
-                  <span className="bold">Ma Pérez</span> (maria.perez@gmail.com)
-                </p>
-                <p> USD 227.00</p>
-                <a>View</a>
-              </div>
-              <div className="tableHeader">
-                <p>2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128</p>
-                <p>
-                  <span className="bold">Ma Pérez</span> (maria.perez@gmail.com)
-                </p>
-                <p> USD 227.00</p>
-                <a>View</a>
-              </div>
-              <div className="tableHeader">
-                <p>2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128</p>
-                <p>
-                  <span className="bold">Ma Pérez</span> (maria.perez@gmail.com)
-                </p>
-                <p> USD 227.00</p>
-                <a>View</a>
-              </div>
-              <div className="tableHeader">
-                <p>2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128</p>
-                <p>
-                  <span className="bold">Ma Pérez</span> (maria.perez@gmail.com)
-                </p>
-                <p> USD 227.00</p>
-                <a>View</a>
-              </div>
-              <div className="tableHeader">
-                <p>2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128</p>
-                <p>
-                  <span className="bold">Ma Pérez</span> (maria.perez@gmail.com)
-                </p>
-                <p> USD 227.00</p>
-                <a>View</a>
-              </div>
-              <div className="tableHeader">
-                <p>2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128</p>
-                <p>
-                  <span className="bold">Ma Pérez</span> (maria.perez@gmail.com)
-                </p>
-                <p> USD 227.00</p>
-                <a>View</a>
+            <div className="administrationPanelMainDashboard">
+              <div className="lastOrders">
+                <table className="dashboardTable">
+                  <thead className="tableHeadDashboard">
+                    <tr>
+                      <th>Id</th>
+                      <th>User</th>
+                      <th>Total Price</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody className="bodyTableProducts">
+                    <tr>
+                      <td className="bold">
+                        2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128
+                      </td>
+                      <td>
+                        <p>
+                          <span className="bold">Ma Pérez</span>{" "}
+                          (maria.perez@gmail.com)
+                        </p>
+                      </td>
+                      <td>USD 227.00</td>
+                      <td>
+                        <a href="">Edit</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="bold">
+                        2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128
+                      </td>
+                      <td>
+                        <p>
+                          <span className="bold">Ma Pérez</span>{" "}
+                          (maria.perez@gmail.com)
+                        </p>
+                      </td>
+                      <td>USD 227.00</td>
+                      <td>
+                        <a href="">Edit</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="bold">
+                        2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128
+                      </td>
+                      <td>
+                        <p>
+                          <span className="bold">Ma Pérez</span>{" "}
+                          (maria.perez@gmail.com)
+                        </p>
+                      </td>
+                      <td>USD 227.00</td>
+                      <td>
+                        <a href="">Edit</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="bold">
+                        2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128
+                      </td>
+                      <td>
+                        <p>
+                          <span className="bold">Ma Pérez</span>{" "}
+                          (maria.perez@gmail.com)
+                        </p>
+                      </td>
+                      <td>USD 227.00</td>
+                      <td>
+                        <a href="">Edit</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="bold">
+                        2ab0efb3-4ed3-4ce3-b6f1-2d9e49920128
+                      </td>
+                      <td>
+                        <p>
+                          <span className="bold">Ma Pérez</span>{" "}
+                          (maria.perez@gmail.com)
+                        </p>
+                      </td>
+                      <td>USD 227.00</td>
+                      <td>
+                        <a href="">Edit</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
