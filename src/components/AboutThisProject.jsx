@@ -1,10 +1,13 @@
 import React from "react";
+import linkedin from "../assets/img/linkedin.svg";
+import github from "../assets/img/github.svg";
+import mer from "../assets/img/MER.png";
 
 function AboutThisProject() {
   return (
-    <div>
+    <div className="mainAboutThisProject">
       <div className="hero-about">
-        <div className="d-flex flex-column">
+        <div className="textAboutProject d-flex flex-column">
           <h2 className="about-heading">What is Utica Coffee?</h2>
           <p className="about-subheading">
             Utica Coffee is an e-commerce platform inspired by Utica Coffee
@@ -29,7 +32,7 @@ function AboutThisProject() {
           </p>
         </div>
       </div>
-      <div className="main-section">
+      <div className="main-section bg-fondo3">
         <div className="about-info text-center d-flex flex-column align-items-center">
           <h2 className="text-light">Technologies & Tools</h2>
           <p>
@@ -60,7 +63,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/bootstrap.png"
                     alt=""
                   />
-                  <small>Bootstrap</small>
+                  <small className="text-orange spanAbout">Bootstrap</small>
                 </div>
               </div>
               <div className="col">
@@ -70,7 +73,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/css3.png"
                     alt=""
                   />
-                  <small>CSS3</small>
+                  <small className="text-orange spanAbout">CSS3</small>
                 </div>
               </div>
               <div className="col">
@@ -80,7 +83,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/discord.png"
                     alt=""
                   />
-                  <small>Discord</small>
+                  <small className="text-orange spanAbout">Discord</small>
                 </div>
               </div>
               <div className="col">
@@ -90,7 +93,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/figma.png"
                     alt=""
                   />
-                  <small>Figma</small>
+                  <small className="text-orange spanAbout">Figma</small>
                 </div>
               </div>
               <div className="col">
@@ -100,7 +103,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/github.png"
                     alt=""
                   />
-                  <small>Github</small>
+                  <small className="text-orange spanAbout">Github</small>
                 </div>
               </div>
               <div className="col">
@@ -110,7 +113,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/js.png"
                     alt=""
                   />
-                  <small>JavaScript</small>
+                  <small className="text-orange spanAbout">JavaScript</small>
                 </div>
               </div>
               <div className="col">
@@ -120,7 +123,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/nodejs.png"
                     alt=""
                   />
-                  <small>NodeJS</small>
+                  <small className="text-orange spanAbout">NodeJS</small>
                 </div>
               </div>
               <div className="col">
@@ -130,7 +133,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/react.png"
                     alt=""
                   />
-                  <small>React</small>
+                  <small className="text-orange spanAbout">React</small>
                 </div>
               </div>
               <div className="col">
@@ -140,7 +143,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/redux.png"
                     alt=""
                   />
-                  <small>Redux</small>
+                  <small className="text-orange spanAbout">Redux</small>
                 </div>
               </div>
               <div className="col">
@@ -150,14 +153,14 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/sql.png"
                     alt=""
                   />
-                  <small>SQL</small>
+                  <small className="text-orange spanAbout">SQL</small>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="main-section">
+      <div className="main-section bg-fondo3">
         <div className="about-info text-center d-flex flex-column align-items-center">
           <h2 className="text-light">Project Organization - MER</h2>
           <p>
@@ -169,8 +172,12 @@ function AboutThisProject() {
             infrastructure.
           </p>
         </div>
+
+        <div className="merAbout">
+          <img src={mer} alt="" />
+        </div>
       </div>
-      <div className="main-section">
+      <div className="main-section bg-fondo3">
         <div className="about-info text-center d-flex flex-column align-items-center">
           <h2 className="text-light">Product Design</h2>
           <p>
@@ -184,7 +191,7 @@ function AboutThisProject() {
           </p>
         </div>
       </div>
-      <div className="main-section">
+      <div className="main-section bg-fondo3">
         <div className="about-info text-center d-flex flex-column align-items-center">
           <h2 className="text-light">Admin Dashboard</h2>
           <p>
@@ -194,7 +201,7 @@ function AboutThisProject() {
           </p>
         </div>
       </div>
-      <div className="main-section">
+      <div className="main-section bg-fondo3">
         <div className="text-center d-flex flex-column align-items-center">
           <h2 className="text-light mb-4">Meet Our Team</h2>
           <p className="about-info">
@@ -213,9 +220,15 @@ function AboutThisProject() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">John Doe</h5>
-                  <a href="#" className="btn btn-primary">
-                    LinkedIn Profile
-                  </a>
+                  <hr />
+                  <div className="imgCardAbout">
+                    <a href="#" className="btn">
+                      <img src={linkedin} alt="" />
+                    </a>
+                    <a href="#" className="btn">
+                      <img src={github} alt="" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -228,9 +241,15 @@ function AboutThisProject() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">Jane Smith</h5>
-                  <a href="#" className="btn btn-primary">
-                    LinkedIn Profile
-                  </a>
+                  <hr />
+                  <div className="imgCardAbout">
+                    <a href="#" className="btn">
+                      <img src={linkedin} alt="" />
+                    </a>
+                    <a href="#" className="btn">
+                      <img src={github} alt="" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -243,9 +262,15 @@ function AboutThisProject() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">Alice Johnson</h5>
-                  <a href="#" className="btn btn-primary">
-                    LinkedIn Profile
-                  </a>
+                  <hr />
+                  <div className="imgCardAbout">
+                    <a href="#" className="btn">
+                      <img src={linkedin} alt="" />
+                    </a>
+                    <a href="#" className="btn">
+                      <img src={github} alt="" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -258,9 +283,15 @@ function AboutThisProject() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">Bob Williams</h5>
-                  <a href="#" className="btn btn-primary">
-                    LinkedIn Profile
-                  </a>
+                  <hr />
+                  <div className="imgCardAbout">
+                    <a href="#" className="btn">
+                      <img src={linkedin} alt="" />
+                    </a>
+                    <a href="#" className="btn">
+                      <img src={github} alt="" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -273,9 +304,15 @@ function AboutThisProject() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">Emily Brown</h5>
-                  <a href="#" className="btn btn-primary">
-                    LinkedIn Profile
-                  </a>
+                  <hr />
+                  <div className="imgCardAbout">
+                    <a href="#" className="btn">
+                      <img src={linkedin} alt="" />
+                    </a>
+                    <a href="#" className="btn">
+                      <img src={github} alt="" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
