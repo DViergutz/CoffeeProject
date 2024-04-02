@@ -444,6 +444,7 @@ h5 {
 .nav-link:hover {
   background-color: #343a40;
   color: #f0f2dc;
+  background-color: transparent !important;
   padding-left: 1.5rem;
 }
 
