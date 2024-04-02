@@ -3,7 +3,7 @@ import React from "react";
 function Checkout() {
   return (
     <div>
-      <div className="main-section">
+      <div className="main-section bg-fondo3">
         <h2>Shopping Cart</h2>
         <hr />
         <div className="row">
