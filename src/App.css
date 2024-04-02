@@ -370,9 +370,19 @@ h5 {
   background-position: center;
   border-radius: 8px;
   height: 300px;
+  width: auto;
+
   background-repeat: no-repeat;
   margin-top: -80px;
 }
+
+.card-img {
+  border-radius: 8px;
+  height: 300px;
+  width: auto;
+  margin-top: -80px;
+}
+
 .special-product-2 {
   background-image: url("/src/assets/img/Flavored-ChocolateAmaretto.png");
   background-size: contain;
@@ -552,11 +562,16 @@ h5 {
   background-color: #ee7828;
   color: white;
   border: none;
-  padding: 7px 12px;
+  width: 65px;
+  height: 65px;
+  /* padding: 7px 12px; */
   font-size: 20px;
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+.height65 {
+  height: 65px;
 }
 
 .btn-cart:hover {
