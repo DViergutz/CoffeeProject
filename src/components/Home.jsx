@@ -71,7 +71,7 @@ function Home() {
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
         </div>
-        <div className="col-6">
+        <div className="col-6 z-2">
           <div className="row mb-4">
             <div className="make-responsive">
               <h2 className="text-start">
