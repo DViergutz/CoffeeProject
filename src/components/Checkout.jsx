@@ -3,7 +3,7 @@ import React from "react";
 function Checkout() {
   return (
     <div className="bg-fondo3">
-      <div className="container">
+      <div className="container pb-5">
         <h2>Shopping Cart</h2>
         <div className="row">
           <div className="col-md-8 bg-light border rounded pt-4 checkout-card">
@@ -20,7 +20,6 @@ function Checkout() {
               </div>
               <div className="col fw-semibold d-flex justify-content-center align-items-center">
                 <div className="d-flex flex-column align-items-center">
-                  <span>Quantity</span>
                   <div className="d-flex border p-1">
                     <span>-</span>
                     <span className="mx-3">1</span>
@@ -39,7 +38,6 @@ function Checkout() {
               </div>
               <div className="col fw-semibold d-flex justify-content-center align-items-center">
                 <div className="d-flex flex-column align-items-center">
-                  <span>Quantity</span>
                   <div className="d-flex border p-1">
                     <span>-</span>
                     <span className="mx-3">1</span>
@@ -58,7 +56,6 @@ function Checkout() {
               </div>
               <div className="col fw-semibold d-flex justify-content-center align-items-center">
                 <div className="d-flex flex-column align-items-center">
-                  <span>Quantity</span>
                   <div className="d-flex border p-1">
                     <span>-</span>
                     <span className="mx-3">1</span>
@@ -77,7 +74,6 @@ function Checkout() {
               </div>
               <div className="col fw-semibold d-flex justify-content-center align-items-center">
                 <div className="d-flex flex-column align-items-center">
-                  <span>Quantity</span>
                   <div className="d-flex border p-1">
                     <span>-</span>
                     <span className="mx-3">1</span>

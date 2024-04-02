@@ -66,7 +66,7 @@ function ProductDetail() {
             )}
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12 ">
-            <div className="special-product-card d-flex flex-column justify-content-start p-5">
+            <div className="m-0 special-product-card d-flex flex-column justify-content-start p-5">
               <h3 className=" text-start">
                 {oneProduct ? (
                   <div>{oneProduct.name}</div>
@@ -154,32 +154,36 @@ function ProductDetail() {
           <div className="row mb-5">
             {relatedProducts ? (
               relatedProducts.map((product) => (
-                <div
-                  className="col-lg-3 col-md-6 col-sm-12 align-items-stretch d-flex g-2" // Added responsive classes
-                  key={product.id}
-                >
-                  <Card>
-                    <Card.Img
-                      variant="top"
-                      src={product.image}
-                      id="relatedProductImg"
-                    />
-                    <Card.Body className="d-flex flex-column justify-content-between">
-                      <Card.Title className="text-decoration-underline">
-                        {product.name}
-                      </Card.Title>{" "}
-                      <Card.Text className="text-dark">
-                        {product.description}
-                      </Card.Text>
-                      <div className="d-flex justify-content-center mt-auto">
-                        <a href={`/products/${product.id}`}>
-                          <Button variant="dark" className="text-warning">
-                            View Product
-                          </Button>
-                        </a>
+                <div className="col-md-6 col-lg-3 col-xl-3 " key={product.id}>
+                  <div className="d-flex flex-column h-100  ">
+                    <div className="special-product-card h-100 d-flex flex-column">
+                      <Card.Img
+                        variant="top"
+                        className="card-img"
+                        src={product.image}
+                      />
+                      <div className="text-start ">
+                        <p className="fs-3 fw-semibold">{product.name}</p>
+                        <p>{product.description}</p>
                       </div>
-                    </Card.Body>
-                  </Card>
+
+                      <div className="mt-auto">
+                        <p className="fs-3 fw-semibold text-center">
+                          <span className="text-orange">${product.price}</span>{" "}
+                        </p>
+                        <div className="d-flex justify-content-evenly">
+                          <a href={`/products/${product.id}`} className="me-2">
+                            <button className="btn btn-view-product height65">
+                              View Product
+                            </button>
+                          </a>
+                          <button className="btn rounded-circle btn-cart ">
+                            <i className="bi bi-cart"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))
             ) : (
