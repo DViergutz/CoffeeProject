@@ -2,6 +2,7 @@ import React from "react";
 import linkedin from "../assets/img/linkedin.svg";
 import github from "../assets/img/github.svg";
 import mer from "../assets/img/MER.png";
+import Santi from "../assets/img/Santi.webp";
 
 function AboutThisProject() {
   return (
@@ -63,7 +64,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/bootstrap.png"
                     alt=""
                   />
-                  <small className="text-orange spanAbout">Bootstrap</small>
+                  <small className="text-orange ">Bootstrap</small>
                 </div>
               </div>
               <div className="col">
@@ -73,7 +74,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/css3.png"
                     alt=""
                   />
-                  <small className="text-orange spanAbout">CSS3</small>
+                  <small className="text-orange ">CSS3</small>
                 </div>
               </div>
               <div className="col">
@@ -83,7 +84,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/discord.png"
                     alt=""
                   />
-                  <small className="text-orange spanAbout">Discord</small>
+                  <small className="text-orange ">Discord</small>
                 </div>
               </div>
               <div className="col">
@@ -93,7 +94,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/figma.png"
                     alt=""
                   />
-                  <small className="text-orange spanAbout">Figma</small>
+                  <small className="text-orange ">Figma</small>
                 </div>
               </div>
               <div className="col">
@@ -103,7 +104,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/github.png"
                     alt=""
                   />
-                  <small className="text-orange spanAbout">Github</small>
+                  <small className="text-orange ">Github</small>
                 </div>
               </div>
               <div className="col">
@@ -113,7 +114,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/js.png"
                     alt=""
                   />
-                  <small className="text-orange spanAbout">JavaScript</small>
+                  <small className="text-orange ">JavaScript</small>
                 </div>
               </div>
               <div className="col">
@@ -123,7 +124,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/nodejs.png"
                     alt=""
                   />
-                  <small className="text-orange spanAbout">NodeJS</small>
+                  <small className="text-orange ">NodeJS</small>
                 </div>
               </div>
               <div className="col">
@@ -133,7 +134,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/react.png"
                     alt=""
                   />
-                  <small className="text-orange spanAbout">React</small>
+                  <small className="text-orange ">React</small>
                 </div>
               </div>
               <div className="col">
@@ -143,7 +144,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/redux.png"
                     alt=""
                   />
-                  <small className="text-orange spanAbout">Redux</small>
+                  <small className="text-orange ">Redux</small>
                 </div>
               </div>
               <div className="col">
@@ -153,7 +154,7 @@ function AboutThisProject() {
                     src="/src/assets/img/about-icons/sql.png"
                     alt=""
                   />
-                  <small className="text-orange spanAbout">SQL</small>
+                  <small className="text-orange ">SQL</small>
                 </div>
               </div>
             </div>
@@ -202,7 +203,7 @@ function AboutThisProject() {
         </div>
       </div>
       <div className="main-section bg-fondo3">
-        <div className="text-center d-flex flex-column align-items-center">
+        <div className="text-center d-flex flex-column align-items-center ">
           <h2 className="text-light mb-4">Meet Our Team</h2>
           <p className="about-info">
             Discover the Faces Behind Our Success! Get to know the talented
@@ -212,28 +213,25 @@ function AboutThisProject() {
           </p>
           <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4">
             <div className="col mb-4">
-              <div className="card h-100">
-                <img
-                  src="https://media.istockphoto.com/id/1386479313/es/foto/feliz-mujer-de-negocios-afroamericana-millennial-posando-aislada-en-blanco.jpg?s=2048x2048&w=is&k=20&c=AVZP51f6LngIhk-BPEw_HEyog_EIMWuqUZNvZt_hRuY="
-                  className="card-img-top"
-                  alt="Team Member 1"
-                />
+              <div className="cardAbout card h-100 ">
+                <img src={Santi} className="card-img-top" alt="Team Member 1" />
                 <div className="card-body">
-                  <h5 className="card-title">John Doe</h5>
-                  <hr />
+                  <h5 className="card-title">Santiago Ternande</h5>
+                  <p>Full Stack Developer</p>
+                  <hr className="text-orange" />
                   <div className="imgCardAbout">
                     <a href="#" className="btn">
-                      <img src={linkedin} alt="" />
+                      <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
                     </a>
                     <a href="#" className="btn">
-                      <img src={github} alt="" />
+                      <i className="bi bi-github iconoGithub fs-2 hoverSocial"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col mb-4">
-              <div className="card h-100">
+              <div className="card h-100 cardAbout">
                 <img
                   src="https://media.istockphoto.com/id/1301037555/es/foto/hombre-joven-de-raza-mixta-guapo-con-ropa-casual-sonriendo-con-dientes-aislados-sobre-fondo.jpg?s=2048x2048&w=is&k=20&c=lZHAvbmSq3V9WVzjH27DICdI7erqj5j7xqvzy9EPWfQ="
                   className="card-img-top"
@@ -241,20 +239,21 @@ function AboutThisProject() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">Jane Smith</h5>
-                  <hr />
+                  <p>Full Stack Developer</p>
+                  <hr className="text-orange" />
                   <div className="imgCardAbout">
                     <a href="#" className="btn">
-                      <img src={linkedin} alt="" />
+                      <i class="bi bi-linkedin hoverSocial  fs-2 hoverSocial"></i>
                     </a>
                     <a href="#" className="btn">
-                      <img src={github} alt="" />
+                      <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col mb-4">
-              <div className="card h-100">
+              <div className="card h-100 cardAbout">
                 <img
                   src="https://media.istockphoto.com/id/1212514593/es/foto/hombre-afroamericano-con-trenzas-con-su%C3%A9ter-verde-sobre-fondo-blanco-aislado-con-expresi%C3%B3n.jpg?s=2048x2048&w=is&k=20&c=Rs5l2EaS-gqIuDKPHWltuw5ho4Sh0FEEE0ENE3B6Q5w="
                   className="card-img-top"
@@ -262,20 +261,21 @@ function AboutThisProject() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">Alice Johnson</h5>
-                  <hr />
+                  <p>Full Stack Developer</p>
+                  <hr className="text-orange" />
                   <div className="imgCardAbout">
                     <a href="#" className="btn">
-                      <img src={linkedin} alt="" />
+                      <i class="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
                     </a>
                     <a href="#" className="btn">
-                      <img src={github} alt="" />
+                      <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col mb-4">
-              <div className="card h-100">
+              <div className="card h-100 cardAbout">
                 <img
                   src="https://media.istockphoto.com/id/542703430/es/foto/sonriente-hombre.jpg?s=2048x2048&w=is&k=20&c=3ZmbfwZk4PyOkEX_a2Rl4yH6zuwOEl0DHeZEytXszKA="
                   className="card-img-top"
@@ -283,20 +283,21 @@ function AboutThisProject() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">Bob Williams</h5>
-                  <hr />
+                  <p>Full Stack Developer</p>
+                  <hr className="text-orange" />
                   <div className="imgCardAbout">
                     <a href="#" className="btn">
-                      <img src={linkedin} alt="" />
+                      <i class="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
                     </a>
                     <a href="#" className="btn">
-                      <img src={github} alt="" />
+                      <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col mb-4">
-              <div className="card h-100">
+              <div className="card h-100 cardAbout">
                 <img
                   src="https://media.istockphoto.com/id/1311406968/es/foto/retrato-del-guapo-joven-cauc%C3%A1sico-con-ropa-casual-sonriendo-y-mirando-a-la-c%C3%A1mara-sobre-el.jpg?s=2048x2048&w=is&k=20&c=fjJC9fq7QLEmw4z_-MVOwoJRT1YhMi327X72kuZA3w8="
                   className="card-img-top"
@@ -304,13 +305,14 @@ function AboutThisProject() {
                 />
                 <div className="card-body">
                   <h5 className="card-title">Emily Brown</h5>
-                  <hr />
+                  <p>Full Stack Developer</p>
+                  <hr className="text-orange" />
                   <div className="imgCardAbout">
                     <a href="#" className="btn">
-                      <img src={linkedin} alt="" />
+                      <i class="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
                     </a>
                     <a href="#" className="btn">
-                      <img src={github} alt="" />
+                      <i className="bi bi-github iconoGithub fs-2 hoverSocial"></i>
                     </a>
                   </div>
                 </div>
