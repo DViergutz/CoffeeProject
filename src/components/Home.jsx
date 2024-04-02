@@ -48,7 +48,7 @@ function Home() {
         <video autoPlay loop muted>
           <source src="src\assets\img\videoplayback.mp4" type="video/mp4" />
         </video>
-        <div id="hero" className="hero-section">
+        <div id="hero" className="hero-section container">
           <div className="content-wrapper">
             <h1>Discover the Essence of Fresh Coffee</h1>
             <p className="hero-subheading">
@@ -61,7 +61,11 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="about" ref={about} className="main-section d-flex flex-row">
+      <div
+        id="about"
+        ref={about}
+        className="main-section-everything-starts-with-coffee  d-flex flex-row"
+      >
         <div className="col-6">
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
