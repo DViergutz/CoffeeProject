@@ -71,7 +71,7 @@ function Home() {
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
         </div>
-        <div className="col-6">
+        <div className="col-6 z-2">
           <div className="row mb-4">
             <div className="make-responsive">
               <h2 className="text-start">
@@ -169,7 +169,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="special-products" className="main-section">
+      <div id="special-products" ref={specialProducts} className="main-section">
         <div className="container">
           <h2 className="text-center">Special Products</h2>
           <div className="row">

@@ -26,45 +26,47 @@ function ProductsCategory() {
   return (
     <>
       <div className="productsOfCategory main-section bg-fondo3 ">
-        <h3>Products of {params.categoryName}</h3>
-        <div className="row mb-5 d-flex justify-content-center">
-          {productsOfCategory ? (
-            productsOfCategory.map((product) => (
-              <div className="col-md-6 col-lg-4 col-xl-3 " key={product.id}>
-                <div className="d-flex flex-column h-100  ">
-                  <div className="special-product-card h-100 d-flex flex-column">
-                    <Card.Img
-                      variant="top"
-                      className="card-img "
-                      src={product.image}
-                    />
-                    <div className="text-start ">
-                      <p className="fs-3 fw-semibold">{product.name}</p>
-                      <p>{product.description}</p>
-                    </div>
+        <h2>Products of {params.categoryName}</h2>
+        <div className="container">
+          <div className="row mb-5 d-flex justify-content-center">
+            {productsOfCategory ? (
+              productsOfCategory.map((product) => (
+                <div className="col-md-6 col-lg-4 col-xl-3 " key={product.id}>
+                  <div className="d-flex flex-column h-100  ">
+                    <div className="special-product-card h-100 d-flex flex-column">
+                      <Card.Img
+                        variant="top"
+                        className="card-img "
+                        src={product.image}
+                      />
+                      <div className="text-start ">
+                        <p className="fs-3 fw-semibold">{product.name}</p>
+                        <p>{product.description}</p>
+                      </div>
 
-                    <div className="mt-auto">
-                      <p className="fs-3 fw-semibold text-center">
-                        <span className="text-orange">${product.price}</span>{" "}
-                      </p>
-                      <div className="d-flex justify-content-evenly">
-                        <a href={`/products/${product.id}`} className="">
-                          <button className="btn btn-view-product height65">
-                            View Product
+                      <div className="mt-auto">
+                        <p className="fs-3 fw-semibold text-center">
+                          <span className="text-orange">${product.price}</span>{" "}
+                        </p>
+                        <div className="d-flex justify-content-evenly">
+                          <a href={`/products/${product.id}`} className="">
+                            <button className="btn btn-view-product height65">
+                              View Product
+                            </button>
+                          </a>
+                          <button className="btn rounded-circle btn-cart ">
+                            <i className="bi bi-cart"></i>
                           </button>
-                        </a>
-                        <button className="btn rounded-circle btn-cart ">
-                          <i className="bi bi-cart"></i>
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))
-          ) : (
-            <div>Loading...</div>
-          )}
+              ))
+            ) : (
+              <div>Loading...</div>
+            )}
+          </div>
         </div>
       </div>
     </>
