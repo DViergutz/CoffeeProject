@@ -38,7 +38,7 @@ function Navigation() {
               </NavDropdown.Item>
               <NavDropdown.Item
                 className="z-index9999"
-                href="/category/single-origin"
+                href="/category/Single Origin"
               >
                 Single Origin
               </NavDropdown.Item>
