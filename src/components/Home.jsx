@@ -71,7 +71,7 @@ function Home() {
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
         </div>
-        <div className="col-6">
+        <div className="col-6 z-2">
           <div className="row mb-4">
             <div className="make-responsive">
               <h2 className="text-start">
@@ -193,7 +193,6 @@ function Home() {
               <div className="d-flex flex-column h-100 ">
                 <div className="special-product-card h-100 d-flex flex-column">
                   <div className="special-product-1"></div>
-                  {/* <Card.Img variant="top" className="special-product-1 " /> */}
                   <div className="text-start ">
                     <p className="fs-3 fw-semibold">Art of Darkness</p>
                     <p>
@@ -228,7 +227,7 @@ function Home() {
               <div className="d-flex flex-column h-100 ">
                 <div className="special-product-card h-100 d-flex flex-column">
                   <div className="special-product-2"></div>
-                  {/* <Card.Img variant="top" className="special-product-1 " /> */}
+
                   <div className="text-start ">
                     <p className="fs-3 fw-semibold">Chocolate Amaretto</p>
                     <p>
@@ -263,7 +262,7 @@ function Home() {
               <div className="d-flex flex-column h-100 ">
                 <div className="special-product-card h-100 d-flex flex-column">
                   <div className="special-product-3"></div>
-                  {/* <Card.Img variant="top" className="special-product-1 " /> */}
+
                   <div className="text-start ">
                     <p className="fs-3 fw-semibold">Colombia Organic</p>
                     <p>

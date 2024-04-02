@@ -25,9 +25,9 @@ function ProductsAll() {
   }, []);
 
   return (
-    <div className="main-section bg-fondo3 ">
+    <div className="main-section bg-fondo3  ">
       <h2>All Products</h2>
-      <div>
+      <div className="container">
         <div className="row mb-5 ">
           {/* start card 1 */}
 
