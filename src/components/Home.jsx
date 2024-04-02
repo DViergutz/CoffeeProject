@@ -9,6 +9,7 @@ function Home() {
   const categories = useRef(null);
   const specialProducts = useRef(null);
   const blog = useRef(null);
+  const about = useRef(null);
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -22,6 +23,10 @@ function Home() {
       <ScrollToTop />
       <div className="navigation-menu">
         <ul>
+          {" "}
+          <li onClick={() => scrollToSection(about)} className="nav-link-home">
+            <GoDot />
+          </li>
           <li
             onClick={() => scrollToSection(categories)}
             className="nav-link-home"
@@ -50,7 +55,90 @@ function Home() {
               Embark on a journey through our finest selection of coffee bean
               bags
             </p>
-            <button className="btn-hero">Explore our products</button>
+            <button className="btn-hero">
+              Explore our products <i className="bi bi-arrow-right ms-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="about" ref={about} className="main-section d-flex flex-row">
+        <div className="col-6">
+          {" "}
+          <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
+        </div>
+        <div className="col-6">
+          <div className="row mb-4">
+            <div className="make-responsive">
+              <h2 className="text-start">
+                Everything starts with{" "}
+                <span className="text-orange">Coffee</span>
+              </h2>
+              <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
+                <div className="mr-md-3 mb-md-0 mb-3">
+                  <img
+                    src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                    alt="Big Coffee Image"
+                    className="img-fluid about-icon"
+                  />
+                </div>
+                <div className="ms-3">
+                  {" "}
+                  <h5 className="fw-semibold">Our Mission</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                    fuga maiores sequi magni perspiciatis quisquam dolor modi,
+                    itaque magnam aliquam illo, natus praesentium iusto
+                    accusamus dicta officiis neque? Ut vel hic ipsum.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row mb-4">
+            <div className="make-responsive">
+              <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
+                <div className="mr-md-3 mb-md-0 mb-3">
+                  <img
+                    src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                    alt="Big Coffee Image"
+                    className="img-fluid about-icon"
+                  />
+                </div>
+                <div className=" ms-3">
+                  {" "}
+                  <h5 className="fw-semibold">The Utica Coffe Brand</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                    fuga maiores sequi magni perspiciatis quisquam dolor modi,
+                    itaque magnam aliquam illo, natus praesentium iusto
+                    accusamus dicta officiis neque? Ut vel hic ipsum.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="make-responsive">
+              <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
+                <div className="mr-md-3 mb-md-0 mb-3">
+                  <img
+                    src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                    alt="Big Coffee Image"
+                    className="img-fluid about-icon"
+                  />
+                </div>
+                <div className=" ms-3">
+                  {" "}
+                  <h5 className="fw-semibold">The Best Part?</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                    fuga maiores sequi magni perspiciatis quisquam dolor modi,
+                    itaque magnam aliquam illo, natus praesentium iusto
+                    accusamus dicta officiis neque? Ut vel hic ipsum.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -84,19 +172,26 @@ function Home() {
               <div className="special-product-card">
                 <div className="special-product-1 mb-2"></div>
                 <div className="text-start">
-                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p className="fs-3 fw-semibold">Art of Darkness</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                     nihil aliquid a cupiditate error neque adipisci, dolorum rem
                     asperiores!
                   </p>
-                  <p className="fs-3 fw-semibold">$250</p>
+                  <p className="fs-3 fw-semibold">
+                    <span className="text-orange">$250</span>{" "}
+                    <span className="text-decoration-line-through fs-5 fw-light">
+                      $220
+                    </span>
+                  </p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product">View Product</button>
-                  <span>
+                  <button className="btn btn-view-product w-100 me-2">
+                    View Product
+                  </button>
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -104,19 +199,26 @@ function Home() {
               <div className="special-product-card">
                 <div className="special-product-2 mb-2"></div>
                 <div className="text-start">
-                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p className="fs-3 fw-semibold">Chocolate Amaretto</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                     nihil aliquid a cupiditate error neque adipisci, dolorum rem
                     asperiores!
                   </p>
-                  <p className="fs-3 fw-semibold">$250</p>
+                  <p className="fs-3 fw-semibold">
+                    <span className="text-orange">$250</span>{" "}
+                    <span className="text-decoration-line-through fs-5 fw-light">
+                      $220
+                    </span>
+                  </p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product">View Product</button>
-                  <span>
+                  <button className="btn btn-view-product w-100 me-2">
+                    View Product
+                  </button>
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -124,19 +226,26 @@ function Home() {
               <div className="special-product-card">
                 <div className="special-product-3 mb-2"></div>
                 <div className="text-start">
-                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p className="fs-3 fw-semibold">Colombia Organic</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                     nihil aliquid a cupiditate error neque adipisci, dolorum rem
                     asperiores!
                   </p>
-                  <p className="fs-3 fw-semibold">$250</p>
+                  <p className="fs-3 fw-semibold">
+                    <span className="text-orange">$250</span>{" "}
+                    <span className="text-decoration-line-through fs-5 fw-light">
+                      $220
+                    </span>
+                  </p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product">View Product</button>
-                  <span>
+                  <button className="btn btn-view-product w-100 me-2">
+                    View Product
+                  </button>
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -144,19 +253,26 @@ function Home() {
               <div className="special-product-card">
                 <div className="special-product-4 mb-2"></div>
                 <div className="text-start">
-                  <p className="fs-3 fw-semibold">Product 1</p>
+                  <p className="fs-3 fw-semibold">Italian Roast</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                     nihil aliquid a cupiditate error neque adipisci, dolorum rem
                     asperiores!
                   </p>
-                  <p className="fs-3 fw-semibold">$250</p>
+                  <p className="fs-3 fw-semibold">
+                    <span className="text-orange">$250</span>{" "}
+                    <span className="text-decoration-line-through fs-5 fw-light">
+                      $220
+                    </span>
+                  </p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <button className="btn btn-view-product">View Product</button>
-                  <span>
+                  <button className="btn btn-view-product w-100 me-2">
+                    View Product
+                  </button>
+                  <div className="btn-cart">
                     <i className="bi bi-cart"></i>
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>

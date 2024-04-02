@@ -13,37 +13,60 @@
 
 footer {
   background-color: black;
-  padding-top: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.logo-footer {
+  height: 150px;
+  width: auto;
+  background-image: url("./assets/img/logo-utica-white.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.footer-icon {
+  transition: transform 0.3s ease; /* Adding transition effect */
+}
+
+.footer-icon:hover {
+  transform: scale(
+    1.4
+  ); /* Scale the icon to 1.1 times its original size on hover */
 }
 
 /* /////// navigation in home ////// */
 .navigation-menu {
-  color: #f0f2dc;
+  color: #ee7828;
   position: fixed;
   z-index: 1000;
+  top: 30%; /* Keep it at the top of the screen */
+  right: 30px; /* Position it to the right side of the screen */
 }
 
+.nav-link-home {
+  text-decoration: none;
+  display: block;
+  padding: 20px 20px;
+  font-weight: 700;
+  font-size: large;
+  cursor: pointer;
+}
 .top-btn-position {
   position: fixed;
   bottom: 15px;
   right: 20px;
 }
 .top-btn-style {
+  margin: 13px;
   height: 40px;
   width: 40px;
-  border: 2px solid rgb(160, 160, 155);
-  color: rgb(13, 14, 13);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ee77281d;
+  border-radius: 100px;
+  color: #ee7828;
   cursor: pointer;
 }
 
-.nav-link-home {
-  text-decoration: none;
-  display: inline;
-  padding: 20px 20px;
-  font-weight: 700;
-  font-size: large;
-  cursor: pointer;
-}
 /* /////// */
 
 .hero-section {
@@ -64,7 +87,7 @@ footer {
 
 .background-video {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -105,7 +128,7 @@ h2 {
   color: rgb(255, 255, 255);
   font-family: myFont;
   font-size: 56px;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
   font-weight: 600;
 }
 
@@ -125,8 +148,9 @@ h4 {
 
 h5 {
   color: white;
-  font-family: myFont;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 24px;
+  margin-bottom: 8px;
 }
 
 .hero-subheading {
@@ -139,13 +163,17 @@ h5 {
 }
 
 .align-navigation-menu {
+  background-image: url("./assets/img/Fondo3.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -160px;
 }
 
 .main-section {
-  background-color: #3b3028;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,6 +185,14 @@ h5 {
   padding-top: 150px;
   padding-bottom: 32px;
 }
+
+.bg-fondo3 {
+  background-image: url("./assets/img/Fondo3.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .category-card {
   position: relative;
   height: 500px;
@@ -204,16 +240,44 @@ h5 {
   background-image: url("/src/assets/img/category-img/Cat%203.png"); /* Background image for Single Origin category */
 }
 
+/* About section */
+
+.about-icon {
+  background-size: contain;
+  background-position: center center;
+  border-radius: 50%;
+  height: auto;
+  width: 65%;
+  margin-bottom: 16px;
+}
+
+.img-sack {
+  height: 1100px;
+  width: 1200px;
+  opacity: 70%;
+  margin-left: -500px;
+}
+#about {
+  margin-top: -200px;
+  height: 50%;
+  width: auto;
+}
+
+.make-responsive {
+  margin-left: -50px;
+}
 /* Special Products Home   */
 
 .special-product-card {
-  background-color: rgba(255, 255, 255, 0.199);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ee77281d;
   border-radius: 10px;
   padding: 16px;
   text-align: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 16px;
+  margin-top: 80px;
 }
 
 .product-image {
@@ -222,18 +286,35 @@ h5 {
 }
 
 .btn-view-product {
-  background-color: #ee7828;
-  color: white;
-  padding: 10px 20px;
-  margin-right: 16px;
-  border-radius: 20px;
-  border: none;
+  background-color: transparent;
+  color: #ee7828;
+  border: 1px solid #ee77281d;
+  padding: 8px 30px;
+  font-size: 16px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-view-product:hover {
-  background-color: #d96c21; /* Darker shade on hover */
+  background-color: #ee7828;
+  color: white;
+}
+
+.secondary-button {
+  display: inline-block;
+  background-color: transparent;
+  color: #ee7828;
+  border: 1px solid #ee77281d;
+  border-radius: 50%;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for color change */
+}
+
+.secondary-button:hover {
+  background-color: #ee7828; /* Change background color to orange on hover */
+  color: white; /* Change text color to white on hover */
 }
 
 .special-product-1 {
@@ -243,6 +324,7 @@ h5 {
   border-radius: 8px;
   height: 300px;
   background-repeat: no-repeat;
+  margin-top: -80px;
 }
 .special-product-2 {
   background-image: url("/src/assets/img/Flavored-ChocolateAmaretto.png");
@@ -251,6 +333,7 @@ h5 {
   border-radius: 8px;
   height: 300px;
   background-repeat: no-repeat;
+  margin-top: -80px;
 }
 
 .special-product-3 {
@@ -260,6 +343,7 @@ h5 {
   border-radius: 8px;
   height: 300px;
   background-repeat: no-repeat;
+  margin-top: -80px;
 }
 
 .special-product-4 {
@@ -269,11 +353,12 @@ h5 {
   border-radius: 8px;
   height: 300px;
   background-repeat: no-repeat;
+  margin-top: -80px;
 }
 /* Blog section/newsletter */
 
 .background-newsletter {
-  background-image: url("/src/assets/img/background-home.jpg");
+  background-image: url("/src/assets/img/newsletter-background.png");
   background-size: cover;
   background-position: center;
 }
@@ -310,18 +395,22 @@ h5 {
   font-size: 1.2rem;
 }
 
-.UticaBrandLogo {
-  height: 126;
+.brand-logo {
+  height: 126px;
   width: 126px;
+  background-color: #dee2e6;
 }
+
 .nav-link:hover {
   background-color: #343a40;
-  color: #fff;
+  color: #f0f2dc;
+  padding-left: 1.5rem;
 }
 
 .dropdown-item:hover {
   background-color: #343a40;
-  color: #fff;
+  color: #f0f2dc;
+  padding-left: 2rem;
 }
 
 .img-checkout {
@@ -352,6 +441,9 @@ h5 {
 }
 
 /* About this Project */
+.text-orange {
+  color: #ee7828;
+}
 
 .hero-about {
   padding-left: 120px;
@@ -380,6 +472,21 @@ h5 {
 }
 
 .btn-hero:hover {
+  background-color: #d96c21;
+}
+
+.btn-cart {
+  background-color: #ee7828;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cart:hover {
   background-color: #d96c21;
 }
 
@@ -419,6 +526,7 @@ h5 {
 .about-icons {
   width: 50px;
   height: 50px;
+  opacity: 0.1;
 }
 
 /*--------*/

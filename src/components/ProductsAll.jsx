@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import imageSrc from "../assets/img/BlendsArtOfDarkness.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -15,7 +14,6 @@ function ProductsAll() {
           method: "GET",
           url: `http://localhost:3000/products`,
         });
-        console.log("Response:", response.data);
         setproducts(response.data);
       } catch (error) {
         console.error("Error:", error);
@@ -26,7 +24,7 @@ function ProductsAll() {
   }, []);
 
   return (
-    <div className="main-section">
+    <div className="main-section bg-fondo3 ">
       <h3>All Products</h3>
       <div>
         <div className="row mb-5 ">
@@ -41,13 +39,17 @@ function ProductsAll() {
                 <Card>
                   <Card.Img variant="top" src={product.image} />
                   <Card.Body className="d-flex flex-column justify-content-between">
-                    <Card.Title className="text-decoration-underline">
+                    <Card.Title className="text-decoration-underline text-secondary">
                       {product.name}
-                    </Card.Title>{" "}
-                    <Card.Text>{product.description}</Card.Text>
+                    </Card.Title>
+                    <Card.Text className="text-dark">
+                      {product.description}
+                    </Card.Text>
                     <div className="d-flex justify-content-center mt-auto">
                       <a href={`/products/${product.id}`}>
-                        <Button variant="dark">View Product</Button>
+                        <Button variant="dark" className="text-warning">
+                          View Product
+                        </Button>
                       </a>
                     </div>
                   </Card.Body>

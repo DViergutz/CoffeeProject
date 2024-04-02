@@ -7,62 +7,47 @@ function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-md-4">
-            <img
-              src="./src/assets/img/logoUtica.png"
-              alt="Logo"
-              className="img-fluid mb-3"
-            />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              lobortis mattis eros, et interdum lectus.
-            </p>
-            <div>
-              {/* Social Media Links */}
-              <a
-                href="https://www.facebook.com/yourpage"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="me-3"
-              >
-                <FaFacebookSquare size={30} />
-              </a>
-              <a
-                href="https://www.instagram.com/yourpage"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram size={30} />
-              </a>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <h5>Quick Links</h5>
-            <ul className="list-unstyled">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/products">Products</a>
-              </li>
-              <li>
-                <a href="/about">About</a>
-              </li>
-              <li>
-                <a href="/contact">Contact</a>
-              </li>
-            </ul>
+            <div className="logo-footer"></div>
           </div>
           <div className="col-md-4">
             <h5>Contact Us</h5>
-            <p>123 Main Street, City, Country</p>
-            <p>Email: info@example.com</p>
-            <p>Phone: +1234567890</p>
+            <p className="mt-3">
+              <i className="bi bi-geo-alt-fill text-orange"></i> 123 Main
+              Street, City, Country
+            </p>
+            <p>
+              <i className="bi bi-envelope-fill text-orange me-1"></i>{" "}
+              info@example.com
+            </p>
+            <p className="mb-4">
+              <i className="bi bi-telephone-fill text-orange me-1"></i>{" "}
+              +1234567890
+            </p>
+          </div>
+          <div className="col-md-4">
+            <h5 className="mb-3">Follow Us</h5>
+            <a
+              href="https://www.facebook.com/uticacoffeeroastingcompany"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="me-3 text-orange"
+            >
+              <FaFacebookSquare size={30} />
+            </a>
+            <a
+              href="https://www.instagram.com/uticacoffee/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange"
+            >
+              <FaInstagram size={30} />
+            </a>
           </div>
         </div>
       </div>
       <div className="text-center p-3">
         <p>
-          &copy; {new Date().getFullYear()} Your Ecommerce Store. All rights
+          &copy; {new Date().getFullYear()} Utica Ecommerce Project. All rights
           reserved.
         </p>
       </div>
