@@ -378,9 +378,18 @@ h5 {
 .card-img {
   border: none !important;
   border-radius: 8px;
-  height: 300px;
   width: auto;
   margin-top: -80px;
+}
+
+@media screen and (max-width: 1000px) {
+  .card-img {
+    border: none !important;
+    border-radius: 8px;
+    height: 300px;
+    width: auto;
+    margin-top: -80px;
+  }
 }
 
 .special-product-2 {
