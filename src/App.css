@@ -195,6 +195,33 @@ h5 {
   padding-bottom: 32px;
 }
 
+.about-info {
+  max-width: 700px;
+  margin-bottom: 32px;
+}
+
+.imgCardAbout {
+  display: flex;
+  justify-content: center;
+}
+
+.card-body img {
+  width: 2.5rem;
+}
+
+.spanAbout {
+  opacity: 0.5;
+}
+
+.merAbout {
+  display: flex;
+  justify-content: center;
+}
+.merAbout img {
+  padding-top: 70px;
+  width: 65rem;
+}
+
 .bg-fondo3 {
   background-image: url("./assets/img/Fondo3.png");
   background-size: cover;
@@ -545,11 +572,6 @@ h5 {
   font-weight: 600;
 }
 
-.about-info {
-  max-width: 700px;
-  margin-bottom: 32px;
-}
-
 .about-subheading {
   max-width: 620px;
   color: white;
@@ -572,7 +594,7 @@ h5 {
 .about-icons {
   width: 50px;
   height: 50px;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 /*--------*/
@@ -873,5 +895,19 @@ h5 {
     display: block;
     left: 80vw;
     width: 3rem;
+  }
+
+  /* ABOUT THIS PROJECT*/
+
+  .textAboutProject p {
+    font-size: 14px;
+  }
+  .textAboutProject h2 {
+    font-size: 45px;
+  }
+
+  .hero-about {
+    padding-right: 95px;
+    padding-left: 95px;
   }
 }
