@@ -44,15 +44,15 @@ function Navigation() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav>
-            <Nav.Link className="navLink" href="/checkout">
-              Shopping Cart
-            </Nav.Link>
+          <Nav className="d-flex align-items-center">
             <Nav.Link className="navLink" href="/user/login">
               LOGIN
             </Nav.Link>
             <Nav.Link className="navLink" href="/user/register">
               REGISTER
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/checkout">
+              <i className="bi bi-cart2 fs-5"></i>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

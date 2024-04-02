@@ -424,16 +424,24 @@ h5 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
+
 .navLink {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   color: white;
 }
 
+.navLink:hover {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: #d96c21;
+}
+
 .brand-logo {
   height: 100px;
   width: 100px;
 }
+
 .nav-link {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -442,14 +450,18 @@ h5 {
 }
 
 .nav-link:hover {
+<<<<<<< HEAD
   background-color: #343a40;
   color: #f0f2dc;
   background-color: transparent !important;
   padding-left: 1.5rem;
+=======
+  color: #d96c21;
+  padding-left: 16px;
+>>>>>>> 337eabaae2bfc3328efbe776e1fb295793b8c22c
 }
 
 .dropdown-item:hover {
-  background-color: #343a40;
   color: #f0f2dc;
   padding-left: 2rem;
 }
