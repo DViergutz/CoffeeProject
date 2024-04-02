@@ -61,7 +61,11 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="about" ref={about} className="main-section d-flex flex-row">
+      <div
+        id="about"
+        ref={about}
+        className="main-section-everything-starts-with-coffee  d-flex flex-row"
+      >
         <div className="col-6">
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
