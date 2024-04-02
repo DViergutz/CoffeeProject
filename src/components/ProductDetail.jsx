@@ -65,69 +65,76 @@ function ProductDetail() {
               <div>Loading...</div>
             )}
           </div>
-          <div className="col-lg-6 col-md-6 col-sm-12 ">
-            <div className="product border rounded p-2">
-              <h3 className="text-decoration-underline text-center">
+          <div className="col-lg-4 col-md-4 col-sm-12 ">
+            <div className="special-product-card d-flex flex-column justify-content-start p-5">
+              <h3 className=" text-start">
                 {oneProduct ? (
                   <div>{oneProduct.name}</div>
                 ) : (
                   <div>Loading...</div>
                 )}
               </h3>
-              <div className="fs-4 fw-bold text-center">
+              <div className="fs-4 fw-bold ">
                 {oneProduct ? (
-                  <div className="text-warning">${oneProduct.price}</div>
+                  <div className="text-orange text-start fs-2">
+                    ${oneProduct.price}
+                  </div>
                 ) : (
                   <div>Loading...</div>
                 )}
               </div>
-              <hr className="text-light" />
-              <div className="d-flex flex-column align-items-center">
-                <p className="fs-4 fw-bold text-light">Quantity</p>
-                <div className="w-100 d-flex justify-content-center">
-                  <button className="w-25 fs-2 btn btn-dark rounded-pill">
+              <hr className="text-orange" />
+              <div className="d-flex flex-column">
+                <p className="fs-4 text-start">Quantity</p>
+                <div className="w-100 d-flex ">
+                  <button className="w-10 btn-view-product fs-3 fw-bold rounded-pill">
                     -
                   </button>
                   <span className="p-2  rounded mx-2 fs-3 text-light">2</span>
-                  <button className="w-25 fs-3 btn btn-dark rounded-pill">
+                  <button className="w-10 btn-view-product fs-3 fw-bold rounded-pill">
                     +
                   </button>
                 </div>
-                <hr className="text-light" />
-                <button className="w-50 rounded-pill p-2 fs-4">
-                  Add to cart
+                <hr className="text-orange" />
+                <button className="btn-hero p-2 w-100 mt-4">
+                  Add to {""}
+                  <i className="bi bi-cart"></i>
                 </button>
               </div>
             </div>
             <div className="p-2">
-              <h5 className="text-light fw-bold">
+              <h5 className="fw-semi-bold mb-3">
                 Experience the taste of our famous
                 {oneProduct ? (
-                  <div className="text-decoration-underline text-warning">
-                    {oneProduct.name}
-                  </div>
+                  <span className="text-orange"> {oneProduct.name}</span>
                 ) : (
                   <div>Loading...</div>
                 )}
               </h5>
               <div>
                 {oneProduct ? (
-                  <div className="text-light">{oneProduct.description}</div>
+                  <div className="text-light  mb-4">
+                    {oneProduct.description}
+                  </div>
                 ) : (
                   <div>Loading...</div>
                 )}
               </div>
-              <hr className="text-light" />
+              <hr className="text-orange" />
               <section className="d-flex">
-                <strong className="text-warning">Tasting Notes:&nbsp;</strong>
+                <strong className="text-orange">
+                  <i className="bi bi-cup-hot-fill me-4 fs-4"></i>
+                </strong>
                 <p>Mild nuttiness, chocolate</p>
               </section>
               <section className="d-flex">
-                <strong className="text-warning">Origin:&nbsp;</strong>
-                <p>Peru, Columbia</p>
+                <strong className="text-orange">
+                  <i className="bi bi-globe-americas me-4 fs-4"></i>
+                </strong>
+                <p> Peru, Columbia</p>
               </section>
               <section className="d-flex">
-                <strong className="text-warning">Type:&nbsp;</strong>
+                <strong className="text-orange">Type:&nbsp;</strong>
                 <div className="text-light">
                   {" "}
                   {oneProduct ? (
