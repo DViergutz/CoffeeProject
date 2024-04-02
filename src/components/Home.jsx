@@ -68,7 +68,7 @@ function Home() {
         </div>
         <div className="col-6">
           <div className="row mb-4">
-            <div className="">
+            <div className="make-responsive">
               <h2 className="text-start">
                 Everything starts with{" "}
                 <span className="text-orange">Coffee</span>
@@ -95,7 +95,7 @@ function Home() {
             </div>
           </div>
           <div className="row mb-4">
-            <div className="">
+            <div className="make-responsive">
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
                 <div className="mr-md-3 mb-md-0 mb-3">
                   <img
@@ -118,7 +118,7 @@ function Home() {
             </div>
           </div>
           <div className="row">
-            <div className="">
+            <div className="make-responsive">
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
                 <div className="mr-md-3 mb-md-0 mb-3">
                   <img

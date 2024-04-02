@@ -24,6 +24,15 @@ footer {
   background-position: center center;
   background-repeat: no-repeat;
 }
+.footer-icon {
+  transition: transform 0.3s ease; /* Adding transition effect */
+}
+
+.footer-icon:hover {
+  transform: scale(
+    1.4
+  ); /* Scale the icon to 1.1 times its original size on hover */
+}
 
 /* DASHBOARD ADMIN*/
 
@@ -189,32 +198,37 @@ footer {
 
 /* /////// navigation in home ////// */
 .navigation-menu {
-  color: #f0f2dc;
+  color: #ee7828;
   position: fixed;
   z-index: 1000;
+  top: 30%; /* Keep it at the top of the screen */
+  right: 30px; /* Position it to the right side of the screen */
 }
 
+.nav-link-home {
+  text-decoration: none;
+  display: block;
+  padding: 20px 20px;
+  font-weight: 700;
+  font-size: large;
+  cursor: pointer;
+}
 .top-btn-position {
   position: fixed;
   bottom: 15px;
   right: 20px;
 }
 .top-btn-style {
+  margin: 13px;
   height: 40px;
   width: 40px;
-  border: 2px solid rgb(160, 160, 155);
-  color: rgb(13, 14, 13);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ee77281d;
+  border-radius: 100px;
+  color: #ee7828;
   cursor: pointer;
 }
 
-.nav-link-home {
-  text-decoration: none;
-  display: inline;
-  padding: 20px 20px;
-  font-weight: 700;
-  font-size: large;
-  cursor: pointer;
-}
 /* /////// */
 
 .hero-section {
@@ -318,6 +332,7 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -160px;
 }
 
 .main-section {
@@ -410,6 +425,9 @@ h5 {
   width: auto;
 }
 
+.make-responsive {
+  margin-left: -50px;
+}
 /* Special Products Home   */
 
 .special-product-card {
