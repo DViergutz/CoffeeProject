@@ -48,7 +48,7 @@ function Home() {
         <video autoPlay loop muted>
           <source src="src\assets\img\videoplayback.mp4" type="video/mp4" />
         </video>
-        <div id="hero" className="hero-section">
+        <div id="hero" className="hero-section container">
           <div className="content-wrapper">
             <h1>Discover the Essence of Fresh Coffee</h1>
             <p className="hero-subheading">

@@ -1,15 +1,10 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import UticaBrandLogo from "../assets/img/logo_utica-removebg.png";
+import UticaBrandLogo from "../assets/img/logo-utica-white.png";
 
 function Navigation() {
   return (
-    <Navbar
-      expand="lg"
-      bg="dark"
-      variant="dark"
-      className="navbar-collapse main-navbar bg-light py-0 "
-    >
+    <Navbar expand="lg" className="navbar-collapse main-navbar">
       <Container>
         <Navbar.Brand href="/" className="m-0 p-0">
           <img
@@ -19,23 +14,17 @@ function Navigation() {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse
-          id="responsive-navbar-nav"
-          className="collapse bg-dark ps-3"
-        >
+        <Navbar.Collapse id="responsive-navbar-nav" className="collapse ps-3">
           <Nav className="me-auto">
             <Nav.Link className="navLink" href="/about-this-project">
-              About this Project
+              ABOUT THIS PROJECT
             </Nav.Link>
             <Nav.Link className="navLink" href="/products">
-              All Products
-            </Nav.Link>
-            <Nav.Link className="navLink" href="/products/2">
-              One Product
+              ALL PRODUCTS
             </Nav.Link>
             <NavDropdown
               className="navLink z-index9999"
-              title="Categories"
+              title="CATEGORIES"
               id="navbarScrollingDropdown"
             >
               <NavDropdown.Item
@@ -49,14 +38,10 @@ function Navigation() {
               </NavDropdown.Item>
               <NavDropdown.Item
                 className="z-index9999"
-                href="/category/single Origin"
+                href="/category/single-origin"
               >
                 Single Origin
               </NavDropdown.Item>
-              {/* <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
           <Nav>
@@ -64,10 +49,10 @@ function Navigation() {
               Shopping Cart
             </Nav.Link>
             <Nav.Link className="navLink" href="/user/login">
-              Login
+              LOGIN
             </Nav.Link>
             <Nav.Link className="navLink" href="/user/register">
-              Register
+              REGISTER
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

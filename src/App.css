@@ -12,7 +12,7 @@
 }
 
 footer {
-  background-color: black;
+  background-color: #121212;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -70,8 +70,6 @@ footer {
 /* /////// */
 
 .hero-section {
-  padding-left: 120px;
-  padding-right: 120px;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -381,24 +379,44 @@ h5 {
 }
 
 /* navbar */
+
+/* background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ee77281d;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  margin-top: 80px; */
+
 .main-navbar {
   height: 126px;
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* padding: 20px; */
-  z-index: 10; /* Ensure navbar is above hero image */
+  background-color: #121212;
+  border-bottom: 1px solid #ee77281d;
+  /* backdrop-filter: blur(10px); */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 .navLink {
-  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: white;
 }
 
 .brand-logo {
-  height: 126px;
-  width: 126px;
-  background-color: #dee2e6;
+  height: 100px;
+  width: 100px;
+}
+.nav-link {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  margin-left: 16px;
 }
 
 .nav-link:hover {
