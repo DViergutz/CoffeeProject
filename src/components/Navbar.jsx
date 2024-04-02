@@ -33,14 +33,7 @@ function Navigation() {
               <NavDropdown.Item className="" href="/category/blends">
                 Blends
               </NavDropdown.Item>
-<<<<<<< HEAD
-              <NavDropdown.Item className="" href="/category/single-origin">
-=======
-              <NavDropdown.Item
-                className="z-index9999"
-                href="/category/Single Origin"
-              >
->>>>>>> f9ad3617efe19d3d2a78e5a4826c16143c29a270
+              <NavDropdown.Item className="" href="/category/Single Origin">
                 Single Origin
               </NavDropdown.Item>
             </NavDropdown>

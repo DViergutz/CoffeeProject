@@ -376,11 +376,8 @@ h5 {
 }
 
 .card-img {
-<<<<<<< Updated upstream
-=======
   border: none !important;
   border-radius: 8px;
->>>>>>> Stashed changes
   height: 300px;
   width: auto;
   margin-top: -80px;
@@ -502,13 +499,10 @@ h5 {
 }
 
 .nav-link:hover {
-<<<<<<< Updated upstream
-=======
   background-color: #343a40;
   color: #f0f2dc;
   background-color: transparent !important;
   padding-left: 1.5rem;
->>>>>>> Stashed changes
   color: #d96c21;
   padding-left: 16px;
 }
