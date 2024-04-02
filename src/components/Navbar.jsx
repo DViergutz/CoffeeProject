@@ -44,7 +44,7 @@ function Navigation() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav className="d-flex align-items-center ">
+          <Nav className="d-flex align-items-start align-items-center ">
             <Nav.Link className="navLink" href="/user/login">
               LOGIN
             </Nav.Link>
