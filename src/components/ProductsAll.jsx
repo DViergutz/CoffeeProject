@@ -47,7 +47,7 @@ function ProductsAll() {
                     </div>
 
                     <div className="mt-auto">
-                      <p className="fs-3 fw-semibold text-center">
+                      <p className="fs-3 fw-semibold text-start">
                         <span className="text-orange">${product.price}</span>{" "}
                       </p>
                       <div className="d-flex justify-content-evenly">

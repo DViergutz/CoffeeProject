@@ -501,6 +501,9 @@ h5 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
+.bg-dark-grey {
+  background-color: #121212;
+}
 
 .brand-logo-no-hover:hover {
   background-color: transparent !important;
@@ -510,7 +513,11 @@ h5 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   color: white;
+  padding-left: 10px;
 }
+/* .navbar-toggler-icon {
+  color: white;
+} */
 
 .navDropdown:hover {
   color: #d96c21 !important;
@@ -544,7 +551,7 @@ h5 {
   background-color: transparent !important;
   padding-left: 1.5rem;
   color: #d96c21;
-  padding-left: 16px;
+  padding-left: 20px;
 }
 
 .dropdown-item:hover {
