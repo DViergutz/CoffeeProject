@@ -451,11 +451,10 @@ h5 {
 
 .nav-link:hover {
   color: #d96c21;
-  padding-left: 1.5rem;
+  padding-left: 16px;
 }
 
 .dropdown-item:hover {
-  background-color: #343a40;
   color: #f0f2dc;
   padding-left: 2rem;
 }
