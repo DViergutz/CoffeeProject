@@ -21,8 +21,8 @@ function Home() {
 
   return (
     <div className="align-navigation-menu">
-      <ScrollToTop />
       <div className="navigation-menu">
+        <ScrollToTop />{" "}
         <ul>
           {" "}
           <li onClick={() => scrollToSection(about)} className="nav-link-home">
