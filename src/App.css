@@ -88,6 +88,7 @@ footer {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  margin-top: 32px;
 }
 
 .background-video video {
@@ -170,6 +171,7 @@ h5 {
   flex-direction: column;
   align-items: center;
   margin-top: -160px;
+  overflow: hidden;
 }
 
 .main-section-everything-starts-with-coffee {
@@ -223,6 +225,16 @@ h5 {
   width: 65rem;
 }
 
+.cardAbout {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ee77281d;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .bg-fondo3 {
   background-image: url("./assets/img/Fondo3.png");
   background-size: cover;
@@ -266,15 +278,44 @@ h5 {
 }
 
 .category-flavored {
-  background-image: url("/src/assets/img/category-img/Cat%201.png"); /* Background image for Flavored category */
+  background-image: url("/src/assets/img/category1.png"); /* Background image for Flavored category */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .category-blends {
-  background-image: url("/src/assets/img/category-img/Cat%202.png"); /* Background image for Blends category */
+  background-image: url("/src/assets/img/category2.png"); /* Background image for Blends category */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .category-single-origin {
-  background-image: url("/src/assets/img/category-img/Cat%203.png"); /* Background image for Single Origin category */
+  background-image: url("/src/assets/img/category3.png"); /* Background image for Single Origin category */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.splash {
+  height: 0px;
+  width: 100vw;
+}
+.img-splash {
+  height: 550px;
+  margin-top: -500px;
+  margin-left: 1400px;
+  opacity: 60%;
+}
+
+.splash-beans {
+  height: 0px;
+  width: auto;
+  transform: scaleX(-1);
+}
+.img-splash-beans {
+  height: 600px;
+  margin-top: -300px;
+  margin-left: 1000px;
+  opacity: 60%;
 }
 
 /* About section */
@@ -291,7 +332,7 @@ h5 {
 .img-sack {
   height: 1100px;
   width: 1200px;
-  opacity: 0.7; /* changed from 70% to 0.7 */
+  opacity: 0.7;
   margin-left: -500px;
 }
 
@@ -425,9 +466,10 @@ h5 {
 /* Blog section/newsletter */
 
 .background-newsletter {
-  background-image: url("/src/assets/img/newsletter-background.png");
+  background-image: url("/src/assets/img/premium6.png");
   background-size: cover;
   background-position: center;
+  opacity: 80%;
 }
 
 .btn-subscribe {
@@ -471,6 +513,9 @@ h5 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
+.bg-dark-grey {
+  background-color: #121212;
+}
 
 .brand-logo-no-hover:hover {
   background-color: transparent !important;
@@ -480,7 +525,11 @@ h5 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   color: white;
+  padding-left: 10px;
 }
+/* .navbar-toggler-icon {
+  color: white;
+} */
 
 .navDropdown:hover {
   color: #d96c21 !important;
@@ -514,7 +563,7 @@ h5 {
   background-color: transparent !important;
   padding-left: 1.5rem;
   color: #d96c21;
-  padding-left: 16px;
+  padding-left: 20px;
 }
 
 .dropdown-item:hover {
@@ -636,7 +685,15 @@ h5 {
 .about-icons {
   width: 50px;
   height: 50px;
-  opacity: 0.2;
+  opacity: 0.4;
+}
+
+.hoverSocial {
+  color: white;
+}
+
+.hoverSocial:hover {
+  color: #d96c21;
 }
 
 /*--------*/
