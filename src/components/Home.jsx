@@ -148,6 +148,14 @@ function Home() {
         </div>
       </div>
       <div id="categories" ref={categories} className="main-section">
+        <div className="splash">
+          {" "}
+          <img
+            src="/src\assets\img\splash-beans.png"
+            alt=""
+            className="img-splash"
+          />
+        </div>
         <h2>Our Coffee Collections</h2>
         <div className="container">
           <div className="row">
@@ -171,6 +179,14 @@ function Home() {
       </div>
       <div id="special-products" ref={specialProducts} className="main-section">
         <div className="container">
+          <div className="splash-beans">
+            {" "}
+            <img
+              src="/src\assets\img\splash-redondo.png"
+              alt=""
+              className="img-splash-beans"
+            />
+          </div>
           <h2 className="text-center">Special Products</h2>
           <div className="row">
             <div className="col-md-6 col-lg-6 col-xl-3 ">
