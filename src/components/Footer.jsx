@@ -1,5 +1,6 @@
 import React from "react";
-import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 
 function Footer() {
   return (
@@ -38,9 +39,17 @@ function Footer() {
               href="https://www.instagram.com/uticacoffee/"
               target="_blank"
               rel="noopener noreferrer"
+              className="me-3 text-orange"
+            >
+              <AiFillInstagram size={30} />
+            </a>
+            <a
+              href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A5276659&keywords=utica%20coffee%20roasting%20co.&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=9f54acc1-ea39-487e-9c44-6f7740c78a85&sid=z(*&spellCorrectionEnabled=true"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-orange"
             >
-              <FaInstagram size={30} />
+              <FaLinkedin size={30} />
             </a>
           </div>
         </div>
