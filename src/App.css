@@ -224,6 +224,16 @@ h5 {
   width: 65rem;
 }
 
+.cardAbout {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ee77281d;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .bg-fondo3 {
   background-image: url("./assets/img/Fondo3.png");
   background-size: cover;
@@ -544,8 +554,6 @@ h5 {
   color: #f0f2dc;
   background-color: transparent !important;
   padding-left: 1.5rem;
-  color: #d96c21;
-  padding-left: 16px;
 }
 
 .dropdown-item:hover {
@@ -667,7 +675,15 @@ h5 {
 .about-icons {
   width: 50px;
   height: 50px;
-  opacity: 0.2;
+  opacity: 0.4;
+}
+
+.hoverSocial {
+  color: white;
+}
+
+.hoverSocial:hover {
+  color: #d96c21;
 }
 
 /*--------*/
