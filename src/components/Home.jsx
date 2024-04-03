@@ -65,9 +65,9 @@ function Home() {
       <div
         id="about"
         ref={about}
-        className="main-section-everything-starts-with-coffee  d-flex flex-row"
+        className="main-section-everything-starts-with-coffee d-flex flex-row"
       >
-        <div className="col-6">
+        <div className="col-lg-6">
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
         </div>
@@ -101,6 +101,7 @@ function Home() {
               </div>
             </div>
           </div>
+
           <div className="row mb-4">
             <div className="make-responsive">
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
@@ -108,19 +109,16 @@ function Home() {
                   <img
                     src="src\assets\img\3beanslogo.png"
                     alt="Big Coffee Image"
-                    className="img-fluid about-icon"
+                    className=" about-icon"
                   />
                 </div>
                 <div className=" ms-3">
                   {" "}
                   <h5 className="fw-semibold">The Utica Coffe Brand</h5>
                   <p>
-                    Welcome to Utica Coffee – where every sip tells a story of
-                    craftsmanship and dedication. Our brand stands as a beacon
-                    of quality, offering an exquisite range of blends
-                    meticulously crafted to awaken your senses. Experience the
-                    essence of excellence with Utica Coffee – a journey worth
-                    savoring.
+                    Synonymous with the best qualities of Utica itself:
+                    simplicity, a no-nonsense attitude, and a richness of
+                    unique, shared culture.
                   </p>
                 </div>
               </div>
@@ -133,19 +131,15 @@ function Home() {
                   <img
                     src="/src\assets\img\coffeemaker.png"
                     alt="Big Coffee Image"
-                    className="img-fluid about-icon"
+                    className="about-icon"
                   />
                 </div>
                 <div className=" ms-3">
                   {" "}
                   <h5 className="fw-semibold">The Best Part?</h5>
                   <p>
-                    Unveil the finest moments with Utica Coffee – a selection
-                    crafted for connoisseurs seeking the epitome of taste.
-                    Delight in our exquisite blends, meticulously sourced and
-                    masterfully roasted to perfection. Elevate your coffee
-                    experience and savor the best part of your day with Utica
-                    Coffee.
+                    We get to roast, drink and share our phenomenal coffee in
+                    the process. Time & love goes into every cup.
                   </p>
                 </div>
               </div>

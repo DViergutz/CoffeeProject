@@ -13,8 +13,14 @@ function Navigation() {
             className="brand-logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="collapse ps-3">
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          className="text-orange bg-light"
+        />
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="collapse ps-3 bg-dark-grey"
+        >
           <Nav className="me-auto">
             <Nav.Link className="navLink" href="/about-this-project">
               ABOUT THIS PROJECT
@@ -38,7 +44,7 @@ function Navigation() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav className="d-flex align-items-center">
+          <Nav className="d-flex align-items-start align-items-center ">
             <Nav.Link className="navLink" href="/user/login">
               LOGIN
             </Nav.Link>
@@ -46,7 +52,10 @@ function Navigation() {
               REGISTER
             </Nav.Link>
             <Nav.Link className="navLink" href="/checkout">
-              <i className="bi bi-cart2 fs-5"></i>
+              MY CART <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/admin/login">
+              ADMIN
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
