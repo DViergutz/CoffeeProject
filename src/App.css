@@ -155,6 +155,13 @@ h3 {
   font-weight: 600;
 }
 
+@media (max-width: 991px) {
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
 h4 {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -217,6 +224,12 @@ h5 {
   }
 }
 
+@media (max-width: 576px) {
+  .main-section-everything-starts-with-coffee {
+    padding: 80px 16px 16px 16px;
+  }
+}
+
 .main-section {
   display: flex;
   flex-direction: column;
@@ -224,10 +237,19 @@ h5 {
   justify-content: start;
   min-height: 100vh;
   width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 150px;
-  padding-bottom: 32px;
+  padding: 120px 10% 32px 10%;
+}
+
+@media (max-width: 940px) {
+  .main-section {
+    padding: 64px 10% 32px 10%;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-section {
+    padding: 80px 16px 16px 16px;
+  }
 }
 
 .about-info {
@@ -284,6 +306,13 @@ h5 {
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .category-card {
+    height: 250px;
+    margin-bottom: 16px;
+  }
 }
 
 .category-card::before {
@@ -379,20 +408,14 @@ h5 {
   height: 100vh;
   width: auto;
   margin-left: -70%;
+  opacity: 0.5;
 }
 
 /* Media Query for smaller screen sizes */
 @media (max-width: 940px) {
-  .make-responsive {
-    margin-top: 100px;
-  }
   .img-sack {
-    display: none; /* Hide the image on smaller screen sizes */
+    display: none;
   }
-}
-
-.make-responsive {
-  margin-left: -50px;
 }
 
 /* Special Products Home   */

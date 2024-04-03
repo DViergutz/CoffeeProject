@@ -140,17 +140,17 @@ function Home() {
         <h2>Our Coffee Collections</h2>
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
-              <div className="category-card category-flavored">
+            <div className=" col-lg-4">
+              <div className="category-card category-flavored mb-">
                 <h3 className="category-title">Flavored</h3>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-lg-4">
               <div className="category-card category-blends">
                 <h3 className="category-title">Blends</h3>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-lg-4">
               <div className="category-card category-single-origin">
                 <h3 className="category-title">Single Origin</h3>
               </div>
