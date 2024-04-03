@@ -382,19 +382,19 @@ h5 {
 }
 
 .category-flavored {
-  background-image: url("/src/assets/img/category1.png"); /* Background image for Flavored category */
+  background-image: url("/src\assets\img\category-img\collection1.png"); /* Background image for Flavored category */
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .category-blends {
-  background-image: url("/src/assets/img/category2.png"); /* Background image for Blends category */
+  background-image: url("/src\assets\img\category-img\collection2.png"); /* Background image for Blends category */
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .category-single-origin {
-  background-image: url("/src/assets/img/category3.png"); /* Background image for Single Origin category */
+  background-image: url("/src\assets\img\category-img\collection3.png"); /* Background image for Single Origin category */
   background-size: cover;
   background-repeat: no-repeat;
 }
