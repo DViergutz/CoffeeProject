@@ -847,7 +847,6 @@ h5 {
   width: 100%;
   height: auto;
   transition: transform 0.3s ease;
-  background-color: #99450d;
 }
 .card-img-top:hover {
   transform: translateY(-12px);
