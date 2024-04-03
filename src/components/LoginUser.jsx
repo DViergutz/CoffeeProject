@@ -37,7 +37,7 @@ function LoginUser() {
   return (
     <>
       <Navigation />
-      <div className="bg-fondo3 main-section pt-4 ">
+      <div className="bg-fondo3 h-100 p-4">
         <div className="container">
           <div className="row d-flex align-items-center bg-dark-grey border-orange ">
             <div className="col-md-6 text-center">

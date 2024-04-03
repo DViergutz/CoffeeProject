@@ -40,8 +40,8 @@ function SignUp() {
 
   return (
     <>
-      {/* <Navigation /> */}
-      <div className="bg-fondo3 main-section p-4">
+      <Navigation />
+      <div className="bg-fondo3 h-100 p-4 ">
         <div className="container ">
           <div className="row d-flex align-items-center bg-dark-grey border-orange  ">
             <div className="col-md-6 text-center">
