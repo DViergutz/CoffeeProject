@@ -63,86 +63,67 @@ function Home() {
         </div>
       </div>
       <div
-        id="about"
         ref={about}
         className="main-section-everything-starts-with-coffee d-flex flex-row"
       >
-        <div className="col-lg-6">
+        <div className=" col-lg-5">
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
         </div>
-        <div className="col-6 z-2">
-          <div className="row mb-4">
-            <div className="make-responsive">
-              <h2 className="text-start">
-                Everything starts with{" "}
-                <span className="text-orange">Coffee</span>
-              </h2>
-              <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
-                <div className="mr-md-3 mb-md-0 mb-3">
-                  <img
-                    src="src\assets\img\pinlogo.png"
-                    alt="Big Coffee Image"
-                    className="img-fluid about-icon"
-                  />
-                </div>
-                <div className="">
-                  {" "}
-                  <h5 className="fw-semibold">Our Mission</h5>
-                  <p>
-                    Discover the essence of excellence with Utica Coffee, where
-                    passion meets perfection in every cup. Crafted with care and
-                    dedication, our artisanal blends promise an unparalleled
-                    coffee experience. Indulge in rich flavors and superior
-                    quality, curated to elevate your mornings and invigorate
-                    your senses.
-                  </p>
-                </div>
-              </div>
+        <div className="col-md-12 col-lg-7 z-2">
+          <h2 className="about-heading">
+            Everything starts with <span className="text-orange">Coffee</span>
+          </h2>
+          <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
+            <div className="mr-md-3 mb-md-0 mb-3">
+              <img
+                src="src\assets\img\pinlogo.png"
+                alt="Big Coffee Image"
+                className="about-icon"
+              />
+            </div>
+            <div className="ms-3">
+              {" "}
+              <h5 className="fw-semibold">Our Mission</h5>
+              <p className="about-paragraph">
+                Every day we put into practice our belief that our community can
+                be revitalized through responsible development.
+              </p>
             </div>
           </div>
-
-          <div className="row mb-4">
-            <div className="make-responsive">
-              <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
-                <div className="mr-md-3 mb-md-0 mb-3">
-                  <img
-                    src="src\assets\img\3beanslogo.png"
-                    alt="Big Coffee Image"
-                    className=" about-icon"
-                  />
-                </div>
-                <div className=" ms-3">
-                  {" "}
-                  <h5 className="fw-semibold">The Utica Coffe Brand</h5>
-                  <p>
-                    Synonymous with the best qualities of Utica itself:
-                    simplicity, a no-nonsense attitude, and a richness of
-                    unique, shared culture.
-                  </p>
-                </div>
-              </div>
+          <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
+            <div className="mr-md-3 mb-md-0 mb-3">
+              <img
+                src="src\assets\img\3beanslogo.png"
+                alt="Big Coffee Image"
+                className="about-icon"
+              />
+            </div>
+            <div className=" ms-3">
+              {" "}
+              <h5 className="fw-semibold">The Utica Coffe Brand</h5>
+              <p className="about-paragraph">
+                Synonymous with the best qualities of Utica itself: simplicity,
+                a no-nonsense attitude, and a richness of unique, shared
+                culture.
+              </p>
             </div>
           </div>
-          <div className="row">
-            <div className="make-responsive">
-              <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
-                <div className="mr-md-3 mb-md-0 mb-3">
-                  <img
-                    src="/src\assets\img\coffeemaker.png"
-                    alt="Big Coffee Image"
-                    className="about-icon"
-                  />
-                </div>
-                <div className=" ms-3">
-                  {" "}
-                  <h5 className="fw-semibold">The Best Part?</h5>
-                  <p>
-                    We get to roast, drink and share our phenomenal coffee in
-                    the process. Time & love goes into every cup.
-                  </p>
-                </div>
-              </div>
+          <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
+            <div className="mr-md-3 mb-md-0 mb-3">
+              <img
+                src="/src\assets\img\coffeemaker.png"
+                alt="Big Coffee Image"
+                className="about-icon"
+              />
+            </div>
+            <div className=" ms-3">
+              {" "}
+              <h5 className="fw-semibold">The Best Part?</h5>
+              <p className="about-paragraph">
+                We get to roast, drink and share our phenomenal coffee in the
+                process. Time & love goes into every cup.
+              </p>
             </div>
           </div>
         </div>
