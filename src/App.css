@@ -346,7 +346,7 @@ h5 {
   height: 600px;
   margin-top: -300px;
   margin-left: 1000px;
-  opacity: 60%;
+  opacity: 70%;
 }
 
 /* About section */
@@ -377,7 +377,6 @@ h5 {
 .img-sack {
   height: 100vh;
   width: auto;
-  opacity: 0.5;
   margin-left: -70%;
 }
 
@@ -509,7 +508,6 @@ h5 {
   background-image: url("/src/assets/img/premium6.png");
   background-size: cover;
   background-position: center;
-  opacity: 80%;
 }
 
 .btn-subscribe {
