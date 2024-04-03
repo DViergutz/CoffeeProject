@@ -10,6 +10,36 @@
 .bold {
   font-weight: 700;
 }
+.main-section-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  padding: 32px 10% 16px 10%;
+}
+
+@media (max-width: 940px) {
+  .main-section-footer {
+    padding: 32px 10% 32px 10%;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-section-footer {
+    padding: 16px;
+  }
+}
+
+.footer-align {
+  text-align: start;
+}
+
+@media (max-width: 940px) {
+  .footer-align {
+    text-align: center;
+  }
+}
 
 footer {
   background-color: #121212;
@@ -202,6 +232,16 @@ h5 {
   align-items: center;
   margin-top: -160px;
   overflow: hidden;
+}
+
+.main-section-newsletter {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 10% 32px 10%;
 }
 
 .main-section-everything-starts-with-coffee {

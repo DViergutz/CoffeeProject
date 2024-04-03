@@ -141,7 +141,7 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className=" col-lg-4">
-              <div className="category-card category-flavored mb-">
+              <div className="category-card category-flavored ">
                 <h3 className="category-title">Flavored</h3>
               </div>
             </div>
@@ -312,7 +312,11 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="blog" ref={blog} className="main-section background-newsletter">
+      <div
+        id="blog"
+        ref={blog}
+        className="main-section-newsletter background-newsletter"
+      >
         <section className="py-5">
           <div className="container">
             <div className="text-center">
