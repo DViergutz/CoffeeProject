@@ -65,38 +65,36 @@ function Home() {
       <div
         id="about"
         ref={about}
-        className="main-section-everything-starts-with-coffee  d-flex flex-row"
+        className="main-section-everything-starts-with-coffee d-flex flex-row"
       >
-        <div className="col-6">
+        <div className="col-lg-6">
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
         </div>
-        <div className="col-6 z-2">
-          <div className="row mb-4">
-            <div className="make-responsive">
-              <h2 className="text-start">
-                Everything starts with{" "}
-                <span className="text-orange">Coffee</span>
-              </h2>
-              <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
-                <div className="mr-md-3 mb-md-0 mb-3">
-                  <img
-                    src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
-                    alt="Big Coffee Image"
-                    className="about-icon"
-                  />
-                </div>
-                <div className="ms-3">
-                  {" "}
-                  <h5 className="fw-semibold">Our Mission</h5>
-                  <p>
-                    Every day we put into practice our belief that our community
-                    can be revitalized through responsible development.
-                  </p>
-                </div>
+        <div className="col-md-12 col-lg-6 z-2">
+          <div className="make-responsive">
+            <h2 className="text-start">
+              Everything starts with <span className="text-orange">Coffee</span>
+            </h2>
+            <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
+              <div className="mr-md-3 mb-md-0 mb-3">
+                <img
+                  src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                  alt="Big Coffee Image"
+                  className="about-icon"
+                />
+              </div>
+              <div className="ms-3">
+                {" "}
+                <h5 className="fw-semibold">Our Mission</h5>
+                <p>
+                  Every day we put into practice our belief that our community
+                  can be revitalized through responsible development.
+                </p>
               </div>
             </div>
           </div>
+
           <div className="row mb-4">
             <div className="make-responsive">
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
