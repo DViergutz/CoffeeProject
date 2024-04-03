@@ -123,6 +123,13 @@ h1 {
   font-weight: 600;
 }
 
+@media (max-width: 940px) {
+  h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+}
+
 h2 {
   text-align: center;
   color: rgb(255, 255, 255);
@@ -160,6 +167,13 @@ h5 {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 32px;
+}
+
+@media (max-width: 940px) {
+  .hero-subheading {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
 }
 
 .align-navigation-menu {
@@ -324,9 +338,9 @@ h5 {
   background-size: contain;
   background-position: center center;
   border-radius: 50%;
-  height: auto;
-  width: 65%;
-  margin-bottom: 16px;
+  height: 120px;
+  width: auto;
+  margin-right: 32px;
 }
 
 .img-sack {
@@ -631,6 +645,14 @@ h5 {
 
 .btn-hero:hover {
   background-color: #d96c21;
+}
+
+@media (max-width: 940px) {
+  .btn-hero {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+  }
 }
 
 .btn-cart {

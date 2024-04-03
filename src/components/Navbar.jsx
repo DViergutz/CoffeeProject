@@ -54,6 +54,9 @@ function Navigation() {
             <Nav.Link className="navLink" href="/checkout">
               MY CART <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>
             </Nav.Link>
+            <Nav.Link className="navLink" href="/admin/login">
+              ADMIN
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
