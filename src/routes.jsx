@@ -79,7 +79,7 @@ const router = createBrowserRouter([
     element: <LoginAdmin />,
   },
   {
-    path: "/sign-up",
+    path: "/user/register",
     element: <Signup />,
   },
   {
