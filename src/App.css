@@ -375,10 +375,10 @@ h5 {
 }
 
 .img-sack {
-  height: 90vh;
+  height: 100vh;
   width: auto;
   opacity: 0.5;
-  margin-left: -50%;
+  margin-left: -70%;
 }
 
 /* Media Query for smaller screen sizes */
