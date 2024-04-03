@@ -45,12 +45,24 @@ function Navigation() {
             </NavDropdown>
           </Nav>
           <Nav className="d-flex align-items-start align-items-center ">
-            <Nav.Link className="navLink" href="/user/login">
+            <NavDropdown
+              className="navLink  navDropdown"
+              title="USER"
+              id="navbarScrollingDropdown"
+            >
+              <NavDropdown.Item className="" href="/category/blends">
+                Login
+              </NavDropdown.Item>
+              <NavDropdown.Item className="" href="/category/Single Origin">
+                Register
+              </NavDropdown.Item>
+            </NavDropdown>
+            {/* <Nav.Link className="navLink" href="/user/login">
               LOGIN
             </Nav.Link>
             <Nav.Link className="navLink" href="/user/register">
               REGISTER
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link className="navLink" href="/checkout">
               MY CART <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>
             </Nav.Link>

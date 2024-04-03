@@ -641,13 +641,10 @@ h5 {
 
 .navLink {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   color: white;
   padding-left: 10px;
 }
-/* .navbar-toggler-icon {
-  color: white;
-} */
 
 .navDropdown:hover {
   color: #d96c21 !important;
@@ -673,6 +670,19 @@ h5 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   margin-left: 16px;
+}
+@media (max-width: 991px) {
+  .nav-link {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 1201px) {
+  .nav-link {
+    font-size: 14px;
+    margin-left: 10px;
+  }
 }
 
 .nav-link:hover {
