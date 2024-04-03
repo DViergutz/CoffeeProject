@@ -81,19 +81,21 @@ function Home() {
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
                 <div className="mr-md-3 mb-md-0 mb-3">
                   <img
-                    src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                    src="src\assets\img\pinlogo.png"
                     alt="Big Coffee Image"
                     className="img-fluid about-icon"
                   />
                 </div>
-                <div className="ms-3">
+                <div className="">
                   {" "}
                   <h5 className="fw-semibold">Our Mission</h5>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    fuga maiores sequi magni perspiciatis quisquam dolor modi,
-                    itaque magnam aliquam illo, natus praesentium iusto
-                    accusamus dicta officiis neque? Ut vel hic ipsum.
+                    Discover the essence of excellence with Utica Coffee, where
+                    passion meets perfection in every cup. Crafted with care and
+                    dedication, our artisanal blends promise an unparalleled
+                    coffee experience. Indulge in rich flavors and superior
+                    quality, curated to elevate your mornings and invigorate
+                    your senses.
                   </p>
                 </div>
               </div>
@@ -104,7 +106,7 @@ function Home() {
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
                 <div className="mr-md-3 mb-md-0 mb-3">
                   <img
-                    src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                    src="src\assets\img\3beanslogo.png"
                     alt="Big Coffee Image"
                     className="img-fluid about-icon"
                   />
@@ -113,10 +115,12 @@ function Home() {
                   {" "}
                   <h5 className="fw-semibold">The Utica Coffe Brand</h5>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    fuga maiores sequi magni perspiciatis quisquam dolor modi,
-                    itaque magnam aliquam illo, natus praesentium iusto
-                    accusamus dicta officiis neque? Ut vel hic ipsum.
+                    Welcome to Utica Coffee – where every sip tells a story of
+                    craftsmanship and dedication. Our brand stands as a beacon
+                    of quality, offering an exquisite range of blends
+                    meticulously crafted to awaken your senses. Experience the
+                    essence of excellence with Utica Coffee – a journey worth
+                    savoring.
                   </p>
                 </div>
               </div>
@@ -127,7 +131,7 @@ function Home() {
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
                 <div className="mr-md-3 mb-md-0 mb-3">
                   <img
-                    src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                    src="/src\assets\img\coffeemaker.png"
                     alt="Big Coffee Image"
                     className="img-fluid about-icon"
                   />
@@ -136,10 +140,12 @@ function Home() {
                   {" "}
                   <h5 className="fw-semibold">The Best Part?</h5>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    fuga maiores sequi magni perspiciatis quisquam dolor modi,
-                    itaque magnam aliquam illo, natus praesentium iusto
-                    accusamus dicta officiis neque? Ut vel hic ipsum.
+                    Unveil the finest moments with Utica Coffee – a selection
+                    crafted for connoisseurs seeking the epitome of taste.
+                    Delight in our exquisite blends, meticulously sourced and
+                    masterfully roasted to perfection. Elevate your coffee
+                    experience and savor the best part of your day with Utica
+                    Coffee.
                   </p>
                 </div>
               </div>
