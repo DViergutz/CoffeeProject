@@ -2,7 +2,9 @@ import React from "react";
 import linkedin from "../assets/img/linkedin.svg";
 import github from "../assets/img/github.svg";
 import mer from "../assets/img/MER.png";
-import Santi from "../assets/img/Santi.webp";
+import Gaston from "../assets/img/Gaston.png";
+import Santiago from "../assets/img/Santiago.png";
+import David from "../assets/img/David.png";
 
 function AboutThisProject() {
   return (
@@ -214,7 +216,7 @@ function AboutThisProject() {
           <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4">
             <div className="col mb-4">
               <div className="cardAbout card h-100 ">
-                <img src={Santi} className="card-img-top" alt="Team Member 1" />
+                <img src={David} className="card-img-top" alt="Team Member 1" />
                 <div className="card-body">
                   <h5 className="card-title">Santiago Ternande</h5>
                   <p>Full Stack Developer</p>
@@ -232,11 +234,7 @@ function AboutThisProject() {
             </div>
             <div className="col mb-4">
               <div className="card h-100 cardAbout">
-                <img
-                  src="https://media.istockphoto.com/id/1301037555/es/foto/hombre-joven-de-raza-mixta-guapo-con-ropa-casual-sonriendo-con-dientes-aislados-sobre-fondo.jpg?s=2048x2048&w=is&k=20&c=lZHAvbmSq3V9WVzjH27DICdI7erqj5j7xqvzy9EPWfQ="
-                  className="card-img-top"
-                  alt="Team Member 2"
-                />
+                <img src={David} className="card-img-top" alt="Team Member 2" />
                 <div className="card-body">
                   <h5 className="card-title">Jane Smith</h5>
                   <p>Full Stack Developer</p>
@@ -255,12 +253,12 @@ function AboutThisProject() {
             <div className="col mb-4">
               <div className="card h-100 cardAbout">
                 <img
-                  src="https://media.istockphoto.com/id/1212514593/es/foto/hombre-afroamericano-con-trenzas-con-su%C3%A9ter-verde-sobre-fondo-blanco-aislado-con-expresi%C3%B3n.jpg?s=2048x2048&w=is&k=20&c=Rs5l2EaS-gqIuDKPHWltuw5ho4Sh0FEEE0ENE3B6Q5w="
+                  src={Gaston}
                   className="card-img-top"
                   alt="Team Member 3"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Alice Johnson</h5>
+                  <h5 className="card-title">Gaston Silva</h5>
                   <p>Full Stack Developer</p>
                   <hr className="text-orange" />
                   <div className="imgCardAbout">

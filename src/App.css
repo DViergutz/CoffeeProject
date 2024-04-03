@@ -296,6 +296,9 @@ h5 {
   max-width: 700px;
   margin-bottom: 32px;
 }
+.about-info p {
+  text-align: left;
+}
 
 .imgCardAbout {
   display: flex;
@@ -826,14 +829,28 @@ h5 {
   width: 50px;
   height: 50px;
   opacity: 0.4;
+  transition: transform 0.3s ease;
 }
 
+.about-icons:hover {
+  transform: translateY(-12px);
+}
 .hoverSocial {
   color: white;
 }
 
 .hoverSocial:hover {
   color: #d96c21;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  background-color: #99450d;
+}
+.card-img-top:hover {
+  transform: translateY(-12px);
 }
 
 /*--------*/
