@@ -66,11 +66,11 @@ function Home() {
         ref={about}
         className="main-section-everything-starts-with-coffee d-flex flex-row"
       >
-        <div className=" col-lg-5">
+        <div className="col-lg-5">
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
         </div>
-        <div className="col-md-12 col-lg-7 z-2">
+        <div className="col-lg-7 z-2">
           <h2 className="about-heading">
             Everything starts with <span className="text-orange">Coffee</span>
           </h2>
