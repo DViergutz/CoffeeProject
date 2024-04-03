@@ -408,18 +408,28 @@ h5 {
   height: 100px;
   margin-left: -350px;
   margin-top: -1600px;
+  filter: brightness(0.5) grayscale(10%);
+}
+.img-b1-copy {
+  height: 220px;
+  margin-left: 700px;
+  margin-top: 1150px;
+  filter: brightness(0.5);
 }
 .img-b2 {
   height: 100px;
   margin-bottom: -1950px;
+  filter: brightness(0.5);
 }
 .img-b3 {
   height: 200px;
+  filter: brightness(0.5);
 }
 .img-b4 {
-  height: 400px;
+  height: 300px;
   margin-top: 50px;
   margin-left: -450px;
+  filter: brightness(0.5);
 }
 
 .splash {
@@ -430,13 +440,14 @@ h5 {
   height: 550px;
   margin-top: -500px;
   margin-left: 1400px;
-  opacity: 60%;
+  filter: brightness(0.5) grayscale(30%);
 }
 
 .splash-beans {
   height: 0px;
   width: auto;
   transform: scaleX(-1);
+  filter: brightness(0.5) grayscale(20%);
 }
 .img-splash-beans {
   height: 600px;
@@ -474,7 +485,7 @@ h5 {
   height: 100vh;
   width: auto;
   margin-left: -70%;
-  opacity: 0.5;
+  filter: brightness(0.5);
 }
 
 /* Media Query for smaller screen sizes */
@@ -597,7 +608,7 @@ h5 {
 .background-newsletter {
   background-image: url("/src/assets/img/premium6.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 1px;
 }
 
 .btn-subscribe {
