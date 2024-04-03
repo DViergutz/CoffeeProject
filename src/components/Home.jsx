@@ -125,9 +125,19 @@ function Home() {
                 process. Time & love goes into every cup.
               </p>
             </div>
+          </div>{" "}
+          <div className="floating-bean-div">
+            {" "}
+            <img src="/src\assets\img\b1.png" className="img-b1" alt="" />
+            <img src="/src\assets\img\b4.png" className="img-b4" alt="" />
           </div>
-        </div>
-      </div>
+          <div className="floating-bean-div">
+            {" "}
+            <img src="/src\assets\img\b2.png" className="img-b2" alt="" />
+            <img src="/src\assets\img\b3.png" className="img-b3" alt="" />
+          </div>
+        </div>{" "}
+      </div>{" "}
       <div id="categories" ref={categories} className="main-section">
         <div className="splash">
           {" "}
