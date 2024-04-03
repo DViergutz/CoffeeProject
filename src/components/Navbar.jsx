@@ -52,7 +52,10 @@ function Navigation() {
               REGISTER
             </Nav.Link>
             <Nav.Link className="navLink" href="/checkout">
-              My Cart <i className="bi bi-cart2 fs-5 text-orange"></i>
+              MY CART <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/admin/login">
+              ADMIN
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

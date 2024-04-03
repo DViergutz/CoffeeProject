@@ -65,9 +65,9 @@ function Home() {
       <div
         id="about"
         ref={about}
-        className="main-section-everything-starts-with-coffee  d-flex flex-row"
+        className="main-section-everything-starts-with-coffee d-flex flex-row"
       >
-        <div className="col-6">
+        <div className="col-lg-6">
           {" "}
           <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
         </div>
@@ -81,42 +81,44 @@ function Home() {
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
                 <div className="mr-md-3 mb-md-0 mb-3">
                   <img
-                    src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                    src="src\assets\img\pinlogo.png"
                     alt="Big Coffee Image"
                     className="img-fluid about-icon"
                   />
                 </div>
-                <div className="ms-3">
+                <div className="">
                   {" "}
                   <h5 className="fw-semibold">Our Mission</h5>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    fuga maiores sequi magni perspiciatis quisquam dolor modi,
-                    itaque magnam aliquam illo, natus praesentium iusto
-                    accusamus dicta officiis neque? Ut vel hic ipsum.
+                    Discover the essence of excellence with Utica Coffee, where
+                    passion meets perfection in every cup. Crafted with care and
+                    dedication, our artisanal blends promise an unparalleled
+                    coffee experience. Indulge in rich flavors and superior
+                    quality, curated to elevate your mornings and invigorate
+                    your senses.
                   </p>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="row mb-4">
             <div className="make-responsive">
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
                 <div className="mr-md-3 mb-md-0 mb-3">
                   <img
-                    src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                    src="src\assets\img\3beanslogo.png"
                     alt="Big Coffee Image"
-                    className="img-fluid about-icon"
+                    className=" about-icon"
                   />
                 </div>
                 <div className=" ms-3">
                   {" "}
                   <h5 className="fw-semibold">The Utica Coffe Brand</h5>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    fuga maiores sequi magni perspiciatis quisquam dolor modi,
-                    itaque magnam aliquam illo, natus praesentium iusto
-                    accusamus dicta officiis neque? Ut vel hic ipsum.
+                    Synonymous with the best qualities of Utica itself:
+                    simplicity, a no-nonsense attitude, and a richness of
+                    unique, shared culture.
                   </p>
                 </div>
               </div>
@@ -127,19 +129,17 @@ function Home() {
               <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center">
                 <div className="mr-md-3 mb-md-0 mb-3">
                   <img
-                    src="https://i.pinimg.com/564x/e3/bf/78/e3bf780bb7d3fcf166422c74f39c38bc.jpg"
+                    src="/src\assets\img\coffeemaker.png"
                     alt="Big Coffee Image"
-                    className="img-fluid about-icon"
+                    className="about-icon"
                   />
                 </div>
                 <div className=" ms-3">
                   {" "}
                   <h5 className="fw-semibold">The Best Part?</h5>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    fuga maiores sequi magni perspiciatis quisquam dolor modi,
-                    itaque magnam aliquam illo, natus praesentium iusto
-                    accusamus dicta officiis neque? Ut vel hic ipsum.
+                    We get to roast, drink and share our phenomenal coffee in
+                    the process. Time & love goes into every cup.
                   </p>
                 </div>
               </div>
