@@ -396,6 +396,32 @@ h5 {
   background-repeat: no-repeat;
 }
 
+/* /////////////////////// FLOATING IMAGES //////////////////// */
+
+.floating-bean-div {
+  height: 0px;
+  width: 100vw;
+  opacity: 80%;
+}
+
+.img-b1 {
+  height: 100px;
+  margin-left: -350px;
+  margin-top: -1600px;
+}
+.img-b2 {
+  height: 100px;
+  margin-bottom: -1950px;
+}
+.img-b3 {
+  height: 200px;
+}
+.img-b4 {
+  height: 400px;
+  margin-top: 50px;
+  margin-left: -450px;
+}
+
 .splash {
   height: 0px;
   width: 100vw;
@@ -956,7 +982,7 @@ h5 {
 .dashboardCard {
   width: 30%;
   min-width: 300px;
-  border-radius: 10px;
+  /*   border-radius: 10px; */
   border: 1px solid rgba(0, 0, 0, 0.281);
   overflow: hidden;
 }
