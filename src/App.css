@@ -1074,3 +1074,13 @@ h5 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 16px;
 }
+
+/* Login */
+.border-orange {
+  border: 1px solid #ee7828;
+  border-radius: 10px;
+}
+
+.h3-login {
+  font-family: myFont;
+}
