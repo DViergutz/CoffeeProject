@@ -47,7 +47,7 @@ function Navigation() {
           <Nav className="d-flex align-items-start align-items-center ">
             <NavDropdown
               className="navLink  navDropdown"
-              title="USER"
+              title={<i class="bi bi-person-fill fs-5"></i>}
               id="navbarScrollingDropdown"
             >
               <NavDropdown.Item className="" href="/category/blends">
@@ -57,12 +57,6 @@ function Navigation() {
                 Register
               </NavDropdown.Item>
             </NavDropdown>
-            {/* <Nav.Link className="navLink" href="/user/login">
-              LOGIN
-            </Nav.Link>
-            <Nav.Link className="navLink" href="/user/register">
-              REGISTER
-            </Nav.Link> */}
             <Nav.Link className="navLink" href="/checkout">
               MY CART <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>
             </Nav.Link>
