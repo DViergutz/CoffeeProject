@@ -202,7 +202,7 @@ h5 {
   align-items: center;
   justify-content: start;
   width: 100%;
-  padding: 64px 10% 32px 10%;
+  padding: 16px 10% 32px 10%;
 }
 
 @media (max-width: 940px) {
