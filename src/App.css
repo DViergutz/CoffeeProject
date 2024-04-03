@@ -475,6 +475,7 @@ h5 {
   height: 120px;
   width: auto;
   margin-right: 32px;
+  opacity: 0.8;
 }
 
 .about-paragraph {
@@ -657,7 +658,8 @@ h5 {
   padding-left: 10px;
 }
 
-.navDropdown:hover {
+.navLink.navDropdown .dropdown-item:hover,
+.navLink.navDropdown .dropdown-item:active {
   color: #d96c21 !important;
 }
 

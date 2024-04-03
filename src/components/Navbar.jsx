@@ -50,10 +50,10 @@ function Navigation() {
               title={<i class="bi bi-person-fill fs-5 "></i>}
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item className="" href="/category/blends">
+              <NavDropdown.Item className="" href="/user/login">
                 Login
               </NavDropdown.Item>
-              <NavDropdown.Item className="" href="/category/Single Origin">
+              <NavDropdown.Item className="" href="/user/register">
                 Register
               </NavDropdown.Item>
             </NavDropdown>
