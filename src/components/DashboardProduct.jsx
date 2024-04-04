@@ -1,72 +1,115 @@
+import axios from "axios";
 import React from "react";
+import { useEffect, useState } from "react";
 
 function DashboardProduct() {
+  const [products, setProducts] = useState();
+
+  useEffect(() => {
+    const fetchAllProducts = async () => {
+      try {
+        const response = await axios({
+          method: "GET",
+          url: `http://localhost:3000/products`,
+        });
+        setProducts(response.data);
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+    fetchAllProducts();
+  }, []);
+
+  // cut description
+  const abbreviateDescription = (description, maxLength) => {
+    const words = description.split(" ");
+    if (words.length > maxLength) {
+      return words.slice(0, maxLength).join(" ") + "...";
+    } else {
+      return description;
+    }
+  };
+
+  // delete product
+  const deleteProduct = async (id) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this item?"
+    );
+    if (confirmDelete) {
+      try {
+        await axios.delete(`http://localhost:3000/products/${id}`);
+        // Fetch products again after deletion
+        const response = await axios.get("http://localhost:3000/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    }
+  };
+
   return (
     <div className="infoDashboard">
       <div className="administrationPanelMain">
-        <h5>Products</h5>
+        <div className="row ">
+          <div className="col">
+            <h5>Products</h5>
+          </div>
+          <div className="col text-end">
+            <button className="btn btn-outline-success">
+              <i class="bi bi-plus-square"> Add Product</i>
+            </button>
+          </div>
+        </div>
 
-        <div className="lastOrders">
+        <div>
           <table className="dashboardTable">
             <thead className="tableHeadProduct">
               <tr>
                 <th>Name</th>
+                <th>Description</th>
                 <th>Price</th>
                 <th>Stock</th>
-                <th></th>
+                <th>Category</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody className="bodyTableProducts">
-              <tr>
-                <td className="bold">Cafe 1</td>
-                <td>
-                  <span>USD 227.00</span>
-                </td>
-                <td>22</td>
-                <td>
-                  <a href="">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td className="bold">Cafe 2</td>
-                <td>
-                  <span>USD 227.00</span>
-                </td>
-                <td>22</td>
-                <td>
-                  <a href="">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td className="bold">Cafe 3</td>
-                <td>
-                  <span>USD 227.00</span>
-                </td>
-                <td>22</td>
-                <td>
-                  <a href="">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td className="bold">Cafe 4</td>
-                <td>
-                  <span>USD 227.00</span>
-                </td>
-                <td>22</td>
-                <td>
-                  <a href="">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td className="bold">Cafe 5</td>
-                <td>
-                  <span>USD 227.00</span>
-                </td>
-                <td>22</td>
-                <td>
-                  <a href="">Edit</a>
-                </td>
-              </tr>
+              {products ? (
+                products.map((product) => (
+                  <tr key={product.id}>
+                    <td className="bold ">{product.name}</td>
+                    <td className="w-50">
+                      {/* call abbreviate Function, pass string and number of words */}
+                      {abbreviateDescription(product.description, 15)}
+                    </td>
+
+                    <td>${product.price}</td>
+                    <td>{product.stock}</td>
+                    <td>{product.category.name}</td>
+
+                    <td>
+                      <a
+                        href={`/admin/products/edit/${product.id}`}
+                        className=""
+                      >
+                        <button className="btn btn-outline-warning mb-2">
+                          <i className="bi bi-pen text-dark"></i>
+                        </button>
+                      </a>
+                      <br />
+                      <button className="btn btn-outline-danger">
+                        <i
+                          className="bi bi-trash3 text-dark"
+                          onClick={() => deleteProduct(product.id)}
+                        ></i>
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <div>Loading...</div>
+              )}
             </tbody>
           </table>
         </div>

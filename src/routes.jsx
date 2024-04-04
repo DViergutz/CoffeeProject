@@ -15,6 +15,7 @@ import NotFound from "./components/NotFound";
 import MainLayout from "./components/MainLayout";
 import Home from "./components/Home";
 import AdminLayout from "./components/AdminLayout";
+import DashboardEditProduct from "./components/DashboardEditProduct";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/admin/products",
         element: <DashboardProduct />,
+      },
+      {
+        path: "/admin/products/edit/:id",
+        element: <DashboardEditProduct />,
       },
       {
         path: "/admin/users",
