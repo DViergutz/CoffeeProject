@@ -37,8 +37,8 @@ function LoginUser() {
   return (
     <>
       <Navigation />
-      <div className="bg-fondo3 h-100 p-4">
-        <div className="container">
+      <div className="bg-fondo3 h-100 pt-5">
+        <div className="container vh-100">
           <div className="row d-flex align-items-center bg-dark-grey border-orange ">
             <div className="col-md-6 text-center">
               <img src={UticaBrandLogo} alt="UticaLogo" className="img-fluid" />

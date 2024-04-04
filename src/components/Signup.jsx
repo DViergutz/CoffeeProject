@@ -10,7 +10,7 @@ function SignUp() {
     email: "",
     password: "",
     phone: "",
-    adress: "",
+    address: "",
   });
 
   // Manejar cambios en los campos del formulario
@@ -41,8 +41,8 @@ function SignUp() {
   return (
     <>
       <Navigation />
-      <div className="bg-fondo3 h-100 p-4 ">
-        <div className="container ">
+      <div className="bg-fondo3 vh-100 p-4 ">
+        <div className="container">
           <div className="row d-flex align-items-center bg-dark-grey border-orange  ">
             <div className="col-md-6 text-center">
               <img src={UticaBrandLogo} alt="UticaLogo" className="img-fluid" />
@@ -51,7 +51,7 @@ function SignUp() {
               <h3 className="text-dark pb-1  fw-semibold">Register Account</h3>
               <form onSubmit={handleSubmit}>
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-md-6">
                     <div className="mb-2">
                       <label
                         forhtml="firstname"
@@ -70,7 +70,7 @@ function SignUp() {
                       />
                     </div>
                   </div>
-                  <div className="mb-2 col-6">
+                  <div className="mb-2 col-md-6">
                     <label forhtml="lastname" className="form-label text-dark">
                       Lastname
                     </label>
@@ -128,15 +128,15 @@ function SignUp() {
                 </div>
 
                 <div className="mb-2">
-                  <label forhtml="adress" className="form-label text-dark">
-                    Adress
+                  <label forhtml="address" className="form-label text-dark">
+                    Address
                   </label>
                   <input
                     type="text"
                     className="form-control form-control-sm"
-                    id="adress"
-                    name="adress"
-                    value={formData.adress}
+                    id="address"
+                    name="address"
+                    value={formData.address}
                     onChange={handleChange}
                   />
                 </div>
@@ -145,7 +145,7 @@ function SignUp() {
                   type="submit"
                   className="btn btn-subscribe w-100 my-3 text-light"
                 >
-                  Login
+                  Register Account
                 </button>
                 <div>
                   <small className="text-dark">
