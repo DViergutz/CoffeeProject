@@ -146,6 +146,9 @@ footer {
 p {
   color: white;
 }
+.stock {
+  margin-bottom: 0px;
+}
 
 h1 {
   color: white;
@@ -183,6 +186,11 @@ h3 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 32px;
   font-weight: 600;
+}
+
+.related-products {
+  font-family: myFont;
+  font-size: 40px;
 }
 
 @media (max-width: 991px) {

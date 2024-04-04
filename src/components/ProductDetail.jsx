@@ -50,11 +50,11 @@ function ProductDetail() {
     <>
       <div className="main-section bg-fondo3  ">
         <div className="row d-flex mt-2 ">
-          <div className="col-md-6 col-sm-12 text-center">
+          <div className="col-md-6 text-center">
             {oneProduct ? (
               <img
                 src={oneProduct.image}
-                className="img-fluid"
+                className=""
                 style={{
                   maxWidth: "100%",
                   height: "",
@@ -66,7 +66,7 @@ function ProductDetail() {
               <div>Loading...</div>
             )}
           </div>
-          <div className=" col-lg-5 col-sm-12 ">
+          <div className=" col-lg-5 ">
             <div className="m-0 special-product-card d-flex flex-column justify-content-start p-5">
               <h4 className=" text-start">
                 {oneProduct ? (
@@ -75,9 +75,9 @@ function ProductDetail() {
                   <div>Loading...</div>
                 )}
               </h4>
-              <div className="fs-5 fw-bold ">
+              <div className="fs-5 fw-semibold ">
                 {oneProduct ? (
-                  <div className="text-orange text-start fs-4">
+                  <div className="text-orange text-start fs-2">
                     ${oneProduct.price}
                   </div>
                 ) : (
@@ -86,17 +86,18 @@ function ProductDetail() {
               </div>
               <hr className="text-orange" />
               <div className="d-flex flex-column">
-                <p className="fs-5 text-start">Quantity</p>
-                <div className="w-100 d-flex ">
+                <p className="fs-4 text-start">Quantity</p>
+                <div className="w-100 d-flex mb-2">
                   <button className="btn-view-product">
-                    <i class="bi bi-dash-circle fs-2 text-light"></i>
+                    <i class="bi bi-dash-circle fs-4 text-light"></i>
                   </button>
-                  <span className="p-2  rounded mx-2 fs-3 text-orange">2</span>
+                  <span className="p-2 rounded mx-2 fs-3 text-orange">2</span>
                   <button className="btn-view-product">
-                    <i class="bi bi-plus-circle  fs-2 text-light"></i>
+                    <i class="bi bi-plus-circle fs-4 text-light"></i>
                   </button>
                 </div>
-                <p className="fs-5 text-start mt-3">
+                <hr className="text-orange" />
+                <p className="fs-4 text-start stock mb-1">
                   In stock:{" "}
                   {oneProduct ? (
                     <span className="text-start fs-5 ">{oneProduct.stock}</span>
@@ -105,13 +106,13 @@ function ProductDetail() {
                   )}{" "}
                 </p>
                 <hr className="text-orange" />
-                <button className="btn-hero p-2 w-100 mt-4 ">
+                <button className="btn-hero p-2 w-100 mt-4">
                   Add to Cart <i className="bi bi-cart"></i>
                 </button>
               </div>
             </div>
-            <div className="p-2">
-              <h5 className="fw-semi-bold mb-3">
+            <div className="px-2 pt-4">
+              <h5 className=" mb-3">
                 Experience the taste of our famous
                 {oneProduct ? (
                   <span className="text-orange"> {oneProduct.name}</span>
@@ -121,7 +122,7 @@ function ProductDetail() {
               </h5>
               <div>
                 {oneProduct ? (
-                  <div className="text-light  mb-4">
+                  <div className="text-light mb-4">
                     {oneProduct.description}
                   </div>
                 ) : (
@@ -129,19 +130,19 @@ function ProductDetail() {
                 )}
               </div>
               <hr className="text-orange" />
-              <section className="d-flex align-items-center ">
+              <div className="d-flex align-items-center mt-4">
                 <strong className="text-orange">
                   <i className="bi bi-cup-hot-fill me-4 fs-4"></i>
                 </strong>
                 <p className="m-0">Mild nuttiness, chocolate</p>
-              </section>
-              <section className="d-flex align-items-center">
+              </div>
+              <div className="d-flex align-items-center my-2">
                 <strong className="text-orange">
                   <i className="bi bi-globe-americas me-4 fs-4"></i>
                 </strong>
                 <p className="m-0"> Peru, Columbia</p>
-              </section>
-              <section className="d-flex align-items-center">
+              </div>
+              <div className="d-flex align-items-center">
                 <strong className="text-orange">
                   <i class="bi bi-brilliance me-4 fs-4"></i>
                 </strong>
@@ -152,19 +153,19 @@ function ProductDetail() {
                     <div>Loading...</div>
                   )}
                 </div>
-              </section>
+              </div>
             </div>
           </div>
         </div>
 
         {/* -----------------------------Related Products-------------- */}
         <div className="relatedProducts mt-5 container">
-          <h3>Related Products</h3>
+          <h3 className="related-products">Related Products</h3>
           <div className="row mb-5">
             {relatedProducts ? (
               relatedProducts.map((product) => (
                 <div className="col-md-6 col-lg-3" key={product.id}>
-                  <div className="d-flex flex-column h-100  ">
+                  <div className="d-flex flex-column h-100 ">
                     <div className="special-product-card h-100 d-flex flex-column">
                       <Card.Img className="card-img" src={product.image} />
                       <div className="text-start ">
