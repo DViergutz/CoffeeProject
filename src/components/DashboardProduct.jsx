@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function DashboardProduct() {
   const [products, setProducts] = useState();
@@ -13,7 +14,6 @@ function DashboardProduct() {
           url: `http://localhost:3000/products`,
         });
         setProducts(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error("Error:", error);
       }
@@ -56,9 +56,12 @@ function DashboardProduct() {
             <h5>Products</h5>
           </div>
           <div className="col text-end">
-            <button className="btn btn-outline-success">
+            <Link
+              to="/admin/products/create"
+              className="btn btn-outline-success"
+            >
               <i class="bi bi-plus-square"> Add Product</i>
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -71,6 +74,7 @@ function DashboardProduct() {
                 <th>Price</th>
                 <th>Stock</th>
                 <th>Category</th>
+                <th>Image</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -87,6 +91,7 @@ function DashboardProduct() {
                     <td>${product.price}</td>
                     <td>{product.stock}</td>
                     <td>{product.category.name}</td>
+                    <td>{product.image}</td>
 
                     <td>
                       <a

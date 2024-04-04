@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
-function EditProduct() {
+function CreateProduct() {
   const { id } = useParams();
-  const navigate = useNavigate(); // Initialize navigate for navigation
+  const navigate = useNavigate();
 
   const [productData, setProductData] = useState({
     name: "",
@@ -14,22 +14,6 @@ function EditProduct() {
     image: "",
     categoryId: "",
   });
-
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:3000/products/edit/${id}`
-        );
-        setProductData(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.error("Error fetching product:", error);
-      }
-    };
-
-    fetchProduct();
-  }, [id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,11 +28,11 @@ function EditProduct() {
     e.preventDefault();
     console.log(productData);
     try {
-      const response = await axios.patch(
-        `http://localhost:3000/products/patch/${id}`,
+      const response = await axios.post(
+        `http://localhost:3000/products`,
         productData
       );
-      console.log(response.data); // Handle response from server
+      console.log(response.data);
     } catch (error) {
       console.error("Error updating product:", error);
     }
@@ -61,14 +45,14 @@ function EditProduct() {
         <div className="infoDashboard">
           <div className="administrationPanelMain">
             <div className="container">
-              <h3 className="text-dark pb-1 fw-semibold">Edit Product</h3>
+              <h3 className="text-dark pb-1 fw-semibold">Create new Product</h3>
               <form onSubmit={handleSubmitEdit}>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="mb-2">
                       <label htmlFor="name" className="form-label text-dark">
                         Name
-                      </label>{" "}
+                      </label>
                       <br />
                       <input
                         type="text"
@@ -152,7 +136,14 @@ function EditProduct() {
                   <label htmlFor="formFile" class="form-label">
                     Upload Image
                   </label>
-                  <input className="form-control" type="file" id="formFile" />
+                  <input
+                    className="form-control"
+                    type="file"
+                    id="productImage"
+                    name="image"
+                    value={productData.image}
+                    onChange={handleChange}
+                  />
                 </div>
 
                 <button
@@ -172,4 +163,4 @@ function EditProduct() {
   );
 }
 
-export default EditProduct;
+export default CreateProduct;
