@@ -178,6 +178,13 @@ function AboutThisProject() {
             any point.
           </p>
         </div>
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="flow-chart-img"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="main-section bg-fondo3">
         <div className="about-info text-center d-flex flex-column align-items-center">
