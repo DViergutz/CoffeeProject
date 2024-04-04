@@ -58,7 +58,7 @@ function Navigation() {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link className="navLink" href="/checkout">
-              CART <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>
+              <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>
             </Nav.Link>
             <Nav.Link className="navLink" href="/admin/login">
               ADMIN
