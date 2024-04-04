@@ -194,7 +194,9 @@ function Checkout() {
                 <p className="fw-bold text-dark ">Total (tax incl.):</p>
                 <p className="fw-bold text-dark">$2025.00</p>
               </div>
-              <button className="btn-hero w-100 mt-4">Checkout</button>
+              <button className="btn-hero w-100 mt-4">
+                Checkout<i className="ms-2 bi bi-lock-fill"></i>
+              </button>
             </div>
           </div>
         </div>
