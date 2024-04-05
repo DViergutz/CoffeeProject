@@ -39,7 +39,7 @@ function DashboardAdmin() {
 
   return (
     <div className="infoDashboard">
-      <div className="administrationPanelMainDashboard">
+      <div className="administrationPanelMain">
         <div className="row ">
           <div className="col">
             <h5>Admins</h5>
