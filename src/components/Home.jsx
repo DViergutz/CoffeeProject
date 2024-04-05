@@ -5,12 +5,23 @@ import "../App.css";
 import { GoDot } from "react-icons/go";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Card from "react-bootstrap/Card";
+import CartOffCanvas from "./CartOffCanvas";
+import {
+  decreaseCount,
+  increaseCount,
+  removeFromCart,
+  setIsCartOpen,
+  addToCart,
+} from "../redux/CartSlice.jsx";
+import { useDispatch, useSelector } from "react-redux";
 
 function Home() {
   const categories = useRef(null);
   const specialProducts = useRef(null);
   const blog = useRef(null);
   const about = useRef(null);
+  const dispatch = useDispatch();
+  const isCartOpen = useSelector((state) => state.cart.isCartOpen);
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -210,7 +221,10 @@ function Home() {
                           View Product
                         </button>
                       </a>
-                      <button className="btn rounded-circle btn-cart">
+                      <button
+                        className="btn rounded-circle btn-cart "
+                        onClick={() => dispatch(setIsCartOpen())}
+                      >
                         <i className="bi bi-cart"></i>
                       </button>
                     </div>
@@ -245,7 +259,10 @@ function Home() {
                           View Product
                         </button>
                       </a>
-                      <button className="btn rounded-circle btn-cart">
+                      <button
+                        className="btn rounded-circle btn-cart"
+                        onClick={() => dispatch(setIsCartOpen())}
+                      >
                         <i className="bi bi-cart"></i>
                       </button>
                     </div>
@@ -280,7 +297,10 @@ function Home() {
                           View Product
                         </button>
                       </a>
-                      <button className="btn rounded-circle btn-cart">
+                      <button
+                        className="btn rounded-circle btn-cart"
+                        onClick={() => dispatch(setIsCartOpen())}
+                      >
                         <i className="bi bi-cart"></i>
                       </button>
                     </div>
@@ -315,7 +335,10 @@ function Home() {
                           View Product
                         </button>
                       </a>
-                      <button className="btn rounded-circle btn-cart">
+                      <button
+                        className="btn rounded-circle btn-cart"
+                        onClick={() => dispatch(setIsCartOpen())}
+                      >
                         <i className="bi bi-cart"></i>
                       </button>
                     </div>

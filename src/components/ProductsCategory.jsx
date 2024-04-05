@@ -3,11 +3,19 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import {
+  decreaseCount,
+  increaseCount,
+  removeFromCart,
+  setIsCartOpen,
+  addToCart,
+} from "../redux/CartSlice.jsx";
+import { useDispatch } from "react-redux";
 
 function ProductsCategory() {
   const params = useParams();
   const [productsOfCategory, setproductsOfCategory] = useState();
-
+  const dispatch = useDispatch();
   useEffect(() => {
     const fetchProductsOfCategory = async () => {
       try {
@@ -54,7 +62,10 @@ function ProductsCategory() {
                               View Product
                             </button>
                           </a>
-                          <button className="btn rounded-circle btn-cart ">
+                          <button
+                            className="btn rounded-circle btn-cart "
+                            onClick={() => dispatch(setIsCartOpen())}
+                          >
                             <i className="bi bi-cart"></i>
                           </button>
                         </div>

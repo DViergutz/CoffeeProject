@@ -47,7 +47,7 @@ function Navigation() {
           <Nav className="d-flex align-items-start align-items-center ">
             <NavDropdown
               className="navLink  navDropdown"
-              title={<i class="bi bi-person-fill fs-5 "></i>}
+              title={<i className="bi bi-person-fill fs-5 "></i>}
               id="navbarScrollingDropdown"
             >
               <NavDropdown.Item className="" href="/user/login">
