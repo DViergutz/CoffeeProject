@@ -59,8 +59,11 @@ function DashboardUser() {
             <thead className="tableHeadProduct">
               <tr>
                 <th>Id</th>
-                <th>Full name</th>
-                <th className="">Email</th>
+                <th>
+                  <p className="fw-normal">Firstname</p>
+                  <p>Lastname</p>
+                </th>
+                <th>Email</th>
                 <th>Phone</th>
                 <th>Address</th>
                 <th>Created at</th>
@@ -72,9 +75,11 @@ function DashboardUser() {
                 users.map((user) => (
                   <tr key={user.id}>
                     <td className="bold ">{user.id}</td>
-                    <td className="">
-                      {/* call abbreviate Function, pass string and number of words */}
-                      {user.firstname} {user.lastname}
+                    <td>
+                      <span>
+                        {user.firstname}
+                        <p className="fw-bold">{user.lastname}</p>
+                      </span>
                     </td>
 
                     <td>{user.email}</td>

@@ -29,6 +29,10 @@ function PanelAdmin() {
               <img src={home} alt="" />
               Dashboard
             </a>
+            <a href="/admin/admins">
+              <img src={user} alt="" />
+              Admins
+            </a>
             <a href="/admin/products">
               <img src={bag} alt="" />
               Products
