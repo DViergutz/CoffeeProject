@@ -122,7 +122,16 @@ function ProductDetail() {
                   </span>
                   <button
                     className="btn-view-product"
-                    onClick={() => handleIncrement(oneProduct.id)}
+                    onClick={() =>
+                      dispatch(
+                        addToCart({
+                          name: oneProduct.name,
+                          id: oneProduct.id,
+                          price: oneProduct.price,
+                          image: oneProduct.image,
+                        })
+                      )
+                    }
                   >
                     <i className="bi bi-plus-circle fs-4 text-light"></i>
                   </button>

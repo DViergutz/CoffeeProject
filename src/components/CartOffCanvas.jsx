@@ -53,11 +53,23 @@ function CartOffCanvas() {
             </div>
             <div className="col-5 p-1 ">
               <button className="btn-view-product-offcanvas">
-                <i className="bi bi-plus-circle fs-8 text-light"></i>
-              </button>
-              <span className="qty-box">1</span>
-              <button className="btn-view-product-offcanvas">
                 <i className="bi bi-dash-circle fs-8 text-light"></i>
+              </button>
+              <span className="qty-box">{item.quantity}</span>
+              <button className="btn-view-product-offcanvas">
+                <i
+                  className="bi bi-plus-circle fs-8 text-light"
+                  onClick={() =>
+                    dispatch(
+                      addToCart({
+                        name: item.name,
+                        id: item.id,
+                        price: item.price,
+                        image: item.image,
+                      })
+                    )
+                  }
+                ></i>
               </button>
             </div>
             <div className="col-2">{item.price}</div>
