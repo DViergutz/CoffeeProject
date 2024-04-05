@@ -65,7 +65,7 @@ const cartSlice = createSlice({
       }
     },
 
-    /* removeFromCart: (state, action) => {
+    removeFromCart: (state, action) => {
       const removeItem = state.inCart.filter(
         (item) => item.id !== action.payload.id
       );
@@ -76,23 +76,12 @@ const cartSlice = createSlice({
         quantity: -1,
       };
     },
-<<<<<<< Updated upstream
-    decreaseCount: (state, action) => {
-      state.inCart = state.inCart.map((item) => {
-        if (item.id === action.payload.id && item.count > 1) {
-          item.count--;
-        }
-        return item;
-      });
-    }, */
-=======
     incrementQuantity: (state, action) => {
       return {
         ...state,
         quantity: +1,
       };
     },
->>>>>>> Stashed changes
 
     setIsCartOpen: (state) => {
       state.isCartOpen = !state.isCartOpen;
