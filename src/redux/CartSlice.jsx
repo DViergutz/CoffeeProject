@@ -77,6 +77,7 @@ const cartSlice = createSlice({
       };
     },
     incrementQuantity: (state, action) => {
+      const { oneProductId } = action.payload;
       return {
         ...state,
         quantity: +1,
