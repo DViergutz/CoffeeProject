@@ -7,6 +7,50 @@
 :root {
   --color: #dcb288;
 }
+
+/* 
+/////////// OFFCANVAS////////// */
+.offcanvas {
+  background-color: #111111;
+  width: 25% !important;
+  min-width: 360px !important;
+}
+.offcanvas-title {
+  color: white;
+  text-align: center;
+}
+.offcanvas-product-div {
+  color: rgb(233, 228, 218);
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid #ee772865;
+}
+.qty-box {
+  margin: 10px;
+  height: 40px;
+  max-width: 70px;
+}
+
+.btn-view-product-offcanvas {
+  background-color: transparent;
+  color: #ee7828;
+  border: 1px solid #ee77281d;
+  padding: 3px 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-view-product-offcanvas:hover {
+  background-color: #ee7828;
+  color: white;
+}
+.btn-close {
+  background-color: #ee7828;
+  color: white !important;
+}
+/* //////////////////////////////// */
 .bold {
   font-weight: 700;
 }

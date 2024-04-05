@@ -16,6 +16,7 @@ import MainLayout from "./components/MainLayout";
 import Home from "./components/Home";
 import AdminLayout from "./components/AdminLayout";
 import DashboardEditProduct from "./components/DashboardEditProduct";
+/* import CartMenu from "./components/CartMenu"; */
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+
       {
         path: "/products",
         element: <ProductsAll />,

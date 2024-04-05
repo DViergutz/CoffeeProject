@@ -3,12 +3,21 @@ import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  decreaseCount,
+  increaseCount,
+  removeFromCart,
+  setIsCartOpen,
+  addToCart,
+} from "../redux/CartSlice.jsx";
 
 function ProductDetail() {
   const [oneProduct, setOneProduct] = useState();
   const [relatedProducts, setRelatedProducts] = useState();
   const { productId } = useParams();
   const params = useParams();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchOneProduct = async () => {
@@ -89,24 +98,27 @@ function ProductDetail() {
                 <p className="fs-4 text-start">Quantity</p>
                 <div className="w-100 d-flex mb-2">
                   <button className="btn-view-product">
-                    <i class="bi bi-dash-circle fs-4 text-light"></i>
+                    <i className="bi bi-dash-circle fs-4 text-light"></i>
                   </button>
                   <span className="p-2 rounded mx-2 fs-3 text-orange">2</span>
                   <button className="btn-view-product">
-                    <i class="bi bi-plus-circle fs-4 text-light"></i>
+                    <i className="bi bi-plus-circle fs-4 text-light"></i>
                   </button>
                 </div>
                 <hr className="text-orange" />
-                <p className="fs-4 text-start stock mb-1">
+                <div className="fs-4 text-start stock mb-1">
                   In stock:{" "}
                   {oneProduct ? (
                     <span className="text-start fs-5 ">{oneProduct.stock}</span>
                   ) : (
                     <div>Loading...</div>
                   )}{" "}
-                </p>
+                </div>
                 <hr className="text-orange" />
-                <button className="btn-hero p-2 w-100 mt-4">
+                <button
+                  className="btn-hero p-2 w-100 mt-4"
+                  onClick={() => dispatch(setIsCartOpen())}
+                >
                   Add to Cart <i className="bi bi-cart"></i>
                 </button>
               </div>
@@ -144,7 +156,7 @@ function ProductDetail() {
               </div>
               <div className="d-flex align-items-center">
                 <strong className="text-orange">
-                  <i class="bi bi-brilliance me-4 fs-4"></i>
+                  <i className="bi bi-brilliance me-4 fs-4"></i>
                 </strong>
                 <div className="text-light">
                   {oneProduct ? (

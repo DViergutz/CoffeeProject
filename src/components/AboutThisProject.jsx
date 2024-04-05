@@ -241,7 +241,7 @@ function AboutThisProject() {
                   <hr className="text-orange" />
                   <div className="imgCardAbout">
                     <a href="#" className="btn">
-                      <i class="bi bi-linkedin hoverSocial  fs-2 hoverSocial"></i>
+                      <i className="bi bi-linkedin hoverSocial  fs-2 hoverSocial"></i>
                     </a>
                     <a href="#" className="btn">
                       <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
@@ -263,7 +263,7 @@ function AboutThisProject() {
                   <hr className="text-orange" />
                   <div className="imgCardAbout">
                     <a href="#" className="btn">
-                      <i class="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
+                      <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
                     </a>
                     <a href="#" className="btn">
                       <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
@@ -307,7 +307,7 @@ function AboutThisProject() {
                   <hr className="text-orange" />
                   <div className="imgCardAbout">
                     <a href="#" className="btn">
-                      <i class="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
+                      <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
                     </a>
                     <a href="#" className="btn">
                       <i className="bi bi-github iconoGithub fs-2 hoverSocial"></i>
