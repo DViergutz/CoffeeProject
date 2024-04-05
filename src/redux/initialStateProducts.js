@@ -4,7 +4,7 @@ const products = {
       {
         name: "Pistachio",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -14,7 +14,7 @@ const products = {
       {
         name: "Coconut Cream",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -24,7 +24,7 @@ const products = {
       {
         name: "Chocolate Amaretto",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -34,7 +34,7 @@ const products = {
       {
         name: "Coconut Cream",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -44,7 +44,7 @@ const products = {
       {
         name: "Cinnamon Bun",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -56,7 +56,7 @@ const products = {
       {
         name: "Dark Adirondack",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -66,7 +66,7 @@ const products = {
       {
         name: "Italian Roast",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -76,7 +76,7 @@ const products = {
       {
         name: "House Blend",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -86,7 +86,7 @@ const products = {
       {
         name: "Art of Darkness",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -96,7 +96,7 @@ const products = {
       {
         name: "Half Caff",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -108,7 +108,7 @@ const products = {
       {
         name: "Colombia Organic",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -118,7 +118,7 @@ const products = {
       {
         name: "Mexico Organic",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -128,7 +128,7 @@ const products = {
       {
         name: "Sumatra Mandheling",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -138,7 +138,7 @@ const products = {
       {
         name: "Guatemala Santo Domingo",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
@@ -148,7 +148,7 @@ const products = {
       {
         name: "Ethiopia Yirgacheffe",
         price: 250,
-        stock: 5,
+        stock: 15,
         image: "",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
