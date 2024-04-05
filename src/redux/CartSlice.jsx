@@ -34,12 +34,46 @@ const cartSlice = createSlice({
         (item) => item.id !== action.payload.id
       );
     },
+
+    /* decrementQuantity: (state, action) => {
+      const itemIndex = state.inCart.findIndex(
+        (product) => product.id === action.payload.id
+      ); ////index me da -1 si no esta en el array
+      if (itemIndex >= 0) {
+        return {
+          ...state,
+          inCart: state.inCart.map((item, index) => {
+            if (index === itemIndex) {
+              return { ...item, quantity: item.quantity - 1 };
+            }
+            return item;
+          }),
+        };
+      }
+    }, */
+
     decrementQuantity: (state, action) => {
-      return {
-        ...state,
-        quantity: -1,
-      };
+      const { id } = action.payload;
+      const itemIndex = state.inCart.findIndex((product) => (product.id = id));
+
+      if (itemIndex >= 0) {
+        const newQuantity = state.inCart[itemIndex].quantity - 1;
+        if (newQuantity > 0) {
+          return {
+            ...state,
+            inCart: state.inCart.map((item, index) =>
+              index === itemIndex ? { ...item, quantity: newQuantity } : item
+            ),
+          };
+        } else {
+          return {
+            ...state,
+            inCart: state.inCart.filter((_, index) => index !== itemIndex),
+          };
+        }
+      }
     },
+
     incrementQuantity: (state, action) => {
       const itemIndex = state.inCart.findIndex(
         (product) => product.id === action.payload.id
@@ -61,6 +95,7 @@ const cartSlice = createSlice({
         };
       }
     },
+
     setIsCartOpen: (state) => {
       state.isCartOpen = !state.isCartOpen;
     },

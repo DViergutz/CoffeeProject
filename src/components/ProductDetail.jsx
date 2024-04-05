@@ -34,10 +34,14 @@ function ProductDetail() {
       );
     }
   };
-  const handleDecrement = () => {
+  /* const handleDecrement = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
+  }; */
+
+  const handleDecrement = (productId) => {
+    dispatch(decrementQuantity({ id: productId }));
   };
 
   useEffect(() => {
