@@ -22,7 +22,7 @@ function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
 
   const handleIncrement = () => {
-    if (quantity < oneProduct.stock) {
+    if (quantity <= oneProduct.stock) {
       setQuantity(quantity + 1);
       dispatch(
         incrementQuantity({
@@ -34,11 +34,6 @@ function ProductDetail() {
       );
     }
   };
-  /* const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  }; */
 
   const handleDecrement = (productId) => {
     if (quantity > 1) {
@@ -132,7 +127,7 @@ function ProductDetail() {
                     <i className="bi bi-dash-circle fs-4 text-light"></i>
                   </button>
                   <span className="p-2 rounded mx-2 fs-3 text-orange">
-                    {quantity}
+                    {quantity - 1}
                   </span>
                   <button
                     className="btn-view-product"
