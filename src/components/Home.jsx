@@ -7,8 +7,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Card from "react-bootstrap/Card";
 import CartOffCanvas from "./CartOffCanvas";
 import {
-  decreaseCount,
-  increaseCount,
   removeFromCart,
   setIsCartOpen,
   addToCart,

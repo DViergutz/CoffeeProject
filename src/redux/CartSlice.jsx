@@ -70,15 +70,13 @@ const cartSlice = createSlice({
         (item) => item.id !== action.payload.id
       );
     },
-
-    increaseCount: (state, action) => {
-      state.inCart = state.inCart.map((item) => {
-        if (item.id === action.payload.id) {
-          item.count++;
-        }
-        return item;
-      });
+    decrementQuantity: (state, action) => {
+      return {
+        ...state,
+        quantity: -1,
+      };
     },
+<<<<<<< Updated upstream
     decreaseCount: (state, action) => {
       state.inCart = state.inCart.map((item) => {
         if (item.id === action.payload.id && item.count > 1) {
@@ -87,6 +85,14 @@ const cartSlice = createSlice({
         return item;
       });
     }, */
+=======
+    incrementQuantity: (state, action) => {
+      return {
+        ...state,
+        quantity: +1,
+      };
+    },
+>>>>>>> Stashed changes
 
     setIsCartOpen: (state) => {
       state.isCartOpen = !state.isCartOpen;
@@ -99,8 +105,8 @@ const { reducer, actions } = cartSlice;
 export const {
   addToCart,
   removeFromCart,
-  increaseCount,
-  decreaseCount,
+  incrementQuantity,
+  decrementQuantity,
   setIsCartOpen,
 } = actions;
 

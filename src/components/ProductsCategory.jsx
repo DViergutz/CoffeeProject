@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import {
-  decreaseCount,
-  increaseCount,
   removeFromCart,
   setIsCartOpen,
   addToCart,
