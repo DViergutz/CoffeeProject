@@ -15,6 +15,10 @@ function ProductsAll() {
   const [products, setproducts] = useState();
   const dispatch = useDispatch();
 
+  const handleAddToCart = () => {
+    dispatch(setIsCartOpen());
+  };
+
   useEffect(() => {
     const fetchOneProduct = async () => {
       try {
@@ -68,7 +72,7 @@ function ProductsAll() {
 
                         <button
                           className="btn rounded-circle btn-cart "
-                          onClick={() => dispatch(setIsCartOpen())}
+                          onClick={handleAddToCart}
                         >
                           <i className="bi bi-cart"></i>
                         </button>

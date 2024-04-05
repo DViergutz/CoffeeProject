@@ -16,13 +16,22 @@ function CartOffCanvas() {
   const dispatch = useDispatch();
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
   const itemsInCart = useSelector((state) => state.cart.inCart);
+  const totalPrice = itemsInCart.reduce((total, item) => total + item.price, 0);
+
+  const handleCheckout = () => {
+    dispatch(setIsCartOpen());
+  };
 
   return (
-    <Offcanvas show={isCartOpen} placement="end" scroll={true} backdrop={true}>
+    <Offcanvas
+      show={isCartOpen}
+      placement="end"
+      scroll={true}
+      onHide={() => dispatch(setIsCartOpen())}
+    >
       <Offcanvas.Header
-        closeButton
-        className="offcanvas-close-button"
         onClick={() => dispatch(setIsCartOpen())}
+        className="offcanvas-close-button"
       >
         <Offcanvas.Title className="offcanvas-title">
           Shopping Cart
@@ -37,7 +46,7 @@ function CartOffCanvas() {
           </div>
         </div>
         {itemsInCart.map((item) => (
-          <div className=" offcanvas-product-div row ms-1 me-1">
+          <div className="offcanvas-product-div row ms-1 me-1" key={item.id}>
             <div className="col-5">
               <img className="w-50" src={item.image} alt="" />
             </div>
@@ -53,12 +62,11 @@ function CartOffCanvas() {
             <div className="col-2">{item.price}</div>
           </div>
         ))}
-        <div className="mt-5 text-light">TOTAL PRICE:</div>
+        <div className="mt-5 text-light">
+          TOTAL PRICE: <p>{totalPrice}</p>
+        </div>
         <Link to="/checkout">
-          <button
-            className="btn-hero p-2 w-100 mt-4"
-            onClick={() => dispatch(setIsCartOpen())}
-          >
+          <button className="btn-hero p-2 w-100 mt-4" onClick={handleCheckout}>
             Checkout <i className="bi bi-cart"></i>
           </button>
         </Link>

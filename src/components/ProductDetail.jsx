@@ -195,7 +195,10 @@ function ProductDetail() {
                               View Product
                             </button>
                           </a>
-                          <button className="btn rounded-circle btn-cart ">
+                          <button
+                            className="btn rounded-circle btn-cart "
+                            onClick={() => dispatch(setIsCartOpen())}
+                          >
                             <i className="bi bi-cart"></i>
                           </button>
                         </div>

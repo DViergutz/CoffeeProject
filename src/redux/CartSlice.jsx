@@ -7,6 +7,17 @@ const cartSlice = createSlice({
     inCart: [
       {
         name: "Mexico Organic",
+        price: 190,
+        stock: 5,
+        image: "/src/assets/img/SingleOrigin-Mexico.png",
+        description:
+          "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
+        createdAt: "",
+        updatedAt: "",
+        id: 1,
+      },
+      {
+        name: "Mexico Organic",
         price: 250,
         stock: 5,
         image: "/src/assets/img/SingleOrigin-Mexico.png",
@@ -14,16 +25,18 @@ const cartSlice = createSlice({
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
         createdAt: "",
         updatedAt: "",
+        id: 2,
       },
       {
         name: "Sumatra Mandheling",
         price: 250,
         stock: 5,
-        image: "",
+        image: "/src/assets/img/SingleOrigin-Mexico.png",
         description:
           "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
         createdAt: "",
         updatedAt: "",
+        id: 3,
       },
     ],
     cartTotalQuantity: 0,
