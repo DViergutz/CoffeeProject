@@ -59,7 +59,7 @@ function Navigation() {
             </NavDropdown>
             <Nav.Link className="navLink" href="/checkout">
               <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>{" "}
-              <Badge pill bg="primary" style={{ marginLeft: "10px" }}>
+              <Badge pill className="cart-badge">
                 1
               </Badge>
             </Nav.Link>
