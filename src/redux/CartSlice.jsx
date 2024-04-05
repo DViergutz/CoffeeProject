@@ -40,13 +40,13 @@ const cartSlice = createSlice({
         quantity: -1,
       };
     },
-    incrementQuantity: (state, action) => {
+    /* incrementQuantity: (state, action) => {
       const { oneProductId } = action.payload;
       return {
         ...state,
         quantity: +1,
       };
-    },
+    }, */
 
     setIsCartOpen: (state) => {
       state.isCartOpen = !state.isCartOpen;
