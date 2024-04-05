@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Container, Badge } from "react-bootstrap";
 import UticaBrandLogo from "../assets/img/logo-utica-white.png";
 
 function Navigation() {
@@ -58,7 +58,10 @@ function Navigation() {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link className="navLink" href="/checkout">
-              <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>
+              <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>{" "}
+              <Badge pill bg="primary" style={{ marginLeft: "10px" }}>
+                1
+              </Badge>
             </Nav.Link>
             <Nav.Link className="navLink" href="/admin/login">
               ADMIN
