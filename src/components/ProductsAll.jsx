@@ -1,12 +1,19 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Description } from "@mui/icons-material";
+import { useDispatch } from "react-redux";
+import {
+  decreaseCount,
+  increaseCount,
+  removeFromCart,
+  setIsCartOpen,
+  addToCart,
+} from "../redux/CartSlice.jsx";
 
 function ProductsAll() {
   const [products, setproducts] = useState();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchOneProduct = async () => {
@@ -26,6 +33,8 @@ function ProductsAll() {
 
   return (
     <div className="main-section bg-fondo3  ">
+      {" "}
+      {/* <CartMenu show={show} /> */}
       <h2>All Products</h2>
       <div className="container">
         <div className="row mb-5 ">
@@ -56,7 +65,11 @@ function ProductsAll() {
                             View Product
                           </button>
                         </a>
-                        <button className="btn rounded-circle btn-cart ">
+
+                        <button
+                          className="btn rounded-circle btn-cart "
+                          onClick={() => dispatch(setIsCartOpen())}
+                        >
                           <i className="bi bi-cart"></i>
                         </button>
                       </div>
