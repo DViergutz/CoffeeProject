@@ -15,10 +15,6 @@ function ProductsAll() {
   const [products, setproducts] = useState();
   const dispatch = useDispatch();
 
-  const handleAddToCart = () => {
-    dispatch(setIsCartOpen());
-  };
-
   useEffect(() => {
     const fetchOneProduct = async () => {
       try {
@@ -35,6 +31,11 @@ function ProductsAll() {
     fetchOneProduct();
   }, []);
 
+  /*   const handleAddToCart = () => {
+    dispatch(setIsCartOpen());
+    dispatch(addToCart({ name: product.name, id: product.id }));
+  };
+ */
   return (
     <div className="main-section bg-fondo3  ">
       {" "}
@@ -72,7 +73,11 @@ function ProductsAll() {
 
                         <button
                           className="btn rounded-circle btn-cart "
-                          onClick={handleAddToCart}
+                          onClick={() =>
+                            dispatch(
+                              addToCart({ name: product.name, id: product.id })
+                            )
+                          }
                         >
                           <i className="bi bi-cart"></i>
                         </button>

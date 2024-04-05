@@ -45,16 +45,27 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const itemIndex = state.inCart.findIndex(
-        (item) => item.id === action.payload.id
+        (product) => product.id === action.payload.id
       ); ////index me da -1 si no esta en el array
       if (itemIndex >= 0) {
-        state.inCart[itemIndex].cartQuantity = +1;
+        return {
+          ...state,
+          inCart: state.inCart.map((item, index) => {
+            if (index === itemIndex) {
+              return { ...item, cartQuantity: item.cartQuantity + 1 };
+            }
+            return item;
+          }),
+        };
       } else {
-        const placeProduct = { ...action.payload, cartQuantity: 1 };
-        state.inCart.push(placeProduct);
+        return {
+          ...state,
+          inCart: [...state.inCart, { ...action.payload, cartQuantity: 1 }],
+        };
       }
     },
-    removeFromCart: (state, action) => {
+
+    /* removeFromCart: (state, action) => {
       const removeItem = state.inCart.filter(
         (item) => item.id !== action.payload.id
       );
@@ -75,7 +86,7 @@ const cartSlice = createSlice({
         }
         return item;
       });
-    },
+    }, */
 
     setIsCartOpen: (state) => {
       state.isCartOpen = !state.isCartOpen;
