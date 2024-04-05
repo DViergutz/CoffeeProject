@@ -34,6 +34,7 @@ function ProductsAll() {
     dispatch(addToCart({ name: product.name, id: product.id }));
   };
  */
+
   return (
     <div className="main-section bg-fondo3  ">
       {" "}
@@ -73,7 +74,15 @@ function ProductsAll() {
                           className="btn rounded-circle btn-cart "
                           onClick={() =>
                             dispatch(
-                              addToCart({ name: product.name, id: product.id })
+                              addToCart(
+                                {
+                                  name: product.name,
+                                  id: product.id,
+                                  price: product.price,
+                                  image: product.image,
+                                },
+                                dispatch(setIsCartOpen())
+                              )
                             )
                           }
                         >

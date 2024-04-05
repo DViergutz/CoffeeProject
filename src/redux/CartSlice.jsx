@@ -4,43 +4,7 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: {
     isCartOpen: false,
-    inCart: [
-      {
-        name: "Mexico Organic",
-        price: 190,
-        stock: 5,
-        image: "/src/assets/img/SingleOrigin-Mexico.png",
-        description:
-          "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
-        createdAt: "",
-        updatedAt: "",
-        id: 1,
-      },
-      {
-        name: "Mexico Organic",
-        price: 250,
-        stock: 5,
-        image: "/src/assets/img/SingleOrigin-Mexico.png",
-        description:
-          "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
-        createdAt: "",
-        updatedAt: "",
-        id: 2,
-      },
-      {
-        name: "Sumatra Mandheling",
-        price: 250,
-        stock: 5,
-        image: "/src/assets/img/SingleOrigin-Mexico.png",
-        description:
-          "This bold, smooth blend contains 40% dark-roasted Kona coffee. We blend it with select Latin American beans for a rich, lively cup of coffee.",
-        createdAt: "",
-        updatedAt: "",
-        id: 3,
-      },
-    ],
-    cartTotalQuantity: 0,
-    cartTotalAmount: 0,
+    inCart: [],
   },
   reducers: {
     addToCart: (state, action) => {
@@ -52,7 +16,7 @@ const cartSlice = createSlice({
           ...state,
           inCart: state.inCart.map((item, index) => {
             if (index === itemIndex) {
-              return { ...item, cartQuantity: item.cartQuantity + 1 };
+              return { ...item, quantity: item.quantity + 1 };
             }
             return item;
           }),
@@ -60,7 +24,7 @@ const cartSlice = createSlice({
       } else {
         return {
           ...state,
-          inCart: [...state.inCart, { ...action.payload, cartQuantity: 1 }],
+          inCart: [...state.inCart, { ...action.payload, quantity: 1 }],
         };
       }
     },
