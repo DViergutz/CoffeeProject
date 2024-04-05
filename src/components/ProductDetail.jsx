@@ -69,7 +69,6 @@ function ProductDetail() {
     fetchRelatedProducts();
   }, [oneProduct]);
 
-  console.log(oneProduct.id);
   return (
     <>
       <div className="main-section bg-fondo3  ">
@@ -138,7 +137,22 @@ function ProductDetail() {
                   )}{" "}
                 </div>
                 <hr className="text-orange" />
-                <button className="btn-hero p-2 w-100 mt-4">
+                <button
+                  className="btn-hero p-2 w-100 mt-4"
+                  onClick={() =>
+                    dispatch(
+                      addToCart(
+                        {
+                          name: oneProduct.name,
+                          id: oneProduct.id,
+                          price: oneProduct.price,
+                          image: oneProduct.image,
+                        },
+                        dispatch(setIsCartOpen())
+                      )
+                    )
+                  }
+                >
                   Add to Cart <i className="bi bi-cart"></i>
                 </button>
               </div>
@@ -215,7 +229,19 @@ function ProductDetail() {
                           </a>
                           <button
                             className="btn rounded-circle btn-cart "
-                            onClick={() => dispatch(setIsCartOpen())}
+                            onClick={() =>
+                              dispatch(
+                                addToCart(
+                                  {
+                                    name: oneProduct.name,
+                                    id: oneProduct.id,
+                                    price: oneProduct.price,
+                                    image: oneProduct.image,
+                                  },
+                                  dispatch(setIsCartOpen())
+                                )
+                              )
+                            }
                           >
                             <i className="bi bi-cart"></i>
                           </button>
