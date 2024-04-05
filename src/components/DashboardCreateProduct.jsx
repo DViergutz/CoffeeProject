@@ -157,7 +157,9 @@ function CreateProduct() {
           </div>
         </div>
       ) : (
-        "Loading..."
+        <tr>
+          <td>Loading...</td>
+        </tr>
       )}
     </>
   );

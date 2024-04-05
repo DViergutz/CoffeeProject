@@ -60,7 +60,7 @@ function DashboardProduct() {
               to="/admin/products/create"
               className="btn btn-outline-success"
             >
-              <i class="bi bi-plus-square"> Add Product</i>
+              <i className="bi bi-plus-square"> Add Product</i>
             </Link>
           </div>
         </div>
@@ -113,7 +113,9 @@ function DashboardProduct() {
                   </tr>
                 ))
               ) : (
-                <div>Loading...</div>
+                <tr>
+                  <td>Loading...</td>
+                </tr>
               )}
             </tbody>
           </table>
