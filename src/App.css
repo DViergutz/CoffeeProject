@@ -795,6 +795,36 @@ h5 {
 }
 
 /* About this Project */
+.flow-chart-img {
+  height: 650px;
+  width: 100%;
+  background-image: url("./assets/img/Flow-chart.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1201px) {
+  .flow-chart-img {
+    height: 500px;
+  }
+}
+@media (max-width: 991px) {
+  .flow-chart-img {
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .flow-chart-img {
+    height: 300px;
+  }
+}
+@media (max-width: 461px) {
+  .flow-chart-img {
+    height: 200px;
+  }
+}
+
 .text-orange {
   color: #ee7828;
 }

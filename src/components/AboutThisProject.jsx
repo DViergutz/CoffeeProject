@@ -163,35 +163,27 @@ function AboutThisProject() {
           </div>
         </div>
       </div>
-      <div className="main-section bg-fondo3">
-        <div className="about-info text-center d-flex flex-column align-items-center">
-          <h2 className="text-light">Project Organization - MER</h2>
-          <p>
-            Setting the Foundation for Backend Excellence! Our initial focus was
-            on delineating the essential backend requirements. We meticulously
-            crafted an entity relationship diagram, mapping out key associations
-            among pivotal entities: Users, Products, Orders and Admins. This
-            served as our blueprint for building a robust backend
-            infrastructure.
-          </p>
-        </div>
 
-        <div className="merAbout">
-          <img src={mer} alt="" />
-        </div>
-      </div>
       <div className="main-section bg-fondo3">
         <div className="about-info text-center d-flex flex-column align-items-center">
-          <h2 className="text-light">Product Design</h2>
+          <h2 className="text-light">Mapping User Flow</h2>
           <p>
-            Building the Architecture of Information for our e-commerce endeavor
-            is a journey that demands our utmost care and attention. It's not
-            just about organizing content—it's about crafting an experience that
-            speaks directly to our users' needs and desires. Join us as we
-            embark on this journey, where every decision we make is driven by
-            our commitment to creating a seamless and personalized journey for
-            our visitors."
+            Diving deep into the essence of our website, we meticulously chart
+            out the various perspectives, understanding the natural flow each
+            page should embody. From the moment you click, every button leads
+            purposefully to its corresponding section, ensuring a fluid journey
+            that keeps you engaged without any hitches. We prioritize user
+            experience as much as we do the design of our interfaces, striving
+            for a seamless, friendly flow that ensures you never feel 'stuck' at
+            any point.
           </p>
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="flow-chart-img"></div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="main-section bg-fondo3">
