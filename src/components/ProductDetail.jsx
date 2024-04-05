@@ -41,6 +41,9 @@ function ProductDetail() {
   }; */
 
   const handleDecrement = (productId) => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
     dispatch(decrementQuantity({ id: productId }));
   };
 
