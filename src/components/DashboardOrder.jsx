@@ -3,7 +3,17 @@ import React from "react";
 function DashboardOrder() {
   return (
     <div className="infoDashboard">
-      <div className="administrationPanelMainDashboard">
+      <div className="administrationPanelMain">
+        <div className="row ">
+          <div className="col">
+            <h5>Orders</h5>
+          </div>
+          <div className="col text-end">
+            <a href="" className="btn btn-outline-success">
+              <i className="bi bi-plus-square"> Add Order</i>
+            </a>
+          </div>
+        </div>
         <div className="lastOrders">
           <table className="dashboardTable">
             <thead className="tableHeadDashboard">

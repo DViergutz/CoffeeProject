@@ -19,6 +19,9 @@ import DashboardEditProduct from "./components/DashboardEditProduct";
 import DashboardCreateProduct from "./components/DashboardCreateProduct";
 import DashboardCreateUser from "./components/DashboardCreateUser";
 import DashboardEditUser from "./components/DashboardEditUser";
+import DashboardAdmin from "./components/DashboardAdmin";
+import DashboardEditAdmin from "./components/DashboardEditAdmin";
+import DashboardCreateAdmin from "./components/DashboardCreateAdmin";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +93,18 @@ const router = createBrowserRouter([
       {
         path: "/admin/orders",
         element: <DashboardOrder />,
+      },
+      {
+        path: "/admin/admins",
+        element: <DashboardAdmin />,
+      },
+      {
+        path: "/admin/admins/edit/:id",
+        element: <DashboardEditAdmin />,
+      },
+      {
+        path: "/admin/admins/create",
+        element: <DashboardCreateAdmin />,
       },
     ],
 

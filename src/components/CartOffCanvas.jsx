@@ -14,7 +14,10 @@ function CartOffCanvas() {
   const dispatch = useDispatch();
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
   const itemsInCart = useSelector((state) => state.cart.inCart);
-  const totalPrice = itemsInCart.reduce((total, item) => total + item.price, 0);
+  const totalPrice = itemsInCart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
 
   const handleCheckout = () => {
     dispatch(setIsCartOpen());
