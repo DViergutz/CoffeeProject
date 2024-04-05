@@ -24,7 +24,7 @@ function ProductDetail() {
   const handleIncrement = (oneProductId) => {
     if (quantity < oneProduct.stock) {
       setQuantity(quantity + 1);
-      dispatch(incrementQuantity({ oneProductId }));
+      dispatch(incrementQuantity(oneProductId));
     }
   };
   const handleDecrement = () => {
