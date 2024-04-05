@@ -17,6 +17,8 @@ import Home from "./components/Home";
 import AdminLayout from "./components/AdminLayout";
 import DashboardEditProduct from "./components/DashboardEditProduct";
 import DashboardCreateProduct from "./components/DashboardCreateProduct";
+import DashboardCreateUser from "./components/DashboardCreateUser";
+import DashboardEditUser from "./components/DashboardEditUser";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +77,14 @@ const router = createBrowserRouter([
       {
         path: "/admin/users",
         element: <DashboardUser />,
+      },
+      {
+        path: "/admin/users/edit/:id",
+        element: <DashboardEditUser />,
+      },
+      {
+        path: "/admin/users/create",
+        element: <DashboardCreateUser />,
       },
       {
         path: "/admin/orders",
