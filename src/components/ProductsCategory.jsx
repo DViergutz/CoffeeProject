@@ -62,7 +62,19 @@ function ProductsCategory() {
                           </a>
                           <button
                             className="btn rounded-circle btn-cart "
-                            onClick={() => dispatch(setIsCartOpen())}
+                            onClick={() =>
+                              dispatch(
+                                addToCart(
+                                  {
+                                    name: product.name,
+                                    id: product.id,
+                                    price: product.price,
+                                    image: product.image,
+                                  },
+                                  dispatch(setIsCartOpen())
+                                )
+                              )
+                            }
                           >
                             <i className="bi bi-cart"></i>
                           </button>

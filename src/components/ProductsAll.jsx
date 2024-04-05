@@ -29,12 +29,6 @@ function ProductsAll() {
     fetchOneProduct();
   }, []);
 
-  /*   const handleAddToCart = () => {
-    dispatch(setIsCartOpen());
-    dispatch(addToCart({ name: product.name, id: product.id }));
-  };
- */
-
   return (
     <div className="main-section bg-fondo3  ">
       {" "}
