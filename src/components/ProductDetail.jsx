@@ -21,10 +21,17 @@ function ProductDetail() {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
 
-  const handleIncrement = (oneProductId) => {
+  const handleIncrement = () => {
     if (quantity < oneProduct.stock) {
       setQuantity(quantity + 1);
-      dispatch(incrementQuantity(oneProductId));
+      dispatch(
+        incrementQuantity({
+          name: oneProduct.name,
+          id: oneProduct.id,
+          price: oneProduct.price,
+          image: oneProduct.image,
+        })
+      );
     }
   };
   const handleDecrement = () => {
@@ -122,16 +129,7 @@ function ProductDetail() {
                   </span>
                   <button
                     className="btn-view-product"
-                    onClick={() =>
-                      dispatch(
-                        addToCart({
-                          name: oneProduct.name,
-                          id: oneProduct.id,
-                          price: oneProduct.price,
-                          image: oneProduct.image,
-                        })
-                      )
-                    }
+                    onClick={() => handleIncrement()}
                   >
                     <i className="bi bi-plus-circle fs-4 text-light"></i>
                   </button>
