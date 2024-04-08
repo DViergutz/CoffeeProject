@@ -48,6 +48,7 @@ function ProductsAll() {
                     <Link
                       to={`/products/${product.id}`}
                       className="text-decoration-none"
+                      onClick={() => window.scrollTo(0, 0)}
                     >
                       <Card.Img
                         variant="top"
