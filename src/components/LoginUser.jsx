@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 import UticaBrandLogo from "../assets/img/logoUticaSB.png";
 import Navigation from "./Navbar";
+
 import { Link } from "react-router-dom";
 
+import { useDispatch } from "react-redux";
+import authUser from "../redux/UserSlice.js";
+
 function LoginUser() {
+  const dispatch = useDispatch();
   // Estado local para almacenar los valores del formulario
   const [formData, setFormData] = useState({
     email: "",
@@ -13,22 +18,26 @@ function LoginUser() {
 
   // Manejar cambios en los campos del formulario
   const handleChange = (e) => {
-    const { email, value } = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [email]: value,
+      [name]: value,
     });
   };
 
   // Manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       // Enviar una solicitud al servidor para verificar las credenciales
       const response = await axios.post(
-        "http://localhost:3000/login",
+        "http://localhost:3000/login/tokens",
         formData
       );
+
+      dispatch(authUser(response.data.token));
+
       console.log(response.data); // Hacer algo con la respuesta del servidor
     } catch (error) {
       console.error("Error al iniciar sesión:", error);

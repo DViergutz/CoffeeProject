@@ -166,6 +166,20 @@ function AboutThisProject() {
 
       <div className="main-section bg-fondo3">
         <div className="about-info text-center d-flex flex-column align-items-center">
+          <h2 className="text-light">Project Organization - MER</h2>
+          <p>
+            Setting the Foundation for Backend Excellence! Our initial focus was
+            on delineating the essential backend requirements. We meticulously
+            crafted an entity relationship diagram, mapping out key associations
+            among pivotal entities: Users, Products, Orders and Admins. This
+            served as our blueprint for building a robust backend
+            infrastructure.
+          </p>
+        </div>
+      </div>
+
+      <div className="main-section bg-fondo3">
+        <div className="about-info text-center d-flex flex-column align-items-center">
           <h2 className="text-light">Mapping User Flow</h2>
           <p>
             Diving deep into the essence of our website, we meticulously chart
@@ -207,17 +221,25 @@ function AboutThisProject() {
           </p>
           <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4">
             <div className="col mb-4">
-              <div className="cardAbout card h-100 ">
-                <img src={David} className="card-img-top" alt="Team Member 1" />
+              <div className="cardAbout h-100 card ">
+                <img
+                  src={David}
+                  className="card-img-top cardPeople "
+                  alt="Team Member 1"
+                />
                 <div className="card-body">
-                  <h5 className="card-title">Santiago Ternande</h5>
+                  <h5 className="card-title">Santiago</h5>
+                  <h5 className="card-title">Ternande</h5>
                   <p>Full Stack Developer</p>
-                  <hr className="text-orange" />
+                  <hr className="text-orange hrAbout" />
                   <div className="imgCardAbout">
-                    <a href="#" className="btn">
+                    <a
+                      href="https://www.linkedin.com/in/santiagoternande/"
+                      className="btn"
+                    >
                       <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
                     </a>
-                    <a href="#" className="btn">
+                    <a href="https://github.com/Machine-45" className="btn">
                       <i className="bi bi-github iconoGithub fs-2 hoverSocial"></i>
                     </a>
                   </div>
@@ -226,16 +248,24 @@ function AboutThisProject() {
             </div>
             <div className="col mb-4">
               <div className="card h-100 cardAbout">
-                <img src={David} className="card-img-top" alt="Team Member 2" />
+                <img
+                  src={David}
+                  className="card-img-top cardPeople"
+                  alt="Team Member 2"
+                />
                 <div className="card-body">
-                  <h5 className="card-title">Jane Smith</h5>
+                  <h5 className="card-title">David</h5>
+                  <h5 className="card-title">Viergutz</h5>
                   <p>Full Stack Developer</p>
-                  <hr className="text-orange" />
+                  <hr className="text-orange hrAbout" />
                   <div className="imgCardAbout">
-                    <a href="#" className="btn">
+                    <a
+                      href="https://www.linkedin.com/in/david-viergutz-b243b425a/"
+                      className="btn"
+                    >
                       <i className="bi bi-linkedin hoverSocial  fs-2 hoverSocial"></i>
                     </a>
-                    <a href="#" className="btn">
+                    <a href="https://github.com/DViergutz" className="btn">
                       <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
                     </a>
                   </div>
@@ -246,18 +276,22 @@ function AboutThisProject() {
               <div className="card h-100 cardAbout">
                 <img
                   src={Gaston}
-                  className="card-img-top"
+                  className="card-img-top cardPeople"
                   alt="Team Member 3"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Gaston Silva</h5>
+                  <h5 className="card-title">Gaston</h5>
+                  <h5 className="card-title">Silva</h5>
                   <p>Full Stack Developer</p>
-                  <hr className="text-orange" />
+                  <hr className="text-orange hrAbout" />
                   <div className="imgCardAbout">
-                    <a href="#" className="btn">
+                    <a
+                      href="https://www.linkedin.com/in/gaston-silva-1a788a1b9/"
+                      className="btn"
+                    >
                       <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
                     </a>
-                    <a href="#" className="btn">
+                    <a href="https://github.com/GastonSilva11" className="btn">
                       <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
                     </a>
                   </div>
@@ -268,35 +302,37 @@ function AboutThisProject() {
               <div className="card h-100 cardAbout">
                 <img
                   src="https://media.istockphoto.com/id/542703430/es/foto/sonriente-hombre.jpg?s=2048x2048&w=is&k=20&c=3ZmbfwZk4PyOkEX_a2Rl4yH6zuwOEl0DHeZEytXszKA="
-                  className="card-img-top"
+                  className="card-img-top cardPeople"
                   alt="Team Member 4"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Bob Williams</h5>
+                  <h5 className="card-title">Peter</h5>
+                  <h5 className="card-title">Williams</h5>
                   <p>Full Stack Developer</p>
-                  <hr className="text-orange" />
+                  <hr className="text-orange hrAbout" />
                   <div className="imgCardAbout">
                     <a href="#" className="btn">
                       <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
                     </a>
-                    <a href="#" className="btn">
+                    <a href="https://github.com/PtrSlk" className="btn">
                       <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col mb-4">
+            <div className="col  mb-4">
               <div className="card h-100 cardAbout">
                 <img
                   src="https://media.istockphoto.com/id/1311406968/es/foto/retrato-del-guapo-joven-cauc%C3%A1sico-con-ropa-casual-sonriendo-y-mirando-a-la-c%C3%A1mara-sobre-el.jpg?s=2048x2048&w=is&k=20&c=fjJC9fq7QLEmw4z_-MVOwoJRT1YhMi327X72kuZA3w8="
-                  className="card-img-top"
+                  className="card-img-top cardPeople"
                   alt="Team Member 5"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Emily Brown</h5>
+                  <h5 className="card-title">Emily</h5>
+                  <h5 className="card-title">Brown</h5>
                   <p>Full Stack Developer</p>
-                  <hr className="text-orange" />
+                  <hr className="text-orange hrAbout" />
                   <div className="imgCardAbout">
                     <a href="#" className="btn">
                       <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
