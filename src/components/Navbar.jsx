@@ -58,18 +58,32 @@ function Navigation() {
               title={<i className="bi bi-person-fill fs-5 "></i>}
               id="navbarScrollingDropdown"
             >
+<<<<<<< HEAD
               <NavDropdown.Item as={Link} to="/user/login" className="">
+=======
+              {/*  {loggedIn === false ? ( */}
+              <NavDropdown.Item className="" href="/user/login">
+>>>>>>> 459d1aa0f2d6c7cfd378c8efe37a7de4e0126d10
                 Login
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/user/register" className="">
                 Register
               </NavDropdown.Item>
             </NavDropdown>
+<<<<<<< HEAD
             <Nav.Link as={Link} to="/checkout" className="navLink">
               <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>{" "}
               <Badge pill className="cart-badge">
                 1
               </Badge>
+=======
+            {/* ) :(
+              <Nav.Link className="navLink" href="/logout"></Nav.Link>
+            )}
+ */}
+            <Nav.Link className="navLink" href="/checkout">
+              <i className="bi bi-cart2 fs-4 text-orange"></i>
+>>>>>>> 459d1aa0f2d6c7cfd378c8efe37a7de4e0126d10
             </Nav.Link>
             <Nav.Link as={Link} to="/user/login" className="navLink">
               ADMIN
