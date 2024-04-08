@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import UticaBrandLogo from "../assets/img/logoUticaSB.png";
 import Navigation from "./Navbar";
+import { Link } from "react-router-dom";
 
 function LoginUser() {
   // Estado local para almacenar los valores del formulario
@@ -82,12 +83,11 @@ function LoginUser() {
                 <div>
                   <small className="text-dark">
                     Don't you have an Account ?{" "}
-                    <a
-                      href="/user/register"
-                      className="text-decoration-none text-orange fw-semibold"
-                    >
-                      Create an Account!
-                    </a>
+                    <Link to="/user/register">
+                      <a className="text-decoration-none text-orange fw-semibold">
+                        Create an Account!
+                      </a>
+                    </Link>
                   </small>
                 </div>
               </form>

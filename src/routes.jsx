@@ -3,7 +3,6 @@ import ProductsAll from "./components/ProductsAll";
 import ProductsCategory from "./components/ProductsCategory";
 import ProductDetail from "./components/ProductDetail";
 import Checkout from "./components/Checkout";
-import LoginAdmin from "./components/LoginAdmin";
 import Dashboard from "./components/Dashboard";
 import DashboardProduct from "./components/DashboardProduct";
 import DashboardUser from "./components/DashboardUser";
@@ -109,10 +108,6 @@ const router = createBrowserRouter([
     ],
 
     // ---------- FIN DASHBOARD ADMIN ----------
-  },
-  {
-    path: "/admin/login",
-    element: <LoginAdmin />,
   },
   {
     path: "/user/register",

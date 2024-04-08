@@ -9,6 +9,7 @@ import {
   addToCart,
   incrementQuantity,
 } from "../redux/CartSlice.jsx";
+import { Link } from "react-router-dom";
 
 function ProductsAll() {
   const [products, setproducts] = useState();
@@ -42,51 +43,56 @@ function ProductsAll() {
           {products ? (
             products.map((product) => (
               <div className="col-md-6 col-lg-4 col-xl-3 " key={product.id}>
-                <div className="d-flex flex-column h-100  ">
-                  <div className="special-product-card h-100 d-flex flex-column">
-                    <Card.Img
-                      variant="top"
-                      className="card-img"
-                      src={product.image}
-                    />
-                    <div className="text-start ">
-                      <p className="fs-3 fw-semibold">{product.name}</p>
-                      <p>{product.description}</p>
-                    </div>
+                <Link
+                  to={`/products/${product.id}`}
+                  className="text-decoration-none"
+                >
+                  <div className="d-flex flex-column h-100  ">
+                    <div className="special-product-card h-100 d-flex flex-column">
+                      <Card.Img
+                        variant="top"
+                        className="card-img"
+                        src={product.image}
+                      />
+                      <div className="text-start ">
+                        <p className="fs-3 fw-semibold">{product.name}</p>
+                        <p>{product.description}</p>
+                      </div>
 
-                    <div className="mt-auto">
-                      <p className="fs-3 fw-semibold text-start">
-                        <span className="text-orange">${product.price}</span>{" "}
-                      </p>
-                      <div className="d-flex justify-content-evenly">
-                        <a href={`/products/${product.id}`} className="me-2">
-                          <button className="btn btn-view-product height65">
-                            View Product
-                          </button>
-                        </a>
+                      <div className="mt-auto">
+                        <p className="fs-3 fw-semibold text-start">
+                          <span className="text-orange">${product.price}</span>{" "}
+                        </p>
+                        <div className="d-flex justify-content-evenly">
+                          <a className="me-2">
+                            <button className="btn btn-view-product height65">
+                              View Product
+                            </button>
+                          </a>
 
-                        <button
-                          className="btn rounded-circle btn-cart "
-                          onClick={() =>
-                            dispatch(
-                              incrementQuantity(
-                                {
-                                  name: product.name,
-                                  id: product.id,
-                                  price: product.price,
-                                  image: product.image,
-                                },
-                                dispatch(setIsCartOpen())
+                          <button
+                            className="btn rounded-circle btn-cart "
+                            onClick={() =>
+                              dispatch(
+                                addToCart(
+                                  {
+                                    name: product.name,
+                                    id: product.id,
+                                    price: product.price,
+                                    image: product.image,
+                                  },
+                                  dispatch(setIsCartOpen())
+                                )
                               )
-                            )
-                          }
-                        >
-                          <i className="bi bi-cart"></i>
-                        </button>
+                            }
+                          >
+                            <i className="bi bi-cart"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))
           ) : (

@@ -9,7 +9,7 @@ function DashboardOrder() {
             <h5>Orders</h5>
           </div>
           <div className="col text-end">
-            <a href="" className="btn btn-outline-success">
+            <a className="btn btn-outline-success">
               <i className="bi bi-plus-square"> Add Order</i>
             </a>
           </div>
@@ -37,7 +37,7 @@ function DashboardOrder() {
                 <td>USD 227.00</td>
                 <td>Processing</td>
                 <td>
-                  <a href="">Edit</a>
+                  <a>Edit</a>
                 </td>
               </tr>
               <tr>
@@ -51,7 +51,7 @@ function DashboardOrder() {
                 <td>USD 227.00</td>
                 <td>Processing</td>
                 <td>
-                  <a href="">Edit</a>
+                  <a>Edit</a>
                 </td>
               </tr>
               <tr>
@@ -65,7 +65,7 @@ function DashboardOrder() {
                 <td>USD 227.00</td>
                 <td>Processing</td>
                 <td>
-                  <a href="">Edit</a>
+                  <a>Edit</a>
                 </td>
               </tr>
               <tr>
@@ -79,7 +79,7 @@ function DashboardOrder() {
                 <td>USD 227.00</td>
                 <td>Processing</td>
                 <td>
-                  <a href="">Edit</a>
+                  <a>Edit</a>
                 </td>
               </tr>
               <tr>
@@ -93,7 +93,7 @@ function DashboardOrder() {
                 <td>USD 227.00</td>
                 <td>Processing</td>
                 <td>
-                  <a href="">Edit</a>
+                  <a>Edit</a>
                 </td>
               </tr>
             </tbody>

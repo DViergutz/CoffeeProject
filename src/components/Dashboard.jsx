@@ -27,7 +27,7 @@ function Dashboard() {
                   </p>
                 </div>
               </div>
-              <a href="">View all</a>
+              <a>View all</a>
             </div>
             <div className="dashboardCard shadow">
               <div>
@@ -42,7 +42,7 @@ function Dashboard() {
                   </p>
                 </div>
               </div>
-              <a href="">View all</a>
+              <a>View all</a>
             </div>
             <div className="dashboardCard">
               <div>
@@ -57,7 +57,7 @@ function Dashboard() {
                   </p>
                 </div>
               </div>
-              <a href="">View all</a>
+              <a>View all</a>
             </div>
           </div>
 
@@ -89,7 +89,7 @@ function Dashboard() {
                       </td>
                       <td>USD 227.00</td>
                       <td>
-                        <a href="">Edit</a>
+                        <a>Edit</a>
                       </td>
                     </tr>
                     <tr>
@@ -104,7 +104,7 @@ function Dashboard() {
                       </td>
                       <td>USD 227.00</td>
                       <td>
-                        <a href="">Edit</a>
+                        <a>Edit</a>
                       </td>
                     </tr>
                     <tr>
@@ -119,7 +119,7 @@ function Dashboard() {
                       </td>
                       <td>USD 227.00</td>
                       <td>
-                        <a href="">Edit</a>
+                        <a>Edit</a>
                       </td>
                     </tr>
                     <tr>
@@ -134,7 +134,7 @@ function Dashboard() {
                       </td>
                       <td>USD 227.00</td>
                       <td>
-                        <a href="">Edit</a>
+                        <a>Edit</a>
                       </td>
                     </tr>
                     <tr>
@@ -149,7 +149,7 @@ function Dashboard() {
                       </td>
                       <td>USD 227.00</td>
                       <td>
-                        <a href="">Edit</a>
+                        <a>Edit</a>
                       </td>
                     </tr>
                   </tbody>
