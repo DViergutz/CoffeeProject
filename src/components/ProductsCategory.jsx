@@ -7,6 +7,7 @@ import {
   removeFromCart,
   setIsCartOpen,
   addToCart,
+  incrementQuantity,
 } from "../redux/CartSlice.jsx";
 import { useDispatch } from "react-redux";
 
@@ -70,7 +71,7 @@ function ProductsCategory() {
                               className="btn rounded-circle btn-cart "
                               onClick={() =>
                                 dispatch(
-                                  addToCart(
+                                  incrementQuantity(
                                     {
                                       name: product.name,
                                       id: product.id,

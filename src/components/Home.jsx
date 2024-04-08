@@ -10,6 +10,7 @@ import {
   removeFromCart,
   setIsCartOpen,
   addToCart,
+  incrementQuantity,
 } from "../redux/CartSlice.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -216,11 +217,11 @@ function Home() {
                         </span>
                       </p>
                       <div className="d-flex justify-content-between">
-                        <a className="me-2">
+                        <div className="me-2">
                           <button className="btn btn-view-product height65">
                             View Product
                           </button>
-                        </a>
+                        </div>
 
                         <button
                           className="btn rounded-circle btn-cart "
@@ -257,11 +258,11 @@ function Home() {
                         </span>
                       </p>
                       <div className="d-flex justify-content-between">
-                        <a className="">
+                        <div className="">
                           <button className="btn btn-view-product height65">
                             View Product
                           </button>
-                        </a>
+                        </div>
                         <button
                           className="btn rounded-circle btn-cart"
                           onClick={() => dispatch(setIsCartOpen())}
@@ -297,11 +298,11 @@ function Home() {
                         </span>
                       </p>
                       <div className="d-flex justify-content-between">
-                        <a className="">
+                        <div className="">
                           <button className="btn btn-view-product height65">
                             View Product
                           </button>
-                        </a>
+                        </div>
                         <button
                           className="btn rounded-circle btn-cart"
                           onClick={() => dispatch(setIsCartOpen())}
@@ -337,11 +338,11 @@ function Home() {
                         </span>
                       </p>
                       <div className="d-flex justify-content-between">
-                        <a className="">
+                        <div className="">
                           <button className="btn btn-view-product height65">
                             View Product
                           </button>
-                        </a>
+                        </div>
                         <button
                           className="btn rounded-circle btn-cart"
                           onClick={() => dispatch(setIsCartOpen())}

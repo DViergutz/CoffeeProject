@@ -2,17 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
   name: "user",
-  initialState: { isLogged: false, token: "" },
+  initialState: { isLogged: false, token: "", userId: 0 },
   reducers: {
     authUser(state, action) {
-      const { token } = action.payload;
+      console.log(action.payload);
+      const { token, userId } = action.payload;
 
       state.isLogged = !state.isLogged;
-
-      return state.isLogged, (state.token = token);
+      state.token = token;
+      state.userId = userId;
     },
+
     logout(state, action) {
-      return {};
+      return { isLogged: false, token: "", userId: 0 }; // Reset to initial state
     },
   },
 });
