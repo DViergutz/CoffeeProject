@@ -67,9 +67,11 @@ function Home() {
               Embark on a journey through our finest selection of coffee bean
               bags
             </p>
-            <button className="btn-hero">
-              Explore our products <i className="bi bi-arrow-right ms-2"></i>
-            </button>
+            <Link to="/products/" className="text-decoration-none">
+              <button className="btn-hero">
+                Explore our products <i className="bi bi-arrow-right ms-2"></i>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -190,19 +192,28 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className=" col-lg-4">
-              <div className="category-card category-flavored ">
-                <h3 className="category-title">Flavored</h3>
-              </div>
+              <Link to="/category/flavored" className="text-decoration-none">
+                <div className="category-card category-flavored ">
+                  <h3 className="category-title">Flavored</h3>
+                </div>
+              </Link>
             </div>
             <div className="col-lg-4">
-              <div className="category-card category-blends">
-                <h3 className="category-title">Blends</h3>
-              </div>
+              <Link to="/category/blends" className="text-decoration-none">
+                <div className="category-card category-blends">
+                  <h3 className="category-title">Blends</h3>
+                </div>
+              </Link>
             </div>
             <div className="col-lg-4">
-              <div className="category-card category-single-origin">
-                <h3 className="category-title">Single Origin</h3>
-              </div>
+              <Link
+                to="/category/single origin"
+                className="text-decoration-none"
+              >
+                <div className="category-card category-single-origin">
+                  <h3 className="category-title">Single Origin</h3>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
