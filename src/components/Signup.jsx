@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import UticaBrandLogo from "../assets/img/logoUticaSB.png";
 import axios from "axios";
 import Navigation from "./Navbar";
 import { Link, useNavigate } from "react-router-dom";

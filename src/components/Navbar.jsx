@@ -1,6 +1,5 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, Container, Badge } from "react-bootstrap";
-import UticaBrandLogo from "../assets/img/logo-utica-white.png";
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Navigation() {
@@ -10,7 +9,9 @@ function Navigation() {
         <Link to="/">
           <Navbar.Brand className="m-0 p-0 brand-logo-no-hover">
             <img
-              src={UticaBrandLogo}
+              src={
+                "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
+              }
               alt="Utica Brand Logo"
               className="brand-logo"
             />

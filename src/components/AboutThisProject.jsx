@@ -1,7 +1,5 @@
 import React from "react";
-import linkedin from "../assets/img/linkedin.svg";
-import github from "../assets/img/github.svg";
-import mer from "../assets/img/MER.png";
+
 import Gaston from "../assets/img/Gaston.png";
 import Santiago from "../assets/img/Santiago.png";
 import David from "../assets/img/David.png";
