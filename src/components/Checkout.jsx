@@ -1,10 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 function Checkout() {
-  useEffect(() => {
-    return window.scrollTo(0, 0);
-  }, []);
+  const dispatch = useDispatch();
+  const itemsInCart = useSelector((state) => state.cart.inCart);
 
+  const totalPrice = itemsInCart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+  /*   useEffect(() => {
+     window.scrollTo(0, 0);
+  }, []);
+ */
   return (
     <div className="bg-fondo3">
       <div className="container pb-5">
@@ -17,120 +25,30 @@ function Checkout() {
               <div className="col fw-bold text-center">QUANTITY</div>
               <div className="col fw-bold text-center">TOTAL</div>
             </div>
-            <hr className="text-orange" />
-            <div className="d-flex py-3">
-              <div className="col fw-semibold d-flex justify-content-center align-items-center img-checkout"></div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                <div className="d-flex flex-column align-items-center">
-                  <div className="d-flex border p-1">
-                    <span>-</span>
-                    <span className="mx-3">1</span>
-                    <span>+</span>
+            {itemsInCart.map((item) => (
+              <div key={item.id}>
+                <hr className="text-orange" />
+                <div className="d-flex py-3">
+                  <div className="col fw-semibold d-flex justify-content-center align-items-center img-checkout"></div>
+                  <div className="col fw-semibold d-flex justify-content-center align-items-center">
+                    ${item.price}
+                  </div>
+                  <div className="col fw-semibold d-flex justify-content-center align-items-center">
+                    <div className="d-flex flex-column align-items-center">
+                      <div className="d-flex border p-1">
+                        <span>-</span>
+                        <span className="mx-3">{item.quantity}</span>
+                        <span>+</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col fw-semibold d-flex justify-content-center align-items-center">
+                    ${totalPrice}
                   </div>
                 </div>
+                <hr className="text-orange" />
               </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-            </div>
-            <hr className="text-orange" />
-            <div className="d-flex py-3">
-              <div className="col fw-semibold d-flex justify-content-center align-items-center img-checkout"></div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                <div className="d-flex flex-column align-items-center">
-                  <div className="d-flex border p-1">
-                    <span>-</span>
-                    <span className="mx-3">1</span>
-                    <span>+</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-            </div>
-            <hr className="text-orange" />
-            <div className="d-flex py-3">
-              <div className="col fw-semibold d-flex justify-content-center align-items-center img-checkout"></div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                <div className="d-flex flex-column align-items-center">
-                  <div className="d-flex border p-1">
-                    <span>-</span>
-                    <span className="mx-3">1</span>
-                    <span>+</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-            </div>
-            <hr className="text-orange" />
-            <div className="d-flex py-3">
-              <div className="col fw-semibold d-flex justify-content-center align-items-center img-checkout"></div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                <div className="d-flex flex-column align-items-center">
-                  <div className="d-flex border p-1">
-                    <span>-</span>
-                    <span className="mx-3">1</span>
-                    <span>+</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-            </div>
-            <hr className="text-orange" />
-            <div className="d-flex py-3">
-              <div className="col fw-semibold d-flex justify-content-center align-items-center img-checkout"></div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                <div className="d-flex flex-column align-items-center">
-                  <div className="d-flex border p-1">
-                    <span>-</span>
-                    <span className="mx-3">1</span>
-                    <span>+</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-            </div>
-            <hr className="text-orange" />
-            <div className="d-flex py-3">
-              <div className="col fw-semibold d-flex justify-content-center align-items-center img-checkout"></div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                <div className="d-flex flex-column align-items-center">
-                  <div className="d-flex border p-1">
-                    <span>-</span>
-                    <span className="mx-3">1</span>
-                    <span>+</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                $500.00
-              </div>
-            </div>
+            ))}
           </div>
           <div className="col-md-4 bg-light border rounded p-4 checkout-card">
             <div className=" fw-bold mb-3">CARD DETAILS</div>

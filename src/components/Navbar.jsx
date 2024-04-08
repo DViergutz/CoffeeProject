@@ -50,6 +50,7 @@ function Navigation() {
               title={<i className="bi bi-person-fill fs-5 "></i>}
               id="navbarScrollingDropdown"
             >
+              {/*  {loggedIn === false ? ( */}
               <NavDropdown.Item className="" href="/user/login">
                 Login
               </NavDropdown.Item>
@@ -57,6 +58,10 @@ function Navigation() {
                 Register
               </NavDropdown.Item>
             </NavDropdown>
+            {/* ) :(
+              <Nav.Link className="navLink" href="/logout"></Nav.Link>
+            )}
+ */}
             <Nav.Link className="navLink" href="/checkout">
               <i className="bi bi-cart2 fs-4 text-orange"></i>
             </Nav.Link>

@@ -53,7 +53,16 @@ function CartOffCanvas() {
             </div>
             <div className="col-5 p-1 ">
               <button className="btn-view-product-offcanvas">
-                <i className="bi bi-dash-circle fs-8 text-light"></i>
+                <i
+                  className="bi bi-dash-circle fs-8 text-light"
+                  onClick={() =>
+                    dispatch(
+                      removeFromCart({
+                        id: item.id,
+                      })
+                    )
+                  }
+                ></i>
               </button>
               <span className="qty-box">{item.quantity}</span>
               <button className="btn-view-product-offcanvas">
