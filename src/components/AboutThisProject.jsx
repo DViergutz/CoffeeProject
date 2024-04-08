@@ -1,7 +1,5 @@
 import React from "react";
-import linkedin from "../assets/img/linkedin.svg";
-import github from "../assets/img/github.svg";
-import mer from "../assets/img/MER.png";
+
 import Gaston from "../assets/img/Gaston.png";
 import Santiago from "../assets/img/Santiago.png";
 import David from "../assets/img/David.png";
@@ -63,7 +61,7 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="/src/assets/img/about-icons/bootstrap.png"
+                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/bootstrap.png"
                     alt=""
                   />
                   <small className="text-orange ">Bootstrap</small>
@@ -73,7 +71,7 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="/src/assets/img/about-icons/css3.png"
+                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/css3.png"
                     alt=""
                   />
                   <small className="text-orange ">CSS3</small>
@@ -83,7 +81,7 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="/src/assets/img/about-icons/discord.png"
+                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/discord.png"
                     alt=""
                   />
                   <small className="text-orange ">Discord</small>
@@ -103,7 +101,7 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="/src/assets/img/about-icons/github.png"
+                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/github.png"
                     alt=""
                   />
                   <small className="text-orange ">Github</small>
@@ -113,7 +111,7 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="/src/assets/img/about-icons/js.png"
+                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/js.png"
                     alt=""
                   />
                   <small className="text-orange ">JavaScript</small>
@@ -123,7 +121,7 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="/src/assets/img/about-icons/nodejs.png"
+                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/nodejs.png"
                     alt=""
                   />
                   <small className="text-orange ">NodeJS</small>
@@ -133,7 +131,7 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="/src/assets/img/about-icons/react.png"
+                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/react.png"
                     alt=""
                   />
                   <small className="text-orange ">React</small>
@@ -143,7 +141,7 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="/src/assets/img/about-icons/redux.png"
+                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/redux.png"
                     alt=""
                   />
                   <small className="text-orange ">Redux</small>
@@ -153,7 +151,7 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="/src/assets/img/about-icons/sql.png"
+                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/sql.png"
                     alt=""
                   />
                   <small className="text-orange ">SQL</small>

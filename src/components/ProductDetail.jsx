@@ -12,7 +12,7 @@ function ProductDetail() {
   const [relatedProducts, setRelatedProducts] = useState();
   const { productId } = useParams();
   const dispatch = useDispatch();
-  /*   const [quantity, setQuantity] = useState(1); */
+  const [quantity, setQuantity] = useState(1);
 
   const handleIncrement = () => {
     /*     if (quantity < oneProduct.stock) {
@@ -209,10 +209,10 @@ function ProductDetail() {
                               dispatch(
                                 incrementQuantity(
                                   {
-                                    name: oneProduct.name,
-                                    id: oneProduct.id,
-                                    price: oneProduct.price,
-                                    image: oneProduct.image,
+                                    name: product.name,
+                                    id: product.id,
+                                    price: product.price,
+                                    image: product.image,
                                     quantity: quantity,
                                   },
                                   dispatch(setIsCartOpen())

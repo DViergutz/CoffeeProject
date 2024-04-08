@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logoUticaSB from "../assets/img/logoUticaSB.png";
 import profile from "../assets/img/profileImg.png";
 import bag from "../assets/img/bag.svg";
 import home from "../assets/img/home.svg";
@@ -19,7 +18,9 @@ function PanelAdmin() {
         <div className="firstSectionDashboard">
           <div className="imgDashboard">
             <img
-              src={logoUticaSB}
+              src={
+                "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
+              }
               alt="imgUtica"
               className="imgLogoUticaDashboard"
             />
@@ -90,7 +91,9 @@ function PanelAdmin() {
             <div className="mobileNav">
               <div className="imgDashboard">
                 <img
-                  src={logoUticaSB}
+                  src={
+                    "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
+                  }
                   alt="imgUtica"
                   className="imgLogoUticaDashboard"
                 />

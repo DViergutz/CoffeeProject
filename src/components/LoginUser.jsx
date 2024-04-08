@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import UticaBrandLogo from "../assets/img/logoUticaSB.png";
+
 import Navigation from "./Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -52,7 +52,13 @@ function LoginUser() {
         <div className="container vh-100">
           <div className="row d-flex align-items-center bg-dark-grey border-orange">
             <div className="col-md-6 text-center">
-              <img src={UticaBrandLogo} alt="UticaLogo" className="img-fluid" />
+              <img
+                src={
+                  "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
+                }
+                alt="UticaLogo"
+                className="img-fluid"
+              />
             </div>
             <div className="col-md-6 bg-light p-5 rounded-end">
               <h3 className="text-dark pb-3  fw-semibold">Login</h3>

@@ -81,7 +81,11 @@ function Home() {
       >
         <div className="col-lg-5">
           {" "}
-          <img className="img-sack" src="/src/assets/img/sack.png" alt="" />
+          <img
+            className="img-sack"
+            src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/sack.png"
+            alt=""
+          />
         </div>
         <div className="col-lg-7 z-2">
           <h2 className="about-heading">
@@ -90,7 +94,7 @@ function Home() {
           <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
             <div className="mr-md-3 mb-md-0 mb-3">
               <img
-                src="src\assets\img\pinlogo.png"
+                src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/pinlogo.png"
                 alt="Big Coffee Image"
                 className="about-icon"
               />
@@ -107,7 +111,7 @@ function Home() {
           <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
             <div className="mr-md-3 mb-md-0 mb-3">
               <img
-                src="src\assets\img\3beanslogo.png"
+                src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/3beanslogo.png"
                 alt="Big Coffee Image"
                 className="about-icon"
               />
@@ -125,7 +129,7 @@ function Home() {
           <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
             <div className="mr-md-3 mb-md-0 mb-3">
               <img
-                src="/src\assets\img\coffeemaker.png"
+                src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/coffeemaker.png"
                 alt="Big Coffee Image"
                 className="about-icon"
               />
@@ -140,17 +144,38 @@ function Home() {
             </div>
           </div>{" "}
           <div className="floating-bean-div">
-            <img src="/src\assets\img\b1.png" className="img-b1" alt="" />
-            <img src="/src\assets\img\b4.png" className="img-b4" alt="" />
+            {" "}
+            <img
+              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/b1.png"
+              className="img-b1"
+              alt=""
+            />
+            <img
+              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/b4.png"
+              className="img-b4"
+              alt=""
+            />
           </div>
           <div className="floating-bean-div">
             {" "}
-            <img src="/src\assets\img\b2.png" className="img-b2" alt="" />
-            <img src="/src\assets\img\b3.png" className="img-b3" alt="" />
+            <img
+              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/b2.png"
+              className="img-b2"
+              alt=""
+            />
+            <img
+              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/b3.png"
+              className="img-b3"
+              alt=""
+            />
           </div>
           <div className="floating-bean-div">
             {" "}
-            <img src="/src\assets\img\b1.png" className="img-b1-copy" alt="" />
+            <img
+              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/b1.png"
+              className="img-b1-copy"
+              alt=""
+            />
           </div>
         </div>{" "}
       </div>{" "}
@@ -158,7 +183,7 @@ function Home() {
         <div className="splash">
           {" "}
           <img
-            src="/src\assets\img\splash-beans.png"
+            src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/Splash%20con%20beans%20y%20capa%20sombra.png"
             alt=""
             className="img-splash"
           />
@@ -198,7 +223,7 @@ function Home() {
           <div className="splash-beans">
             {" "}
             <img
-              src="/src\assets\img\splash-redondo.png"
+              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/splash%20redondo.png?t=2024-04-08T20%3A42%3A37.287Z"
               alt=""
               className="img-splash-beans"
             />

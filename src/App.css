@@ -93,7 +93,7 @@ footer {
 .logo-footer {
   height: 150px;
   width: auto;
-  background-image: url("./assets/img/logo-utica-white.png");
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -276,7 +276,7 @@ h5 {
 }
 
 .align-navigation-menu {
-  background-image: url("./assets/img/Fondo3.png");
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/Fondo3.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -395,7 +395,7 @@ h5 {
 }
 
 .bg-fondo3 {
-  background-image: url("./assets/img/Fondo3.png");
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/Fondo3.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -444,19 +444,19 @@ h5 {
 }
 
 .category-flavored {
-  background-image: url("/src\assets\img\category-img\collection1.png"); /* Background image for Flavored category */
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/collection1.png"); /* Background image for Flavored category */
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .category-blends {
-  background-image: url("/src\assets\img\category-img\collection2.png"); /* Background image for Blends category */
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/collection2.png"); /* Background image for Blends category */
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .category-single-origin {
-  background-image: url("/src\assets\img\category-img\collection3.png"); /* Background image for Single Origin category */
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/collection3.png"); /* Background image for Single Origin category */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -619,7 +619,7 @@ h5 {
 }
 
 .special-product-1 {
-  background-image: url("/src/assets/img/Blends-ArtOfDarkness.png");
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ArtOfDarkness.png");
   background-size: contain;
   background-position: center;
   border-radius: 8px;
@@ -647,7 +647,7 @@ h5 {
 }
 
 .special-product-2 {
-  background-image: url("/src/assets/img/Flavored-ChocolateAmaretto.png");
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Flavored-ChocolateAmaretto.png");
   background-size: contain;
   background-position: center;
   border-radius: 8px;
@@ -657,7 +657,7 @@ h5 {
 }
 
 .special-product-3 {
-  background-image: url("/src/assets/img/SingleOrigin-Colombia.png");
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/SingleOrigin-Colombia.png");
   background-size: contain;
   background-position: center;
   border-radius: 8px;
@@ -667,7 +667,7 @@ h5 {
 }
 
 .special-product-4 {
-  background-image: url("/src/assets/img/Blends-ItalianRoast.png");
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ItalianRoast.png");
   background-size: contain;
   background-position: center;
   border-radius: 8px;
@@ -678,7 +678,7 @@ h5 {
 /* Blog section/newsletter */
 
 .background-newsletter {
-  background-image: url("/src/assets/img/premium6.png");
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/premium6.png");
   background-size: cover;
   background-position: center 1px;
 }
@@ -849,7 +849,7 @@ h5 {
 .flow-chart-img {
   height: 650px;
   width: 100%;
-  background-image: url("./assets/img/Flow-chart.png");
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/Flow-chart.png");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -888,7 +888,7 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: start;
-  background-image: url("./assets/img/aboutThisProjectImg.png");
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/aboutThisProjectImg.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

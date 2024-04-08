@@ -1,5 +1,4 @@
 import React from "react";
-import logoUticaSB from "../assets/img/logoUticaSB.png";
 import profile from "../assets/img/profileImg.png";
 import bag2 from "../assets/img/bag2.svg";
 
