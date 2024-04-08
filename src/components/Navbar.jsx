@@ -71,7 +71,7 @@ function Navigation() {
                 1
               </Badge>
             </Nav.Link>
-            <Nav.Link as={Link} to="/admin/login" className="navLink">
+            <Nav.Link as={Link} to="/user/login" className="navLink">
               ADMIN
             </Nav.Link>
           </Nav>

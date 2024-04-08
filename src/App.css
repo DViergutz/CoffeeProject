@@ -687,10 +687,6 @@ h5 {
 
 /* navbar */
 
-.cart-badge {
-  background-color: #ee7828 !important;
-}
-
 .main-navbar {
   height: 126px;
   position: sticky;
