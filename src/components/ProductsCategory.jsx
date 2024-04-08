@@ -39,58 +39,62 @@ function ProductsCategory() {
             {productsOfCategory ? (
               productsOfCategory.map((product) => (
                 <div className="col-md-6 col-lg-4 col-xl-3 " key={product.id}>
-                  <Link
-                    to={`/products/${product.id}`}
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="text-decoration-none"
-                  >
-                    <div className="d-flex flex-column h-100  ">
-                      <div className="special-product-card h-100 d-flex flex-column">
+                  <div className="d-flex flex-column h-100  ">
+                    <div className="special-product-card h-100 d-flex flex-column">
+                      <Link
+                        to={`/products/${product.id}`}
+                        onClick={() => window.scrollTo(0, 0)}
+                        className="text-decoration-none"
+                      >
                         <Card.Img
                           variant="top"
                           className="card-img "
                           src={product.image}
                         />
-                        <div className="text-start ">
-                          <p className="fs-3 fw-semibold">{product.name}</p>
-                          <p>{product.description}</p>
-                        </div>
+                      </Link>
+                      <div className="text-start ">
+                        <p className="fs-3 fw-semibold">{product.name}</p>
+                        <p>{product.description}</p>
+                      </div>
 
-                        <div className="mt-auto">
-                          <p className="fs-3 fw-semibold text-start">
-                            <span className="text-orange">
-                              ${product.price}
-                            </span>{" "}
-                          </p>
-                          <div className="d-flex justify-content-evenly">
-                            <div className="">
+                      <div className="mt-auto">
+                        <p className="fs-3 fw-semibold text-start">
+                          <span className="text-orange">${product.price}</span>{" "}
+                        </p>
+                        <div className="d-flex justify-content-evenly">
+                          <div className="">
+                            <Link
+                              to={`/products/${product.id}`}
+                              onClick={() => window.scrollTo(0, 0)}
+                              className="text-decoration-none"
+                            >
                               <button className="btn btn-view-product height65">
                                 View Product
                               </button>
-                            </div>
-                            <button
-                              className="btn rounded-circle btn-cart "
-                              onClick={() =>
-                                dispatch(
-                                  incrementQuantity(
-                                    {
-                                      name: product.name,
-                                      id: product.id,
-                                      price: product.price,
-                                      image: product.image,
-                                    },
-                                    dispatch(setIsCartOpen())
-                                  )
-                                )
-                              }
-                            >
-                              <i className="bi bi-cart"></i>
-                            </button>
+                            </Link>
                           </div>
+                          <button
+                            className="btn rounded-circle btn-cart "
+                            onClick={() =>
+                              dispatch(
+                                incrementQuantity(
+                                  {
+                                    name: product.name,
+                                    id: product.id,
+                                    price: product.price,
+                                    image: product.image,
+                                  },
+                                  dispatch(setIsCartOpen())
+                                )
+                              )
+                            }
+                          >
+                            <i className="bi bi-cart"></i>
+                          </button>
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 </div>
               ))
             ) : (
