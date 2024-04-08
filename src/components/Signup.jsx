@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import UticaBrandLogo from "../assets/img/logoUticaSB.png";
 import axios from "axios";
 import Navigation from "./Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SignUp() {
+  const navigate = useNavigate(); // Initialize navigate for navigation
+
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -24,18 +26,17 @@ function SignUp() {
   };
 
   const handleSubmit = async (e) => {
-    console.log(formData);
     e.preventDefault();
-    // try {
-    //   const response = await axios.post(
-    //     "http://localhost:3000/users",
-    //     formData
-    //   );
-    //   console.log(formData);
-    //   console.log(response.data);
-    // } catch (error) {
-    //   console.error("Error al iniciar sesión:", error);
-    // }
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/users",
+        formData
+      );
+
+      navigate("/");
+    } catch (error) {
+      console.error("Error al iniciar sesión:", error);
+    }
   };
 
   return (
@@ -140,21 +141,19 @@ function SignUp() {
                     onChange={handleChange}
                   />
                 </div>
-                <Link to="/" className="text-decoration-none">
-                  <button
-                    type="submit"
-                    className="btn btn-subscribe w-100 my-3 text-light"
-                  >
-                    Register Account
-                  </button>
-                </Link>
+                <button
+                  type="submit"
+                  className="btn btn-subscribe w-100 my-3 text-light"
+                >
+                  Register Account
+                </button>
                 <div>
                   <small className="text-dark">
-                    Already have an Account ?{" "}
+                    Already have an Account ?
                     <Link to="/user/login" className="text-decoration-none">
-                      <a className="text-decoration-none text-orange fw-semibold">
+                      <div className="text-decoration-none text-orange fw-semibold">
                         Login
-                      </a>
+                      </div>
                     </Link>
                   </small>
                 </div>
