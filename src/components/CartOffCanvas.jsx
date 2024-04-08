@@ -92,7 +92,7 @@ function CartOffCanvas() {
         <div className="mt-5 text-light">
           TOTAL PRICE: <p>{totalPrice}</p>
         </div>
-        <Link to="/checkout">
+        <Link to="/checkout" onClick={() => window.scrollTo(0, 0)}>
           <button className="btn-hero p-2 w-100 mt-4" onClick={handleCheckout}>
             Checkout <i className="bi bi-cart"></i>
           </button>

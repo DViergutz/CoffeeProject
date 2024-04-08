@@ -41,6 +41,7 @@ function ProductsCategory() {
                 <div className="col-md-6 col-lg-4 col-xl-3 " key={product.id}>
                   <Link
                     to={`/products/${product.id}`}
+                    onClick={() => window.scrollTo(0, 0)}
                     className="text-decoration-none"
                   >
                     <div className="d-flex flex-column h-100  ">
@@ -62,11 +63,11 @@ function ProductsCategory() {
                             </span>{" "}
                           </p>
                           <div className="d-flex justify-content-evenly">
-                            <a className="">
+                            <div className="">
                               <button className="btn btn-view-product height65">
                                 View Product
                               </button>
-                            </a>
+                            </div>
                             <button
                               className="btn rounded-circle btn-cart "
                               onClick={() =>

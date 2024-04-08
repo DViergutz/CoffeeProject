@@ -35,13 +35,13 @@ function ProductDetail() {
     }
   };
 
-  const handleDecrement = (productId) => {
+  /*   const handleDecrement = (productId) => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
     dispatch(decrementQuantity({ id: productId }));
   };
-
+ */
   useEffect(() => {
     const fetchOneProduct = async () => {
       try {
@@ -120,21 +120,9 @@ function ProductDetail() {
               <div className="d-flex flex-column">
                 <p className="fs-4 text-start">Quantity</p>
                 <div className="w-100 d-flex mb-2">
-                  <button
-                    className="btn-view-product"
-                    onClick={() => handleDecrement(oneProduct.id)}
-                  >
-                    <i className="bi bi-dash-circle fs-4 text-light"></i>
-                  </button>
                   <span className="p-2 rounded mx-2 fs-3 text-orange">
                     {quantity}
                   </span>
-                  <button
-                    className="btn-view-product"
-                    onClick={() => handleIncrement()}
-                  >
-                    <i className="bi bi-plus-circle fs-4 text-light"></i>
-                  </button>
                 </div>
                 <hr className="text-orange" />
                 <div className="fs-4 text-start stock mb-1">
@@ -148,7 +136,7 @@ function ProductDetail() {
                 <hr className="text-orange" />
                 <button
                   className="btn-hero p-2 w-100 mt-4"
-                  onClick={() => dispatch(setIsCartOpen())}
+                  onClick={() => dispatch(handleIncrement())}
                 >
                   Add to Cart <i className="bi bi-cart"></i>
                 </button>
@@ -225,11 +213,14 @@ function ProductDetail() {
                             </span>{" "}
                           </p>
                           <div className="d-flex justify-content-evenly">
-                            <a className="me-2">
-                              <button className="btn btn-view-product height65">
+                            <div className="me-2">
+                              <button
+                                className="btn btn-view-product height65"
+                                onClick={() => window.scrollTo(0, 0)}
+                              >
                                 View Product
                               </button>
-                            </a>
+                            </div>
                             <button
                               className="btn rounded-circle btn-cart "
                               onClick={() =>

@@ -64,11 +64,11 @@ function ProductsAll() {
                           <span className="text-orange">${product.price}</span>{" "}
                         </p>
                         <div className="d-flex justify-content-evenly">
-                          <a className="me-2">
+                          <div className="me-2">
                             <button className="btn btn-view-product height65">
                               View Product
                             </button>
-                          </a>
+                          </div>
                           <button
                             className="btn rounded-circle btn-cart "
                             onClick={() =>

@@ -7,32 +7,6 @@ const cartSlice = createSlice({
     inCart: [],
   },
   reducers: {
-    addToCart: (state, action) => {
-      const { id, quantity } = action.payload;
-      const itemIndex = state.inCart.findIndex((product) => product.id === id);
-      if (itemIndex >= 0) {
-        return {
-          ...state,
-          inCart: state.inCart.map((item, index) =>
-            index === itemIndex
-              ? { ...item, quantity: item.quantity + quantity }
-              : item
-          ),
-        };
-      } else {
-        return {
-          ...state,
-          inCart: [...state.inCart, { ...action.payload }],
-        };
-      }
-    },
-
-    removeFromCart: (state, action) => {
-      const removeItem = state.inCart.filter(
-        (item) => item.id !== action.payload.id
-      );
-    },
-
     decrementQuantity: (state, action) => {
       const { id } = action.payload;
       const itemIndex = state.inCart.findIndex((product) => product.id === id);
@@ -82,6 +56,32 @@ const cartSlice = createSlice({
     },
   },
 });
+
+/*     addToCart: (state, action) => {
+      const { id, quantity } = action.payload;
+      const itemIndex = state.inCart.findIndex((product) => product.id === id);
+      if (itemIndex >= 0) {
+        return {
+          ...state,
+          inCart: state.inCart.map((item, index) =>
+            index === itemIndex
+              ? { ...item, quantity: item.quantity + quantity }
+              : item
+          ),
+        };
+      } else {
+        return {
+          ...state,
+          inCart: [...state.inCart, { ...action.payload }],
+        };
+      }
+    }, */
+
+/*    removeFromCart: (state, action) => {
+      const removeItem = state.inCart.filter(
+        (item) => item.id !== action.payload.id
+      );
+    }, */
 
 const { reducer, actions } = cartSlice;
 

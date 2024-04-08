@@ -141,7 +141,11 @@ function SignUp() {
                     onChange={handleChange}
                   />
                 </div>
-                <Link to="/" className="text-decoration-none">
+                <Link
+                  to="/"
+                  className="text-decoration-none"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   <button
                     type="submit"
                     className="btn btn-subscribe w-100 my-3 text-light"
@@ -153,9 +157,9 @@ function SignUp() {
                   <small className="text-dark">
                     Already have an Account ?{" "}
                     <Link to="/user/login" className="text-decoration-none">
-                      <a className="text-decoration-none text-orange fw-semibold">
+                      <div className="text-decoration-none text-orange fw-semibold">
                         Login
-                      </a>
+                      </div>
                     </Link>
                   </small>
                 </div>
