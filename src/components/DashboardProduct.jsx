@@ -94,14 +94,13 @@ function DashboardProduct() {
                     <td>{product.image}</td>
 
                     <td>
-                      <a
-                        href={`/admin/products/edit/${product.id}`}
-                        className=""
-                      >
-                        <button className="btn btn-outline-warning mb-2">
-                          <i className="bi bi-pen text-dark"></i>
-                        </button>
-                      </a>
+                      <Link to={`/admin/products/edit/${product.id}`}>
+                        <a className="">
+                          <button className="btn btn-outline-warning mb-2">
+                            <i className="bi bi-pen text-dark"></i>
+                          </button>
+                        </a>
+                      </Link>
                       <br />
                       <button className="btn btn-outline-danger">
                         <i

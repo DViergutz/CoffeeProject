@@ -42,7 +42,7 @@ function PanelAdmin() {
                 </a>
               </div>
             </Link>
-            <Link to="/admin/products">
+            <Link to="/admin/products" className="text-decoration-none">
               <div className="navbar">
                 <a>
                   <img src={bag} alt="" />
@@ -50,7 +50,7 @@ function PanelAdmin() {
                 </a>
               </div>
             </Link>
-            <Link to="/admin/users">
+            <Link to="/admin/users" className="text-decoration-none">
               <div className="navbar">
                 <a>
                   <img src={user} alt="" />
@@ -58,7 +58,7 @@ function PanelAdmin() {
                 </a>
               </div>
             </Link>
-            <Link to="/admin/orders">
+            <Link to="/admin/orders" className="text-decoration-none">
               <div className="navbar">
                 <a>
                   <img src={cart} alt="" />
@@ -68,9 +68,9 @@ function PanelAdmin() {
             </Link>
           </div>
           <hr />
-          <Link to="/">
+          <Link to="/" className="text-decoration-none">
             <div className="returnToWebsite">
-              <a href="/">Return to Website</a>
+              <a>Return to Website</a>
             </div>
           </Link>
         </div>
@@ -101,30 +101,48 @@ function PanelAdmin() {
                 className="close"
                 onClick={() => setMobileNav(false)}
               />
-              <div className="navbar">
-                <a href="/admin">
-                  <img src={home} alt="" />
-                  Dashboard
-                </a>
-                <a href="/admin/products">
-                  <img src={bag} alt="" />
-                  Products
-                </a>
-                <a href="/admin/users">
-                  <img src={user} alt="" />
-                  Users
-                </a>
-                <a href="/admin/orders">
-                  <img src={cart} alt="" />
-                  Orders
-                </a>
+              <div>
+                <Link to="/admin">
+                  <div className="navbar">
+                    <a>
+                      <img src={home} alt="" />
+                      Dashboard
+                    </a>
+                  </div>
+                </Link>
+                <Link to="/admin/products">
+                  <div className="navbar">
+                    <a>
+                      <img src={bag} alt="" />
+                      Products
+                    </a>
+                  </div>
+                </Link>
+                <Link to="/admin/users">
+                  <div className="navbar">
+                    <a>
+                      <img src={user} alt="" />
+                      Users
+                    </a>
+                  </div>
+                </Link>
+                <Link to="/admin/orders">
+                  <div className="navbar">
+                    <a>
+                      <img src={cart} alt="" />
+                      Orders
+                    </a>
+                  </div>
+                </Link>
               </div>
               <hr />
               <div className="returnToWebsite">
-                <a href="/">
-                  {/* <img src={backHome} alt="" /> */}
-                  Return to Website
-                </a>
+                <Link to="/">
+                  <a>
+                    {/* <img src={backHome} alt="" /> */}
+                    Return to Website
+                  </a>
+                </Link>
               </div>
             </div>
           )}
