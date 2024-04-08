@@ -10,6 +10,7 @@ import {
   removeFromCart,
   setIsCartOpen,
   addToCart,
+  incrementQuantity,
 } from "../redux/CartSlice.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
