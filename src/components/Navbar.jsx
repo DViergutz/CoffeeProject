@@ -58,10 +58,7 @@ function Navigation() {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link className="navLink" href="/checkout">
-              <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>{" "}
-              <Badge pill className="cart-badge">
-                1
-              </Badge>
+              <i className="bi bi-cart2 fs-4 text-orange"></i>
             </Nav.Link>
             <Nav.Link className="navLink" href="/admin/login">
               ADMIN
