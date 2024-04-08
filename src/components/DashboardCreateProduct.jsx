@@ -5,13 +5,14 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 function CreateProduct() {
   const { id } = useParams();
   const navigate = useNavigate();
+  /*   const formidable = require("formidable"); */
 
   const [productData, setProductData] = useState({
     name: "",
     description: "",
     price: "",
     stock: "",
-    image: "",
+    productImage: "",
     categoryId: "",
   });
 
@@ -26,13 +27,13 @@ function CreateProduct() {
 
   const handleSubmitEdit = async (e) => {
     e.preventDefault();
-    console.log(productData);
+    /* console.log(productData); */
     try {
       const response = await axios.post(
         `http://localhost:3000/products`,
         productData
       );
-      console.log(response.data);
+      /* console.log(response.data); */
     } catch (error) {
       console.error("Error updating product:", error);
     }
@@ -46,7 +47,12 @@ function CreateProduct() {
           <div className="administrationPanelMain">
             <div className="container">
               <h3 className="text-dark pb-1 fw-semibold">Create new Product</h3>
-              <form onSubmit={handleSubmitEdit}>
+              <form
+                onSubmit={handleSubmitEdit}
+                encType="multipart/form-data"
+                method="post"
+                action="/products"
+              >
                 <div className="row">
                   <div className="col-md-6">
                     <div className="mb-2">
@@ -132,15 +138,15 @@ function CreateProduct() {
                   </select>
                 </div>
 
-                <div class="mb-3">
-                  <label htmlFor="formFile" class="form-label">
+                <div className="mb-3">
+                  <label htmlFor="formFile" className="form-label">
                     Upload Image
                   </label>
                   <input
                     className="form-control"
                     type="file"
                     id="productImage"
-                    name="image"
+                    name="productImage"
                     value={productData.image}
                     onChange={handleChange}
                   />
