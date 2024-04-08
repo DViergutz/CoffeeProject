@@ -70,7 +70,6 @@ function ProductsAll() {
                             </button>
                           </a>
 
-<<<<<<< HEAD
                           <button
                             className="btn rounded-circle btn-cart "
                             onClick={() =>
@@ -84,20 +83,6 @@ function ProductsAll() {
                                   },
                                   dispatch(setIsCartOpen())
                                 )
-=======
-                        <button
-                          className="btn rounded-circle btn-cart "
-                          onClick={() =>
-                            dispatch(
-                              incrementQuantity(
-                                {
-                                  name: product.name,
-                                  id: product.id,
-                                  price: product.price,
-                                  image: product.image,
-                                },
-                                dispatch(setIsCartOpen())
->>>>>>> 459d1aa0f2d6c7cfd378c8efe37a7de4e0126d10
                               )
                             }
                           >
