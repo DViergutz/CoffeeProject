@@ -54,36 +54,36 @@ function CartOffCanvas() {
               <img className="w-50" src={item.image} alt="" />
             </div>
             <div className="col-5 p-1 ">
-              <button className="btn-view-product-offcanvas">
-                <i
-                  className="bi bi-dash-circle fs-8 text-light"
-                  onClick={() =>
-                    dispatch(
-                      decrementQuantity({
-                        name: item.name,
-                        id: item.id,
-                        price: item.price,
-                        image: item.image,
-                      })
-                    )
-                  }
-                ></i>
+              <button
+                className="btn-view-product-offcanvas"
+                onClick={() =>
+                  dispatch(
+                    decrementQuantity({
+                      name: item.name,
+                      id: item.id,
+                      price: item.price,
+                      image: item.image,
+                    })
+                  )
+                }
+              >
+                <i className="bi bi-dash-circle fs-8 text-light"></i>
               </button>
               <span className="qty-box">{item.quantity}</span>
-              <button className="btn-view-product-offcanvas">
-                <i
-                  className="bi bi-plus-circle fs-8 text-light"
-                  onClick={() =>
-                    dispatch(
-                      incrementQuantity({
-                        name: item.name,
-                        id: item.id,
-                        price: item.price,
-                        image: item.image,
-                      })
-                    )
-                  }
-                ></i>
+              <button
+                className="btn-view-product-offcanvas"
+                onClick={() =>
+                  dispatch(
+                    incrementQuantity({
+                      name: item.name,
+                      id: item.id,
+                      price: item.price,
+                      image: item.image,
+                    })
+                  )
+                }
+              >
+                <i className="bi bi-plus-circle fs-8 text-light"></i>
               </button>
             </div>
             <div className="col-2">{item.price}</div>
