@@ -4,7 +4,7 @@ import UticaBrandLogo from "../assets/img/logoUticaSB.png";
 import Navigation from "./Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { authUser } from "../redux/UserSlice.js";
+import { authUser } from "../redux/UserSlice.jsx";
 
 function LoginUser() {
   const dispatch = useDispatch();
