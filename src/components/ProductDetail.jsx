@@ -5,34 +5,27 @@ import Card from "react-bootstrap/Card";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 
-import {
-  decrementQuantity,
-  incrementQuantity,
-  removeFromCart,
-  setIsCartOpen,
-  addToCart,
-} from "../redux/CartSlice.jsx";
+import { incrementQuantity, setIsCartOpen } from "../redux/CartSlice.jsx";
 
 function ProductDetail() {
   const [oneProduct, setOneProduct] = useState();
   const [relatedProducts, setRelatedProducts] = useState();
   const { productId } = useParams();
-  const params = useParams();
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(1);
+  /*   const [quantity, setQuantity] = useState(1); */
 
   const handleIncrement = () => {
-    if (quantity < oneProduct.stock) {
-      setQuantity(quantity + 1);
-      dispatch(
-        incrementQuantity({
-          name: oneProduct.name,
-          id: oneProduct.id,
-          price: oneProduct.price,
-          image: oneProduct.image,
-        })
-      );
-    }
+    /*     if (quantity < oneProduct.stock) {
+      setQuantity(quantity + 1); */
+    dispatch(
+      incrementQuantity({
+        name: oneProduct.name,
+        id: oneProduct.id,
+        price: oneProduct.price,
+        image: oneProduct.image,
+      })
+    );
+    dispatch(setIsCartOpen());
   };
 
   /*   const handleDecrement = (productId) => {
@@ -118,13 +111,6 @@ function ProductDetail() {
               </div>
               <hr className="text-orange" />
               <div className="d-flex flex-column">
-                <p className="fs-4 text-start">Quantity</p>
-                <div className="w-100 d-flex mb-2">
-                  <span className="p-2 rounded mx-2 fs-3 text-orange">
-                    {quantity}
-                  </span>
-                </div>
-                <hr className="text-orange" />
                 <div className="fs-4 text-start stock mb-1">
                   In stock:{" "}
                   {oneProduct ? (
@@ -136,7 +122,7 @@ function ProductDetail() {
                 <hr className="text-orange" />
                 <button
                   className="btn-hero p-2 w-100 mt-4"
-                  onClick={() => dispatch(handleIncrement())}
+                  onClick={handleIncrement}
                 >
                   Add to Cart <i className="bi bi-cart"></i>
                 </button>
