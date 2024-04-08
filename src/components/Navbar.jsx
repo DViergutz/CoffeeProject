@@ -1,18 +1,22 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container, Badge } from "react-bootstrap";
 import UticaBrandLogo from "../assets/img/logo-utica-white.png";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
     <Navbar expand="lg" className="navbar-collapse main-navbar">
       <Container>
-        <Navbar.Brand href="/" className="m-0 p-0 brand-logo-no-hover">
-          <img
-            src={UticaBrandLogo}
-            alt="Utica Brand Logo"
-            className="brand-logo"
-          />
-        </Navbar.Brand>
+        <Link to="/">
+          <Navbar.Brand className="m-0 p-0 brand-logo-no-hover">
+            <img
+              src={UticaBrandLogo}
+              alt="Utica Brand Logo"
+              className="brand-logo"
+            />
+          </Navbar.Brand>
+        </Link>
+
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           className="text-orange bg-light"
@@ -22,10 +26,10 @@ function Navigation() {
           className="collapse ps-3 bg-dark-grey"
         >
           <Nav className="me-auto">
-            <Nav.Link className="navLink" href="/about-this-project">
+            <Nav.Link as={Link} to="/about-this-project" className="navLink">
               ABOUT THIS PROJECT
             </Nav.Link>
-            <Nav.Link className="navLink" href="/products">
+            <Nav.Link as={Link} to="/products" className="navLink">
               PRODUCTS
             </Nav.Link>
             <NavDropdown
@@ -33,13 +37,17 @@ function Navigation() {
               title="CATEGORIES"
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item className="" href="/category/flavored">
+              <NavDropdown.Item as={Link} to="/category/flavored" className="">
                 Flavored
               </NavDropdown.Item>
-              <NavDropdown.Item className="" href="/category/blends">
+              <NavDropdown.Item as={Link} to="/category/blends" className="">
                 Blends
               </NavDropdown.Item>
-              <NavDropdown.Item className="" href="/category/Single Origin">
+              <NavDropdown.Item
+                as={Link}
+                to="/category/Single Origin"
+                className=""
+              >
                 Single Origin
               </NavDropdown.Item>
             </NavDropdown>
@@ -50,20 +58,20 @@ function Navigation() {
               title={<i className="bi bi-person-fill fs-5 "></i>}
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item className="" href="/user/login">
+              <NavDropdown.Item as={Link} to="/user/login" className="">
                 Login
               </NavDropdown.Item>
-              <NavDropdown.Item className="" href="/user/register">
+              <NavDropdown.Item as={Link} to="/user/register" className="">
                 Register
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link className="navLink" href="/checkout">
+            <Nav.Link as={Link} to="/checkout" className="navLink">
               <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>{" "}
               <Badge pill className="cart-badge">
                 1
               </Badge>
             </Nav.Link>
-            <Nav.Link className="navLink" href="/admin/login">
+            <Nav.Link as={Link} to="/admin/login" className="navLink">
               ADMIN
             </Nav.Link>
           </Nav>
