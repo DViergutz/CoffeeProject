@@ -8,23 +8,21 @@ const cartSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
-      const itemIndex = state.inCart.findIndex(
-        (product) => product.id === action.payload.id
-      ); ////index me da -1 si no esta en el array
+      const { id, quantity } = action.payload;
+      const itemIndex = state.inCart.findIndex((product) => product.id === id);
       if (itemIndex >= 0) {
         return {
           ...state,
-          inCart: state.inCart.map((item, index) => {
-            if (index === itemIndex) {
-              return { ...item, quantity: item.quantity + 1 };
-            }
-            return item;
-          }),
+          inCart: state.inCart.map((item, index) =>
+            index === itemIndex
+              ? { ...item, quantity: item.quantity + quantity }
+              : item
+          ),
         };
       } else {
         return {
           ...state,
-          inCart: [...state.inCart, { ...action.payload, quantity: 1 }],
+          inCart: [...state.inCart, { ...action.payload }],
         };
       }
     },
@@ -37,7 +35,7 @@ const cartSlice = createSlice({
 
     decrementQuantity: (state, action) => {
       const { id } = action.payload;
-      const itemIndex = state.inCart.findIndex((product) => (product.id = id));
+      const itemIndex = state.inCart.findIndex((product) => product.id === id);
 
       if (itemIndex >= 0) {
         const newQuantity = state.inCart[itemIndex].quantity - 1;

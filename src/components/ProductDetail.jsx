@@ -34,11 +34,6 @@ function ProductDetail() {
       );
     }
   };
-  /* const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  }; */
 
   const handleDecrement = (productId) => {
     if (quantity > 1) {
@@ -239,6 +234,7 @@ function ProductDetail() {
                                     id: oneProduct.id,
                                     price: oneProduct.price,
                                     image: oneProduct.image,
+                                    quantity: quantity,
                                   },
                                   dispatch(setIsCartOpen())
                                 )
