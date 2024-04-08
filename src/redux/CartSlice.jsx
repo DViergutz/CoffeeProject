@@ -9,33 +9,6 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const { id, quantity } = action.payload;
-      const existingProductIndex = state.inCart.findIndex(
-        (product) => product.id === id
-      );
-
-      if (existingProductIndex !== -1) {
-        // Si el producto ya está en el carrito, actualizamos su cantidad sumando la nueva cantidad
-        const updatedCart = state.inCart.map((product, index) => {
-          if (index === existingProductIndex) {
-            return { ...product, quantity: product.quantity + quantity };
-          }
-          return product;
-        });
-
-        return {
-          ...state,
-          inCart: updatedCart,
-        };
-      } else {
-        // Si el producto no está en el carrito, lo agregamos con la cantidad proporcionada
-        return {
-          ...state,
-          inCart: [...state.inCart, { ...action.payload }],
-        };
-      }
-    },
-    /* addToCart: (state, action) => {
-      const { id, quantity } = action.payload;
       const itemIndex = state.inCart.findIndex((product) => product.id === id);
       if (itemIndex >= 0) {
         return {
@@ -52,7 +25,7 @@ const cartSlice = createSlice({
           inCart: [...state.inCart, { ...action.payload }],
         };
       }
-    }, */
+    },
 
     removeFromCart: (state, action) => {
       const removeItem = state.inCart.filter(
