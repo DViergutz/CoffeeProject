@@ -547,6 +547,12 @@ h5 {
   max-width: 650px;
 }
 
+@media (max-width: 991px) {
+  .about-paragraph {
+    max-width: 70vw;
+  }
+}
+
 .img-sack {
   height: 100vh;
   width: auto;
