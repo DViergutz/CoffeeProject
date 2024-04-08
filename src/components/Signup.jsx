@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import UticaBrandLogo from "../assets/img/logoUticaSB.png";
 import axios from "axios";
 import Navigation from "./Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SignUp() {
+  const navigate = useNavigate(); // Initialize navigate for navigation
+
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -23,20 +25,18 @@ function SignUp() {
     });
   };
 
-  // Manejar el envío del formulario
   const handleSubmit = async (e) => {
-    console.log(formData);
     e.preventDefault();
-    // try {
-    //   // Enviar una solicitud al servidor para verificar las credenciales
-    //   const response = await axios.post(
-    //     "http://localhost:3000/login",
-    //     formData
-    //   );
-    //   console.log(response.data); // Hacer algo con la respuesta del servidor
-    // } catch (error) {
-    //   console.error("Error al iniciar sesión:", error);
-    // }
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/users",
+        formData
+      );
+
+      navigate("/");
+    } catch (error) {
+      console.error("Error al iniciar sesión:", error);
+    }
   };
 
   return (
@@ -141,21 +141,15 @@ function SignUp() {
                     onChange={handleChange}
                   />
                 </div>
-                <Link
-                  to="/"
-                  className="text-decoration-none"
-                  onClick={() => window.scrollTo(0, 0)}
+                <button
+                  type="submit"
+                  className="btn btn-subscribe w-100 my-3 text-light"
                 >
-                  <button
-                    type="submit"
-                    className="btn btn-subscribe w-100 my-3 text-light"
-                  >
-                    Register Account
-                  </button>
-                </Link>
+                  Register Account
+                </button>
                 <div>
                   <small className="text-dark">
-                    Already have an Account ?{" "}
+                    Already have an Account ?
                     <Link to="/user/login" className="text-decoration-none">
                       <div className="text-decoration-none text-orange fw-semibold">
                         Login
