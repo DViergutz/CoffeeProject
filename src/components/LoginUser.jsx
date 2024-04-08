@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import UticaBrandLogo from "../assets/img/logoUticaSB.png";
 import Navigation from "./Navbar";
-
 import { Link } from "react-router-dom";
-
 import { useDispatch } from "react-redux";
-import authUser from "../redux/UserSlice.js";
+import { authUser } from "../redux/UserSlice";
 
 function LoginUser() {
   const dispatch = useDispatch();
@@ -36,7 +34,7 @@ function LoginUser() {
         formData
       );
 
-      dispatch(authUser(response.data.token));
+      dispatch(authUser(response.data));
 
       console.log(response.data); // Hacer algo con la respuesta del servidor
     } catch (error) {
