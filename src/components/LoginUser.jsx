@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 import UticaBrandLogo from "../assets/img/logoUticaSB.png";
 import Navigation from "./Navbar";
-
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import authUser from "../redux/UserSlice.js";
+import { authUser } from "../redux/UserSlice.js";
 
 function LoginUser() {
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // Initialize navigate for navigation
+
   // Estado local para almacenar los valores del formulario
   const [formData, setFormData] = useState({
     email: "",
@@ -36,9 +36,10 @@ function LoginUser() {
         formData
       );
 
-      dispatch(authUser(response.data.token));
-
-      console.log(response.data); // Hacer algo con la respuesta del servidor
+      dispatch(
+        authUser({ token: response.data.token, userId: response.data.userId })
+      );
+      navigate("/");
     } catch (error) {
       console.error("Error al iniciar sesión:", error);
     }
