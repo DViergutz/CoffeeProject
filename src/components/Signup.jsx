@@ -23,17 +23,16 @@ function SignUp() {
     });
   };
 
-  // Manejar el envío del formulario
   const handleSubmit = async (e) => {
     console.log(formData);
     e.preventDefault();
     // try {
-    //   // Enviar una solicitud al servidor para verificar las credenciales
     //   const response = await axios.post(
-    //     "http://localhost:3000/login",
+    //     "http://localhost:3000/users",
     //     formData
     //   );
-    //   console.log(response.data); // Hacer algo con la respuesta del servidor
+    //   console.log(formData);
+    //   console.log(response.data);
     // } catch (error) {
     //   console.error("Error al iniciar sesión:", error);
     // }
