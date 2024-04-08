@@ -19,7 +19,7 @@ function ProductDetail() {
   const { productId } = useParams();
   const params = useParams();
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
 
   const handleIncrement = () => {
     if (quantity < oneProduct.stock) {
@@ -30,6 +30,7 @@ function ProductDetail() {
           id: oneProduct.id,
           price: oneProduct.price,
           image: oneProduct.image,
+          quantity: quantity,
         })
       );
     }

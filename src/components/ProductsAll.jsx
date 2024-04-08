@@ -69,7 +69,6 @@ function ProductsAll() {
                               View Product
                             </button>
                           </a>
-
                           <button
                             className="btn rounded-circle btn-cart "
                             onClick={() =>
