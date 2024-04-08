@@ -7,6 +7,7 @@ import {
   removeFromCart,
   setIsCartOpen,
   addToCart,
+  incrementQuantity,
 } from "../redux/CartSlice.jsx";
 
 function ProductsAll() {
@@ -68,7 +69,7 @@ function ProductsAll() {
                           className="btn rounded-circle btn-cart "
                           onClick={() =>
                             dispatch(
-                              addToCart(
+                              incrementQuantity(
                                 {
                                   name: product.name,
                                   id: product.id,

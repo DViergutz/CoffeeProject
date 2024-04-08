@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  incrementQuantity,
   removeFromCart,
   setIsCartOpen,
   addToCart,
+  decrementQuantity,
 } from "../redux/CartSlice.jsx";
 import { useNavigate } from "react-router-dom";
 import { Offcanvas, Button } from "react-bootstrap";
@@ -46,8 +48,8 @@ function CartOffCanvas() {
             <div className="col fw-bold text-center text-light">PRICE</div>
           </div>
         </div>
-        {itemsInCart.map((item) => (
-          <div className="offcanvas-product-div row ms-1 me-1" key={item.id}>
+        {itemsInCart.map((item, index) => (
+          <div className="offcanvas-product-div row ms-1 me-1" key={index}>
             <div className="col-5">
               <img className="w-50" src={item.image} alt="" />
             </div>
@@ -57,8 +59,11 @@ function CartOffCanvas() {
                   className="bi bi-dash-circle fs-8 text-light"
                   onClick={() =>
                     dispatch(
-                      removeFromCart({
+                      decrementQuantity({
+                        name: item.name,
                         id: item.id,
+                        price: item.price,
+                        image: item.image,
                       })
                     )
                   }
@@ -70,7 +75,7 @@ function CartOffCanvas() {
                   className="bi bi-plus-circle fs-8 text-light"
                   onClick={() =>
                     dispatch(
-                      addToCart({
+                      incrementQuantity({
                         name: item.name,
                         id: item.id,
                         price: item.price,

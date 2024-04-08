@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import {
+  removeFromCart,
+  addToCart,
+  incrementQuantity,
+  decrementQuantity,
+} from "../redux/CartSlice.jsx";
 
 function Checkout() {
   const dispatch = useDispatch();
@@ -36,14 +42,39 @@ function Checkout() {
                   <div className="col fw-semibold d-flex justify-content-center align-items-center">
                     <div className="d-flex flex-column align-items-center">
                       <div className="d-flex border p-1">
-                        <span>-</span>
-                        <span className="mx-3">{item.quantity}</span>
-                        <span>+</span>
+                        <button className="btn-view-product-offcanvas">
+                          <i
+                            className="bi bi-dash-circle fs-8 text-light"
+                            onClick={() =>
+                              dispatch(
+                                decrementQuantity({
+                                  id: item.id,
+                                })
+                              )
+                            }
+                          ></i>
+                        </button>
+                        <span className="qty-box">{item.quantity}</span>
+                        <button className="btn-view-product-offcanvas">
+                          <i
+                            className="bi bi-plus-circle fs-8 text-light"
+                            onClick={() =>
+                              dispatch(
+                                incrementQuantity({
+                                  name: item.name,
+                                  id: item.id,
+                                  price: item.price,
+                                  image: item.image,
+                                })
+                              )
+                            }
+                          ></i>
+                        </button>
                       </div>
                     </div>
                   </div>
                   <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                    ${totalPrice}
+                    ${item.price * item.quantity}
                   </div>
                 </div>
                 <hr className="text-orange" />
@@ -106,7 +137,7 @@ function Checkout() {
             <div className="mt-5">
               <div className="d-flex justify-content-between">
                 <p className="fw-semibold text-dark">Subtotal:</p>
-                <p className="text-dark">$2000.00</p>
+                <p className="text-dark">${totalPrice}</p>
               </div>
               <div className="d-flex justify-content-between">
                 <p className="fw-semibold text-dark">Shipping:</p>
@@ -114,7 +145,9 @@ function Checkout() {
               </div>
               <div className="d-flex justify-content-between ">
                 <p className="fw-bold text-dark ">Total (tax incl.):</p>
-                <p className="fw-bold text-dark">$2025.00</p>
+                <p className="fw-bold text-dark">
+                  ${totalPrice ? totalPrice + 25 : 0}
+                </p>
               </div>
               <button className="btn-hero w-100 mt-4">
                 Checkout<i className="ms-2 bi bi-lock-fill"></i>
