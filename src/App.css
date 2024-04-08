@@ -723,6 +723,10 @@ h5 {
   padding-left: 10px;
 }
 
+.navLink:focus {
+  color: #d96c21 !important;
+}
+
 .navLink.navDropdown .dropdown-item:hover,
 .navLink.navDropdown .dropdown-item:active {
   color: #d96c21 !important;
@@ -748,6 +752,10 @@ h5 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   margin-left: 16px;
+}
+
+.nav-link:focus {
+  color: #d96c21 !important;
 }
 
 #root > div > nav > div {
