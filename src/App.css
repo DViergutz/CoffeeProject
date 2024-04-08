@@ -695,6 +695,11 @@ h5 {
 }
 
 /* navbar */
+/*Esto sirve para alinear los elementos dentro del dropdown */
+
+.align-items-center {
+  align-items: start !important;
+}
 
 .main-navbar {
   height: 126px;
@@ -756,6 +761,22 @@ h5 {
 
 .nav-link:focus {
   color: #d96c21 !important;
+}
+
+.visibility-link-show {
+  display: none;
+}
+
+@media (min-width: 991px) {
+  .visibility-link-show {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .visibility-link-hide {
+    display: none !important;
+  }
 }
 
 #root > div > nav > div {
