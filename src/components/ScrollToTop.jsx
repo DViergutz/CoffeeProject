@@ -22,14 +22,14 @@ function ScrollToTop() {
   };
 
   return (
-    <i className="p-3">
+    <div className="p-3">
       {showScrollTopButton && (
         <RiArrowUpDoubleFill
           className="top-btn-position top-btn-style"
           onClick={scrollTop}
         />
       )}
-    </i>
+    </div>
   );
 }
 

@@ -8,8 +8,8 @@ const userSlice = createSlice({
       const { token } = action.payload;
 
       state.isLogged = !state.isLogged;
-
-      return state.isLogged, (state.token = token);
+      state.token = token;
+      return state;
     },
     logout(state, action) {
       return {};

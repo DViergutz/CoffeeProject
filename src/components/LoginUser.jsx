@@ -93,9 +93,9 @@ function LoginUser() {
                   <small className="text-dark">
                     Don't you have an Account ?{" "}
                     <Link to="/user/register">
-                      <a className="text-decoration-none text-orange fw-semibold">
+                      <p className="text-decoration-none text-orange fw-semibold">
                         Create an Account!
-                      </a>
+                      </p>
                     </Link>
                   </small>
                 </div>
