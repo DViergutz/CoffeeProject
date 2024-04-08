@@ -8,6 +8,7 @@ import cart from "../assets/img/cart.svg";
 import burger from "../assets/img/burger.svg";
 import close from "../assets/img/close.svg";
 import backHome from "../assets/img/return.svg";
+import { Link } from "react-router-dom";
 
 function PanelAdmin() {
   const [mobileNav, setMobileNav] = useState(false);
@@ -24,32 +25,54 @@ function PanelAdmin() {
             />
           </div>
 
-          <div className="navbar">
-            <a href="/admin">
-              <img src={home} alt="" />
-              Dashboard
-            </a>
-            <a href="/admin/admins">
-              <img src={user} alt="" />
-              Admins
-            </a>
-            <a href="/admin/products">
-              <img src={bag} alt="" />
-              Products
-            </a>
-            <a href="/admin/users">
-              <img src={user} alt="" />
-              Users
-            </a>
-            <a href="/admin/orders">
-              <img src={cart} alt="" />
-              Orders
-            </a>
+          <div className="">
+            <Link to="/admin" className="text-decoration-none">
+              <div className="navbar">
+                <a>
+                  <img src={home} alt="" />
+                  Dashboard
+                </a>
+              </div>
+            </Link>
+            <Link to="/admin/admins" className="text-decoration-none">
+              <div className="navbar">
+                <a>
+                  <img src={user} alt="" />
+                  Admins
+                </a>
+              </div>
+            </Link>
+            <Link to="/admin/products">
+              <div className="navbar">
+                <a>
+                  <img src={bag} alt="" />
+                  Products
+                </a>
+              </div>
+            </Link>
+            <Link to="/admin/users">
+              <div className="navbar">
+                <a>
+                  <img src={user} alt="" />
+                  Users
+                </a>
+              </div>
+            </Link>
+            <Link to="/admin/orders">
+              <div className="navbar">
+                <a>
+                  <img src={cart} alt="" />
+                  Orders
+                </a>
+              </div>
+            </Link>
           </div>
           <hr />
-          <div className="returnToWebsite">
-            <a href="/">Return to Website</a>
-          </div>
+          <Link to="/">
+            <div className="returnToWebsite">
+              <a href="/">Return to Website</a>
+            </div>
+          </Link>
         </div>
 
         {/* SecondDiv */}

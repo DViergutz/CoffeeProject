@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import UticaBrandLogo from "../assets/img/logoUticaSB.png";
 import axios from "axios";
 import Navigation from "./Navbar";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -140,22 +141,22 @@ function SignUp() {
                     onChange={handleChange}
                   />
                 </div>
-
-                <button
-                  type="submit"
-                  className="btn btn-subscribe w-100 my-3 text-light"
-                >
-                  Register Account
-                </button>
+                <Link to="/" className="text-decoration-none">
+                  <button
+                    type="submit"
+                    className="btn btn-subscribe w-100 my-3 text-light"
+                  >
+                    Register Account
+                  </button>
+                </Link>
                 <div>
                   <small className="text-dark">
                     Already have an Account ?{" "}
-                    <a
-                      href="/user/login"
-                      className="text-decoration-none text-orange fw-semibold"
-                    >
-                      Login
-                    </a>
+                    <Link to="/user/login" className="text-decoration-none">
+                      <a className="text-decoration-none text-orange fw-semibold">
+                        Login
+                      </a>
+                    </Link>
                   </small>
                 </div>
               </form>

@@ -12,6 +12,7 @@ import {
   addToCart,
 } from "../redux/CartSlice.jsx";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Home() {
   const categories = useRef(null);
@@ -194,155 +195,164 @@ function Home() {
           <h2 className="text-center">Special Products</h2>
           <div className="row">
             <div className="col-md-6 col-lg-6 col-xl-3 ">
-              <div className="d-flex flex-column h-100 ">
-                <div className="special-product-card h-100 d-flex flex-column">
-                  <div className="special-product-1"></div>
-                  <div className="text-start ">
-                    <p className="fs-3 fw-semibold">Art of Darkness</p>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
-                      corrupti est odio repellat voluptatibus praesentium
-                      distinctio dicta!
-                    </p>
-                  </div>
-                  <div className="mt-auto">
-                    <p className="fs-3 fw-semibold text-start">
-                      <span className="text-orange me-3 fs-2">$190</span>
-                      <span className="text-decoration-line-through fs-5">
-                        $250
-                      </span>
-                    </p>
-                    <div className="d-flex justify-content-between">
-                      <a href="/products/9" className="me-2">
-                        <button className="btn btn-view-product height65">
-                          View Product
-                        </button>
-                      </a>
-                      <button
-                        className="btn rounded-circle btn-cart "
-                        onClick={() => dispatch(setIsCartOpen())}
-                      >
-                        <i className="bi bi-cart"></i>
-                      </button>
+              <Link to="/products/9" className="text-decoration-none">
+                <div className="d-flex flex-column h-100 ">
+                  <div className="special-product-card h-100 d-flex flex-column">
+                    <div className="special-product-1"></div>
+                    <div className="text-start ">
+                      <p className="fs-3 fw-semibold">Art of Darkness</p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Non ad rerum totam aliquid eveniet! Placeat rem, rerum
+                        corrupti est odio repellat voluptatibus praesentium
+                        distinctio dicta!
+                      </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-6 col-xl-3 ">
-              <div className="d-flex flex-column h-100 ">
-                <div className="special-product-card h-100 d-flex flex-column">
-                  <div className="special-product-2"></div>
+                    <div className="mt-auto">
+                      <p className="fs-3 fw-semibold text-start">
+                        <span className="text-orange me-3 fs-2">$190</span>
+                        <span className="text-decoration-line-through fs-5">
+                          $250
+                        </span>
+                      </p>
+                      <div className="d-flex justify-content-between">
+                        <a className="me-2">
+                          <button className="btn btn-view-product height65">
+                            View Product
+                          </button>
+                        </a>
 
-                  <div className="text-start ">
-                    <p className="fs-3 fw-semibold">Chocolate Amaretto</p>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
-                      corrupti est odio repellat voluptatibus praesentium
-                      distinctio dicta!
-                    </p>
-                  </div>
-                  <div className="mt-auto">
-                    <p className="fs-3 fw-semibold text-start">
-                      <span className="text-orange me-3 fs-2">$190</span>
-                      <span className="text-decoration-line-through fs-5">
-                        $250
-                      </span>
-                    </p>
-                    <div className="d-flex justify-content-between">
-                      <a href="/products/3" className="">
-                        <button className="btn btn-view-product height65">
-                          View Product
+                        <button
+                          className="btn rounded-circle btn-cart "
+                          onClick={() => dispatch(setIsCartOpen())}
+                        >
+                          <i className="bi bi-cart"></i>
                         </button>
-                      </a>
-                      <button
-                        className="btn rounded-circle btn-cart"
-                        onClick={() => dispatch(setIsCartOpen())}
-                      >
-                        <i className="bi bi-cart"></i>
-                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="col-md-6 col-lg-6 col-xl-3 ">
-              <div className="d-flex flex-column h-100 ">
-                <div className="special-product-card h-100 d-flex flex-column">
-                  <div className="special-product-3"></div>
+              <Link to="/products/3" className="text-decoration-none">
+                <div className="d-flex flex-column h-100 ">
+                  <div className="special-product-card h-100 d-flex flex-column">
+                    <div className="special-product-2"></div>
 
-                  <div className="text-start ">
-                    <p className="fs-3 fw-semibold">Colombia Organic</p>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
-                      corrupti est odio repellat voluptatibus praesentium
-                      distinctio dicta!
-                    </p>
-                  </div>
-                  <div className="mt-auto">
-                    <p className="fs-3 fw-semibold text-start">
-                      <span className="text-orange me-3 fs-2">$190</span>
-                      <span className="text-decoration-line-through fs-5">
-                        $250
-                      </span>
-                    </p>
-                    <div className="d-flex justify-content-between">
-                      <a href="/products/11" className="">
-                        <button className="btn btn-view-product height65">
-                          View Product
+                    <div className="text-start ">
+                      <p className="fs-3 fw-semibold">Chocolate Amaretto</p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Non ad rerum totam aliquid eveniet! Placeat rem, rerum
+                        corrupti est odio repellat voluptatibus praesentium
+                        distinctio dicta!
+                      </p>
+                    </div>
+                    <div className="mt-auto">
+                      <p className="fs-3 fw-semibold text-start">
+                        <span className="text-orange me-3 fs-2">$190</span>
+                        <span className="text-decoration-line-through fs-5">
+                          $250
+                        </span>
+                      </p>
+                      <div className="d-flex justify-content-between">
+                        <a className="">
+                          <button className="btn btn-view-product height65">
+                            View Product
+                          </button>
+                        </a>
+                        <button
+                          className="btn rounded-circle btn-cart"
+                          onClick={() => dispatch(setIsCartOpen())}
+                        >
+                          <i className="bi bi-cart"></i>
                         </button>
-                      </a>
-                      <button
-                        className="btn rounded-circle btn-cart"
-                        onClick={() => dispatch(setIsCartOpen())}
-                      >
-                        <i className="bi bi-cart"></i>
-                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="col-md-6 col-lg-6 col-xl-3 ">
-              <div className="d-flex flex-column h-100 ">
-                <div className="special-product-card h-100 d-flex flex-column">
-                  <div className="special-product-4"></div>
-                  {/* <Card.Img variant="top" className="special-product-1 " /> */}
-                  <div className="text-start ">
-                    <p className="fs-3 fw-semibold">Italian Roast</p>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
-                      corrupti est odio repellat voluptatibus praesentium
-                      distinctio dicta!
-                    </p>
-                  </div>
-                  <div className="mt-auto">
-                    <p className="fs-3 fw-semibold text-start">
-                      <span className="text-orange me-3 fs-2">$190</span>
-                      <span className="text-decoration-line-through fs-5">
-                        $250
-                      </span>
-                    </p>
-                    <div className="d-flex justify-content-between">
-                      <a href="/products/7" className="">
-                        <button className="btn btn-view-product height65">
-                          View Product
+              <Link to="/products/11" className="text-decoration-none">
+                <div className="d-flex flex-column h-100 ">
+                  <div className="special-product-card h-100 d-flex flex-column">
+                    <div className="special-product-3"></div>
+
+                    <div className="text-start ">
+                      <p className="fs-3 fw-semibold">Colombia Organic</p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Non ad rerum totam aliquid eveniet! Placeat rem, rerum
+                        corrupti est odio repellat voluptatibus praesentium
+                        distinctio dicta!
+                      </p>
+                    </div>
+                    <div className="mt-auto">
+                      <p className="fs-3 fw-semibold text-start">
+                        <span className="text-orange me-3 fs-2">$190</span>
+                        <span className="text-decoration-line-through fs-5">
+                          $250
+                        </span>
+                      </p>
+                      <div className="d-flex justify-content-between">
+                        <a className="">
+                          <button className="btn btn-view-product height65">
+                            View Product
+                          </button>
+                        </a>
+                        <button
+                          className="btn rounded-circle btn-cart"
+                          onClick={() => dispatch(setIsCartOpen())}
+                        >
+                          <i className="bi bi-cart"></i>
                         </button>
-                      </a>
-                      <button
-                        className="btn rounded-circle btn-cart"
-                        onClick={() => dispatch(setIsCartOpen())}
-                      >
-                        <i className="bi bi-cart"></i>
-                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
+            </div>
+            <div className="col-md-6 col-lg-6 col-xl-3 ">
+              <Link to="/products/7" className="text-decoration-none">
+                <div className="d-flex flex-column h-100 ">
+                  <div className="special-product-card h-100 d-flex flex-column">
+                    <div className="special-product-4"></div>
+                    {/* <Card.Img variant="top" className="special-product-1 " /> */}
+                    <div className="text-start ">
+                      <p className="fs-3 fw-semibold">Italian Roast</p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Non ad rerum totam aliquid eveniet! Placeat rem, rerum
+                        corrupti est odio repellat voluptatibus praesentium
+                        distinctio dicta!
+                      </p>
+                    </div>
+                    <div className="mt-auto">
+                      <p className="fs-3 fw-semibold text-start">
+                        <span className="text-orange me-3 fs-2">$190</span>
+                        <span className="text-decoration-line-through fs-5">
+                          $250
+                        </span>
+                      </p>
+                      <div className="d-flex justify-content-between">
+                        <a className="">
+                          <button className="btn btn-view-product height65">
+                            View Product
+                          </button>
+                        </a>
+                        <button
+                          className="btn rounded-circle btn-cart"
+                          onClick={() => dispatch(setIsCartOpen())}
+                        >
+                          <i className="bi bi-cart"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
