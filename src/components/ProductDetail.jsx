@@ -151,19 +151,21 @@ function ProductDetail() {
                 <strong className="text-orange">
                   <i className="bi bi-cup-hot-fill me-4 fs-4"></i>
                 </strong>
-                <p className="m-0">Mild nuttiness, chocolate</p>
+                <p className="m-0 align-self-center">
+                  Mild nuttiness, chocolate
+                </p>
               </div>
               <div className="d-flex align-items-center my-2">
                 <strong className="text-orange">
                   <i className="bi bi-globe-americas me-4 fs-4"></i>
                 </strong>
-                <p className="m-0"> Peru, Columbia</p>
+                <p className="m-0 align-self-center"> Peru, Columbia</p>
               </div>
               <div className="d-flex align-items-center">
                 <strong className="text-orange">
                   <i className="bi bi-brilliance me-4 fs-4"></i>
                 </strong>
-                <div className="text-light">
+                <div className="text-light align-self-center">
                   {oneProduct ? (
                     <p className="m-0">{oneProduct.category.name}</p>
                   ) : (
