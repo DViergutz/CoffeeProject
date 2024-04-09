@@ -67,7 +67,11 @@ function Home() {
               Embark on a journey through our finest selection of coffee bean
               bags
             </p>
-            <Link to="/products/" className="text-decoration-none">
+            <Link
+              to="/products/"
+              className="text-decoration-none"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               <button className="btn-hero">
                 Explore our products <i className="bi bi-arrow-right ms-2"></i>
               </button>
@@ -192,14 +196,22 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className=" col-lg-4">
-              <Link to="/category/flavored" className="text-decoration-none">
+              <Link
+                to="/category/flavored"
+                className="text-decoration-none"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 <div className="category-card category-flavored ">
                   <h3 className="category-title">Flavored</h3>
                 </div>
               </Link>
             </div>
             <div className="col-lg-4">
-              <Link to="/category/blends" className="text-decoration-none">
+              <Link
+                to="/category/blends"
+                className="text-decoration-none"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 <div className="category-card category-blends">
                   <h3 className="category-title">Blends</h3>
                 </div>
@@ -209,6 +221,7 @@ function Home() {
               <Link
                 to="/category/single origin"
                 className="text-decoration-none"
+                onClick={() => window.scrollTo(0, 0)}
               >
                 <div className="category-card category-single-origin">
                   <h3 className="category-title">Single Origin</h3>
@@ -254,7 +267,11 @@ function Home() {
                     </p>
                     <div className="d-flex justify-content-between">
                       <div className="me-2">
-                        <Link to="/products/9" className="text-decoration-none">
+                        <Link
+                          to="/products/9"
+                          className="text-decoration-none"
+                          onClick={() => window.scrollTo(0, 0)}
+                        >
                           <button className="btn btn-view-product height65">
                             View Product
                           </button>
@@ -288,7 +305,11 @@ function Home() {
             <div className="col-md-6 col-lg-6 col-xl-3 ">
               <div className="d-flex flex-column h-100 ">
                 <div className="special-product-card h-100 d-flex flex-column">
-                  <Link to="/products/3" className="text-decoration-none">
+                  <Link
+                    to="/products/3"
+                    className="text-decoration-none"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
                     <div className="special-product-2"></div>
                   </Link>
                   <div className="text-start ">
@@ -309,7 +330,11 @@ function Home() {
                     </p>
                     <div className="d-flex justify-content-between">
                       <div className="">
-                        <Link to="/products/3" className="text-decoration-none">
+                        <Link
+                          to="/products/3"
+                          className="text-decoration-none"
+                          onClick={() => window.scrollTo(0, 0)}
+                        >
                           <button className="btn btn-view-product height65">
                             View Product
                           </button>
@@ -342,7 +367,11 @@ function Home() {
             <div className="col-md-6 col-lg-6 col-xl-3 ">
               <div className="d-flex flex-column h-100 ">
                 <div className="special-product-card h-100 d-flex flex-column">
-                  <Link to="/products/11" className="text-decoration-none">
+                  <Link
+                    to="/products/11"
+                    className="text-decoration-none"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
                     <div className="special-product-3"></div>
                   </Link>
                   <div className="text-start ">
@@ -366,6 +395,7 @@ function Home() {
                         <Link
                           to="/products/11"
                           className="text-decoration-none"
+                          onClick={() => window.scrollTo(0, 0)}
                         >
                           <button className="btn btn-view-product height65">
                             View Product
@@ -399,7 +429,11 @@ function Home() {
             <div className="col-md-6 col-lg-6 col-xl-3 ">
               <div className="d-flex flex-column h-100 ">
                 <div className="special-product-card h-100 d-flex flex-column">
-                  <Link to="/products/7" className="text-decoration-none">
+                  <Link
+                    to="/products/7"
+                    className="text-decoration-none"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
                     <div className="special-product-4"></div>
                   </Link>
 
@@ -421,7 +455,11 @@ function Home() {
                     </p>
                     <div className="d-flex justify-content-between">
                       <div className="">
-                        <Link to="/products/7" className="text-decoration-none">
+                        <Link
+                          to="/products/7"
+                          className="text-decoration-none"
+                          onClick={() => window.scrollTo(0, 0)}
+                        >
                           <button className="btn btn-view-product height65">
                             View Product
                           </button>
