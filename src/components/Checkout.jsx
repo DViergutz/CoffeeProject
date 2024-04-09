@@ -1,11 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  removeFromCart,
-  addToCart,
-  incrementQuantity,
-  decrementQuantity,
-} from "../redux/CartSlice.jsx";
+import { incrementQuantity, decrementQuantity } from "../redux/CartSlice.jsx";
 
 function Checkout() {
   const dispatch = useDispatch();
@@ -15,10 +10,7 @@ function Checkout() {
     (total, item) => total + item.price * item.quantity,
     0
   );
-  /*   useEffect(() => {
-     window.scrollTo(0, 0);
-  }, []);
- */
+
   return (
     <div className="bg-fondo3">
       <div className="container pb-5">
