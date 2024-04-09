@@ -20,12 +20,15 @@ function CartOffCanvas() {
     (total, item) => total + item.price * item.quantity,
     0
   );
+  const navigate = useNavigate();
 
   const handleCheckout = () => {
     dispatch(setIsCartOpen());
+    () => window.scrollTo(0, 0);
+    navigate("/checkout");
   };
 
-  return (
+  return itemsInCart.length > 0 ? (
     <Offcanvas
       show={isCartOpen}
       placement="end"
@@ -92,14 +95,13 @@ function CartOffCanvas() {
         <div className="mt-5 text-light">
           TOTAL PRICE: <p>{totalPrice}</p>
         </div>
-        <Link to="/checkout" onClick={() => window.scrollTo(0, 0)}>
-          <button className="btn-hero p-2 w-100 mt-4" onClick={handleCheckout}>
-            Checkout <i className="bi bi-cart"></i>
-          </button>
-        </Link>
+
+        <button className="btn-hero p-2 w-100 mt-4" onClick={handleCheckout}>
+          Checkout <i className="bi bi-cart"></i>
+        </button>
       </Offcanvas.Body>
     </Offcanvas>
-  );
+  ) : null;
 }
 
 export default CartOffCanvas;

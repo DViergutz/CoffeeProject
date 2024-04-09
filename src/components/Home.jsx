@@ -263,7 +263,20 @@ function Home() {
 
                       <button
                         className="btn rounded-circle btn-cart "
-                        onClick={() => dispatch(setIsCartOpen())}
+                        onClick={() =>
+                          dispatch(
+                            incrementQuantity(
+                              {
+                                name: "Art Of Darkness",
+                                id: 9,
+                                price: 190,
+                                image:
+                                  "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ArtOfDarkness.png",
+                              },
+                              dispatch(setIsCartOpen())
+                            )
+                          )
+                        }
                       >
                         <i className="bi bi-cart"></i>
                       </button>
@@ -304,7 +317,20 @@ function Home() {
                       </div>
                       <button
                         className="btn rounded-circle btn-cart"
-                        onClick={() => dispatch(setIsCartOpen())}
+                        onClick={() =>
+                          dispatch(
+                            incrementQuantity(
+                              {
+                                name: "Chocolate Amaretto",
+                                id: 3,
+                                price: 190,
+                                image:
+                                  "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Flavored-ChocolateAmaretto.png",
+                              },
+                              dispatch(setIsCartOpen())
+                            )
+                          )
+                        }
                       >
                         <i className="bi bi-cart"></i>
                       </button>
@@ -348,7 +374,20 @@ function Home() {
                       </div>
                       <button
                         className="btn rounded-circle btn-cart"
-                        onClick={() => dispatch(setIsCartOpen())}
+                        onClick={() =>
+                          dispatch(
+                            incrementQuantity(
+                              {
+                                name: "Colombia Organic",
+                                id: 11,
+                                price: 190,
+                                image:
+                                  "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/SingleOrigin-Colombia.png",
+                              },
+                              dispatch(setIsCartOpen())
+                            )
+                          )
+                        }
                       >
                         <i className="bi bi-cart"></i>
                       </button>
@@ -390,7 +429,20 @@ function Home() {
                       </div>
                       <button
                         className="btn rounded-circle btn-cart"
-                        onClick={() => dispatch(setIsCartOpen())}
+                        onClick={() =>
+                          dispatch(
+                            incrementQuantity(
+                              {
+                                name: "Italian Roast",
+                                id: 7,
+                                price: 190,
+                                image:
+                                  "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ItalianRoast.png",
+                              },
+                              dispatch(setIsCartOpen())
+                            )
+                          )
+                        }
                       >
                         <i className="bi bi-cart"></i>
                       </button>

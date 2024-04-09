@@ -5,7 +5,6 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 function CreateProduct() {
   const { id } = useParams();
   const navigate = useNavigate();
-  /*   const formidable = require("formidable"); */
 
   const [productData, setProductData] = useState({
     name: "",
@@ -27,13 +26,14 @@ function CreateProduct() {
 
   const handleSubmitEdit = async (e) => {
     e.preventDefault();
-    /* console.log(productData); */
+
+    const data = new FormData(e.target);
     try {
-      const response = await axios.post(
-        `http://localhost:3000/products`,
-        productData
-      );
-      /* console.log(response.data); */
+      const response = await axios({
+        url: `http://localhost:3000/products`,
+        method: "POST",
+        data,
+      });
     } catch (error) {
       console.error("Error updating product:", error);
     }
