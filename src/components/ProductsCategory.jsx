@@ -33,7 +33,13 @@ function ProductsCategory() {
   return (
     <>
       <div className="productsOfCategory main-section bg-fondo3 ">
-        <h2>Products of {params.categoryName}</h2>
+        <h2>
+          Explore Our{" "}
+          <span className="text-orange text-capitalize">
+            {params.categoryName}
+          </span>{" "}
+          Coffee Selection
+        </h2>
         <div className="container">
           <div className="row mb-5 d-flex justify-content-center">
             {productsOfCategory ? (

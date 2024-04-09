@@ -89,7 +89,7 @@ function Home() {
         </div>
         <div className="col-lg-7 z-2">
           <h2 className="about-heading">
-            Everything starts with <span className="text-orange">Coffee</span>
+            Everything Starts With <span className="text-orange">Coffee</span>
           </h2>
           <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
             <div className="mr-md-3 mb-md-0 mb-3">
@@ -188,7 +188,7 @@ function Home() {
             className="img-splash"
           />
         </div>
-        <h2>Our Coffee Collections</h2>
+        <h2>Explore Our Coffee Offerings</h2>
         <div className="container">
           <div className="row">
             <div className=" col-lg-4">
@@ -228,7 +228,7 @@ function Home() {
               className="img-splash-beans"
             />
           </div>
-          <h2 className="text-center">Special Products</h2>
+          <h2 className="text-center">Discover Our Special Delights</h2>
           <div className="row">
             <div className="col-md-6 col-lg-6 col-xl-3 ">
               <div className="d-flex flex-column h-100 ">
@@ -462,7 +462,7 @@ function Home() {
         <section className="py-5">
           <div className="container">
             <div className="text-center">
-              <h2 className="mb-4">We have more to tell you</h2>
+              <h2 className="mb-4">We Have More To Tell You</h2>
               <p className="mb-4 fs-5 mb-5">
                 Subscribe to our newsletter to receive updates and special
                 offers!
