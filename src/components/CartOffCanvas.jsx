@@ -12,7 +12,6 @@ import { Offcanvas, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function CartOffCanvas() {
-  const [show, setShow] = useState(true);
   const dispatch = useDispatch();
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
   const itemsInCart = useSelector((state) => state.cart.inCart);
@@ -28,7 +27,7 @@ function CartOffCanvas() {
     navigate("/checkout");
   };
 
-  return itemsInCart.length > 0 ? (
+  return (
     <Offcanvas
       show={isCartOpen}
       placement="end"
@@ -59,7 +58,9 @@ function CartOffCanvas() {
             <div className="col-5 p-1 ">
               <button
                 className="btn-view-product-offcanvas"
-                onClick={() =>
+                onClick={() => {
+                  if (item.quantity === 1 && itemsInCart.length === 1)
+                    dispatch(setIsCartOpen());
                   dispatch(
                     decrementQuantity({
                       name: item.name,
@@ -67,8 +68,8 @@ function CartOffCanvas() {
                       price: item.price,
                       image: item.image,
                     })
-                  )
-                }
+                  );
+                }}
               >
                 <i className="bi bi-dash-circle fs-8 text-light"></i>
               </button>
@@ -101,7 +102,7 @@ function CartOffCanvas() {
         </button>
       </Offcanvas.Body>
     </Offcanvas>
-  ) : null;
+  );
 }
 
 export default CartOffCanvas;
