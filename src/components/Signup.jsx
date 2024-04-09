@@ -41,7 +41,7 @@ function SignUp() {
   return (
     <>
       <Navigation />
-      <div className="bg-fondo3 vh-100 p-4 ">
+      <div className="bg-fondo3 vh-100 p-5 ">
         <div className="container">
           <div className="row d-flex align-items-center bg-dark-grey border-orange  ">
             <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
@@ -55,8 +55,8 @@ function SignUp() {
                 />
               </div>
             </div>
-            <div className="col-md-6 bg-light p-4 rounded-end">
-              <h3 className="text-dark pb-1  fw-semibold">Register Account</h3>
+            <div className="col-md-6 bg-light p-5 rounded-end">
+              <h3 className="text-dark mb-3 fw-semibold">Register Account</h3>
               <form onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-md-6">

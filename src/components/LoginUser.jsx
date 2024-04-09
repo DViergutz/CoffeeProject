@@ -48,7 +48,7 @@ function LoginUser() {
   return (
     <>
       <Navigation />
-      <div className="bg-fondo3 h-100 pt-5">
+      <div className="bg-fondo3 h-100 p-5">
         <div className="container vh-100">
           <div className="row bg-dark-grey border-orange">
             <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
@@ -63,7 +63,7 @@ function LoginUser() {
               </div>
             </div>
             <div className="col-md-6 bg-light p-5 rounded-end">
-              <h3 className="text-dark pb-3  fw-semibold">Login</h3>
+              <h3 className="text-dark mb-3 fw-semibold">Login</h3>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label text-dark">
