@@ -192,7 +192,9 @@ function Home() {
             className="img-splash"
           />
         </div>
-        <h2>Explore Our Coffee Offerings</h2>
+        <h2>
+          Explore Our Coffee <span className="text-orange">Selections</span>
+        </h2>
         <div className="container">
           <div className="row">
             <div className=" col-lg-4">
@@ -237,7 +239,9 @@ function Home() {
               className="img-splash-beans"
             />
           </div>
-          <h2 className="text-center">Discover Our Special Delights</h2>
+          <h2 className="text-center">
+            Discover Our <span className="text-orange">Special</span> Delights
+          </h2>
           <div className="row">
             <div className="col-md-6 col-lg-6 col-xl-3 ">
               <div className="d-flex flex-column h-100 ">
