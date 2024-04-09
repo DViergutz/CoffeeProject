@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { incrementQuantity, decrementQuantity } from "../redux/CartSlice.jsx";
 
@@ -11,7 +11,6 @@ function Checkout() {
     0
   );
 
-<<<<<<< HEAD
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleOptionChange = (event) => {
@@ -22,8 +21,6 @@ function Checkout() {
      window.scrollTo(0, 0);
   }, []);
  */
-=======
->>>>>>> 73e8ccbdb50664dd799bd4716013513f98b7c962
   return (
     <div className="bg-fondo3">
       <div className="container pb-5">
