@@ -91,7 +91,7 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="/src/assets/img/about-icons/figma.png"
+                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/figma.png"
                     alt=""
                   />
                   <small className="text-orange ">Figma</small>
