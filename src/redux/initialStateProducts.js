@@ -1,6 +1,6 @@
 const products = {
   categories: {
-    flavored: [
+    Flavored: [
       {
         name: "Pistachio",
         price: 250,
@@ -52,7 +52,7 @@ const products = {
         updatedAt: "",
       },
     ],
-    blends: [
+    Blends: [
       {
         name: "Dark Adirondack",
         price: 250,
@@ -104,7 +104,7 @@ const products = {
         updatedAt: "",
       },
     ],
-    singleOrigin: [
+    SingleOrigin: [
       {
         name: "Colombia Organic",
         price: 250,

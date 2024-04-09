@@ -35,7 +35,9 @@ function ProductsAll() {
     <div className="main-section bg-fondo3  ">
       {" "}
       {/* <CartMenu show={show} /> */}
-      <h2>All Products</h2>
+      <h2>
+        Our Complete <span className="text-orange">Coffee</span> Collection
+      </h2>
       <div className="container">
         <div className="row mb-5 ">
           {/* start card 1 */}

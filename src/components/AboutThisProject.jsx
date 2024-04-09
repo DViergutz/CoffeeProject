@@ -9,7 +9,7 @@ function AboutThisProject() {
     <div className="mainAboutThisProject">
       <div className="hero-about">
         <div className="textAboutProject d-flex flex-column">
-          <h2 className="about-heading">What is Utica Coffee?</h2>
+          <h2 className="about-heading">What Is Utica Coffee?</h2>
           <p className="about-subheading">
             Utica Coffee is an e-commerce platform inspired by Utica Coffee
             Roasting Co. Developed during a Coding Bootcamp at Hack Academy,
@@ -34,8 +34,12 @@ function AboutThisProject() {
         </div>
       </div>
       <div className="main-section bg-fondo3">
-        <div className="about-info text-center d-flex flex-column align-items-center">
-          <h2 className="text-light">Technologies & Tools</h2>
+        <div className="about-info d-flex flex-column align-items-center">
+          <div className="text-center w-100">
+            <h2 className="text-light ">
+              Technologies<span className="text-orange"> & </span> Tools
+            </h2>
+          </div>
           <p>
             During our coding bootcamp journey, we immersed ourselves in a
             diverse array of technologies spanning both backend and frontend
@@ -164,21 +168,11 @@ function AboutThisProject() {
 
       <div className="main-section bg-fondo3">
         <div className="about-info text-center d-flex flex-column align-items-center">
-          <h2 className="text-light">Project Organization - MER</h2>
-          <p>
-            Setting the Foundation for Backend Excellence! Our initial focus was
-            on delineating the essential backend requirements. We meticulously
-            crafted an entity relationship diagram, mapping out key associations
-            among pivotal entities: Users, Products, Orders and Admins. This
-            served as our blueprint for building a robust backend
-            infrastructure.
-          </p>
-        </div>
-      </div>
-
-      <div className="main-section bg-fondo3">
-        <div className="about-info text-center d-flex flex-column align-items-center">
-          <h2 className="text-light">Mapping User Flow</h2>
+          <div className="text-center w-100">
+            <h2 className="text-light ">
+              Mapping <span className="text-orange">User Flow</span>
+            </h2>
+          </div>
           <p>
             Diving deep into the essence of our website, we meticulously chart
             out the various perspectives, understanding the natural flow each
@@ -200,7 +194,11 @@ function AboutThisProject() {
       </div>
       <div className="main-section bg-fondo3">
         <div className="about-info text-center d-flex flex-column align-items-center">
-          <h2 className="text-light">Admin Dashboard</h2>
+          <div className="text-center w-100">
+            <h2 className="text-light ">
+              <span className="text-orange">Admin </span> Dashboard
+            </h2>
+          </div>
           <p>
             In our e-commerce platform, the admin dashboard enables users to
             delete, update, or create products, categories, and customers, while
@@ -209,14 +207,20 @@ function AboutThisProject() {
         </div>
       </div>
       <div className="main-section bg-fondo3">
-        <div className="text-center d-flex flex-column align-items-center ">
-          <h2 className="text-light mb-4">Meet Our Team</h2>
-          <p className="about-info">
+        <div className="about-info text-center d-flex flex-column align-items-center">
+          <div className="text-center w-100">
+            <h2 className="text-light ">
+              Meet <span className="text-orange">Our Team</span>
+            </h2>
+          </div>
+          <p>
             Discover the Faces Behind Our Success! Get to know the talented
             individuals who bring creativity, expertise, and passion to our
             team. Meet our dedicated team members below and learn more about
             their unique contributions.
           </p>
+        </div>
+        <div className="text-center d-flex flex-column align-items-center ">
           <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4">
             <div className="col mb-4">
               <div className="cardAbout h-100 card ">
