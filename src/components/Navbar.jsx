@@ -38,10 +38,10 @@ function Navigation() {
               title="CATEGORIES"
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item as={Link} to="/category/flavored" className="">
+              <NavDropdown.Item as={Link} to="/category/Flavored" className="">
                 Flavored
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/blends" className="">
+              <NavDropdown.Item as={Link} to="/category/Blends" className="">
                 Blends
               </NavDropdown.Item>
               <NavDropdown.Item

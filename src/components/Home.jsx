@@ -192,14 +192,14 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className=" col-lg-4">
-              <Link to="/category/flavored" className="text-decoration-none">
+              <Link to="/category/Flavored" className="text-decoration-none">
                 <div className="category-card category-flavored ">
                   <h3 className="category-title">Flavored</h3>
                 </div>
               </Link>
             </div>
             <div className="col-lg-4">
-              <Link to="/category/blends" className="text-decoration-none">
+              <Link to="/category/Blends" className="text-decoration-none">
                 <div className="category-card category-blends">
                   <h3 className="category-title">Blends</h3>
                 </div>
