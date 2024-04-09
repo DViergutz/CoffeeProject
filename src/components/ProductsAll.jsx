@@ -111,6 +111,7 @@ function ProductsAll() {
                                   id: product.id,
                                   price: product.price,
                                   image: product.image,
+                                  stock: product.stock,
                                 },
                                 dispatch(setIsCartOpen())
                               )

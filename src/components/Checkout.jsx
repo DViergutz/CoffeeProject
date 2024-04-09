@@ -56,6 +56,7 @@ function Checkout() {
                                 id: item.id,
                                 price: item.price,
                                 image: item.image,
+                                stock: item.stock,
                               })
                             )
                           }
