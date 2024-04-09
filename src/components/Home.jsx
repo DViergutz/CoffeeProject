@@ -199,7 +199,7 @@ function Home() {
           <div className="row">
             <div className=" col-lg-4">
               <Link
-                to="/category/flavored"
+                to="/category/Flavored"
                 className="text-decoration-none"
                 onClick={() => window.scrollTo(0, 0)}
               >
@@ -209,11 +209,7 @@ function Home() {
               </Link>
             </div>
             <div className="col-lg-4">
-              <Link
-                to="/category/blends"
-                className="text-decoration-none"
-                onClick={() => window.scrollTo(0, 0)}
-              >
+              <Link to="/category/Blends" className="text-decoration-none">
                 <div className="category-card category-blends">
                   <h3 className="category-title">Blends</h3>
                 </div>

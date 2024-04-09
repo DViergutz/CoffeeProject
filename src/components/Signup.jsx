@@ -4,7 +4,7 @@ import Navigation from "./Navbar";
 import { Link, useNavigate } from "react-router-dom";
 
 function SignUp() {
-  const navigate = useNavigate(); // Initialize navigate for navigation
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     firstname: "",

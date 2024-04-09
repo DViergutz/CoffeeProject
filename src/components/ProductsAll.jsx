@@ -3,12 +3,7 @@ import Card from "react-bootstrap/Card";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import {
-  removeFromCart,
-  setIsCartOpen,
-  addToCart,
-  incrementQuantity,
-} from "../redux/CartSlice.jsx";
+import { setIsCartOpen, incrementQuantity } from "../redux/CartSlice.jsx";
 import { Link, useNavigate } from "react-router-dom";
 
 function ProductsAll() {
@@ -43,7 +38,7 @@ function ProductsAll() {
     } catch (error) {
       console.error("Error:", error);
     }
-    // window.location.reload();
+
     navigate(0);
   };
 
@@ -60,7 +55,7 @@ function ProductsAll() {
       >
         Reset Database
       </button>
-      {/* <CartMenu show={show} /> */}
+
       <h2>
         Our Complete <span className="text-orange">Coffee</span> Collection
       </h2>
