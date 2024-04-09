@@ -50,15 +50,17 @@ function LoginUser() {
       <Navigation />
       <div className="bg-fondo3 h-100 pt-5">
         <div className="container vh-100">
-          <div className="row d-flex align-items-center bg-dark-grey border-orange">
-            <div className="col-md-6 text-center">
-              <img
-                src={
-                  "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
-                }
-                alt="UticaLogo"
-                className="img-fluid"
-              />
+          <div className="row bg-dark-grey border-orange">
+            <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
+              <div className="text-center">
+                <img
+                  src={
+                    "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
+                  }
+                  alt="UticaLogo"
+                  className="utica-logo-login"
+                />
+              </div>
             </div>
             <div className="col-md-6 bg-light p-5 rounded-end">
               <h3 className="text-dark pb-3  fw-semibold">Login</h3>
@@ -96,13 +98,13 @@ function LoginUser() {
                 >
                   Login
                 </button>
-                <div>
+                <div className="d-flex">
                   <small className="text-dark">
                     Don't you have an Account ?{" "}
-                    <Link to="/user/register">
-                      <p className="text-decoration-none text-orange fw-semibold">
+                    <Link to="/user/register" className="text-decoration-none">
+                      <span className="ms-2 text-decoration-none text-orange fw-semibold">
                         Create an Account!
-                      </p>
+                      </span>
                     </Link>
                   </small>
                 </div>
