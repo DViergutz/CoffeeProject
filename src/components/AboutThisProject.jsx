@@ -9,7 +9,9 @@ function AboutThisProject() {
     <div className="mainAboutThisProject">
       <div className="hero-about">
         <div className="textAboutProject d-flex flex-column">
-          <h2 className="about-heading">What Is Utica Coffee?</h2>
+          <h2 className="about-heading">
+            What Is <span className="text-orange">Utica </span>Coffee?
+          </h2>
           <p className="about-subheading">
             Utica Coffee is an e-commerce platform inspired by Utica Coffee
             Roasting Co. Developed during a Coding Bootcamp at Hack Academy,
