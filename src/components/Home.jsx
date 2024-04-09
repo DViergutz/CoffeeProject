@@ -67,7 +67,11 @@ function Home() {
               Embark on a journey through our finest selection of coffee bean
               bags
             </p>
-            <Link to="/products/" className="text-decoration-none">
+            <Link
+              to="/products/"
+              className="text-decoration-none"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               <button className="btn-hero">
                 Explore our products <i className="bi bi-arrow-right ms-2"></i>
               </button>
@@ -194,14 +198,22 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className=" col-lg-4">
-              <Link to="/category/flavored" className="text-decoration-none">
+              <Link
+                to="/category/flavored"
+                className="text-decoration-none"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 <div className="category-card category-flavored ">
                   <h3 className="category-title">Flavored</h3>
                 </div>
               </Link>
             </div>
             <div className="col-lg-4">
-              <Link to="/category/blends" className="text-decoration-none">
+              <Link
+                to="/category/blends"
+                className="text-decoration-none"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 <div className="category-card category-blends">
                   <h3 className="category-title">Blends</h3>
                 </div>
@@ -211,6 +223,7 @@ function Home() {
               <Link
                 to="/category/single origin"
                 className="text-decoration-none"
+                onClick={() => window.scrollTo(0, 0)}
               >
                 <div className="category-card category-single-origin">
                   <h3 className="category-title">Single Origin</h3>
@@ -258,7 +271,11 @@ function Home() {
                     </p>
                     <div className="d-flex justify-content-between">
                       <div className="me-2">
-                        <Link to="/products/9" className="text-decoration-none">
+                        <Link
+                          to="/products/9"
+                          className="text-decoration-none"
+                          onClick={() => window.scrollTo(0, 0)}
+                        >
                           <button className="btn btn-view-product height65">
                             View Product
                           </button>
@@ -267,7 +284,20 @@ function Home() {
 
                       <button
                         className="btn rounded-circle btn-cart "
-                        onClick={() => dispatch(setIsCartOpen())}
+                        onClick={() =>
+                          dispatch(
+                            incrementQuantity(
+                              {
+                                name: "Art Of Darkness",
+                                id: 9,
+                                price: 190,
+                                image:
+                                  "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ArtOfDarkness.png",
+                              },
+                              dispatch(setIsCartOpen())
+                            )
+                          )
+                        }
                       >
                         <i className="bi bi-cart"></i>
                       </button>
@@ -279,7 +309,11 @@ function Home() {
             <div className="col-md-6 col-lg-6 col-xl-3 ">
               <div className="d-flex flex-column h-100 ">
                 <div className="special-product-card h-100 d-flex flex-column">
-                  <Link to="/products/3" className="text-decoration-none">
+                  <Link
+                    to="/products/3"
+                    className="text-decoration-none"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
                     <div className="special-product-2"></div>
                   </Link>
                   <div className="text-start ">
@@ -300,7 +334,11 @@ function Home() {
                     </p>
                     <div className="d-flex justify-content-between">
                       <div className="">
-                        <Link to="/products/3" className="text-decoration-none">
+                        <Link
+                          to="/products/3"
+                          className="text-decoration-none"
+                          onClick={() => window.scrollTo(0, 0)}
+                        >
                           <button className="btn btn-view-product height65">
                             View Product
                           </button>
@@ -308,7 +346,20 @@ function Home() {
                       </div>
                       <button
                         className="btn rounded-circle btn-cart"
-                        onClick={() => dispatch(setIsCartOpen())}
+                        onClick={() =>
+                          dispatch(
+                            incrementQuantity(
+                              {
+                                name: "Chocolate Amaretto",
+                                id: 3,
+                                price: 190,
+                                image:
+                                  "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Flavored-ChocolateAmaretto.png",
+                              },
+                              dispatch(setIsCartOpen())
+                            )
+                          )
+                        }
                       >
                         <i className="bi bi-cart"></i>
                       </button>
@@ -320,7 +371,11 @@ function Home() {
             <div className="col-md-6 col-lg-6 col-xl-3 ">
               <div className="d-flex flex-column h-100 ">
                 <div className="special-product-card h-100 d-flex flex-column">
-                  <Link to="/products/11" className="text-decoration-none">
+                  <Link
+                    to="/products/11"
+                    className="text-decoration-none"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
                     <div className="special-product-3"></div>
                   </Link>
                   <div className="text-start ">
@@ -344,6 +399,7 @@ function Home() {
                         <Link
                           to="/products/11"
                           className="text-decoration-none"
+                          onClick={() => window.scrollTo(0, 0)}
                         >
                           <button className="btn btn-view-product height65">
                             View Product
@@ -352,7 +408,20 @@ function Home() {
                       </div>
                       <button
                         className="btn rounded-circle btn-cart"
-                        onClick={() => dispatch(setIsCartOpen())}
+                        onClick={() =>
+                          dispatch(
+                            incrementQuantity(
+                              {
+                                name: "Colombia Organic",
+                                id: 11,
+                                price: 190,
+                                image:
+                                  "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/SingleOrigin-Colombia.png",
+                              },
+                              dispatch(setIsCartOpen())
+                            )
+                          )
+                        }
                       >
                         <i className="bi bi-cart"></i>
                       </button>
@@ -364,7 +433,11 @@ function Home() {
             <div className="col-md-6 col-lg-6 col-xl-3 ">
               <div className="d-flex flex-column h-100 ">
                 <div className="special-product-card h-100 d-flex flex-column">
-                  <Link to="/products/7" className="text-decoration-none">
+                  <Link
+                    to="/products/7"
+                    className="text-decoration-none"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
                     <div className="special-product-4"></div>
                   </Link>
 
@@ -386,7 +459,11 @@ function Home() {
                     </p>
                     <div className="d-flex justify-content-between">
                       <div className="">
-                        <Link to="/products/7" className="text-decoration-none">
+                        <Link
+                          to="/products/7"
+                          className="text-decoration-none"
+                          onClick={() => window.scrollTo(0, 0)}
+                        >
                           <button className="btn btn-view-product height65">
                             View Product
                           </button>
@@ -394,7 +471,20 @@ function Home() {
                       </div>
                       <button
                         className="btn rounded-circle btn-cart"
-                        onClick={() => dispatch(setIsCartOpen())}
+                        onClick={() =>
+                          dispatch(
+                            incrementQuantity(
+                              {
+                                name: "Italian Roast",
+                                id: 7,
+                                price: 190,
+                                image:
+                                  "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ItalianRoast.png",
+                              },
+                              dispatch(setIsCartOpen())
+                            )
+                          )
+                        }
                       >
                         <i className="bi bi-cart"></i>
                       </button>

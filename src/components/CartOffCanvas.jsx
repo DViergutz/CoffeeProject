@@ -12,7 +12,6 @@ import { Offcanvas, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function CartOffCanvas() {
-  const [show, setShow] = useState(true);
   const dispatch = useDispatch();
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
   const itemsInCart = useSelector((state) => state.cart.inCart);
@@ -20,9 +19,12 @@ function CartOffCanvas() {
     (total, item) => total + item.price * item.quantity,
     0
   );
+  const navigate = useNavigate();
 
   const handleCheckout = () => {
     dispatch(setIsCartOpen());
+    () => window.scrollTo(0, 0);
+    navigate("/checkout");
   };
 
   return (
@@ -56,7 +58,9 @@ function CartOffCanvas() {
             <div className="col-5 p-1 ">
               <button
                 className="btn-view-product-offcanvas"
-                onClick={() =>
+                onClick={() => {
+                  if (item.quantity === 1 && itemsInCart.length === 1)
+                    dispatch(setIsCartOpen());
                   dispatch(
                     decrementQuantity({
                       name: item.name,
@@ -64,8 +68,8 @@ function CartOffCanvas() {
                       price: item.price,
                       image: item.image,
                     })
-                  )
-                }
+                  );
+                }}
               >
                 <i className="bi bi-dash-circle fs-8 text-light"></i>
               </button>
@@ -92,11 +96,10 @@ function CartOffCanvas() {
         <div className="mt-5 text-light">
           TOTAL PRICE: <p>{totalPrice}</p>
         </div>
-        <Link to="/checkout" onClick={() => window.scrollTo(0, 0)}>
-          <button className="btn-hero p-2 w-100 mt-4" onClick={handleCheckout}>
-            Checkout <i className="bi bi-cart"></i>
-          </button>
-        </Link>
+
+        <button className="btn-hero p-2 w-100 mt-4" onClick={handleCheckout}>
+          Checkout <i className="bi bi-cart"></i>
+        </button>
       </Offcanvas.Body>
     </Offcanvas>
   );
