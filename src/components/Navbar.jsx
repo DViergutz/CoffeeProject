@@ -6,7 +6,7 @@ function Navigation() {
   return (
     <Navbar expand="lg" className="navbar-collapse main-navbar">
       <Container>
-        <Link to="/">
+        <Link to="/" onClick={() => window.scrollTo(0, 0)}>
           <Navbar.Brand className="m-0 p-0 brand-logo-no-hover">
             <img
               src={
@@ -27,10 +27,20 @@ function Navigation() {
           className="collapse ps-3 bg-dark-grey"
         >
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/about-this-project" className="navLink">
+            <Nav.Link
+              as={Link}
+              to="/about-this-project"
+              className="navLink"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               ABOUT THIS PROJECT
             </Nav.Link>
-            <Nav.Link as={Link} to="/products" className="navLink">
+            <Nav.Link
+              as={Link}
+              to="/products"
+              className="navLink"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               PRODUCTS
             </Nav.Link>
             <NavDropdown
@@ -48,6 +58,7 @@ function Navigation() {
                 as={Link}
                 to="/category/Single Origin"
                 className=""
+                onClick={() => window.scrollTo(0, 0)}
               >
                 Single Origin
               </NavDropdown.Item>
@@ -60,17 +71,37 @@ function Navigation() {
               title={<i className="bi bi-person-fill fs-5 "></i>}
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item as={Link} to="/user/login" className="">
+              <NavDropdown.Item
+                as={Link}
+                to="/user/login"
+                className=""
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Login
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/user/register" className="">
+              <NavDropdown.Item
+                as={Link}
+                to="/user/register"
+                className=""
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Register
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/checkout" className="navLink ">
+            <Nav.Link
+              as={Link}
+              to="/checkout"
+              className="navLink "
+              onClick={() => window.scrollTo(0, 0)}
+            >
               <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>{" "}
             </Nav.Link>
-            <Nav.Link as={Link} to="/user/login" className="navLink">
+            <Nav.Link
+              as={Link}
+              to="/user/login"
+              className="navLink"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               ADMIN
             </Nav.Link>
           </Nav>
