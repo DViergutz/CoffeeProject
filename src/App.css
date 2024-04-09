@@ -703,9 +703,9 @@ h5 {
 /* navbar */
 /*Esto sirve para alinear los elementos dentro del dropdown */
 
-.align-items-center {
+/* .align-items-center {
   align-items: start !important;
-}
+} */
 
 .main-navbar {
   height: 126px;
@@ -1327,4 +1327,8 @@ h5 {
 
 .h3-login {
   font-family: myFont;
+}
+
+.utica-logo-login {
+  width: 60%;
 }

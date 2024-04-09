@@ -134,43 +134,49 @@ function Checkout() {
               </div>
               <hr className="text-orange" />
               <div className=" fw-bold mb-3 mt-2">PAYMENT METHOD</div>
-              <div className="">
-                <input
-                  type="radio"
-                  id="visa"
-                  name="paymentMethod"
-                  value="visa"
-                  className="ms-2"
-                  checked={selectedOption === "visa"}
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="visa" className="ms-2">
-                  Visa
-                </label>
-                <input
-                  type="radio"
-                  id="mastercard"
-                  name="paymentMethod"
-                  value="mastercard"
-                  className="ms-4"
-                  checked={selectedOption === "mastercard"}
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="mastercard" className="ms-2">
-                  Mastercard
-                </label>
-                <input
-                  type="radio"
-                  id="mercadopago"
-                  name="paymentMethod"
-                  value="mercadopago"
-                  className="ms-4"
-                  checked={selectedOption === "mercadopago"}
-                  onChange={handleOptionChange}
-                />
-                <label htmlFor="mercadopago" className="ms-2">
-                  Mercado Pago
-                </label>
+              <div className="d-flex justify-content-between">
+                <div>
+                  <input
+                    type="radio"
+                    id="visa"
+                    name="paymentMethod"
+                    value="visa"
+                    className="ms-2"
+                    checked={selectedOption === "visa"}
+                    onChange={handleOptionChange}
+                  />
+                  <label htmlFor="visa" className="ms-2">
+                    Visa
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="mastercard"
+                    name="paymentMethod"
+                    value="mastercard"
+                    className="ms-4"
+                    checked={selectedOption === "mastercard"}
+                    onChange={handleOptionChange}
+                  />
+                  <label htmlFor="mastercard" className="ms-2">
+                    Mastercard
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="mercadopago"
+                    name="paymentMethod"
+                    value="mercadopago"
+                    className="ms-4"
+                    checked={selectedOption === "mercadopago"}
+                    onChange={handleOptionChange}
+                  />
+                  <label htmlFor="mercadopago" className="ms-2">
+                    Mercado Pago
+                  </label>
+                </div>
                 <hr className="text-orange mt-4" />
               </div>
             </form>
