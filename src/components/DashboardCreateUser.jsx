@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { Email } from "@mui/icons-material";
 
 function CreateUser() {
   const { id } = useParams();

@@ -1,17 +1,10 @@
 import React from "react";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import ScrollToTop from "./ScrollToTop";
 import "../App.css";
 import { GoDot } from "react-icons/go";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Card from "react-bootstrap/Card";
-import CartOffCanvas from "./CartOffCanvas";
-import {
-  removeFromCart,
-  setIsCartOpen,
-  addToCart,
-  incrementQuantity,
-} from "../redux/CartSlice.jsx";
+import { setIsCartOpen, incrementQuantity } from "../redux/CartSlice.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -265,20 +258,19 @@ function Home() {
                         $250
                       </span>
                     </p>
-                    <div className="d-flex justify-content-between">
+                    <div>
                       <div className="me-2">
-                        <Link
-                          to="/products/9"
-                          className="text-decoration-none"
-                          onClick={() => window.scrollTo(0, 0)}
-                        >
-                          <button className="btn btn-view-product height65">
+                        <Link to="/products/9" className="text-decoration-none">
+                          <button
+                            className="btn btn-view-product height65 w-100"
+                            onClick={() => window.scrollTo(0, 0)}
+                          >
                             View Product
                           </button>
                         </Link>
                       </div>
 
-                      <button
+                      {/*                       <button
                         className="btn rounded-circle btn-cart "
                         onClick={() =>
                           dispatch(
@@ -287,6 +279,7 @@ function Home() {
                                 name: "Art Of Darkness",
                                 id: 9,
                                 price: 190,
+                                stock: "",
                                 image:
                                   "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ArtOfDarkness.png",
                               },
@@ -296,7 +289,7 @@ function Home() {
                         }
                       >
                         <i className="bi bi-cart"></i>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -328,19 +321,19 @@ function Home() {
                         $250
                       </span>
                     </p>
-                    <div className="d-flex justify-content-between">
+                    <div>
                       <div className="">
                         <Link
                           to="/products/3"
                           className="text-decoration-none"
                           onClick={() => window.scrollTo(0, 0)}
                         >
-                          <button className="btn btn-view-product height65">
+                          <button className="btn btn-view-product height65 w-100">
                             View Product
                           </button>
                         </Link>
                       </div>
-                      <button
+                      {/* <button
                         className="btn rounded-circle btn-cart"
                         onClick={() =>
                           dispatch(
@@ -349,6 +342,7 @@ function Home() {
                                 name: "Chocolate Amaretto",
                                 id: 3,
                                 price: 190,
+                                stock: "",
                                 image:
                                   "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Flavored-ChocolateAmaretto.png",
                               },
@@ -358,7 +352,7 @@ function Home() {
                         }
                       >
                         <i className="bi bi-cart"></i>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -390,19 +384,19 @@ function Home() {
                         $250
                       </span>
                     </p>
-                    <div className="d-flex justify-content-between">
+                    <div>
                       <div className="">
                         <Link
                           to="/products/11"
                           className="text-decoration-none"
                           onClick={() => window.scrollTo(0, 0)}
                         >
-                          <button className="btn btn-view-product height65">
+                          <button className="btn btn-view-product height65 w-100">
                             View Product
                           </button>
                         </Link>
                       </div>
-                      <button
+                      {/* <button
                         className="btn rounded-circle btn-cart"
                         onClick={() =>
                           dispatch(
@@ -411,6 +405,7 @@ function Home() {
                                 name: "Colombia Organic",
                                 id: 11,
                                 price: 190,
+                                stock: "",
                                 image:
                                   "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/SingleOrigin-Colombia.png",
                               },
@@ -420,7 +415,7 @@ function Home() {
                         }
                       >
                         <i className="bi bi-cart"></i>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -453,19 +448,19 @@ function Home() {
                         $250
                       </span>
                     </p>
-                    <div className="d-flex justify-content-between">
+                    <div>
                       <div className="">
                         <Link
                           to="/products/7"
                           className="text-decoration-none"
                           onClick={() => window.scrollTo(0, 0)}
                         >
-                          <button className="btn btn-view-product height65">
+                          <button className="btn btn-view-product height65 w-100">
                             View Product
                           </button>
                         </Link>
                       </div>
-                      <button
+                      {/*  <button
                         className="btn rounded-circle btn-cart"
                         onClick={() =>
                           dispatch(
@@ -474,6 +469,7 @@ function Home() {
                                 name: "Italian Roast",
                                 id: 7,
                                 price: 190,
+                                stock: "",
                                 image:
                                   "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ItalianRoast.png",
                               },
@@ -483,7 +479,7 @@ function Home() {
                         }
                       >
                         <i className="bi bi-cart"></i>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>

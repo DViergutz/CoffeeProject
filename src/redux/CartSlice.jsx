@@ -34,20 +34,26 @@ const cartSlice = createSlice({
         (product) => product.id === action.payload.id
       ); ////index me da -1 si no esta en el array
       if (itemIndex >= 0) {
-        return {
-          ...state,
-          inCart: state.inCart.map((item, index) => {
-            if (index === itemIndex) {
+        const cart = state.inCart.map((item, index) => {
+          if (index === itemIndex) {
+            if (item.quantity + 1 <= action.payload.stock) {
               return { ...item, quantity: item.quantity + 1 };
+            } else {
+              return item; /* STOCK REACHED --- apply toastify */
             }
-            return item;
-          }),
-        };
+          }
+          return item;
+        }); /* ?????? */
+        return { ...state, inCart: cart };
       } else {
-        return {
-          ...state,
-          inCart: [...state.inCart, { ...action.payload, quantity: 1 }],
-        };
+        if (action.payload.stock > 0) {
+          return {
+            ...state,
+            inCart: [...state.inCart, { ...action.payload, quantity: 1 }],
+          };
+        } else {
+          return state; /* STOCK 0 ---apply toast */
+        }
       }
     },
 
@@ -56,32 +62,6 @@ const cartSlice = createSlice({
     },
   },
 });
-
-/*     addToCart: (state, action) => {
-      const { id, quantity } = action.payload;
-      const itemIndex = state.inCart.findIndex((product) => product.id === id);
-      if (itemIndex >= 0) {
-        return {
-          ...state,
-          inCart: state.inCart.map((item, index) =>
-            index === itemIndex
-              ? { ...item, quantity: item.quantity + quantity }
-              : item
-          ),
-        };
-      } else {
-        return {
-          ...state,
-          inCart: [...state.inCart, { ...action.payload }],
-        };
-      }
-    }, */
-
-/*    removeFromCart: (state, action) => {
-      const removeItem = state.inCart.filter(
-        (item) => item.id !== action.payload.id
-      );
-    }, */
 
 const { reducer, actions } = cartSlice;
 

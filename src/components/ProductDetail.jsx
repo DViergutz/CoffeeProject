@@ -20,6 +20,7 @@ function ProductDetail() {
         id: oneProduct.id,
         price: oneProduct.price,
         image: oneProduct.image,
+        stock: oneProduct.stock,
       })
     );
     dispatch(setIsCartOpen());
@@ -63,7 +64,7 @@ function ProductDetail() {
 
   return (
     <>
-      <div className="main-section bg-fondo3  ">
+      <div className="main-section bg-fondo3">
         <div className="row d-flex mt-2 ">
           <div className="col-md-6 text-center">
             {oneProduct ? (
@@ -206,6 +207,7 @@ function ProductDetail() {
                                     price: product.price,
                                     image: product.image,
                                     quantity: quantity,
+                                    stock: product.stock,
                                   },
                                   dispatch(setIsCartOpen())
                                 )
