@@ -1,32 +1,57 @@
 import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function ResetDbButton() {
   const navigate = useNavigate();
 
   const resetDb = async () => {
-    console.log("resetting DB...");
-    try {
-      const response = await axios({
-        method: "GET",
-        url: `http://localhost:3000/resetDb`,
-      });
-      console.log(response.data);
-    } catch (error) {
-      console.error("Error:", error);
-    }
-    // window.location.reload();
-    navigate(0);
+    Swal.fire({
+      title:
+        "Are you sure you want to reset the following tables to their initial state?",
+      html: `
+      <ul class="list-unstyled">
+        <li>Product</li>
+        <li>User</li>
+        <li>Category</li>
+        <li>Admin</li>
+        <li>Order</li>
+      </ul>
+    
+    `,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, reset them!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          const response = await axios({
+            method: "GET",
+            url: `http://localhost:3000/resetDb`,
+          });
+          console.log(response.data);
+        } catch (error) {
+          console.error("Error:", error);
+        }
+        // window.location.reload();
+        navigate(0);
+
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+      }
+    });
   };
+
   return (
     <>
-      <p className="fst-italic fw-light">
-        If the page doesn't display products below or the page seems to be
-        broken we please you to reset the Database by clicking this button
-      </p>
       <button
-        className="btn btn-hero height65 mb-5 mt-0 fs-4"
+        className="btn btn-hero height65 mb-5 mt-0 fs-5 w-25 p-2"
         onClick={() => resetDb()}
       >
         Reset Database

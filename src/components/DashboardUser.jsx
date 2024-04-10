@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function DashboardUser() {
   const [users, setUsers] = useState();
@@ -24,20 +25,32 @@ function DashboardUser() {
 
   // delete product
   const deleteUser = async (id) => {
-    const confirmDelete = window.confirm(
-      "Are you sure you want to delete this item?"
-    );
-    if (confirmDelete) {
-      try {
-        await axios.delete(`http://localhost:3000/users/${id}`);
-        // Fetch users again after deletion
-        const response = await axios.get("http://localhost:3000/users");
-        setUsers(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.error("Error:", error);
+    Swal.fire({
+      title: "Do you really want to delete this user?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await axios.delete(`http://localhost:3000/users/${id}`);
+          // Fetch users again after deletion
+          const response = await axios.get("http://localhost:3000/users");
+          setUsers(response.data);
+          console.log(response.data);
+        } catch (error) {
+          console.error("Error:", error);
+        }
+        Swal.fire({
+          title: "Deleted!",
+          text: "User has been deleted.",
+          icon: "success",
+        });
       }
-    }
+    });
   };
 
   return (
@@ -94,11 +107,11 @@ function DashboardUser() {
                         </button>
                       </Link>
                       <br />
-                      <button className="btn btn-outline-danger">
-                        <i
-                          className="bi bi-trash3 text-dark"
-                          onClick={() => deleteUser(user.id)}
-                        ></i>
+                      <button
+                        className="btn btn-outline-danger"
+                        onClick={() => deleteUser(user.id)}
+                      >
+                        <i className="bi bi-trash3 text-dark"></i>
                       </button>
                     </td>
                   </tr>

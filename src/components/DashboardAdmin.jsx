@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function DashboardAdmin() {
   const [admins, setadmins] = useState();
@@ -22,19 +23,32 @@ function DashboardAdmin() {
 
   //   delete admin
   const deleteAdmin = async (id) => {
-    const confirmDelete = window.confirm(
-      "Are you sure you want to delete this item?"
-    );
-    if (confirmDelete) {
-      try {
-        await axios.delete(`http://localhost:3000/admin/${id}`);
-        // Fetch admins again after deletion
-        const response = await axios.get("http://localhost:3000/admin");
-        setadmins(response.data);
-      } catch (error) {
-        console.error("Error:", error);
+    Swal.fire({
+      title: "Do you really want to delete this admin?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await axios.delete(`http://localhost:3000/admin/${id}`);
+          // Fetch admins again after deletion
+          const response = await axios.get("http://localhost:3000/admin");
+          setadmins(response.data);
+        } catch (error) {
+          console.error("Error:", error);
+        }
+
+        Swal.fire({
+          title: "Deleted!",
+          text: "Admin has been deleted.",
+          icon: "success",
+        });
       }
-    }
+    });
   };
 
   return (
@@ -78,11 +92,11 @@ function DashboardAdmin() {
                         </button>
                       </Link>
                       <br />
-                      <button className="btn btn-outline-danger">
-                        <i
-                          className="bi bi-trash3 text-dark"
-                          onClick={() => deleteAdmin(admin.id)}
-                        ></i>
+                      <button
+                        className="btn btn-outline-danger"
+                        onClick={() => deleteAdmin(admin.id)}
+                      >
+                        <i className="bi bi-trash3 text-dark"></i>
                       </button>
                     </td>
                   </tr>
