@@ -98,7 +98,7 @@ function Navigation() {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/user/login"
+              to="/admin/login"
               className="navLink"
               onClick={() => window.scrollTo(0, 0)}
             >

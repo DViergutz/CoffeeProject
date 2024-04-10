@@ -78,9 +78,15 @@
 .footer-align {
   text-align: start;
 }
+.footer-align-contact {
+  text-align: end;
+}
 
 @media (max-width: 940px) {
   .footer-align {
+    text-align: center;
+  }
+  .footer-align-contact {
     text-align: center;
   }
 }
@@ -115,6 +121,12 @@ footer {
   z-index: 1000;
   top: 30%; /* Keep it at the top of the screen */
   right: 30px; /* Position it to the right side of the screen */
+}
+
+@media (max-width: 768px) {
+  .navigation-menu {
+    display: none;
+  }
 }
 
 .nav-link-home {
@@ -715,10 +727,10 @@ h5 {
   width: 100%;
   background-color: #121212;
   border-bottom: 1px solid #ee77281d;
-  /* backdrop-filter: blur(10px); */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
+
 .bg-dark-grey {
   background-color: #121212;
 }
@@ -1337,6 +1349,12 @@ h5 {
 }
 
 /* Login */
+
+.login-wrapper {
+  max-width: 1000px;
+  height: 100vh;
+}
+
 .border-orange {
   border: 1px solid #ee7828;
   border-radius: 10px;
