@@ -14,19 +14,37 @@ function Footer() {
             <div className="col-md-4 mb-md-5 mb-4 footer-align">
               <h5>Contact Us</h5>
               <p className="mt-3">
-                <i className="bi bi-geo-alt-fill text-orange"></i> 123 Main
-                Street, City, Country
+                <i className="bi bi-geo-alt-fill text-orange me-2"></i>
+                <a
+                  href="https://www.google.com/maps/place/Utica+Coffee+Roasting+Company/@43.1034997,-75.2301864,17z/data=!3m1!4b1!4m6!3m5!1s0x89d9472300fe4943:0x8b9f0b82b03f9611!8m2!3d43.1034958!4d-75.2276115!16s%2Fg%2F1tg51dz2?entry=ttu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none text-light"
+                >
+                  92 Genesee St, Utica, NY 13502, U.S.
+                </a>{" "}
               </p>
               <p>
                 <i className="bi bi-envelope-fill text-orange me-1"></i>{" "}
-                info@example.com
+                <a
+                  href="mailto:info@example.com"
+                  className="text-decoration-none text-light"
+                >
+                  {" "}
+                  info@example.com
+                </a>
               </p>
               <p className="mb-4">
                 <i className="bi bi-telephone-fill text-orange me-1"></i>{" "}
-                +1234567890
+                <a
+                  href="tel:+1234567890"
+                  className="text-decoration-none text-light"
+                >
+                  +1234567890
+                </a>
               </p>
             </div>
-            <div className="col-md-4 mb-md-5 mb-4 footer-align">
+            <div className="col-md-4 mb-md-5 mb-4 footer-align-contact">
               <h5 className="mb-3">Follow Us</h5>
               <a
                 href="https://www.facebook.com/uticacoffeeroastingcompany"

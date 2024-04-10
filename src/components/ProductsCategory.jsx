@@ -57,7 +57,9 @@ function ProductsCategory() {
                         <Card.Img
                           variant="top"
                           className="card-img "
-                          src={product.image}
+                          src={`${import.meta.env.VITE_BUCKETS_URL}/${
+                            product.image
+                          }`}
                         />
                       </Link>
                       <div className="text-start ">

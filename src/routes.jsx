@@ -21,6 +21,7 @@ import DashboardEditUser from "./components/DashboardEditUser";
 import DashboardAdmin from "./components/DashboardAdmin";
 import DashboardEditAdmin from "./components/DashboardEditAdmin";
 import DashboardCreateAdmin from "./components/DashboardCreateAdmin";
+import LoginAdmin from "./components/LoginAdmin";
 
 const router = createBrowserRouter([
   {
@@ -108,6 +109,10 @@ const router = createBrowserRouter([
     ],
 
     // ---------- FIN DASHBOARD ADMIN ----------
+  },
+  {
+    path: "/admin/login",
+    element: <LoginAdmin />,
   },
   {
     path: "/user/register",
