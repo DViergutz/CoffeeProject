@@ -67,7 +67,9 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/bootstrap.png"
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/about_icons/bootstrap.png`}
                     alt=""
                   />
                   <small className="text-orange ">Bootstrap</small>
@@ -77,7 +79,9 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/css3.png"
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/about_icons/css3.png`}
                     alt=""
                   />
                   <small className="text-orange ">CSS3</small>
@@ -87,7 +91,9 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/discord.png"
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/about_icons/discord.png`}
                     alt=""
                   />
                   <small className="text-orange ">Discord</small>
@@ -97,7 +103,9 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/figma.png"
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/about_icons/figma.png`}
                     alt=""
                   />
                   <small className="text-orange ">Figma</small>
@@ -107,7 +115,9 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/github.png"
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/about_icons/github.png`}
                     alt=""
                   />
                   <small className="text-orange ">Github</small>
@@ -117,7 +127,9 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/js.png"
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/about_icons/js.png`}
                     alt=""
                   />
                   <small className="text-orange ">JavaScript</small>
@@ -127,7 +139,9 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/nodejs.png"
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/about_icons/nodejs.png`}
                     alt=""
                   />
                   <small className="text-orange ">NodeJS</small>
@@ -137,7 +151,9 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/react.png"
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/about_icons/react.png`}
                     alt=""
                   />
                   <small className="text-orange ">React</small>
@@ -147,7 +163,9 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/redux.png"
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/about_icons/redux.png`}
                     alt=""
                   />
                   <small className="text-orange ">Redux</small>
@@ -157,7 +175,9 @@ function AboutThisProject() {
                 <div className="d-flex flex-column align-items-center p-4">
                   <img
                     className="about-icons mb-2"
-                    src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/about_icons/sql.png"
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/about_icons/sql.png`}
                     alt=""
                   />
                   <small className="text-orange ">SQL</small>

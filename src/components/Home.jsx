@@ -80,7 +80,7 @@ function Home() {
           {" "}
           <img
             className="img-sack"
-            src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/sack.png"
+            src={`${import.meta.env.VITE_BUCKETS_URL}/fotos_varias/sack.png`}
             alt=""
           />
         </div>
@@ -91,7 +91,9 @@ function Home() {
           <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
             <div className="mr-md-3 mb-md-0 mb-3">
               <img
-                src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/pinlogo.png"
+                src={`${
+                  import.meta.env.VITE_BUCKETS_URL
+                }/fotos_varias/pinlogo.png`}
                 alt="Big Coffee Image"
                 className="about-icon"
               />
@@ -108,7 +110,9 @@ function Home() {
           <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
             <div className="mr-md-3 mb-md-0 mb-3">
               <img
-                src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/3beanslogo.png"
+                src={`${
+                  import.meta.env.VITE_BUCKETS_URL
+                }/fotos_varias/3beanslogo.png`}
                 alt="Big Coffee Image"
                 className="about-icon"
               />
@@ -126,7 +130,9 @@ function Home() {
           <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
             <div className="mr-md-3 mb-md-0 mb-3">
               <img
-                src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/coffeemaker.png"
+                src={`${
+                  import.meta.env.VITE_BUCKETS_URL
+                }/fotos_varias/coffeemaker.png`}
                 alt="Big Coffee Image"
                 className="about-icon"
               />
@@ -143,12 +149,12 @@ function Home() {
           <div className="floating-bean-div">
             {" "}
             <img
-              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/b1.png"
+              src={`${import.meta.env.VITE_BUCKETS_URL}/fotos_varias/b1.png`}
               className="img-b1"
               alt=""
             />
             <img
-              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/b4.png"
+              src={`${import.meta.env.VITE_BUCKETS_URL}/fotos_varias/b4.png`}
               className="img-b4"
               alt=""
             />
@@ -156,12 +162,12 @@ function Home() {
           <div className="floating-bean-div">
             {" "}
             <img
-              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/b2.png"
+              src={`${import.meta.env.VITE_BUCKETS_URL}/fotos_varias/b2.png`}
               className="img-b2"
               alt=""
             />
             <img
-              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/b3.png"
+              src={`${import.meta.env.VITE_BUCKETS_URL}/fotos_varias/b3.png`}
               className="img-b3"
               alt=""
             />
@@ -169,7 +175,7 @@ function Home() {
           <div className="floating-bean-div">
             {" "}
             <img
-              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/b1.png"
+              src={`${import.meta.env.VITE_BUCKETS_URL}/fotos_varias/b1.png`}
               className="img-b1-copy"
               alt=""
             />
@@ -180,7 +186,9 @@ function Home() {
         <div className="splash">
           {" "}
           <img
-            src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/Splash%20con%20beans%20y%20capa%20sombra.png"
+            src={`${
+              import.meta.env.VITE_BUCKETS_URL
+            }/fotos_varias/Splash%20con%20beans%20y%20capa%20sombra.png`}
             alt=""
             className="img-splash"
           />
@@ -227,7 +235,9 @@ function Home() {
           <div className="splash-beans">
             {" "}
             <img
-              src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/splash%20redondo.png?t=2024-04-08T20%3A42%3A37.287Z"
+              src={`${
+                import.meta.env.VITE_BUCKETS_URL
+              }/fotos_varias/splash%20redondo.png?t=2024-04-08T20%3A42%3A37.287Z`}
               alt=""
               className="img-splash-beans"
             />
