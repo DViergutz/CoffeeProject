@@ -10,11 +10,11 @@ import {
   incrementQuantity,
 } from "../redux/CartSlice.jsx";
 import { Link, useNavigate } from "react-router-dom";
+import ResetDbButton from "./ResetDbButton.jsx";
 
 function ProductsAll() {
   const [products, setproducts] = useState();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchOneProduct = async () => {
@@ -32,34 +32,10 @@ function ProductsAll() {
     fetchOneProduct();
   }, []);
 
-  const resetDb = async () => {
-    console.log("resetting DB...");
-    try {
-      const response = await axios({
-        method: "GET",
-        url: `http://localhost:3000/resetDb`,
-      });
-      console.log(response.data);
-    } catch (error) {
-      console.error("Error:", error);
-    }
-    // window.location.reload();
-    navigate(0);
-  };
-
   return (
     <div className="main-section bg-fondo3  ">
-      <p className="fst-italic fw-light">
-        If you don`t view any producty below or the page seems broken please
-        reset the Database by clicking this button
-      </p>
-      <resetButton />
-      <button
-        className="btn btn-view-product height65 mb-3 mt-0 fs-4"
-        onClick={() => resetDb()}
-      >
-        Reset Database
-      </button>
+      <ResetDbButton />
+
       {/* <CartMenu show={show} /> */}
       <h2>
         Our Complete <span className="text-orange">Coffee</span> Collection

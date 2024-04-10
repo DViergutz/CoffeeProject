@@ -43,7 +43,6 @@ function ProductDetail() {
           url: `http://localhost:3000/products/${productId}`,
         });
         setOneProduct(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error("Error:", error);
       }
