@@ -62,7 +62,7 @@ function EditProduct() {
           <div className="administrationPanelMain">
             <div className="container">
               <h3 className="text-dark pb-1 fw-semibold">Edit Product</h3>
-              <form onSubmit={handleSubmitEdit} enctype="multipart/form-data">
+              <form onSubmit={handleSubmitEdit} encType="multipart/form-data">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="mb-2">
@@ -148,7 +148,7 @@ function EditProduct() {
                   </select>
                 </div>
 
-                <div class="mb-3">
+                <div className="mb-3">
                   <label htmlFor="formFile" className="form-label">
                     Upload Image
                   </label>

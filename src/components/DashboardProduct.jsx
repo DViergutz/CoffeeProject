@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function DashboardProduct() {
   const [products, setProducts] = useState();
@@ -33,19 +34,31 @@ function DashboardProduct() {
 
   // delete product
   const deleteProduct = async (id) => {
-    const confirmDelete = window.confirm(
-      "Are you sure you want to delete this item?"
-    );
-    if (confirmDelete) {
-      try {
-        await axios.delete(`http://localhost:3000/products/${id}`);
-        // Fetch products again after deletion
-        const response = await axios.get("http://localhost:3000/products");
-        setProducts(response.data);
-      } catch (error) {
-        console.error("Error:", error);
+    Swal.fire({
+      title: "Do you really want to delete this product?",
+      text: "You won't be able to revert this item!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await axios.delete(`http://localhost:3000/products/${id}`);
+          // Fetch products again after deletion
+          const response = await axios.get("http://localhost:3000/products");
+          setProducts(response.data);
+        } catch (error) {
+          console.error("Error:", error);
+        }
+        Swal.fire({
+          title: "Deleted!",
+          text: "Product has been deleted.",
+          icon: "success",
+        });
       }
-    }
+    });
   };
 
   return (
@@ -83,7 +96,7 @@ function DashboardProduct() {
                 products.map((product) => (
                   <tr key={product.id}>
                     <td className="bold ">{product.name}</td>
-                    <td className="w-50">
+                    <td className="25">
                       {/* call abbreviate Function, pass string and number of words */}
                       {abbreviateDescription(product.description, 15)}
                     </td>
@@ -102,11 +115,11 @@ function DashboardProduct() {
                         </a>
                       </Link>
                       <br />
-                      <button className="btn btn-outline-danger">
-                        <i
-                          className="bi bi-trash3 text-dark"
-                          onClick={() => deleteProduct(product.id)}
-                        ></i>
+                      <button
+                        className="btn btn-outline-danger"
+                        onClick={() => deleteProduct(product.id)}
+                      >
+                        <i className="bi bi-trash3 text-dark"></i>
                       </button>
                     </td>
                   </tr>

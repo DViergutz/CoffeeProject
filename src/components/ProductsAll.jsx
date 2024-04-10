@@ -29,6 +29,11 @@ function ProductsAll() {
 
   return (
     <div className="main-section bg-fondo3  ">
+      <p className="fst-italic fw-light">
+        If the page doesn't display products below or the page seems to be
+        broken we please you to reset the tables to their initial state by
+        clicking this button.
+      </p>
       <ResetDbButton />
 
       {/* <CartMenu show={show} /> */}
@@ -51,7 +56,9 @@ function ProductsAll() {
                       <Card.Img
                         variant="top"
                         className="card-img"
-                        src={product.image}
+                        src={`${import.meta.env.VITE_BUCKETS_URL}${
+                          product.image
+                        }`}
                       />
                     </Link>
                     <div className="text-start ">
