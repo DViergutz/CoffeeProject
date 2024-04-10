@@ -56,7 +56,7 @@ function ProductsAll() {
                       <Card.Img
                         variant="top"
                         className="card-img"
-                        src={`${import.meta.env.VITE_BUCKETS_URL}${
+                        src={`${import.meta.env.VITE_BUCKETS_URL}/${
                           product.image
                         }`}
                       />
