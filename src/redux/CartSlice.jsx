@@ -5,6 +5,7 @@ const cartSlice = createSlice({
   initialState: {
     isCartOpen: false,
     inCart: [],
+    showToast: false,
   },
   reducers: {
     decrementQuantity: (state, action) => {
@@ -39,26 +40,36 @@ const cartSlice = createSlice({
             if (item.quantity + 1 <= action.payload.stock) {
               return { ...item, quantity: item.quantity + 1 };
             } else {
-              return item; /* STOCK REACHED --- apply toastify */
+              return item;
             }
           }
           return item;
-        }); /* ?????? */
-        return { ...state, inCart: cart };
+        });
+
+        if (cart[itemIndex] === state.inCart[itemIndex]) {
+          return { ...state, inCart: cart, showToast: true };
+        } else {
+          return { ...state, inCart: cart, showToast: false };
+        }
       } else {
         if (action.payload.stock > 0) {
           return {
             ...state,
             inCart: [...state.inCart, { ...action.payload, quantity: 1 }],
+            showToast: false,
           };
         } else {
-          return state; /* STOCK 0 ---apply toast */
+          return state;
         }
       }
     },
 
     setIsCartOpen: (state) => {
       state.isCartOpen = !state.isCartOpen;
+    },
+
+    setShowToast: (state, action) => {
+      state.showToast = action.payload;
     },
   },
 });
@@ -71,6 +82,7 @@ export const {
   incrementQuantity,
   decrementQuantity,
   setIsCartOpen,
+  setShowToast,
 } = actions;
 
 export default reducer;

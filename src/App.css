@@ -938,6 +938,23 @@ h5 {
   background-color: #d96c21;
 }
 
+.toast-button {
+  padding: 0px 4px 0px 4px;
+  color: rgb(255, 255, 255);
+  background-color: #ee7828;
+  height: 25px;
+  border: none;
+}
+
+.toast-button:hover {
+  background-color: #d96c21;
+}
+
+.toast-cart {
+  border: 2px;
+  border-color: #d96c21;
+}
+
 .about-subheading {
   max-width: 620px;
   color: white;
