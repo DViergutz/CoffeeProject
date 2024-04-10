@@ -6,6 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { authUser } from "../redux/UserSlice.jsx";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function LoginUser() {
   const dispatch = useDispatch();
   const navigate = useNavigate(); // Initialize navigate for navigation
@@ -25,6 +28,7 @@ function LoginUser() {
     });
   };
 
+  const notifyErrorLogin = () => toast("Please enter valid credentials!");
   // Manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,11 +39,18 @@ function LoginUser() {
         "http://localhost:3000/login/tokens",
         formData
       );
+      console.log("RESPUESTA DEL SERVIDOR : " + response.data);
 
-      dispatch(
-        authUser({ token: response.data.token, userId: response.data.userId })
-      );
-      navigate("/");
+      const { token, userId } = response.data;
+
+      if (token === undefined || userId === undefined) {
+        notifyErrorLogin();
+      } else {
+        dispatch(
+          authUser({ token: response.data.token, userId: response.data.userId })
+        );
+        navigate("/");
+      }
     } catch (error) {
       console.error("Error al iniciar sesión:", error);
     }
@@ -112,6 +123,7 @@ function LoginUser() {
             </div>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </>
   );

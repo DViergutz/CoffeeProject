@@ -7,6 +7,8 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { setIsCartOpen, incrementQuantity } from "../redux/CartSlice.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Home() {
   const categories = useRef(null);
@@ -23,6 +25,8 @@ function Home() {
     });
   };
 
+  const notifyNewsletter = () =>
+    toast("Action outside the scope of the project!");
   return (
     <div className="align-navigation-menu">
       <div className="navigation-menu">
@@ -525,6 +529,7 @@ function Home() {
                     <button
                       type="button"
                       className="btn btn-subscribe" // Custom class for styling
+                      onClick={notifyNewsletter}
                     >
                       Subscribe
                     </button>
@@ -535,6 +540,7 @@ function Home() {
           </div>
         </section>
       </div>
+      <ToastContainer />
     </div>
   );
 }
