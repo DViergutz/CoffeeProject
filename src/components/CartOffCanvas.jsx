@@ -50,7 +50,11 @@ function CartOffCanvas() {
         {itemsInCart.map((item, index) => (
           <div className="offcanvas-product-div row ms-1 me-1" key={index}>
             <div className="col-5">
-              <img className="w-50" src={item.image} alt="" />
+              <img
+                className="w-50"
+                src={`${import.meta.env.VITE_BUCKETS_URL}/${item.image}`}
+                alt=""
+              />
             </div>
             <div className="col-5 p-1 ">
               <button

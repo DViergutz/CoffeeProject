@@ -68,7 +68,7 @@ function ProductDetail() {
           <div className="col-md-6 text-center">
             {oneProduct ? (
               <img
-                src={oneProduct.image}
+                src={`${import.meta.env.VITE_BUCKETS_URL}/${oneProduct.image}`}
                 className=""
                 style={{
                   maxWidth: "100%",
@@ -174,7 +174,12 @@ function ProductDetail() {
                 <div className="col-md-6 col-lg-3" key={product.id}>
                   <div className="d-flex flex-column h-100 ">
                     <div className="special-product-card h-100 d-flex flex-column">
-                      <Card.Img className="card-img" src={product.image} />
+                      <Card.Img
+                        className="card-img"
+                        src={`${import.meta.env.VITE_BUCKETS_URL}/${
+                          product.image
+                        }`}
+                      />
                       <div className="text-start ">
                         <p className="fs-3 fw-semibold">{product.name}</p>
                         <p>{product.description}</p>
