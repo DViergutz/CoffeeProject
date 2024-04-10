@@ -14,7 +14,7 @@ const userSlice = createSlice({
     },
 
     logout(state, action) {
-      return { isLogged: false, token: "", userId: 0 }; // Reset to initial state
+      return { isLogged: false, token: "", userId: "" }; // Reset to initial state
     },
   },
 });
