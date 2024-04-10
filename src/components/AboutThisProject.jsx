@@ -227,6 +227,13 @@ function AboutThisProject() {
             also providing oversight of order statuses.
           </p>
         </div>
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="admin-panel-img"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="main-section">
         <div className="about-info text-center d-flex flex-column align-items-center">
