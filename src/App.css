@@ -904,6 +904,7 @@ h5 {
   height: 650px;
   width: 100%;
   background-image: url("https://unicornbeer.vercel.app/assets/Admin_dashboard-82c3d7dc.png");
+  /* background-image: url(`${import.meta.env.VITE_BUCKETS_URL}/fotos_varias/panel-admin-idea.png`); */
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
