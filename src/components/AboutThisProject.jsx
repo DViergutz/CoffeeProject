@@ -6,7 +6,7 @@ import David from "../assets/img/David.png";
 
 function AboutThisProject() {
   return (
-    <div className="mainAboutThisProject">
+    <div className="mainAboutThisProject bg-fondo3">
       <div className="hero-about">
         <div className="textAboutProject d-flex flex-column">
           <h2 className="about-heading">
@@ -35,7 +35,7 @@ function AboutThisProject() {
           </p>
         </div>
       </div>
-      <div className="main-section bg-fondo3">
+      <div className="main-section ">
         <div className="about-info d-flex flex-column align-items-center">
           <div className="text-center w-100">
             <h2 className="text-light ">
@@ -168,7 +168,7 @@ function AboutThisProject() {
         </div>
       </div>
 
-      <div className="main-section bg-fondo3">
+      <div className="main-section">
         <div className="about-info text-center d-flex flex-column align-items-center">
           <div className="text-center w-100">
             <h2 className="text-light ">
@@ -194,7 +194,7 @@ function AboutThisProject() {
           </div>
         </div>
       </div>
-      <div className="main-section bg-fondo3">
+      <div className="main-section">
         <div className="about-info text-center d-flex flex-column align-items-center">
           <div className="text-center w-100">
             <h2 className="text-light ">
@@ -208,7 +208,7 @@ function AboutThisProject() {
           </p>
         </div>
       </div>
-      <div className="main-section bg-fondo3">
+      <div className="main-section">
         <div className="about-info text-center d-flex flex-column align-items-center">
           <div className="text-center w-100">
             <h2 className="text-light ">
