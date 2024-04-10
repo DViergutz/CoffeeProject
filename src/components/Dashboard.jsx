@@ -10,7 +10,14 @@ function Dashboard() {
 
       <div className="infoDashboard">
         <div className="administrationPanelMain">
-          <ResetDbButton />
+          <div className="d-flex align-items-center flex-column">
+            <p className="fst-italic fw-light">
+              If the page doesn't display products below or the page seems to be
+              broken we please you to reset the tables to their initial state by
+              clicking this button.
+            </p>
+            <ResetDbButton />
+          </div>
           <h5>Dashboard</h5>
           <p>Last 30 days</p>
 
