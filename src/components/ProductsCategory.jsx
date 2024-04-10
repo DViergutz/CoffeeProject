@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 
 import { setIsCartOpen, incrementQuantity } from "../redux/CartSlice.jsx";
 import { useDispatch } from "react-redux";
+import ResetDbButton from "./ResetDbButton.jsx";
 
 function ProductsCategory() {
   const params = useParams();
@@ -28,6 +29,7 @@ function ProductsCategory() {
   return (
     <>
       <div className="productsOfCategory main-section bg-fondo3 ">
+        <ResetDbButton />
         <h2>
           Explore Our{" "}
           <span className="text-orange text-capitalize">

@@ -1,6 +1,7 @@
 import React from "react";
 import profile from "../assets/img/profileImg.png";
 import bag2 from "../assets/img/bag2.svg";
+import ResetDbButton from "./ResetDbButton";
 
 function Dashboard() {
   return (
@@ -9,6 +10,7 @@ function Dashboard() {
 
       <div className="infoDashboard">
         <div className="administrationPanelMain">
+          <ResetDbButton />
           <h5>Dashboard</h5>
           <p>Last 30 days</p>
 
