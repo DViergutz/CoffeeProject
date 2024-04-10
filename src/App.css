@@ -1149,10 +1149,6 @@ h5 {
   text-decoration: none;
 }
 
-.navbar a:hover {
-  background-color: #555;
-}
-
 .imgDashboard {
   display: flex;
   justify-content: center;
