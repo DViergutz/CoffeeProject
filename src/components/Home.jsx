@@ -1,17 +1,10 @@
 import React from "react";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import ScrollToTop from "./ScrollToTop";
 import "../App.css";
 import { GoDot } from "react-icons/go";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Card from "react-bootstrap/Card";
-import CartOffCanvas from "./CartOffCanvas";
-import {
-  removeFromCart,
-  setIsCartOpen,
-  addToCart,
-  incrementQuantity,
-} from "../redux/CartSlice.jsx";
+import { setIsCartOpen, incrementQuantity } from "../redux/CartSlice.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -192,12 +185,14 @@ function Home() {
             className="img-splash"
           />
         </div>
-        <h2>Explore Our Coffee Offerings</h2>
+        <h2>
+          Explore Our Coffee <span className="text-orange">Selections</span>
+        </h2>
         <div className="container">
           <div className="row">
             <div className=" col-lg-4">
               <Link
-                to="/category/flavored"
+                to="/category/Flavored"
                 className="text-decoration-none"
                 onClick={() => window.scrollTo(0, 0)}
               >
@@ -207,11 +202,7 @@ function Home() {
               </Link>
             </div>
             <div className="col-lg-4">
-              <Link
-                to="/category/blends"
-                className="text-decoration-none"
-                onClick={() => window.scrollTo(0, 0)}
-              >
+              <Link to="/category/Blends" className="text-decoration-none">
                 <div className="category-card category-blends">
                   <h3 className="category-title">Blends</h3>
                 </div>
@@ -241,7 +232,9 @@ function Home() {
               className="img-splash-beans"
             />
           </div>
-          <h2 className="text-center">Discover Our Special Delights</h2>
+          <h2 className="text-center">
+            Discover Our <span className="text-orange">Special</span> Delights
+          </h2>
           <div className="row">
             <div className="col-md-6 col-lg-6 col-xl-3 ">
               <div className="d-flex flex-column h-100 ">
@@ -252,10 +245,10 @@ function Home() {
                   <div className="text-start ">
                     <p className="fs-3 fw-semibold">Art of Darkness</p>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
-                      corrupti est odio repellat voluptatibus praesentium
-                      distinctio dicta!
+                      A bold and mysterious brew, offering a rich, velvety
+                      experience. Dark chocolate undertones entwine with smoky
+                      caramel hints, inviting you into the enigmatic depths of
+                      the night
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -265,20 +258,19 @@ function Home() {
                         $250
                       </span>
                     </p>
-                    <div className="d-flex justify-content-between">
+                    <div>
                       <div className="me-2">
-                        <Link
-                          to="/products/9"
-                          className="text-decoration-none"
-                          onClick={() => window.scrollTo(0, 0)}
-                        >
-                          <button className="btn btn-view-product height65">
+                        <Link to="/products/9" className="text-decoration-none">
+                          <button
+                            className="btn btn-view-product height65 w-100"
+                            onClick={() => window.scrollTo(0, 0)}
+                          >
                             View Product
                           </button>
                         </Link>
                       </div>
 
-                      <button
+                      {/*                       <button
                         className="btn rounded-circle btn-cart "
                         onClick={() =>
                           dispatch(
@@ -287,6 +279,7 @@ function Home() {
                                 name: "Art Of Darkness",
                                 id: 9,
                                 price: 190,
+                                stock: "",
                                 image:
                                   "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ArtOfDarkness.png",
                               },
@@ -296,7 +289,7 @@ function Home() {
                         }
                       >
                         <i className="bi bi-cart"></i>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -315,10 +308,10 @@ function Home() {
                   <div className="text-start ">
                     <p className="fs-3 fw-semibold">Chocolate Amaretto</p>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
-                      corrupti est odio repellat voluptatibus praesentium
-                      distinctio dicta!
+                      Dive into decadence with our Chocolate Amaretto blend.
+                      Rich chocolate and almond-infused notes dance harmoniously
+                      with bold coffee, creating an indulgent experience
+                      reminiscent of Italian elegance.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -328,19 +321,19 @@ function Home() {
                         $250
                       </span>
                     </p>
-                    <div className="d-flex justify-content-between">
+                    <div>
                       <div className="">
                         <Link
                           to="/products/3"
                           className="text-decoration-none"
                           onClick={() => window.scrollTo(0, 0)}
                         >
-                          <button className="btn btn-view-product height65">
+                          <button className="btn btn-view-product height65 w-100">
                             View Product
                           </button>
                         </Link>
                       </div>
-                      <button
+                      {/* <button
                         className="btn rounded-circle btn-cart"
                         onClick={() =>
                           dispatch(
@@ -349,6 +342,7 @@ function Home() {
                                 name: "Chocolate Amaretto",
                                 id: 3,
                                 price: 190,
+                                stock: "",
                                 image:
                                   "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Flavored-ChocolateAmaretto.png",
                               },
@@ -358,7 +352,7 @@ function Home() {
                         }
                       >
                         <i className="bi bi-cart"></i>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -377,10 +371,10 @@ function Home() {
                   <div className="text-start ">
                     <p className="fs-3 fw-semibold">Colombia Organic</p>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
-                      corrupti est odio repellat voluptatibus praesentium
-                      distinctio dicta!
+                      From Colombia's fertile lands, our Organic blend offers a
+                      pure taste of nature's bounty. Smooth and vibrant with
+                      notes of cocoa and citrus, it's a testament to
+                      sustainability and quality.{" "}
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -390,19 +384,19 @@ function Home() {
                         $250
                       </span>
                     </p>
-                    <div className="d-flex justify-content-between">
+                    <div>
                       <div className="">
                         <Link
                           to="/products/11"
                           className="text-decoration-none"
                           onClick={() => window.scrollTo(0, 0)}
                         >
-                          <button className="btn btn-view-product height65">
+                          <button className="btn btn-view-product height65 w-100">
                             View Product
                           </button>
                         </Link>
                       </div>
-                      <button
+                      {/* <button
                         className="btn rounded-circle btn-cart"
                         onClick={() =>
                           dispatch(
@@ -411,6 +405,7 @@ function Home() {
                                 name: "Colombia Organic",
                                 id: 11,
                                 price: 190,
+                                stock: "",
                                 image:
                                   "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/SingleOrigin-Colombia.png",
                               },
@@ -420,7 +415,7 @@ function Home() {
                         }
                       >
                         <i className="bi bi-cart"></i>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -440,10 +435,10 @@ function Home() {
                   <div className="text-start ">
                     <p className="fs-3 fw-semibold">Italian Roast</p>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Non ad rerum totam aliquid eveniet! Placeat rem, rerum
-                      corrupti est odio repellat voluptatibus praesentium
-                      distinctio dicta!
+                      Immerse yourself in the bold intensity of Italy with our
+                      signature blend. Robust and full-bodied, it embodies the
+                      essence of Italian coffee culture in every rich and
+                      satisfying sip.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -453,19 +448,19 @@ function Home() {
                         $250
                       </span>
                     </p>
-                    <div className="d-flex justify-content-between">
+                    <div>
                       <div className="">
                         <Link
                           to="/products/7"
                           className="text-decoration-none"
                           onClick={() => window.scrollTo(0, 0)}
                         >
-                          <button className="btn btn-view-product height65">
+                          <button className="btn btn-view-product height65 w-100">
                             View Product
                           </button>
                         </Link>
                       </div>
-                      <button
+                      {/*  <button
                         className="btn rounded-circle btn-cart"
                         onClick={() =>
                           dispatch(
@@ -474,6 +469,7 @@ function Home() {
                                 name: "Italian Roast",
                                 id: 7,
                                 price: 190,
+                                stock: "",
                                 image:
                                   "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ItalianRoast.png",
                               },
@@ -483,7 +479,7 @@ function Home() {
                         }
                       >
                         <i className="bi bi-cart"></i>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>

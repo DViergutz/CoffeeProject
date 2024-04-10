@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   incrementQuantity,
-  removeFromCart,
   setIsCartOpen,
-  addToCart,
   decrementQuantity,
 } from "../redux/CartSlice.jsx";
 import { useNavigate } from "react-router-dom";
-import { Offcanvas, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Offcanvas } from "react-bootstrap";
 
 function CartOffCanvas() {
   const dispatch = useDispatch();
@@ -83,6 +80,7 @@ function CartOffCanvas() {
                       id: item.id,
                       price: item.price,
                       image: item.image,
+                      stock: item.stock,
                     })
                   )
                 }

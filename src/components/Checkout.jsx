@@ -1,11 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  removeFromCart,
-  addToCart,
-  incrementQuantity,
-  decrementQuantity,
-} from "../redux/CartSlice.jsx";
+import { incrementQuantity, decrementQuantity } from "../redux/CartSlice.jsx";
 
 function Checkout() {
   const dispatch = useDispatch();
@@ -15,6 +10,13 @@ function Checkout() {
     (total, item) => total + item.price * item.quantity,
     0
   );
+
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
   /*   useEffect(() => {
      window.scrollTo(0, 0);
   }, []);
@@ -64,6 +66,7 @@ function Checkout() {
                                 id: item.id,
                                 price: item.price,
                                 image: item.image,
+                                stock: item.stock,
                               })
                             )
                           }
@@ -130,11 +133,56 @@ function Checkout() {
                 <input type="checkbox" className="form-check-input me-2" />
                 <label htmlFor="">Save card details</label>
               </div>
+              <hr className="text-orange" />
+              <div className=" fw-bold mb-3 mt-2">PAYMENT METHOD</div>
+              <div className="d-flex justify-content-between">
+                <div>
+                  <input
+                    type="radio"
+                    id="visa"
+                    name="paymentMethod"
+                    value="visa"
+                    className="ms-2"
+                    checked={selectedOption === "visa"}
+                    onChange={handleOptionChange}
+                  />
+                  <label htmlFor="visa" className="ms-2">
+                    Visa
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="mastercard"
+                    name="paymentMethod"
+                    value="mastercard"
+                    className="ms-4"
+                    checked={selectedOption === "mastercard"}
+                    onChange={handleOptionChange}
+                  />
+                  <label htmlFor="mastercard" className="ms-2">
+                    Mastercard
+                  </label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="mercadopago"
+                    name="paymentMethod"
+                    value="mercadopago"
+                    className="ms-4"
+                    checked={selectedOption === "mercadopago"}
+                    onChange={handleOptionChange}
+                  />
+                  <label htmlFor="mercadopago" className="ms-2">
+                    Mercado Pago
+                  </label>
+                </div>
+                <hr className="text-orange mt-4" />
+              </div>
             </form>
-            <hr className="text-orange" />
-            <div className=" fw-bold mb-3 mt-5">PAYMENT SUMMARY</div>
-            <hr className="text-orange" />
-            <div className="mt-5">
+            <div className=" fw-bold mb-4 mt-2">PAYMENT SUMMARY</div>
+            <div className="">
               <div className="d-flex justify-content-between">
                 <p className="fw-semibold text-dark">Subtotal:</p>
                 <p className="text-dark">${totalPrice}</p>

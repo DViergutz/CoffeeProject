@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { incrementQuantity, setIsCartOpen } from "../redux/CartSlice.jsx";
 
@@ -15,26 +14,18 @@ function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
 
   const handleIncrement = () => {
-    /*     if (quantity < oneProduct.stock) {
-      setQuantity(quantity + 1); */
     dispatch(
       incrementQuantity({
         name: oneProduct.name,
         id: oneProduct.id,
         price: oneProduct.price,
         image: oneProduct.image,
+        stock: oneProduct.stock,
       })
     );
     dispatch(setIsCartOpen());
   };
 
-  /*   const handleDecrement = (productId) => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-    dispatch(decrementQuantity({ id: productId }));
-  };
- */
   useEffect(() => {
     const fetchOneProduct = async () => {
       try {
@@ -58,7 +49,7 @@ function ProductDetail() {
           method: "GET",
           url: `http://localhost:3000/category/${oneProduct.category.name}`,
         });
-        // Filter out the oneProduct from the related products
+
         const filteredRelatedProducts = response.data.filter(
           (product) => product.name !== oneProduct.name
         );
@@ -72,7 +63,7 @@ function ProductDetail() {
 
   return (
     <>
-      <div className="main-section bg-fondo3  ">
+      <div className="main-section bg-fondo3">
         <div className="row d-flex mt-2 ">
           <div className="col-md-6 text-center">
             {oneProduct ? (
@@ -215,6 +206,7 @@ function ProductDetail() {
                                     price: product.price,
                                     image: product.image,
                                     quantity: quantity,
+                                    stock: product.stock,
                                   },
                                   dispatch(setIsCartOpen())
                                 )

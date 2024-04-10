@@ -2,13 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import {
-  removeFromCart,
-  setIsCartOpen,
-  addToCart,
-  incrementQuantity,
-} from "../redux/CartSlice.jsx";
+
+import { setIsCartOpen, incrementQuantity } from "../redux/CartSlice.jsx";
 import { useDispatch } from "react-redux";
 import ResetDbButton from "./ResetDbButton.jsx";
 
@@ -91,6 +86,7 @@ function ProductsCategory() {
                                     id: product.id,
                                     price: product.price,
                                     image: product.image,
+                                    stock: product.stock,
                                   },
                                   dispatch(setIsCartOpen())
                                 )

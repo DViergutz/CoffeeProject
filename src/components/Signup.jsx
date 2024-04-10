@@ -4,7 +4,7 @@ import Navigation from "./Navbar";
 import { Link, useNavigate } from "react-router-dom";
 
 function SignUp() {
-  const navigate = useNavigate(); // Initialize navigate for navigation
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     firstname: "",
@@ -41,18 +41,22 @@ function SignUp() {
   return (
     <>
       <Navigation />
-      <div className="bg-fondo3 vh-100 p-4 ">
+      <div className="bg-fondo3 vh-100 p-5 ">
         <div className="container">
           <div className="row d-flex align-items-center bg-dark-grey border-orange  ">
-            <div className="col-md-6 text-center">
-              <img
-                src="https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
-                alt="UticaLogo"
-                className="img-fluid"
-              />
+            <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
+              <div className="text-center">
+                <img
+                  src={
+                    "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
+                  }
+                  alt="UticaLogo"
+                  className="utica-logo-login"
+                />
+              </div>
             </div>
-            <div className="col-md-6 bg-light p-4 rounded-end">
-              <h3 className="text-dark pb-1  fw-semibold">Register Account</h3>
+            <div className="col-md-6 bg-light p-5 rounded-end">
+              <h3 className="text-dark mb-3 fw-semibold">Register Account</h3>
               <form onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-md-6">
@@ -150,13 +154,13 @@ function SignUp() {
                 >
                   Register Account
                 </button>
-                <div>
+                <div className="d-flex">
                   <small className="text-dark">
                     Already have an Account ?
                     <Link to="/user/login" className="text-decoration-none">
-                      <div className="text-decoration-none text-orange fw-semibold">
+                      <span className="ms-2 text-decoration-none text-orange fw-semibold">
                         Login
-                      </div>
+                      </span>
                     </Link>
                   </small>
                 </div>

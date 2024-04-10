@@ -3,12 +3,7 @@ import Card from "react-bootstrap/Card";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import {
-  removeFromCart,
-  setIsCartOpen,
-  addToCart,
-  incrementQuantity,
-} from "../redux/CartSlice.jsx";
+import { setIsCartOpen, incrementQuantity } from "../redux/CartSlice.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import ResetDbButton from "./ResetDbButton.jsx";
 
@@ -92,6 +87,7 @@ function ProductsAll() {
                                   id: product.id,
                                   price: product.price,
                                   image: product.image,
+                                  stock: product.stock,
                                 },
                                 dispatch(setIsCartOpen())
                               )
