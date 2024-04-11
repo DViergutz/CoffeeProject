@@ -59,7 +59,7 @@ function CartOffCanvas() {
           <div className="row pb-3 mb-4 mt-3">
             <div className="col-4 text-center text-light">PRODUCT</div>
             <div className="col-5 text-center text-light">QUANTITY</div>
-            <div className="col-3 text-center text-light">PRICE</div>
+            <div className="col-3 text-center text-light pe-5">PRICE</div>
           </div>
         </div>
         {itemsInCart.map((item, index) => (
