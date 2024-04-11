@@ -141,7 +141,9 @@ function CartOffCanvas() {
               <span className=" mb-3">${item.price}</span>
               <button
                 className="btn-delete-product"
-                onClick={() => dispatch(deleteOneProduct({ id: item.id }))}
+                onClick={() => {
+                  dispatch(deleteOneProduct({ id: item.id }));
+                }}
               >
                 <i className="bi bi-trash3"></i>
               </button>

@@ -104,7 +104,15 @@ function DashboardProduct() {
                     <td>${product.price}</td>
                     <td>{product.stock}</td>
                     <td>{product.category.name}</td>
-                    <td>{product.image}</td>
+                    <td>
+                      <img
+                        src={`${import.meta.env.VITE_BUCKETS_URL}/${
+                          product.image
+                        }`}
+                        alt=""
+                        style={{ width: "80px", height: "100px" }} // Adjust width and height as needed
+                      />
+                    </td>
 
                     <td>
                       <Link to={`/admin/products/edit/${product.id}`}>
