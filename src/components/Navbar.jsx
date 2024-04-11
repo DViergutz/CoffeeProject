@@ -79,20 +79,6 @@ function Navigation() {
             <Nav className="d-flex align-items-start align-items-center ">
               <Nav.Link
                 as={Link}
-                to="/"
-                className="navLink "
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <button
-                  className="btn btn-danger"
-                  onClick={() => dispatch(logout)}
-                >
-                  Logout
-                </button>
-              </Nav.Link>
-
-              <Nav.Link
-                as={Link}
                 to="/checkout"
                 className="navLink "
                 onClick={() => window.scrollTo(0, 0)}
@@ -106,6 +92,19 @@ function Navigation() {
                 onClick={() => window.scrollTo(0, 0)}
               >
                 ADMIN
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/"
+                className="navLink "
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <button
+                  className="btn btn-view-product-logout height65 w-80"
+                  onClick={() => dispatch(logout())}
+                >
+                  LOGOUT
+                </button>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
