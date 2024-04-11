@@ -52,7 +52,10 @@ function Home() {
       </div>{" "}
       <div className="background-video">
         <video autoPlay loop muted>
-          <source src="src\assets\img\videoplayback.mp4" type="video/mp4" />
+          <source
+            src={`${import.meta.env.VITE_BUCKETS_URL}/videos/videoplayback.mp4`}
+            type="video/mp4"
+          />
         </video>
         <div id="hero" className="hero-section container">
           <div className="content-wrapper">
