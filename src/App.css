@@ -779,6 +779,7 @@ h5 {
 .navLink.navDropdown .dropdown-item:hover,
 .navLink.navDropdown .dropdown-item:active {
   color: #d96c21 !important;
+  background-color: transparent !important;
 }
 
 .dropdown-menu[data-bs-popper] {
