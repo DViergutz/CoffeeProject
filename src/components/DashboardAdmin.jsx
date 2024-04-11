@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import moment from "moment";
 
 // new comment
 
@@ -86,7 +87,7 @@ function DashboardAdmin() {
                     <td>{admin.firstname}</td>
                     <td>{admin.lastname}</td>
                     <td>{admin.email}</td>
-                    <td>{admin.createdAt}</td>
+                    <td>{moment(new Date(admin.createdAt)).fromNow()}</td>
                     <td>
                       <Link to={`/admin/admins/edit/${admin.id}`} className="">
                         <button className="btn btn-outline-warning mb-2">
