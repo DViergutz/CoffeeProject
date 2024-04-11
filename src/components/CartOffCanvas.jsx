@@ -143,6 +143,12 @@ function CartOffCanvas() {
                 className="btn-delete-product"
                 onClick={() => {
                   dispatch(deleteOneProduct({ id: item.id }));
+
+                  // Check if itemsInCart will be empty after deleting
+                  if (itemsInCart.length === 1) {
+                    // If it will be empty, close the off-canvas
+                    dispatch(setIsCartOpen(false));
+                  }
                 }}
               >
                 <i className="bi bi-trash3"></i>
