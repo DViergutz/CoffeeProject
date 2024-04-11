@@ -14,9 +14,9 @@ function Navigation() {
         <Link to="/" onClick={() => window.scrollTo(0, 0)}>
           <Navbar.Brand className="m-0 p-0 brand-logo-no-hover">
             <img
-              src={
-                "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
-              }
+              src={`${
+                import.meta.env.VITE_BUCKETS_URL
+              }/fotos_varias/logo-utica-white.png`}
               alt="Utica Brand Logo"
               className="brand-logo"
             />
@@ -85,7 +85,7 @@ function Navigation() {
               >
                 <button
                   className="btn btn-danger"
-                  onClick={() => dispatch(logout())}
+                  onClick={() => dispatch(logout)}
                 >
                   Logout
                 </button>
