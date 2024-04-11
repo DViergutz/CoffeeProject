@@ -99,7 +99,9 @@ const cartSlice = createSlice({
 
     deleteOneProduct: (state, action) => {
       const { id } = action.payload;
-      const itemIndex = state.inCart.findIndex((product) => product.id === id);
+      const itemIndex = state.inCart.findIndex(
+        (product) => product.id === action.payload.id
+      );
 
       if (itemIndex >= 0) {
         const updatedCart = [...state.inCart];

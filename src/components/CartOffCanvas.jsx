@@ -49,15 +49,15 @@ function CartOffCanvas() {
     >
       <Offcanvas.Header
         onClick={() => dispatch(setIsCartOpen())}
-        className="offcanvas-close-button"
+        className="offcanvas-close-button d-flex justify-content-between"
       >
-        <Offcanvas.Title className="offcanvas-title">
-          Shopping Cart
-        </Offcanvas.Title>
+        <p className="fs-4">Shopping Cart</p>
+        <Offcanvas.Title className="offcanvas-title"></Offcanvas.Title>
+        <p className="fs-3 me-3">X</p>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <div>
-          <div className="row pb-3 mb-4 mt-3">
+          <div className="row pb-3 mb-4">
             <div className="col-4 text-center text-light">PRODUCT</div>
             <div className="col-5 text-center text-light">QUANTITY</div>
             <div className="col-3 text-center text-light pe-5">UNIT PRICE</div>
@@ -66,16 +66,16 @@ function CartOffCanvas() {
         </div>
         {itemsInCart.map((item, index) => (
           <div className="row offcanvas-product-div ms-1 me-1 mt-3" key={index}>
-            <div className="col-4">
+            <div className="col-3">
               <img
-                className="w-75"
+                className="w-100"
                 src={`${import.meta.env.VITE_BUCKETS_URL}/${item.image}`}
                 alt=""
               />
             </div>
-            <div className="col-5 d-flex flex-column align-items-center justify-content-center">
+            <div className="col-6 d-flex flex-column align-items-center justify-content-center">
               <div>
-                <p className="fs-5">{item.name}</p>
+                <p>{item.name}</p>
               </div>
               <div>
                 <button
