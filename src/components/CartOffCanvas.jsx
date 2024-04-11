@@ -59,11 +59,12 @@ function CartOffCanvas() {
           <div className="row pb-3 mb-4 mt-3">
             <div className="col-4 text-center text-light">PRODUCT</div>
             <div className="col-5 text-center text-light">QUANTITY</div>
-            <div className="col-3 text-center text-light pe-5">PRICE</div>
+            <div className="col-3 text-center text-light pe-5">UNIT PRICE</div>
           </div>
+          <hr className="text-orange" />
         </div>
         {itemsInCart.map((item, index) => (
-          <div className="row offcanvas-product-div ms-1 me-1" key={index}>
+          <div className="row offcanvas-product-div ms-1 me-1 mt-3" key={index}>
             <div className="col-4">
               <img
                 className="w-75"
@@ -71,7 +72,7 @@ function CartOffCanvas() {
                 alt=""
               />
             </div>
-            <div className="col-5 d-flex flex-column align-items-center">
+            <div className="col-5 d-flex flex-column align-items-center justify-content-center">
               <div>
                 <p className="fs-5">{item.name}</p>
               </div>
@@ -135,12 +136,13 @@ function CartOffCanvas() {
                 </Toast>
               </div>
             </div>
-            <div className="col-3 fs-5 d-flex flex-column align-items-center">
+            <div className="col-3 fs-5 d-flex flex-column align-items-center justify-content-center">
               <span className=" mb-3">${item.price}</span>
               <button className="btn-delete-product">
                 <i class="bi bi-trash3 "></i>
               </button>
             </div>
+            <hr className="text-orange mt-4" />
           </div>
         ))}
         <div className="mt-5 text-light d-flex justify-content-between align-items-center">
