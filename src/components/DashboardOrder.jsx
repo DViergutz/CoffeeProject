@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import moment from "moment";
 
 function DashboardOrder() {
   const [orders, setOrders] = useState();
@@ -20,6 +21,8 @@ function DashboardOrder() {
     };
     fetchAllOrders();
   }, []);
+  /*  const dateTimeAgo = moment(new Date(order.createdAt)).fromNow(); */
+
   return (
     <div className="infoDashboard">
       <div className="administrationPanelMain">
@@ -63,7 +66,7 @@ function DashboardOrder() {
                     <td>{order.totalPrice}</td>
                     <td>{order.method}</td>
                     <td>{order.status}</td>
-                    <td>{order.createdAt}</td>
+                    <td>{moment(new Date(order.createdAt)).fromNow()}</td>
                     <td>
                       <Link to={`/order/orders/edit/${order.id}`} className="">
                         <button className="btn btn-outline-warning mb-2">
