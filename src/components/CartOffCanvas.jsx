@@ -5,6 +5,7 @@ import {
   setIsCartOpen,
   decrementQuantity,
   setShowToast,
+  deleteOneProduct,
 } from "../redux/CartSlice.jsx";
 import { useNavigate } from "react-router-dom";
 import { Offcanvas } from "react-bootstrap";
@@ -32,7 +33,7 @@ function CartOffCanvas() {
       // Después de 3 segundos, ocultar el toast
       const timer = setTimeout(() => {
         dispatch(setShowToast(false));
-      }, 10000);
+      }, 3000);
 
       // Limpiar el temporizador al desmontar el componente o cuando showToast cambie
       return () => clearTimeout(timer);
@@ -111,35 +112,38 @@ function CartOffCanvas() {
                 >
                   <i className="bi bi-plus-circle fs-8 text-light"></i>
                 </button>
-                <Toast
-                  show={showToast}
-                  onClose={() => dispatch(setShowToast(false))}
-                  delay={10000}
-                  autohide
-                >
-                  <Toast.Body
-                    closeButton={false}
-                    className="text-dark toast-cart"
-                  >
-                    <div className="d-flex">
-                      <div>Has alcanzado el límite de stock!</div>
-                      <Button
-                        variant="secondary"
-                        size="sm"
-                        onClick={() => dispatch(setShowToast(false))}
-                        className="toast-button"
-                      >
-                        X
-                      </Button>
-                    </div>
-                  </Toast.Body>
-                </Toast>
               </div>
+              <Toast
+                show={showToast}
+                onClose={() => dispatch(setShowToast(false))}
+                delay={3000}
+                autohide
+              >
+                <Toast.Body
+                  closeButton={false}
+                  className="text-dark toast-cart"
+                >
+                  <div className="d-flex">
+                    <div>Has alcanzado el límite de stock!</div>
+                    <Button
+                      variant="secondary"
+                      size="sm"
+                      onClick={() => dispatch(setShowToast(false))}
+                      className="toast-button"
+                    >
+                      X
+                    </Button>
+                  </div>
+                </Toast.Body>
+              </Toast>
             </div>
             <div className="col-3 fs-5 d-flex flex-column align-items-center justify-content-center">
               <span className=" mb-3">${item.price}</span>
-              <button className="btn-delete-product">
-                <i class="bi bi-trash3 "></i>
+              <button
+                className="btn-delete-product"
+                onClick={() => dispatch(deleteOneProduct({ id: item.id }))}
+              >
+                <i className="bi bi-trash3"></i>
               </button>
             </div>
             <hr className="text-orange mt-4" />

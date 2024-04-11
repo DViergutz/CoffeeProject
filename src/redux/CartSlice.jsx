@@ -71,6 +71,24 @@ const cartSlice = createSlice({
     setShowToast: (state, action) => {
       state.showToast = action.payload;
     },
+
+    deleteOneProduct: (state, action) => {
+      const { id } = action.payload;
+      const itemIndex = state.inCart.findIndex((product) => product.id === id);
+
+      if (itemIndex >= 0) {
+        const updatedCart = [...state.inCart];
+
+        updatedCart.splice(itemIndex, 1);
+
+        return {
+          ...state,
+          inCart: updatedCart,
+        };
+      } else {
+        return state;
+      }
+    },
   },
 });
 
@@ -83,6 +101,7 @@ export const {
   decrementQuantity,
   setIsCartOpen,
   setShowToast,
+  deleteOneProduct,
 } = actions;
 
 export default reducer;
