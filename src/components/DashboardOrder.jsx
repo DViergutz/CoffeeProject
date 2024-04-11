@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import moment from "moment";
 
 function DashboardOrder() {
   const [orders, setOrders] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAllOrders = async () => {
@@ -21,7 +22,53 @@ function DashboardOrder() {
     };
     fetchAllOrders();
   }, []);
-  /*  const dateTimeAgo = moment(new Date(order.createdAt)).fromNow(); */
+
+  const handleStatusChange = async (id, newStatus) => {
+    const newOrderStatus = newStatus;
+    setOrders(
+      orders.map((order) =>
+        order.id === id ? { ...order, status: newStatus } : order
+      )
+    );
+    try {
+      const response = await axios.patch(`http://localhost:3000/orders/${id}`, {
+        status: newStatus,
+      });
+      console.log(response.data);
+      // navigate(0);
+    } catch (error) {
+      console.error("Error updating product:", error);
+    }
+  };
+
+  const deleteOrder = async (id) => {
+    Swal.fire({
+      title: "Do you really want to delete this order?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await axios.delete(`http://localhost:3000/orders/${id}`);
+          // Fetch admins again after deletion
+          const response = await axios.get("http://localhost:3000/orders");
+          setOrders(response.data);
+        } catch (error) {
+          console.error("Error:", error);
+        }
+
+        Swal.fire({
+          title: "Deleted!",
+          text: "Order has been deleted.",
+          icon: "success",
+        });
+      }
+    });
+  };
 
   return (
     <div className="infoDashboard">
@@ -65,16 +112,28 @@ function DashboardOrder() {
                     </td>
                     <td>{order.totalPrice}</td>
                     <td>{order.method}</td>
-                    <td>{order.status}</td>
+                    <td className="w-25">
+                      <select
+                        className="form-select"
+                        aria-label="order"
+                        name="status"
+                        value={order.status}
+                        onChange={(e) =>
+                          handleStatusChange(order.id, e.target.value)
+                        }
+                        required
+                      >
+                        <option value="Pending">Pending</option>
+                        <option value="Processing">Processing</option>
+                        <option value="Delivered">Delivered</option>
+                      </select>
+                    </td>
                     <td>{moment(new Date(order.createdAt)).fromNow()}</td>
                     <td>
-                      <Link to={`/order/orders/edit/${order.id}`} className="">
-                        <button className="btn btn-outline-warning mb-2">
-                          <i className="bi bi-pen text-dark"></i>
-                        </button>
-                      </Link>
-                      <br />
-                      <button className="btn btn-outline-danger">
+                      <button
+                        className="btn btn-outline-danger"
+                        onClick={() => deleteOrder(order.id)}
+                      >
                         <i className="bi bi-trash3 text-dark"></i>
                       </button>
                     </td>
