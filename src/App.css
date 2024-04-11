@@ -1085,6 +1085,7 @@ h5 {
 }
 .hoverSocial {
   color: white;
+  transition: color 0.3s ease;
 }
 
 .hoverSocial:hover {
