@@ -11,13 +11,12 @@
 /* 
 /////////// OFFCANVAS////////// */
 .offcanvas {
-  background-color: #111111;
+  background-color: #121212;
   width: 25% !important;
   min-width: 360px !important;
 }
 .offcanvas-title {
   color: white;
-  text-align: center;
 }
 .offcanvas-product-div {
   color: rgb(233, 228, 218);
@@ -33,7 +32,7 @@
 
 .btn-delete-product {
   background-color: transparent;
-  color: #ee7828;
+  color: #ee7728cf;
   border: 1px solid #ee77281d;
   border-radius: 50px;
   cursor: pointer;
