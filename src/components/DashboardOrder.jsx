@@ -128,7 +128,7 @@ function DashboardOrder() {
                         <option value="Delivered">Delivered</option>
                       </select>
                     </td>
-                    <td>{order.createdAt}</td>
+                    <td>{moment(new Date(order.createdAt)).fromNow()}</td>
                     <td>
                       <button
                         className="btn btn-outline-danger"
