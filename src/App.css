@@ -10,6 +10,15 @@
 
 /* 
 /////////// OFFCANVAS////////// */
+.close-offcanvas {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.close-offcanvas:hover {
+  color: #ee7728cf;
+}
+
 .offcanvas {
   background-color: #121212;
   width: 25% !important;

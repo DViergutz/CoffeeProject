@@ -53,7 +53,7 @@ function CartOffCanvas() {
       >
         <p className="fs-4">Shopping Cart</p>
         <Offcanvas.Title className="offcanvas-title"></Offcanvas.Title>
-        <p className="fs-3 me-3">X</p>
+        <p className="fs-3 me-3 close-offcanvas">X</p>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <div>
