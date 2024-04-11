@@ -18,9 +18,9 @@ function PanelAdmin() {
         <div className="firstSectionDashboard">
           <div className="imgDashboard">
             <img
-              src={
-                "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
-              }
+              src={`${
+                import.meta.env.VITE_BUCKETS_URL
+              }/fotos_varias/logo-utica-white.png`}
               alt="imgUtica"
               className="imgLogoUticaDashboard"
             />
@@ -91,9 +91,9 @@ function PanelAdmin() {
             <div className="mobileNav">
               <div className="imgDashboard">
                 <img
-                  src={
-                    "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
-                  }
+                  src={`${
+                    import.meta.env.VITE_BUCKETS_URL
+                  }/fotos_varias/logo-utica-white.png`}
                   alt="imgUtica"
                   className="imgLogoUticaDashboard"
                 />

@@ -3,6 +3,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import moment from "moment";
 
 function DashboardUser() {
   const [users, setUsers] = useState();
@@ -98,7 +99,7 @@ function DashboardUser() {
                     <td>{user.email}</td>
                     <td>{user.phone}</td>
                     <td>{user.address}</td>
-                    <td>{user.createdAt}</td>
+                    <td>{moment(new Date(user.createdAt)).fromNow()}</td>
 
                     <td>
                       <Link to={`/admin/users/edit/${user.id}`} className="">

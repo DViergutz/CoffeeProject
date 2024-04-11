@@ -5,6 +5,7 @@ import {
   setIsCartOpen,
   decrementQuantity,
   setShowToast,
+  deleteOneProduct,
 } from "../redux/CartSlice.jsx";
 import { useNavigate } from "react-router-dom";
 import { Offcanvas } from "react-bootstrap";
@@ -32,7 +33,7 @@ function CartOffCanvas() {
       // Después de 3 segundos, ocultar el toast
       const timer = setTimeout(() => {
         dispatch(setShowToast(false));
-      }, 10000);
+      }, 3000);
 
       // Limpiar el temporizador al desmontar el componente o cuando showToast cambie
       return () => clearTimeout(timer);
@@ -56,60 +57,66 @@ function CartOffCanvas() {
       </Offcanvas.Header>
       <Offcanvas.Body>
         <div>
-          <div className="d-flex justify-content-evenly pb-3 mb-5 mt-4">
-            <div className="col fw-bold text-center text-light">PRODUCT</div>
-            <div className="col fw-bold text-center text-light">QUANTITY</div>
-            <div className="col fw-bold text-center text-light">PRICE</div>
+          <div className="row pb-3 mb-4 mt-3">
+            <div className="col-4 text-center text-light">PRODUCT</div>
+            <div className="col-5 text-center text-light">QUANTITY</div>
+            <div className="col-3 text-center text-light pe-5">UNIT PRICE</div>
           </div>
+          <hr className="text-orange" />
         </div>
         {itemsInCart.map((item, index) => (
-          <div className="offcanvas-product-div row ms-1 me-1" key={index}>
-            <div className="col-5">
+          <div className="row offcanvas-product-div ms-1 me-1 mt-3" key={index}>
+            <div className="col-4">
               <img
-                className="w-50"
+                className="w-75"
                 src={`${import.meta.env.VITE_BUCKETS_URL}/${item.image}`}
                 alt=""
               />
             </div>
-            <div className="col-5 p-1 ">
-              <button
-                className="btn-view-product-offcanvas"
-                onClick={() => {
-                  if (item.quantity === 1 && itemsInCart.length === 1)
-                    dispatch(setIsCartOpen());
-                  dispatch(
-                    decrementQuantity({
-                      name: item.name,
-                      id: item.id,
-                      price: item.price,
-                      image: item.image,
-                    })
-                  );
-                }}
-              >
-                <i className="bi bi-dash-circle fs-8 text-light"></i>
-              </button>
-              <span className="qty-box">{item.quantity}</span>
-              <button
-                className="btn-view-product-offcanvas"
-                onClick={() =>
-                  dispatch(
-                    incrementQuantity({
-                      name: item.name,
-                      id: item.id,
-                      price: item.price,
-                      image: item.image,
-                      stock: item.stock,
-                    })
-                  )
-                }
-              >
-                <i className="bi bi-plus-circle fs-8 text-light"></i>
-              </button>
+            <div className="col-5 d-flex flex-column align-items-center justify-content-center">
+              <div>
+                <p className="fs-5">{item.name}</p>
+              </div>
+              <div>
+                <button
+                  className="btn-view-product-offcanvas"
+                  onClick={() => {
+                    if (item.quantity === 1 && itemsInCart.length === 1)
+                      dispatch(setIsCartOpen());
+                    dispatch(
+                      decrementQuantity({
+                        name: item.name,
+                        id: item.id,
+                        price: item.price,
+                        image: item.image,
+                      })
+                    );
+                  }}
+                >
+                  <i className="bi bi-dash-circle fs-8 text-light"></i>
+                </button>
+                <span className="qty-box">{item.quantity}</span>
+                <button
+                  className="btn-view-product-offcanvas"
+                  onClick={() =>
+                    dispatch(
+                      incrementQuantity({
+                        name: item.name,
+                        id: item.id,
+                        price: item.price,
+                        image: item.image,
+                        stock: item.stock,
+                      })
+                    )
+                  }
+                >
+                  <i className="bi bi-plus-circle fs-8 text-light"></i>
+                </button>
+              </div>
               <Toast
                 show={showToast}
                 onClose={() => dispatch(setShowToast(false))}
-                delay={10000}
+                delay={3000}
                 autohide
               >
                 <Toast.Body
@@ -130,11 +137,21 @@ function CartOffCanvas() {
                 </Toast.Body>
               </Toast>
             </div>
-            <div className="col-2">{item.price}</div>
+            <div className="col-3 fs-5 d-flex flex-column align-items-center justify-content-center">
+              <span className=" mb-3">${item.price}</span>
+              <button
+                className="btn-delete-product"
+                onClick={() => dispatch(deleteOneProduct({ id: item.id }))}
+              >
+                <i className="bi bi-trash3"></i>
+              </button>
+            </div>
+            <hr className="text-orange mt-4" />
           </div>
         ))}
-        <div className="mt-5 text-light">
-          TOTAL PRICE: <p>{totalPrice}</p>
+        <div className="mt-5 text-light d-flex justify-content-between align-items-center mx-4">
+          <p className="fw-semibold">TOTAL PRICE:</p>
+          <p className="fs-4 me-2">${totalPrice}</p>
         </div>
 
         <button className="btn-hero p-2 w-100 mt-4" onClick={handleCheckout}>
