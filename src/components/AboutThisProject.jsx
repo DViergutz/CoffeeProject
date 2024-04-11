@@ -14,9 +14,10 @@ function AboutThisProject() {
           </h2>
           <p className="about-subheading">
             Utica Coffee is an e-commerce platform inspired by Utica Coffee
-            Roasting Co. Developed during a Coding Bootcamp at Hack Academy,
-            it's a collaborative project showcasing Full Stack Development
-            skills.
+            Roasting Co. Developed during a Coding Bootcamp (Intensive-full
+            practical training of approximately 600 hours in total) at Hack
+            Academy, it's a collaborative project showcasing Full Stack
+            Development skills.
           </p>
           <p className="about-subheading">
             Utilizing SQL, Express.js, React.js, and Node.js, the team
@@ -332,7 +333,7 @@ function AboutThisProject() {
             <div className="col mb-4">
               <div className="card h-100 cardAbout">
                 <img
-                  src="https://media.istockphoto.com/id/542703430/es/foto/sonriente-hombre.jpg?s=2048x2048&w=is&k=20&c=3ZmbfwZk4PyOkEX_a2Rl4yH6zuwOEl0DHeZEytXszKA="
+                  src={Gaston}
                   className="card-img-top cardPeople"
                   alt="Team Member 4"
                 />
@@ -355,7 +356,7 @@ function AboutThisProject() {
             <div className="col  mb-4">
               <div className="card h-100 cardAbout">
                 <img
-                  src="https://media.istockphoto.com/id/1311406968/es/foto/retrato-del-guapo-joven-cauc%C3%A1sico-con-ropa-casual-sonriendo-y-mirando-a-la-c%C3%A1mara-sobre-el.jpg?s=2048x2048&w=is&k=20&c=fjJC9fq7QLEmw4z_-MVOwoJRT1YhMi327X72kuZA3w8="
+                  src={David}
                   className="card-img-top cardPeople"
                   alt="Team Member 5"
                 />
