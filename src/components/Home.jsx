@@ -4,8 +4,6 @@ import ScrollToTop from "./ScrollToTop";
 import "../App.css";
 import { GoDot } from "react-icons/go";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { setIsCartOpen, incrementQuantity } from "../redux/CartSlice.jsx";
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,8 +13,6 @@ function Home() {
   const specialProducts = useRef(null);
   const blog = useRef(null);
   const about = useRef(null);
-  const dispatch = useDispatch();
-  const isCartOpen = useSelector((state) => state.cart.isCartOpen);
 
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -26,7 +22,8 @@ function Home() {
   };
 
   const notifyNewsletter = () =>
-    toast("Action outside the scope of the project!");
+    toast("Action exeeded the scope of this project!");
+
   return (
     <div className="align-navigation-menu">
       <div className="navigation-menu">
