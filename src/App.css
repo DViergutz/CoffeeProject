@@ -634,8 +634,20 @@ h5 {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .btn-view-product:hover {
+  background-color: #ee7828;
+  color: white;
+}
+
+.btn-view-product-logout {
+  background-color: transparent;
+  color: #ee7828;
+  border: 1px solid #ee77281d;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-view-product-logout:hover {
   background-color: #ee7828;
   color: white;
 }
@@ -923,6 +935,7 @@ h5 {
     height: 200px;
   }
 }
+
 .admin-panel-img {
   height: 650px;
   width: 100%;
