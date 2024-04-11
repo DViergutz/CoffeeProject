@@ -76,7 +76,7 @@ function Checkout() {
                   </div>
                   <div className="col fw-semibold d-flex justify-content-center align-items-center">
                     <div className="d-flex flex-column align-items-center">
-                      <div className="d-flex border p-1">
+                      <div className="d-flex ">
                         <button
                           className="btn-view-product-offcanvas"
                           onClick={() =>
@@ -87,7 +87,7 @@ function Checkout() {
                             )
                           }
                         >
-                          <i className="bi bi-dash-circle fs-8 text-light"></i>
+                          <i className="bi bi-dash-circle fs-8"></i>
                         </button>
                         <span className="qty-box">{item.quantity}</span>
                         <button
@@ -104,7 +104,7 @@ function Checkout() {
                             )
                           }
                         >
-                          <i className="bi bi-plus-circle fs-8 text-light"></i>
+                          <i className="bi bi-plus-circle fs-8"></i>
                         </button>
                       </div>
                     </div>
