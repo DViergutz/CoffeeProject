@@ -145,9 +145,9 @@ function CartOffCanvas() {
             <hr className="text-orange mt-4" />
           </div>
         ))}
-        <div className="mt-5 text-light d-flex justify-content-between align-items-center">
+        <div className="mt-5 text-light d-flex justify-content-between align-items-center mx-4">
           <p className="fw-semibold">TOTAL PRICE:</p>
-          <p className="fs-4 me-3">${totalPrice}</p>
+          <p className="fs-4 me-2">${totalPrice}</p>
         </div>
 
         <button className="btn-hero p-2 w-100 mt-4" onClick={handleCheckout}>
