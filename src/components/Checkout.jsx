@@ -194,10 +194,7 @@ function Checkout() {
                   />
                 </div>
               </div>
-              <div>
-                <input type="checkbox" className="form-check-input me-2" />
-                <label htmlFor="">Save card details</label>
-              </div>
+
               <hr className="text-orange" />
               <div className=" fw-bold mb-3 mt-2">PAYMENT METHOD</div>
               <div className="d-flex justify-content-between">
