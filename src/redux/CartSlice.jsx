@@ -32,7 +32,7 @@ const cartSlice = createSlice({
       }
     },
 
-    incrementQuantity: (state, action) => {
+    /*  incrementQuantity: (state, action) => {
       const itemIndex = state.inCart.findIndex(
         (product) => product.id === action.payload.id
       ); ////index me da -1 si no esta en el array
@@ -42,7 +42,7 @@ const cartSlice = createSlice({
             if (item.quantity + 1 <= action.payload.stock) {
               return { ...item, quantity: item.quantity + 1 };
             } else {
-              return item; /* STOCK REACHED --- apply toastify */
+              return item; 
             }
           }
           return item;
@@ -55,12 +55,17 @@ const cartSlice = createSlice({
             inCart: [...state.inCart, { ...action.payload, quantity: 1 }],
           };
         } else {
-          return state; /* STOCK 0 ---apply toast */
+          return state; 
         }
       }
-    },
+    }, */
 
-    /*         const cart = state.inCart.map((item, index) => {
+    incrementQuantity: (state, action) => {
+      const itemIndex = state.inCart.findIndex(
+        (product) => product.id === action.payload.id
+      ); ////index me da -1 si no esta en el array
+      if (itemIndex >= 0) {
+        const cart = state.inCart.map((item, index) => {
           if (index === itemIndex) {
             if (item.quantity + 1 <= action.payload.stock) {
               return { ...item, quantity: item.quantity + 1 };
@@ -87,7 +92,7 @@ const cartSlice = createSlice({
           return state;
         }
       }
-    }, */
+    },
 
     setIsCartOpen: (state) => {
       state.isCartOpen = !state.isCartOpen;
