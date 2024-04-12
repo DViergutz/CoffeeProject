@@ -272,7 +272,7 @@ function Checkout() {
               </div>
               <div className="d-flex justify-content-between ">
                 <p className="fw-bold text-dark ">Total (tax incl.):</p>
-                <p className="fw-bold text-dark">
+                <p className="fw-bold text-dark fs-5">
                   ${totalPrice ? totalPrice + 25 : 0}
                 </p>
               </div>
