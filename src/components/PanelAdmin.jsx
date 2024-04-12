@@ -56,7 +56,7 @@ function PanelAdmin() {
           <hr />
           <Link to="/" className="text-decoration-none">
             <div className="returnToWebsite">
-              <i class="bi bi-arrow-return-left"> Return to Website</i>
+              <i className="bi bi-arrow-return-left"> Return to Website</i>
             </div>
           </Link>
         </div>
@@ -119,7 +119,7 @@ function PanelAdmin() {
               <hr />
               <div className="returnToWebsite">
                 <Link to="/" className="text-decoration-none">
-                  <i class="bi bi-arrow-return-left"> Return to Website</i>
+                  <i className="bi bi-arrow-return-left"> Return to Website</i>
                 </Link>
               </div>
             </div>
