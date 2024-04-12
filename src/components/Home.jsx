@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 import ScrollToTop from "./ScrollToTop";
 import "../App.css";
@@ -13,12 +13,14 @@ function Home() {
   const specialProducts = useRef(null);
   const blog = useRef(null);
   const about = useRef(null);
+  const [activeSection, setActiveSection] = useState(null);
 
-  const scrollToSection = (elementRef) => {
+  const scrollToSection = (elementRef, section) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
       behavior: "smooth",
     });
+    setActiveSection(section);
   };
 
   const notifyNewsletter = () =>
@@ -30,23 +32,43 @@ function Home() {
         <ScrollToTop />{" "}
         <ul>
           {" "}
-          <li onClick={() => scrollToSection(about)} className="nav-link-home">
-            <GoDot />
+          <li
+            onClick={() => scrollToSection(about, "about")}
+            className={`nav-link-home ${
+              activeSection === "about" ? "active" : ""
+            }`}
+          >
+            <GoDot className={activeSection === "about" ? "active-dot" : ""} />
           </li>
           <li
-            onClick={() => scrollToSection(categories)}
-            className="nav-link-home"
+            onClick={() => scrollToSection(categories, "categories")}
+            className={`nav-link-home ${
+              activeSection === "categories" ? "active" : ""
+            }`}
           >
-            <GoDot />
+            <GoDot
+              className={activeSection === "categories" ? "active-dot" : ""}
+            />
           </li>
           <li
-            onClick={() => scrollToSection(specialProducts)}
-            className="nav-link-home"
+            onClick={() => scrollToSection(specialProducts, "specialProducts")}
+            className={`nav-link-home ${
+              activeSection === "specialProducts" ? "active" : ""
+            }`}
           >
-            <GoDot />{" "}
+            <GoDot
+              className={
+                activeSection === "specialProducts" ? "active-dot" : ""
+              }
+            />
           </li>
-          <li onClick={() => scrollToSection(blog)} className="nav-link-home">
-            <GoDot />
+          <li
+            onClick={() => scrollToSection(blog, "blog")}
+            className={`nav-link-home ${
+              activeSection === "blog" ? "active" : ""
+            }`}
+          >
+            <GoDot className={activeSection === "blog" ? "active-dot" : ""} />
           </li>
         </ul>
       </div>{" "}

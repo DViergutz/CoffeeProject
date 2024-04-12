@@ -185,7 +185,9 @@ footer {
   color: #ee7828;
   cursor: pointer;
 }
-
+.active-dot {
+  color: red;
+}
 /* /////// */
 
 .hero-section {
@@ -752,7 +754,7 @@ h5 {
 .background-newsletter {
   background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/premium6.png");
   background-size: cover;
-  background-position: center 1px;
+  background-position: center 50px;
 }
 
 .btn-subscribe {

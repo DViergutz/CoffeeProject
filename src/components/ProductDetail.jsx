@@ -149,7 +149,7 @@ function ProductDetail() {
                 <strong className="text-orange">
                   <i className="bi bi-globe-americas me-4 fs-4"></i>
                 </strong>
-                <p className="m-0 align-self-center"> Peru, Columbia</p>
+                <p className="m-0 align-self-center"> Peru, Colombia</p>
               </div>
               <div className="d-flex align-items-center">
                 <strong className="text-orange">
