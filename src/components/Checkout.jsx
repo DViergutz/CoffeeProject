@@ -97,7 +97,8 @@ function Checkout() {
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   <button className="btn-hero mt-4">
-                    <i class="bi bi-arrow-left me-2"></i> Explore our products
+                    <i className="bi bi-arrow-left me-2"></i> Explore our
+                    products
                   </button>
                 </Link>
               </div>
