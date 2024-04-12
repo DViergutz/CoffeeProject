@@ -487,6 +487,8 @@ h5 {
 .category-title {
   position: relative;
   z-index: 2;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 rgb(19, 18, 18),
+    -2px 2px 0 rgb(20, 19, 19), 2px 2px 0 black;
   /*font-size: 24px;*/
   color: white;
 }
@@ -1188,8 +1190,8 @@ h5 {
 }
 
 .imgLogoUticaDashboard {
-  width: 6.8rem;
-  height: 6.8rem;
+  width: auto;
+  height: 95%;
 }
 
 .navbar {
@@ -1402,7 +1404,7 @@ h5 {
     position: relative;
   }
 
-  .mobileNav a {
+  .mobileNav i {
     color: white;
     padding: 10px 16px;
     text-decoration: none;
