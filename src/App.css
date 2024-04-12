@@ -779,7 +779,7 @@ h5 {
   align-items: start !important;
 } */
 .bounce-text {
-  animation: bounce 2s ease 3;
+  animation: bounce 2s ease 2;
 }
 
 @keyframes bounce {
@@ -794,12 +794,12 @@ h5 {
   }
   40% {
     transform: translateY(
-      -15px
+      -8px
     ); /* En este punto, el texto se moverá hacia arriba */
   }
   60% {
     transform: translateY(
-      -15px
+      -8px
     ); /* En este punto, el texto se moverá hacia abajo */
   }
 }
