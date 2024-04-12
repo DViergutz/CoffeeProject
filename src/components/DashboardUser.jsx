@@ -73,10 +73,7 @@ function DashboardUser() {
             <thead className="tableHeadProduct">
               <tr>
                 <th>Id</th>
-                <th>
-                  <p className="fw-normal">Firstname</p>
-                  <p>Lastname</p>
-                </th>
+                <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Address</th>

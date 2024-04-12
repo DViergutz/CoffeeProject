@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 import ScrollToTop from "./ScrollToTop";
 import "../App.css";
@@ -25,6 +25,39 @@ function Home() {
 
   const notifyNewsletter = () =>
     toast("Action exeeded the scope of this project!");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition < about.current.offsetTop) {
+        setActiveSection("");
+      } else if (
+        scrollPosition >= about.current.offsetTop &&
+        scrollPosition < categories.current.offsetTop
+      ) {
+        setActiveSection("about");
+      } else if (
+        scrollPosition >= categories.current.offsetTop &&
+        scrollPosition < specialProducts.current.offsetTop
+      ) {
+        setActiveSection("categories");
+      } else if (
+        scrollPosition >= specialProducts.current.offsetTop &&
+        scrollPosition < blog.current.offsetTop
+      ) {
+        setActiveSection("specialProducts");
+      } else if (scrollPosition >= blog.current.offsetTop) {
+        setActiveSection("blog");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="align-navigation-menu">

@@ -235,14 +235,14 @@ function Checkout() {
                 <div>
                   <input
                     type="radio"
-                    id="visa"
+                    id="Visa"
                     name="paymentMethod"
-                    value="visa"
+                    value="Visa"
                     className="ms-2"
-                    checked={selectedOption === "visa"}
+                    checked={selectedOption === "Visa"}
                     onChange={handleOptionChange}
                   />
-                  <label htmlFor="visa" className="ms-2">
+                  <label htmlFor="Visa" className="ms-2">
                     <img
                       className="checkout-payment-icon mb-2"
                       src={`${
@@ -255,14 +255,14 @@ function Checkout() {
                 <div>
                   <input
                     type="radio"
-                    id="mastercard"
+                    id="Mastercard"
                     name="paymentMethod"
-                    value="mastercard"
+                    value="Mastercard"
                     className="ms-4"
-                    checked={selectedOption === "mastercard"}
+                    checked={selectedOption === "Mastercard"}
                     onChange={handleOptionChange}
                   />
-                  <label htmlFor="mastercard" className="ms-2">
+                  <label htmlFor="Mastercard" className="ms-2">
                     <img
                       className="checkout-payment-icon mb-2"
                       src={`${
@@ -275,14 +275,14 @@ function Checkout() {
                 <div>
                   <input
                     type="radio"
-                    id="mercadopago"
+                    id="MercadoPago"
                     name="paymentMethod"
-                    value="mercadopago"
+                    value="MercadoPago"
                     className="ms-4"
-                    checked={selectedOption === "mercadopago"}
+                    checked={selectedOption === "MercadoPago"}
                     onChange={handleOptionChange}
                   />
-                  <label htmlFor="mercadopago" className="ms-2">
+                  <label htmlFor="MercadoPago" className="ms-2">
                     <img
                       className="checkout-payment-icon mb-2"
                       src={`${
