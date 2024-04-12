@@ -43,7 +43,6 @@ function LoginAdmin() {
   };
   return (
     <>
-      <Navigation />
       <div className="bg-fondo3 p-5 ">
         <div className="container login-wrapper">
           <div className="row bg-dark-grey border-orange mt-5 ">
