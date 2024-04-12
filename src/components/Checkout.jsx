@@ -186,7 +186,7 @@ function Checkout() {
                     CVV
                   </label>
                   <input
-                    className="form-control mb-4 mt-1"
+                    className="form-control mt-1"
                     type="number"
                     id="cvv"
                     name="cvv"
@@ -194,7 +194,6 @@ function Checkout() {
                   />
                 </div>
               </div>
-
               <hr className="text-orange" />
               <div className=" fw-bold mb-3 mt-2">PAYMENT METHOD</div>
               <div className="d-flex justify-content-between">
