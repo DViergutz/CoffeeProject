@@ -1187,8 +1187,8 @@ h5 {
 }
 
 .imgLogoUticaDashboard {
-  width: 6.8rem;
-  height: 6.8rem;
+  width: auto;
+  height: 95%;
 }
 
 .navbar {
