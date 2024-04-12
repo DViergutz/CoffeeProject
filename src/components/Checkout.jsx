@@ -84,7 +84,7 @@ function Checkout() {
             {itemsInCart.length === 0 ? (
               <div className="mt-5 d-flex flex-column align-items-center justify-content-center empty-cart-1">
                 <p className=" text-center">
-                  <span className="text-orange fs-2">Oops!</span>{" "}
+                  <span className="text-orange fs-1">Oops!</span>{" "}
                 </p>
                 <p className="fs-4 text-center">
                   It seems your cart is as empty as a Monday morning before

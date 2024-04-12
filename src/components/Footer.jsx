@@ -45,7 +45,7 @@ function Footer() {
               </p>
             </div>
             <div className="col-md-4 mb-md-5 mb-4 footer-align-contact">
-              <h5 className="mb-3">Follow Us</h5>
+              <h5 className="mb-3 me-1">Follow Us</h5>
               <a
                 href="https://www.facebook.com/uticacoffeeroastingcompany"
                 target="_blank"
