@@ -22,56 +22,41 @@ function PanelAdmin() {
                 import.meta.env.VITE_BUCKETS_URL
               }/fotos_varias/logo-utica-white.png`}
               alt="imgUtica"
-              className="imgLogoUticaDashboard"
+              className="imgLogoUticaDashboard img-fluid"
             />
           </div>
 
-          <div className="">
+          <div className="d-flex align-items-start flex-column mt-5">
             <Link to="/admin" className="text-decoration-none">
               <div className="navbar">
-                <a>
-                  <img src={home} alt="" />
-                  Dashboard
-                </a>
+                <i className="bi bi-house"> Dashboard</i>
               </div>
             </Link>
             <Link to="/admin/admins" className="text-decoration-none">
               <div className="navbar">
-                <a>
-                  <img src={user} alt="" />
-                  Admins
-                </a>
+                <i className="bi bi-people"> Admins</i>
               </div>
             </Link>
             <Link to="/admin/products" className="text-decoration-none">
               <div className="navbar">
-                <a>
-                  <img src={bag} alt="" />
-                  Products
-                </a>
+                <i className="bi bi-backpack"> Products</i>
               </div>
             </Link>
             <Link to="/admin/users" className="text-decoration-none">
               <div className="navbar">
-                <a>
-                  <img src={user} alt="" />
-                  Users
-                </a>
+                <i className="bi bi-person"> Users</i>
               </div>
             </Link>
             <Link to="/admin/orders" className="text-decoration-none">
               <div className="navbar">
-                <a>
-                  <img src={cart} alt="" />
-                  Orders
-                </a>
+                <i className="bi bi-cart3"> Orders</i>
               </div>
             </Link>
           </div>
           <hr />
           <Link to="/" className="text-decoration-none">
             <div className="returnToWebsite">
-              <a>Return to Website</a>
+              <i class="bi bi-arrow-return-left"> Return to Website</i>
             </div>
           </Link>
         </div>
@@ -88,7 +73,7 @@ function PanelAdmin() {
           </div>
 
           {mobileNav && (
-            <div className="mobileNav">
+            <div className="mobileNav w-50">
               <div className="imgDashboard">
                 <img
                   src={`${
@@ -105,46 +90,36 @@ function PanelAdmin() {
                 onClick={() => setMobileNav(false)}
               />
               <div>
-                <Link to="/admin">
-                  <div className="navbar">
-                    <a>
-                      <img src={home} alt="" />
-                      Dashboard
-                    </a>
+                <Link to="/admin" className="text-decoration-none">
+                  <div className="navbar mt-3">
+                    <i className="bi bi-house"> Dashboard</i>
                   </div>
                 </Link>
-                <Link to="/admin/products">
+                <Link to="/admin/admins" className="text-decoration-none">
                   <div className="navbar">
-                    <a>
-                      <img src={bag} alt="" />
-                      Products
-                    </a>
+                    <i className="bi bi-people"> Admins</i>
                   </div>
                 </Link>
-                <Link to="/admin/users">
+                <Link to="/admin/products" className="text-decoration-none">
                   <div className="navbar">
-                    <a>
-                      <img src={user} alt="" />
-                      Users
-                    </a>
+                    <i className="bi bi-backpack"> Products</i>
                   </div>
                 </Link>
-                <Link to="/admin/orders">
+                <Link to="/admin/users" className="text-decoration-none">
                   <div className="navbar">
-                    <a>
-                      <img src={cart} alt="" />
-                      Orders
-                    </a>
+                    <i className="bi bi-person"> Users</i>
+                  </div>
+                </Link>
+                <Link to="/admin/orders" className="text-decoration-none">
+                  <div className="navbar">
+                    <i className="bi bi-cart3"> Orders</i>
                   </div>
                 </Link>
               </div>
               <hr />
               <div className="returnToWebsite">
-                <Link to="/">
-                  <a>
-                    {/* <img src={backHome} alt="" /> */}
-                    Return to Website
-                  </a>
+                <Link to="/" className="text-decoration-none">
+                  <i class="bi bi-arrow-return-left"> Return to Website</i>
                 </Link>
               </div>
             </div>
