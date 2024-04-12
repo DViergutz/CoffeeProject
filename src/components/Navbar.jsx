@@ -74,34 +74,32 @@ function Navigation() {
           </Nav>
 
           <Nav className="d-flex align-items-start align-items-center ">
-            <NavDropdown
-              className="navLink navDropdown"
-              title={<i className="bi bi-person-fill fs-5 "></i>}
-              id="navbarScrollingDropdown"
-            >
-              {isLogged ? (
-                <></>
-              ) : (
-                <>
-                  <NavDropdown.Item
-                    as={Link}
-                    to="/user/login"
-                    className=""
-                    onClick={() => window.scrollTo(0, 0)}
-                  >
-                    Login
-                  </NavDropdown.Item>
-                  <NavDropdown.Item
-                    as={Link}
-                    to="/user/register"
-                    className=""
-                    onClick={() => window.scrollTo(0, 0)}
-                  >
-                    Register
-                  </NavDropdown.Item>
-                </>
-              )}
-            </NavDropdown>
+            {isLogged ? (
+              <></>
+            ) : (
+              <NavDropdown
+                className="navLink navDropdown"
+                title={<i className="bi bi-person-fill fs-5 "></i>}
+                id="navbarScrollingDropdown"
+              >
+                <NavDropdown.Item
+                  as={Link}
+                  to="/user/login"
+                  className=""
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Login
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/user/register"
+                  className=""
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Register
+                </NavDropdown.Item>
+              </NavDropdown>
+            )}
             <i
               className="bi bi-cart2 fs-5 text-orange ms-2 navLink"
               onClick={() => dispatch(setIsCartOpen())}

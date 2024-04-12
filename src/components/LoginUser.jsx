@@ -57,7 +57,7 @@ function LoginUser() {
   };
 
   return (
-    <div className="vh-100 bg-fondo3">
+    <div className="vh-100 bg-fondo3 d-flex flex-colum align-items-center justify-content-center">
       <div className="p-5 ">
         <div className="container login-wrapper">
           <div className="row bg-dark-grey border-orange mt-5">
