@@ -19,7 +19,7 @@ function EditProduct() {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/products/edit/${id}`
+          `http://localhost:3000/products/${id}`
         );
         setProductData(response.data);
         console.log(response.data);
@@ -45,7 +45,7 @@ function EditProduct() {
     console.log(productData);
     try {
       const response = await axios.patch(
-        `http://localhost:3000/products/patch/${id}`,
+        `http://localhost:3000/products/${id}`,
         productData
       );
       console.log(response.data); // Handle response from server

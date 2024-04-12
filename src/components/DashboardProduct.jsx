@@ -115,7 +115,7 @@ function DashboardProduct() {
                     </td>
 
                     <td>
-                      <Link to={`/admin/products/edit/${product.id}`}>
+                      <Link to={`/admin/products/${product.id}`}>
                         <a className="">
                           <button className="btn btn-outline-warning mb-2">
                             <i className="bi bi-pen text-dark"></i>
