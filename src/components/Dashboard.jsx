@@ -59,7 +59,7 @@ function Dashboard() {
         try {
           await axios.delete(`http://localhost:3000/orders/${id}`);
           // Fetch admins again after deletion
-          const response = await axios.get("http://localhost:3000/orders");
+          const response = await axios.get("http://localhost:3000/orders/last");
           setOrders(response.data);
         } catch (error) {
           console.error("Error:", error);
@@ -70,7 +70,6 @@ function Dashboard() {
           text: "Order has been deleted.",
           icon: "success",
         });
-        navigate(0);
       }
     });
   };
