@@ -3,10 +3,12 @@ import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../redux/UserSlice.jsx";
+import { setIsCartOpen } from "../redux/CartSlice.jsx";
 
 function Navigation() {
   const isLogged = useSelector((state) => state.user.isLogged);
   const dispatch = useDispatch();
+  const isCartOpen = useSelector((state) => state.cart.isCartOpen);
 
   return (
     <Navbar expand="lg" className="navbar-collapse main-navbar">
@@ -77,14 +79,10 @@ function Navigation() {
             </Nav>
 
             <Nav className="d-flex align-items-start align-items-center ">
-              <Nav.Link
-                as={Link}
-                to="/checkout"
-                className="navLink "
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>{" "}
-              </Nav.Link>
+              <i
+                className="bi bi-cart2 fs-5 text-orange ms-2 navLink"
+                onClick={() => dispatch(setIsCartOpen())}
+              ></i>
               <Nav.Link
                 as={Link}
                 to="/admin/login"
@@ -179,14 +177,10 @@ function Navigation() {
                   Register
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link
-                as={Link}
-                to="/checkout"
-                className="navLink "
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <i className="bi bi-cart2 fs-5 text-orange ms-2"></i>{" "}
-              </Nav.Link>
+              <i
+                className="bi bi-cart2 fs-5 text-orange ms-2 navLink"
+                onClick={() => dispatch(setIsCartOpen())}
+              ></i>{" "}
               <Nav.Link
                 as={Link}
                 to="/admin/login"

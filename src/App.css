@@ -791,6 +791,7 @@ h5 {
   font-size: 12px;
   color: white;
   padding-left: 10px;
+  cursor: pointer;
 }
 
 .navLink:focus {
@@ -991,6 +992,16 @@ h5 {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.btn-hero-disabled {
+  background-color: #ee772858;
+  color: rgba(255, 255, 255, 0.351);
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  pointer-events: none;
 }
 
 .btn-hero {
