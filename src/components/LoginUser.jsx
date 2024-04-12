@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function LoginUser() {
   const dispatch = useDispatch();
-  const navigate = useNavigate(); // Initialize navigate for navigation
+  const navigate = useNavigate();
 
   // Estado local para almacenar los valores del formulario
   const [formData, setFormData] = useState({
@@ -39,7 +39,7 @@ function LoginUser() {
         "http://localhost:3000/login/tokens",
         formData
       );
-      console.log("RESPUESTA DEL SERVIDOR : " + response.data);
+      console.log("Login Response: " + response.data);
 
       const { token, userId } = response.data;
 

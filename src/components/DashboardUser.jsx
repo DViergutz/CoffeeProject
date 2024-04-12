@@ -102,7 +102,7 @@ function DashboardUser() {
                     <td>{moment(new Date(user.createdAt)).fromNow()}</td>
 
                     <td>
-                      <Link to={`/admin/users/edit/${user.id}`} className="">
+                      <Link to={`/admin/users/${user.id}`} className="">
                         <button className="btn btn-outline-warning mb-2">
                           <i className="bi bi-pen text-dark"></i>
                         </button>
