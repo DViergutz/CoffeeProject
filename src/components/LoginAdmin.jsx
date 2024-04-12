@@ -1,6 +1,46 @@
 import Navigation from "./Navbar";
+import React, { useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+
+import { Link, useNavigate } from "react-router-dom";
 
 function LoginAdmin() {
+  const navigate = useNavigate();
+  const notifyErrorLogin = () => toast("Please enter valid credentials!");
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/login/tokens/admin",
+        formData
+      );
+
+      const { token, adminId } = response.data;
+
+      if (token === undefined || adminId === undefined) {
+        notifyErrorLogin();
+      } else {
+        navigate("/admin");
+      }
+    } catch (error) {
+      console.error("Error al iniciar sesión:", error);
+    }
+  };
   return (
     <>
       <Navigation />
@@ -19,8 +59,8 @@ function LoginAdmin() {
               </div>
             </div>
             <div className="col-md-6 bg-light p-5 rounded-end">
-              <h3 className="text-dark mb-3 fw-semibold">Login</h3>
-              <form>
+              <h3 className="text-dark mb-3 fw-semibold">Login Admin</h3>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-2">
                   <label forhtml="email" className="form-label text-dark">
                     Email
@@ -30,6 +70,8 @@ function LoginAdmin() {
                     className="form-control form-control-sm"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                   <small className="text-secondary">Try: test@test.com</small>
                 </div>
@@ -46,6 +88,8 @@ function LoginAdmin() {
                     className="form-control form-control-sm"
                     id="password"
                     name="password"
+                    value={formData.password}
+                    onChange={handleChange}
                   />
                   <small className="text-secondary">Try: 123</small>
                 </div>
