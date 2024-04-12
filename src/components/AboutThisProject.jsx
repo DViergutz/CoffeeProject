@@ -45,7 +45,7 @@ function AboutThisProject() {
           </li>
         </ul>
       </div>
-      <div className="mainAboutThisProject bg-fondo3">
+      <div className=" bg-fondo3">
         <div className="hero-about">
           <div className="textAboutProject d-flex flex-column">
             <h2 className="about-heading">
