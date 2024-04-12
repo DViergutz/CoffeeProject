@@ -823,7 +823,8 @@ h5 {
 }
 
 .dropdown-item {
-  color: #f0f2dc;
+  color: #e4e4e4;
+  font-size: 0.9rem;
 }
 
 .navLink:hover {
