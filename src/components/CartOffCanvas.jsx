@@ -63,6 +63,14 @@ function CartOffCanvas() {
             <div className="col-3 text-center text-light pe-5">UNIT PRICE</div>
           </div>
           <hr className="text-orange" />
+          {itemsInCart.length === 0 ? (
+            <div className="mt-5 d-flex flex-column align-items-center">
+              <p className="fs-4">Nothing here!</p>
+              <p className="fs-4">Ready to fill your cart?</p>
+            </div>
+          ) : (
+            <div></div>
+          )}
         </div>
         {itemsInCart.map((item, index) => (
           <div className="row offcanvas-product-div ms-1 me-1 mt-3" key={index}>
@@ -161,10 +169,15 @@ function CartOffCanvas() {
           <p className="fw-semibold">TOTAL PRICE:</p>
           <p className="fs-4 me-2">${totalPrice}</p>
         </div>
-
-        <button className="btn-hero p-2 w-100 mt-4" onClick={handleCheckout}>
-          Checkout <i className="bi bi-cart"></i>
-        </button>
+        {itemsInCart.length === 0 ? (
+          <button className="btn-hero-disabled p-2 w-100 mt-4 ">
+            Checkout <i className="bi bi-cart"></i>
+          </button>
+        ) : (
+          <button className="btn-hero p-2 w-100 mt-4 " onClick={handleCheckout}>
+            Checkout <i className="bi bi-cart"></i>
+          </button>
+        )}
       </Offcanvas.Body>
     </Offcanvas>
   );
