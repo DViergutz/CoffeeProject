@@ -178,13 +178,13 @@ function CartOffCanvas() {
           </div>
         ))}
         {itemsInCart.length === 0 ? (
-          <div className="d-flex justify-content-between disabled mt-5 mx-4">
-            <p className="fw-semibold">TOTAL PRICE:</p>
+          <div className="d-flex justify-content-end disabled align-items-center mt-5 mx-4">
+            <p className="fw-semibold me-3">TOTAL PRICE:</p>
             <p className="fs-4 me-2">${totalPrice}</p>
           </div>
         ) : (
-          <div className="d-flex justify-content-between mt-5 mx-4">
-            <p className="fw-semibold">TOTAL PRICE:</p>
+          <div className="d-flex justify-content-end align-items-center mt-5 mx-4">
+            <p className="fw-semibold me-3">TOTAL PRICE:</p>
             <p className="fs-4">${totalPrice}</p>
           </div>
         )}
