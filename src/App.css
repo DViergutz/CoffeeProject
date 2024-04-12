@@ -200,6 +200,27 @@ footer {
   z-index: 1;
 }
 
+.hero-text {
+  font-size: 36px;
+  opacity: 0; /* Inicialmente, el texto estará oculto */
+  animation: slideIn 1s ease forwards; /* Animación de aparición gradual con desplazamiento */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(
+      -100%
+    ); /* Inicialmente, el texto estará fuera de la pantalla a la izquierda */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(
+      0
+    ); /* Al final, el texto estará en su posición original */
+  }
+}
+
 .background-video {
   position: relative;
   width: 100%;

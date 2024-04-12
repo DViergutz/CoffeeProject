@@ -79,7 +79,7 @@ function Home() {
             type="video/mp4"
           />
         </video>
-        <div id="hero" className="hero-section container">
+        <div id="hero" className="hero-section container hero-text">
           <div className="content-wrapper">
             <h1>Discover the Essence of Fresh Coffee</h1>
             <p className="hero-subheading">
