@@ -58,7 +58,7 @@ function CartOffCanvas() {
       <Offcanvas.Body>
         <div>
           {itemsInCart.length === 0 ? (
-            <div className="row pb-3  disabled">
+            <div className="row pb-3 disabled">
               <div className="col-4 text-center text-light">PRODUCT</div>
               <div className="col-4 text-center text-light">QUANTITY</div>
               <div className="col-4 text-center text-light">UNIT PRICE</div>

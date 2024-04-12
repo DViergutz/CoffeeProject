@@ -63,13 +63,23 @@ function Checkout() {
         </h2>
         <div className="row">
           <div className="col-md-7 pt-4 checkout-products">
-            <div className="d-flex justify-content-evenly pb-3">
-              <div className="col-3 fw-bold text-center">PRODUCT</div>
-              <div className="col-3 fw-bold text-center">UNIT PRICE</div>
-              <div className="col-3 fw-bold text-center">QUANTITY</div>
-              <div className="col-2 fw-bold text-center">TOTAL</div>
-              <div className="col-1"></div>
-            </div>
+            {itemsInCart.length === 0 ? (
+              <div className="d-flex justify-content-evenly pb-3 disabled">
+                <div className="col-3 fw-bold text-center">PRODUCT</div>
+                <div className="col-3 fw-bold text-center">UNIT PRICE</div>
+                <div className="col-3 fw-bold text-center">QUANTITY</div>
+                <div className="col-2 fw-bold text-center">TOTAL</div>
+                <div className="col-1"></div>
+              </div>
+            ) : (
+              <div className="d-flex justify-content-evenly pb-3">
+                <div className="col-3 fw-bold text-center">PRODUCT</div>
+                <div className="col-3 fw-bold text-center">UNIT PRICE</div>
+                <div className="col-3 fw-bold text-center">QUANTITY</div>
+                <div className="col-2 fw-bold text-center">TOTAL</div>
+                <div className="col-1"></div>
+              </div>
+            )}
             <hr className="text-orange" />
             {itemsInCart.length === 0 ? (
               <div className="mt-5 d-flex flex-column align-items-center justify-content-center empty-cart-1">
