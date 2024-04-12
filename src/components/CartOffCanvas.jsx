@@ -58,20 +58,16 @@ function CartOffCanvas() {
       <Offcanvas.Body>
         <div>
           {itemsInCart.length === 0 ? (
-            <div className="row pb-3 mb-4 disabled">
+            <div className="row pb-3  disabled">
               <div className="col-4 text-center text-light">PRODUCT</div>
-              <div className="col-5 text-center text-light">QUANTITY</div>
-              <div className="col-3 text-center text-light pe-5">
-                UNIT PRICE
-              </div>
+              <div className="col-4 text-center text-light">QUANTITY</div>
+              <div className="col-4 text-center text-light">UNIT PRICE</div>
             </div>
           ) : (
-            <div className="row pb-3 mb-4">
+            <div className="row pb-3">
               <div className="col-4 text-center text-light">PRODUCT</div>
-              <div className="col-5 text-center text-light">QUANTITY</div>
-              <div className="col-3 text-center text-light pe-5">
-                UNIT PRICE
-              </div>
+              <div className="col-4 text-center text-light">QUANTITY</div>
+              <div className="col-4 text-center text-light">UNIT PRICE</div>
             </div>
           )}
           <hr className="text-orange" />
@@ -93,11 +89,11 @@ function CartOffCanvas() {
                 alt=""
               />
             </div>
-            <div className="col-6 d-flex flex-column align-items-center justify-content-center">
+            <div className="col-6 d-flex flex-column align-items-center justify-content-around">
               <div>
                 <p>{item.name}</p>
               </div>
-              <div>
+              <div className="">
                 <button
                   className="btn-view-product-offcanvas"
                   onClick={() => {
@@ -157,10 +153,12 @@ function CartOffCanvas() {
                 </Toast.Body>
               </Toast>
             </div>
-            <div className="col-3 fs-5 d-flex flex-column align-items-center justify-content-center">
-              <span className=" mb-3">${item.price}</span>
+            <div className="col-3 d-flex flex-column align-items-center justify-content-around">
+              <div>
+                <p className="fs-5">${item.price}</p>
+              </div>
               <button
-                className="btn-delete-product"
+                className="btn-delete-product mb-1"
                 onClick={() => {
                   dispatch(deleteOneProduct({ id: item.id }));
 

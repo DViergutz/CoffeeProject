@@ -42,7 +42,7 @@ function LoginAdmin() {
     }
   };
   return (
-    <>
+    <div className="vh-100 bg-fondo3">
       <Navigation />
       <div className="bg-fondo3 p-5 ">
         <div className="container login-wrapper">
@@ -106,7 +106,7 @@ function LoginAdmin() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
