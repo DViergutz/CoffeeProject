@@ -77,7 +77,7 @@ function CartOffCanvas() {
               <p className="fs-4">Your cart is waiting for you!</p>
             </div>
           ) : (
-            <div></div>
+            <></>
           )}
         </div>
         {itemsInCart.map((item, index) => (

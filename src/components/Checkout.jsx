@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { incrementQuantity, decrementQuantity } from "../redux/CartSlice.jsx";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { deleteOneProduct } from "../redux/CartSlice.jsx";
@@ -71,6 +71,30 @@ function Checkout() {
               <div className="col-1"></div>
             </div>
             <hr className="text-orange" />
+            {itemsInCart.length === 0 ? (
+              <div className="mt-5 d-flex flex-column align-items-center justify-content-center empty-cart-1">
+                <p className=" text-center">
+                  <span className="text-orange fs-2">Oops!</span>{" "}
+                </p>
+                <p className="fs-4 text-center">
+                  It seems your cart is as empty as a Monday morning before
+                  coffee.{" "}
+                </p>
+                <p className="fs-4">Let's fill it up with some goodies! </p>
+                <Link
+                  to="/products/"
+                  className="text-decoration-none"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <button className="btn-hero mt-4">
+                    <i class="bi bi-arrow-left me-2"></i> Explore our products
+                  </button>
+                </Link>
+              </div>
+            ) : (
+              <></>
+            )}
+
             {itemsInCart.map((item) => (
               <div key={item.id}>
                 <div className="d-flex py-3">
@@ -272,7 +296,7 @@ function Checkout() {
               </div>
               <div className="d-flex justify-content-between ">
                 <p className="fw-bold text-dark ">Total (tax incl.):</p>
-                <p className="fw-bold text-dark">
+                <p className="fw-bold text-dark fs-5">
                   ${totalPrice ? totalPrice + 25 : 0}
                 </p>
               </div>

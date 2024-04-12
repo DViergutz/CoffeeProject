@@ -1044,6 +1044,12 @@ h5 {
     margin-bottom: 16px;
   }
 }
+
+.empty-cart-1 {
+  height: 50%;
+  margin-top: 5rem;
+}
+
 .empty-cart {
   height: 250px;
 }
