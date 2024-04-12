@@ -56,11 +56,21 @@ function Navigation() {
               title="CATEGORIES"
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item as={Link} to="/category/Flavored" className="">
-                Flavored
+              <NavDropdown.Item
+                as={Link}
+                to="/category/Flavored"
+                className=""
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                FLAVORED
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/Blends" className="">
-                Blends
+              <NavDropdown.Item
+                as={Link}
+                to="/category/Blends"
+                className=""
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                BLENDS
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
@@ -68,12 +78,24 @@ function Navigation() {
                 className=""
                 onClick={() => window.scrollTo(0, 0)}
               >
-                Single Origin
+                SINGLE ORIGIN
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
 
           <Nav className="d-flex align-items-start align-items-center ">
+            <Nav.Link
+              as={Link}
+              to="/admin/login"
+              className="navLink"
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              ADMIN
+            </Nav.Link>
+            <i
+              className="bi bi-cart2 fs-5 text-orange ms-3 navLink"
+              onClick={() => dispatch(setIsCartOpen())}
+            ></i>{" "}
             {isLogged ? (
               <></>
             ) : (
@@ -88,7 +110,7 @@ function Navigation() {
                   className=""
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Login
+                  LOGIN
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   as={Link}
@@ -96,22 +118,10 @@ function Navigation() {
                   className=""
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Register
+                  REGISTER
                 </NavDropdown.Item>
               </NavDropdown>
             )}
-            <i
-              className="bi bi-cart2 fs-5 text-orange ms-2 navLink"
-              onClick={() => dispatch(setIsCartOpen())}
-            ></i>{" "}
-            <Nav.Link
-              as={Link}
-              to="/admin/login"
-              className="navLink"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              ADMIN
-            </Nav.Link>
             {isLogged ? (
               <Nav.Link
                 as={Link}
