@@ -994,8 +994,12 @@ h5 {
   background-repeat: no-repeat;
 }
 
+.disabled {
+  opacity: 0.2;
+}
+
 .btn-hero-disabled {
-  background-color: #ee772858;
+  background-color: #ee772838;
   color: rgba(255, 255, 255, 0.351);
   border: none;
   padding: 15px 30px;
@@ -1025,6 +1029,9 @@ h5 {
     padding: 8px 16px;
     margin-bottom: 16px;
   }
+}
+.empty-cart {
+  height: 250px;
 }
 
 .btn-cart {
