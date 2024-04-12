@@ -56,10 +56,20 @@ function Navigation() {
               title="CATEGORIES"
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item as={Link} to="/category/Flavored" className="">
+              <NavDropdown.Item
+                as={Link}
+                to="/category/Flavored"
+                className=""
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Flavored
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/Blends" className="">
+              <NavDropdown.Item
+                as={Link}
+                to="/category/Blends"
+                className=""
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Blends
               </NavDropdown.Item>
               <NavDropdown.Item
