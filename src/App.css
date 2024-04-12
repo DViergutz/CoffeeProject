@@ -771,7 +771,7 @@ h5 {
 
 .main-navbar {
   height: 126px;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
