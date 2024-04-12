@@ -110,7 +110,7 @@ function DashboardProduct() {
                           product.image
                         }`}
                         alt=""
-                        style={{ width: "80px", height: "100px" }} // Adjust width and height as needed
+                        style={{ maxWidth: "80px", maxHeight: "100px" }} // Adjust width and height as needed
                       />
                     </td>
 

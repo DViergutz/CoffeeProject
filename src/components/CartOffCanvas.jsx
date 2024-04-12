@@ -57,16 +57,28 @@ function CartOffCanvas() {
       </Offcanvas.Header>
       <Offcanvas.Body>
         <div>
-          <div className="row pb-3 mb-4">
-            <div className="col-4 text-center text-light">PRODUCT</div>
-            <div className="col-5 text-center text-light">QUANTITY</div>
-            <div className="col-3 text-center text-light pe-5">UNIT PRICE</div>
-          </div>
+          {itemsInCart.length === 0 ? (
+            <div className="row pb-3 mb-4 disabled">
+              <div className="col-4 text-center text-light">PRODUCT</div>
+              <div className="col-5 text-center text-light">QUANTITY</div>
+              <div className="col-3 text-center text-light pe-5">
+                UNIT PRICE
+              </div>
+            </div>
+          ) : (
+            <div className="row pb-3 mb-4">
+              <div className="col-4 text-center text-light">PRODUCT</div>
+              <div className="col-5 text-center text-light">QUANTITY</div>
+              <div className="col-3 text-center text-light pe-5">
+                UNIT PRICE
+              </div>
+            </div>
+          )}
           <hr className="text-orange" />
           {itemsInCart.length === 0 ? (
-            <div className="mt-5 d-flex flex-column align-items-center">
-              <p className="fs-4">Nothing here!</p>
-              <p className="fs-4">Ready to fill your cart?</p>
+            <div className="mt-5 d-flex flex-column align-items-center justify-content-center empty-cart">
+              <p className="fs-4">Ready to shop?</p>
+              <p className="fs-4">Your cart is waiting for you!</p>
             </div>
           ) : (
             <div></div>
@@ -165,12 +177,19 @@ function CartOffCanvas() {
             <hr className="text-orange mt-4" />
           </div>
         ))}
-        <div className="mt-5 text-light d-flex justify-content-between align-items-center mx-4">
-          <p className="fw-semibold">TOTAL PRICE:</p>
-          <p className="fs-4 me-2">${totalPrice}</p>
-        </div>
         {itemsInCart.length === 0 ? (
-          <button className="btn-hero-disabled p-2 w-100 mt-4 ">
+          <div className="d-flex justify-content-end disabled align-items-center mt-5 mx-4">
+            <p className="fw-semibold me-3">TOTAL PRICE:</p>
+            <p className="fs-4 me-2">${totalPrice}</p>
+          </div>
+        ) : (
+          <div className="d-flex justify-content-end align-items-center mt-5 mx-4">
+            <p className="fw-semibold me-3">TOTAL PRICE:</p>
+            <p className="fs-4">${totalPrice}</p>
+          </div>
+        )}
+        {itemsInCart.length === 0 ? (
+          <button className="btn-hero-disabled p-2 w-100 mt-4">
             Checkout <i className="bi bi-cart"></i>
           </button>
         ) : (
