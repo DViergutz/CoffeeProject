@@ -212,7 +212,13 @@ function Checkout() {
                     onChange={handleOptionChange}
                   />
                   <label htmlFor="visa" className="ms-2">
-                    Visa
+                    <img
+                      className="checkout-payment-icon mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/visa.png`}
+                      alt=""
+                    />
                   </label>
                 </div>
                 <div>
@@ -226,7 +232,13 @@ function Checkout() {
                     onChange={handleOptionChange}
                   />
                   <label htmlFor="mastercard" className="ms-2">
-                    Mastercard
+                    <img
+                      className="checkout-payment-icon mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/master-card.png`}
+                      alt=""
+                    />
                   </label>
                 </div>
                 <div>
@@ -240,12 +252,18 @@ function Checkout() {
                     onChange={handleOptionChange}
                   />
                   <label htmlFor="mercadopago" className="ms-2">
-                    Mercado Pago
+                    <img
+                      className="checkout-payment-icon mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/mercado-pago.png`}
+                      alt=""
+                    />
                   </label>
                 </div>
-                <hr className="text-orange mt-4" />
               </div>
             </form>
+            <hr className="text-orange mt-2" />
             <div className=" fw-bold mb-4 mt-2">PAYMENT SUMMARY</div>
             <div className="">
               <div className="d-flex justify-content-between">

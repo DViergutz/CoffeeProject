@@ -1439,6 +1439,12 @@ h5 {
 }
 
 /* Checkout Section */
+.checkout-payment-icon {
+  width: 45px;
+  height: auto;
+  opacity: 1;
+}
+
 .h2-checkout {
   padding-top: 32px;
 }
