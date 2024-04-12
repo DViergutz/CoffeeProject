@@ -123,9 +123,15 @@ function DashboardOrder() {
                         }
                         required
                       >
-                        <option value="Pending">Pending</option>
-                        <option value="Processing">Processing</option>
-                        <option value="Delivered">Delivered</option>
+                        <option value="Pending" style={{ color: "red" }}>
+                          Pending
+                        </option>
+                        <option value="Processing" style={{ color: "blue" }}>
+                          Processing
+                        </option>
+                        <option value="Delivered" style={{ color: "green" }}>
+                          Delivered
+                        </option>
                       </select>
                     </td>
                     <td>{moment(new Date(order.createdAt)).fromNow()}</td>
