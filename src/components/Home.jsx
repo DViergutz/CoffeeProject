@@ -123,7 +123,7 @@ function Home() {
             </div>
             <div className=" ms-3">
               {" "}
-              <h5 className="fw-semibold">The Utica Coffe Brand</h5>
+              <h5 className="fw-semibold">The Utica Coffee Brand</h5>
               <p className="about-paragraph">
                 Synonymous with the best qualities of Utica itself: simplicity,
                 a no-nonsense attitude, and a richness of unique, shared
