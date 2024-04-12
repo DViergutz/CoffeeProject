@@ -22,6 +22,7 @@ import DashboardAdmin from "./components/DashboardAdmin";
 import DashboardEditAdmin from "./components/DashboardEditAdmin";
 import DashboardCreateAdmin from "./components/DashboardCreateAdmin";
 import LoginAdmin from "./components/LoginAdmin";
+import LogLayout from "./components/LogLayout";
 
 const router = createBrowserRouter([
   {
@@ -49,10 +50,6 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <Checkout />,
-      },
-      {
-        path: "/about-this-project",
-        element: <AboutThisProject />,
       },
     ],
   },
@@ -110,17 +107,29 @@ const router = createBrowserRouter([
 
     // ---------- FIN DASHBOARD ADMIN ----------
   },
+
   {
-    path: "/admin/login",
-    element: <LoginAdmin />,
-  },
-  {
-    path: "/user/register",
-    element: <Signup />,
-  },
-  {
-    path: "/user/login",
-    element: <LoginUser />,
+    path: "/",
+    element: <LogLayout />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        path: "/admin/login",
+        element: <LoginAdmin />,
+      },
+      {
+        path: "/user/register",
+        element: <Signup />,
+      },
+      {
+        path: "/user/login",
+        element: <LoginUser />,
+      },
+      {
+        path: "/about-this-project",
+        element: <AboutThisProject />,
+      },
+    ],
   },
 ]);
 
