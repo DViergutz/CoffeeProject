@@ -4,6 +4,7 @@ import { incrementQuantity, decrementQuantity } from "../redux/CartSlice.jsx";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { deleteOneProduct } from "../redux/CartSlice.jsx";
 
 function Checkout() {
   const dispatch = useDispatch();
@@ -56,61 +57,92 @@ function Checkout() {
  */
   return (
     <div className="bg-fondo3">
-      <div className="container pb-5">
-        <h2>Shopping Cart</h2>
+      <div className="container pb-5 checkout-section">
+        <h2 className="h2-checkout">
+          Shopping <span className="text-orange"> Cart</span>
+        </h2>
         <div className="row">
-          <div className="col-md-8 bg-light border rounded pt-4 checkout-products">
+          <div className="col-md-7 pt-4 checkout-products">
             <div className="d-flex justify-content-evenly pb-3">
-              <div className="col fw-bold text-center">PRODUCT</div>
-              <div className="col fw-bold text-center">PRICE</div>
-              <div className="col fw-bold text-center">QUANTITY</div>
-              <div className="col fw-bold text-center">TOTAL</div>
+              <div className="col-3 fw-bold text-center">PRODUCT</div>
+              <div className="col-3 fw-bold text-center">UNIT PRICE</div>
+              <div className="col-3 fw-bold text-center">QUANTITY</div>
+              <div className="col-2 fw-bold text-center">TOTAL</div>
+              <div className="col-1"></div>
             </div>
+            <hr className="text-orange" />
             {itemsInCart.map((item) => (
               <div key={item.id}>
-                <hr className="text-orange" />
                 <div className="d-flex py-3">
-                  <div className="col fw-semibold d-flex justify-content-center align-items-center img-checkout"></div>
-                  <div className="col fw-semibold d-flex justify-content-center align-items-center">
+                  <div className="col-3 fw-semibold d-flex justify-content-center align-items-center">
+                    <img
+                      className="img-checkout"
+                      src={`${import.meta.env.VITE_BUCKETS_URL}/${item.image}`}
+                      alt=""
+                    />
+                  </div>
+                  <div className="col-3 fw-semibold d-flex justify-content-center align-items-center">
                     ${item.price}
                   </div>
-                  <div className="col fw-semibold d-flex justify-content-center align-items-center">
-                    <div className="d-flex flex-column align-items-center">
-                      <div className="d-flex ">
+                  <div className="col-3 fw-semibold d-flex justify-content-center align-items-center">
+                    <div>
+                      {item.quantity === 1 ? (
+                        <i className="bi bi-dash-circle fs-8 text-secondary btn-view-product-offcanvas-disabled"></i>
+                      ) : (
                         <button
                           className="btn-view-product-offcanvas"
-                          onClick={() =>
+                          onClick={() => {
                             dispatch(
                               decrementQuantity({
-                                id: item.id,
-                              })
-                            )
-                          }
-                        >
-                          <i className="bi bi-dash-circle fs-8"></i>
-                        </button>
-                        <span className="qty-box">{item.quantity}</span>
-                        <button
-                          className="btn-view-product-offcanvas"
-                          onClick={() =>
-                            dispatch(
-                              incrementQuantity({
                                 name: item.name,
                                 id: item.id,
                                 price: item.price,
                                 image: item.image,
-                                stock: item.stock,
                               })
-                            )
-                          }
+                            );
+                          }}
                         >
-                          <i className="bi bi-plus-circle fs-8"></i>
+                          <i className="bi bi-dash-circle fs-8 text-light"></i>
                         </button>
-                      </div>
+                      )}
+
+                      <span className="qty-box">{item.quantity}</span>
+                      <button
+                        className="btn-view-product-offcanvas"
+                        onClick={() =>
+                          dispatch(
+                            incrementQuantity({
+                              name: item.name,
+                              id: item.id,
+                              price: item.price,
+                              image: item.image,
+                              stock: item.stock,
+                            })
+                          )
+                        }
+                      >
+                        <i className="bi bi-plus-circle fs-8 text-light"></i>
+                      </button>
                     </div>
                   </div>
-                  <div className="col fw-semibold d-flex justify-content-center align-items-center">
+                  <div className="col-2 fw-semibold d-flex justify-content-center align-items-center fs-5">
                     ${item.price * item.quantity}
+                  </div>
+                  <div className="col-1 d-flex justify-content-center align-items-center">
+                    <button
+                      className="btn-delete-product mb-1"
+                      onClick={() => {
+                        dispatch(deleteOneProduct({ id: item.id }));
+
+                        // Check if itemsInCart will be empty after deleting
+                        if (itemsInCart.length === 1) {
+                          // If it will be empty, close the off-canvas
+                          dispatch(setIsCartOpen(false));
+                        }
+                      }}
+                    >
+                      <i className="bi bi-trash3"></i>
+                    </button>
                   </div>
                 </div>
                 <hr className="text-orange" />
@@ -222,7 +254,7 @@ function Checkout() {
               </div>
               <div className="d-flex justify-content-between">
                 <p className="fw-semibold text-dark">Shipping:</p>
-                <p className="text-dark">$25.00</p>
+                <p className="text-dark">$25</p>
               </div>
               <div className="d-flex justify-content-between ">
                 <p className="fw-bold text-dark ">Total (tax incl.):</p>
@@ -230,12 +262,21 @@ function Checkout() {
                   ${totalPrice ? totalPrice + 25 : 0}
                 </p>
               </div>
-              <button
-                className="btn-hero w-100 mt-4"
-                onClick={handleCreateOrder}
-              >
-                Checkout<i className="ms-2 bi bi-lock-fill"></i>
-              </button>
+              {itemsInCart.length === 0 ? (
+                <button
+                  className="btn-hero-disabled p-2 w-100 mt-4"
+                  onClick={handleCreateOrder}
+                >
+                  Checkout<i className="ms-2 bi bi-lock-fill"></i>
+                </button>
+              ) : (
+                <button
+                  className="btn-hero p-2 w-100 mt-4"
+                  onClick={handleCreateOrder}
+                >
+                  Checkout<i className="ms-2 bi bi-lock-fill"></i>
+                </button>
+              )}
             </div>
           </div>
         </div>

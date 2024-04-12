@@ -93,24 +93,27 @@ function CartOffCanvas() {
               <div>
                 <p>{item.name}</p>
               </div>
-              <div className="">
-                <button
-                  className="btn-view-product-offcanvas"
-                  onClick={() => {
-                    if (item.quantity === 1 && itemsInCart.length === 1)
-                      dispatch(setIsCartOpen());
-                    dispatch(
-                      decrementQuantity({
-                        name: item.name,
-                        id: item.id,
-                        price: item.price,
-                        image: item.image,
-                      })
-                    );
-                  }}
-                >
-                  <i className="bi bi-dash-circle fs-8 text-light"></i>
-                </button>
+              <div>
+                {item.quantity === 1 ? (
+                  <i className="bi bi-dash-circle fs-8 text-secondary btn-view-product-offcanvas-disabled"></i>
+                ) : (
+                  <button
+                    className="btn-view-product-offcanvas"
+                    onClick={() => {
+                      dispatch(
+                        decrementQuantity({
+                          name: item.name,
+                          id: item.id,
+                          price: item.price,
+                          image: item.image,
+                        })
+                      );
+                    }}
+                  >
+                    <i className="bi bi-dash-circle fs-8 text-light"></i>
+                  </button>
+                )}
+
                 <span className="qty-box">{item.quantity}</span>
                 <button
                   className="btn-view-product-offcanvas"

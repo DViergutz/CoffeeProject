@@ -54,6 +54,16 @@
   color: white;
 }
 
+.btn-view-product-offcanvas-disabled {
+  color: rgba(0, 0, 0, 0.46);
+  border: none;
+  padding: 3px 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  background-color: transparent;
+  cursor: default;
+}
+
 .btn-view-product-offcanvas {
   background-color: transparent;
   color: #ee7828;
@@ -892,9 +902,8 @@ h5 {
 }
 
 .img-checkout {
-  height: 85px;
-  width: 20px;
-  background-image: url("https://uticacoffeeroasting.com/cdn/shop/products/Adirondack10oz_720x.png?v=1617817727");
+  height: auto;
+  width: 60px;
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1430,14 +1439,24 @@ h5 {
 }
 
 /* Checkout Section */
+.h2-checkout {
+  padding-top: 32px;
+}
+
+.checkout-section {
+  margin-top: 126px;
+}
+
 .checkout-products {
-  background-color: rgb(238, 236, 236);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid #ee77281d;
   border-radius: 10px;
   padding: 16px;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 /* background-color: rgba(0, 0, 0, 0.1);
