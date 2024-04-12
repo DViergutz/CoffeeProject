@@ -41,22 +41,23 @@
 
 .btn-delete-product {
   background-color: transparent;
-  color: #ee7728cf;
-  border: 1px solid #ee77281d;
+  color: #ffffff;
+  opacity: 0.15;
+  border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 .btn-delete-product:hover {
-  background-color: #ee7828;
+  opacity: 0.8;
   color: white;
 }
 
 .btn-view-product-offcanvas {
   background-color: transparent;
   color: #ee7828;
-  border: 1px solid #ee77281d;
+  border: none;
   padding: 3px 10px;
   font-size: 16px;
   border-radius: 50px;
@@ -770,7 +771,7 @@ h5 {
 
 .main-navbar {
   height: 126px;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -1189,8 +1190,8 @@ h5 {
 }
 
 .imgLogoUticaDashboard {
-  width: 6.8rem;
-  height: 6.8rem;
+  width: auto;
+  height: 95%;
 }
 
 .navbar {
@@ -1456,7 +1457,7 @@ h5 {
 
 .login-wrapper {
   max-width: 1000px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .border-orange {

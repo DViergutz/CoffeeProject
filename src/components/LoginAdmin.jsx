@@ -42,7 +42,7 @@ function LoginAdmin() {
     }
   };
   return (
-    <>
+    <div className="vh-100 bg-fondo3">
       <div className="bg-fondo3 p-5 ">
         <div className="container login-wrapper">
           <div className="row bg-dark-grey border-orange mt-5 ">
@@ -105,7 +105,7 @@ function LoginAdmin() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
