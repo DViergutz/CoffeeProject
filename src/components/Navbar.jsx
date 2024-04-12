@@ -38,7 +38,7 @@ function Navigation() {
             <Nav.Link
               as={Link}
               to="/about-this-project"
-              className="navLink bounce-text"
+              className="navLink"
               onClick={() => window.scrollTo(0, 0)}
             >
               ABOUT THIS PROJECT

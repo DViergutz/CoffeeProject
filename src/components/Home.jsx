@@ -112,10 +112,10 @@ function Home() {
             type="video/mp4"
           />
         </video>
-        <div id="hero" className="hero-section container hero-text">
+        <div id="hero" className="hero-section container ">
           <div className="content-wrapper">
-            <h1>Discover the Essence of Fresh Coffee</h1>
-            <p className="hero-subheading">
+            <h1 className="hero-text">Discover the Essence of Fresh Coffee</h1>
+            <p className="hero-subheading hero-text-1">
               Embark on a journey through our finest selection of coffee bean
               bags
             </p>
@@ -124,7 +124,7 @@ function Home() {
               className="text-decoration-none"
               onClick={() => window.scrollTo(0, 0)}
             >
-              <button className="btn-hero">
+              <button className="btn-hero hero-text-2">
                 Explore our products <i className="bi bi-arrow-right ms-2"></i>
               </button>
             </Link>
