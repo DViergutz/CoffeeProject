@@ -241,7 +241,7 @@ function Home() {
           </div>
         </div>{" "}
       </div>{" "}
-      <div id="categories" ref={categories} className="main-section">
+      <div id="categories" ref={categories} className="main-section-categories">
         <div className="splash">
           {" "}
           <img

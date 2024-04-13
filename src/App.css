@@ -129,7 +129,7 @@ footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-.logo-footer {
+total .logo-footer {
   height: 150px;
   width: auto;
   background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png");
@@ -413,6 +413,16 @@ h5 {
   min-height: 100vh;
   width: 100%;
   padding: 120px 10% 32px 10%;
+}
+
+.main-section-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  width: 100%;
+  padding: 180px 10% 32px 10%;
 }
 
 @media (max-width: 940px) {
