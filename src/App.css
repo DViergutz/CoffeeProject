@@ -430,6 +430,16 @@ h5 {
   min-height: 100vh;
 }
 
+.main-about {
+  min-height: 100vh;
+}
+
+@media (max-width: 991px) {
+  .main-about {
+    min-height: 80vh;
+  }
+}
+
 .about-wrapper {
   display: flex;
   flex-direction: column;
@@ -447,12 +457,10 @@ h5 {
   }
 }
 
-.about-info {
-  max-width: 700px;
+.about-info-1 {
+  text-align: start;
+  max-width: 620px;
   margin-bottom: 32px;
-}
-.about-info p {
-  text-align: left;
 }
 
 .imgCardAbout {
@@ -647,13 +655,12 @@ h5 {
 
 /* About section */
 .about-heading-3 {
-  text-align: center;
+  text-align: start;
   margin-top: 90px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 @media (min-width: 991px) {
   .about-heading-3 {
-    text-align: start;
     margin-top: 126px;
   }
 }

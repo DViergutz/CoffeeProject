@@ -49,7 +49,7 @@ function AboutThisProject() {
         <div className="hero-about">
           <div className="container">
             <div className="textAboutProject d-flex flex-column">
-              <h2 className="about-heading-2">
+              <h2 className="about-heading-3">
                 What Is <span className="text-orange">Utica </span>Coffee?
               </h2>
               <p className="about-subheading">
@@ -78,32 +78,33 @@ function AboutThisProject() {
           </div>
         </div>
         <div className="container main" ref={technologies}>
-          <div className="about-info d-flex flex-column align-items-start">
+          <div className=" d-flex flex-column align-items-start">
             <h2 className="about-heading-3">
               Technologies<span className="text-orange"> & </span> Tools
             </h2>
-
-            <p>
-              During our coding bootcamp journey, we immersed ourselves in a
-              diverse array of technologies spanning both backend and frontend
-              development. We actively engaged with databases, honing our
-              skills, and employed practical tools to streamline our workflow
-              effectively.
-            </p>
-            <p>
-              Our project underwent meticulous segmentation into three sprints,
-              with Github serving as our central collaboration hub. Discord
-              emerged as an indispensable platform, enabling seamless
-              communication throughout every phase of the development journey.
-            </p>
-            <p>
-              In pursuit of heightened productivity for this project, we curated
-              a select ensemble of tools designed to elevate our efficiency and
-              innovation.
-            </p>
+            <div className="about-info-1">
+              <p>
+                During our coding bootcamp journey, we immersed ourselves in a
+                diverse array of technologies spanning both backend and frontend
+                development. We actively engaged with databases, honing our
+                skills, and employed practical tools to streamline our workflow
+                effectively.
+              </p>
+              <p>
+                Our project underwent meticulous segmentation into three
+                sprints, with Github serving as our central collaboration hub.
+                Discord emerged as an indispensable platform, enabling seamless
+                communication throughout every phase of the development journey.
+              </p>
+              <p>
+                In pursuit of heightened productivity for this project, we
+                curated a select ensemble of tools designed to elevate our
+                efficiency and innovation.
+              </p>
+            </div>
           </div>
           <div>
-            <div className="about-info">
+            <div>
               <div className="row row-cols-2 row-cols-md-5 g-4">
                 <div className="col">
                   <div className="d-flex flex-column align-items-center p-4">
@@ -229,23 +230,25 @@ function AboutThisProject() {
             </div>
           </div>
         </div>
-        <div className="container main" ref={mapping}>
-          <div className="about-info text-center d-flex flex-column align-items-center">
-            <div className="text-center w-100">
-              <h2 className="text-light ">
+        <div className="container main-about" ref={mapping}>
+          <div className=" text-center d-flex flex-column align-items-start">
+            <div>
+              <h2 className="about-heading-3">
                 Mapping <span className="text-orange">User Flow</span>
               </h2>
             </div>
-            <p>
-              Diving deep into the essence of our website, we meticulously chart
-              out the various perspectives, understanding the natural flow each
-              page should embody. From the moment you click, every button leads
-              purposefully to its corresponding section, ensuring a fluid
-              journey that keeps you engaged without any hitches. We prioritize
-              user experience as much as we do the design of our interfaces,
-              striving for a seamless, friendly flow that ensures you never feel
-              'stuck' at any point.
-            </p>
+            <div className="about-info-1">
+              <p>
+                Diving deep into the essence of our website, we meticulously
+                chart out the various perspectives, understanding the natural
+                flow each page should embody. From the moment you click, every
+                button leads purposefully to its corresponding section, ensuring
+                a fluid journey that keeps you engaged without any hitches. We
+                prioritize user experience as much as we do the design of our
+                interfaces, striving for a seamless, friendly flow that ensures
+                you never feel 'stuck' at any point.
+              </p>
+            </div>
           </div>
           <div className="container">
             <div className="row">
@@ -255,18 +258,20 @@ function AboutThisProject() {
             </div>
           </div>
         </div>
-        <div className="container main" ref={admin}>
-          <div className="about-info text-center d-flex flex-column align-items-center">
-            <div className="text-center w-100">
-              <h2 className="text-light ">
+        <div className="container main-about" ref={admin}>
+          <div className="text-center d-flex flex-column align-items-start">
+            <div>
+              <h2 className="about-heading-3">
                 <span className="text-orange">Admin </span> Dashboard
               </h2>
             </div>
-            <p>
-              In our e-commerce platform, the admin dashboard enables users to
-              delete, update, or create products, categories, and customers,
-              while also providing oversight of order statuses.
-            </p>
+            <div className="about-info-1">
+              <p>
+                In our e-commerce platform, the admin dashboard enables users to
+                delete, update, or create products, categories, and customers,
+                while also providing oversight of order statuses.
+              </p>
+            </div>
           </div>
           <div className="container">
             <div className="row">
@@ -277,18 +282,20 @@ function AboutThisProject() {
           </div>
         </div>
         <div className="container main" ref={team}>
-          <div className="about-info text-center d-flex flex-column align-items-center">
+          <div className=" text-center d-flex flex-column align-items-start">
             <div className="text-center w-100">
-              <h2 className="text-light ">
+              <h2 className="about-heading-3">
                 <span className="text-orange">Meet </span> Our Team
               </h2>
             </div>
-            <p>
-              Discover the Faces Behind Our Success! Get to know the talented
-              individuals who bring creativity, expertise, and passion to our
-              team. Meet our dedicated team members below and learn more about
-              their unique contributions.
-            </p>
+            <div className="about-info-1">
+              <p>
+                Discover the Faces Behind Our Success! Get to know the talented
+                individuals who bring creativity, expertise, and passion to our
+                team. Meet our dedicated team members below and learn more about
+                their unique contributions.
+              </p>
+            </div>
           </div>
           <div className="text-center d-flex flex-column align-items-center ">
             <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4 justify-content-between p-0">
