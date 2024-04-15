@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { incrementQuantity, decrementQuantity } from "../redux/CartSlice.jsx";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 function Checkout() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const itemsInCart = useSelector((state) => state.cart.inCart);
+  const user = useSelector((state) => state.user);
 
   const totalPrice = itemsInCart.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -17,6 +23,37 @@ function Checkout() {
     setSelectedOption(event.target.value);
   };
 
+  const handleCreateOrder = async () => {
+    if (user.isLogged) {
+      try {
+        const response = await axios({
+          method: "post",
+          url: `http://localhost:3000/orders`,
+          data: {
+            user,
+            itemsInCart,
+            method: selectedOption,
+            totalPrice,
+          },
+        });
+        console.log(response.data);
+        Swal.fire({
+          title: "Thank you for placing order!",
+          text: "We will keep you updated about the state of your order.",
+          icon: "success",
+          footer: '<a href="/">Return to Home</a>',
+        });
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    } else {
+      navigate("/user/login");
+    }
+  };
+  /*   useEffect(() => {
+     window.scrollTo(0, 0);
+  }, []);
+ */
   return (
     <div className="bg-fondo3">
       <div className="container pb-5">
@@ -39,7 +76,7 @@ function Checkout() {
                   </div>
                   <div className="col fw-semibold d-flex justify-content-center align-items-center">
                     <div className="d-flex flex-column align-items-center">
-                      <div className="d-flex border p-1">
+                      <div className="d-flex ">
                         <button
                           className="btn-view-product-offcanvas"
                           onClick={() =>
@@ -50,7 +87,7 @@ function Checkout() {
                             )
                           }
                         >
-                          <i className="bi bi-dash-circle fs-8 text-light"></i>
+                          <i className="bi bi-dash-circle fs-8"></i>
                         </button>
                         <span className="qty-box">{item.quantity}</span>
                         <button
@@ -67,7 +104,7 @@ function Checkout() {
                             )
                           }
                         >
-                          <i className="bi bi-plus-circle fs-8 text-light"></i>
+                          <i className="bi bi-plus-circle fs-8"></i>
                         </button>
                       </div>
                     </div>
@@ -193,7 +230,10 @@ function Checkout() {
                   ${totalPrice ? totalPrice + 25 : 0}
                 </p>
               </div>
-              <button className="btn-hero w-100 mt-4">
+              <button
+                className="btn-hero w-100 mt-4"
+                onClick={handleCreateOrder}
+              >
                 Checkout<i className="ms-2 bi bi-lock-fill"></i>
               </button>
             </div>

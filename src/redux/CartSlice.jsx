@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useDispatch } from "react-redux";
 
 const cartSlice = createSlice({
   name: "cart",
@@ -7,6 +8,7 @@ const cartSlice = createSlice({
     inCart: [],
     showToast: false,
   },
+
   reducers: {
     decrementQuantity: (state, action) => {
       const { id } = action.payload;
@@ -40,6 +42,29 @@ const cartSlice = createSlice({
             if (item.quantity + 1 <= action.payload.stock) {
               return { ...item, quantity: item.quantity + 1 };
             } else {
+              return item; /* STOCK REACHED --- apply toastify */
+            }
+          }
+          return item;
+        });
+        return { ...state, inCart: cart };
+      } else {
+        if (action.payload.stock > 0) {
+          return {
+            ...state,
+            inCart: [...state.inCart, { ...action.payload, quantity: 1 }],
+          };
+        } else {
+          return state; /* STOCK 0 ---apply toast */
+        }
+      }
+    },
+
+    /*         const cart = state.inCart.map((item, index) => {
+          if (index === itemIndex) {
+            if (item.quantity + 1 <= action.payload.stock) {
+              return { ...item, quantity: item.quantity + 1 };
+            } else {
               return item;
             }
           }
@@ -62,7 +87,7 @@ const cartSlice = createSlice({
           return state;
         }
       }
-    },
+    }, */
 
     setIsCartOpen: (state) => {
       state.isCartOpen = !state.isCartOpen;
@@ -70,6 +95,26 @@ const cartSlice = createSlice({
 
     setShowToast: (state, action) => {
       state.showToast = action.payload;
+    },
+
+    deleteOneProduct: (state, action) => {
+      const { id } = action.payload;
+      const itemIndex = state.inCart.findIndex(
+        (product) => product.id === action.payload.id
+      );
+
+      if (itemIndex >= 0) {
+        const updatedCart = [...state.inCart];
+
+        updatedCart.splice(itemIndex, 1);
+
+        return {
+          ...state,
+          inCart: updatedCart,
+        };
+      } else {
+        return state;
+      }
     },
   },
 });
@@ -83,6 +128,7 @@ export const {
   decrementQuantity,
   setIsCartOpen,
   setShowToast,
+  deleteOneProduct,
 } = actions;
 
 export default reducer;

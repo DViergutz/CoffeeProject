@@ -71,7 +71,7 @@ const router = createBrowserRouter([
         element: <DashboardProduct />,
       },
       {
-        path: "/admin/products/edit/:id",
+        path: "/admin/products/:id",
         element: <DashboardEditProduct />,
       },
       {
@@ -83,7 +83,7 @@ const router = createBrowserRouter([
         element: <DashboardUser />,
       },
       {
-        path: "/admin/users/edit/:id",
+        path: "/admin/users/:id",
         element: <DashboardEditUser />,
       },
       {

@@ -10,25 +10,47 @@
 
 /* 
 /////////// OFFCANVAS////////// */
+.close-offcanvas {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.close-offcanvas:hover {
+  color: #ee7728cf;
+}
+
 .offcanvas {
-  background-color: #111111;
+  background-color: #121212;
   width: 25% !important;
   min-width: 360px !important;
 }
 .offcanvas-title {
   color: white;
-  text-align: center;
 }
 .offcanvas-product-div {
   color: rgb(233, 228, 218);
   margin-bottom: 15px;
   padding-bottom: 20px;
-  border-bottom: 0.5px solid #ee772865;
 }
+
 .qty-box {
   margin: 10px;
-  height: 40px;
+  height: 20px;
   max-width: 70px;
+}
+
+.btn-delete-product {
+  background-color: transparent;
+  color: #ee7728cf;
+  border: 1px solid #ee77281d;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-delete-product:hover {
+  background-color: #ee7828;
+  color: white;
 }
 
 .btn-view-product-offcanvas {
@@ -233,8 +255,11 @@ h2 {
 
 @media (max-width: 940px) {
   h2 {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 48px;
+  }
+  .hero-about p {
+    font-size: 17px;
   }
 }
 
@@ -295,7 +320,7 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -160px;
+  margin-top: -80px;
   overflow: hidden;
 }
 
@@ -333,12 +358,6 @@ h5 {
   }
 }
 
-@media (max-width: 576px) {
-  .main-section-everything-starts-with-coffee {
-    padding: 80px 16px 16px 16px;
-  }
-}
-
 .main-section {
   display: flex;
   flex-direction: column;
@@ -346,7 +365,7 @@ h5 {
   justify-content: start;
   min-height: 100vh;
   width: 100%;
-  padding: 120px 10% 32px 10%;
+  padding: 120px 13vw 32px 13vw;
 }
 
 @media (max-width: 940px) {
@@ -357,7 +376,7 @@ h5 {
 
 @media (max-width: 576px) {
   .main-section {
-    padding: 80px 16px 16px 16px;
+    padding: 80px 50px 16px 50px;
   }
 }
 
@@ -458,7 +477,7 @@ h5 {
 }
 
 .category-card:hover::before {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .category-title {
@@ -565,7 +584,7 @@ h5 {
   height: 120px;
   width: auto;
   margin-right: 32px;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .about-paragraph {
@@ -621,8 +640,20 @@ h5 {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .btn-view-product:hover {
+  background-color: #ee7828;
+  color: white;
+}
+
+.btn-view-product-logout {
+  background-color: transparent;
+  color: #ee7828;
+  border: 1px solid #ee77281d;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-view-product-logout:hover {
   background-color: #ee7828;
   color: white;
 }
@@ -766,6 +797,16 @@ h5 {
 .navLink.navDropdown .dropdown-item:hover,
 .navLink.navDropdown .dropdown-item:active {
   color: #d96c21 !important;
+  background-color: transparent !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+  background-color: #121212;
+  border: 0.5px solid #ee77281d;
+}
+
+.dropdown-item {
+  color: #f0f2dc;
 }
 
 .navLink:hover {
@@ -900,10 +941,12 @@ h5 {
     height: 200px;
   }
 }
+
 .admin-panel-img {
   height: 650px;
   width: 100%;
   background-image: url("https://unicornbeer.vercel.app/assets/Admin_dashboard-82c3d7dc.png");
+  /* background-image: url(`${import.meta.env.VITE_BUCKETS_URL}/fotos_varias/panel-admin-idea.png`); */
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1034,15 +1077,21 @@ h5 {
   transition: transform 0.3s ease;
 }
 
+.orangeBold {
+  font-weight: bold;
+  color: #d96c21 !important;
+}
+
 .about-icons:hover {
   transform: translateY(-12px);
 }
 .hoverSocial {
   color: white;
+  transition: color 0.3s ease;
 }
 
 .hoverSocial:hover {
-  color: #d96c21;
+  color: #0a66c2;
 }
 
 .card-img-top {
@@ -1137,10 +1186,6 @@ h5 {
   color: white;
   padding: 10px 16px;
   text-decoration: none;
-}
-
-.navbar a:hover {
-  background-color: #555;
 }
 
 .imgDashboard {
@@ -1353,14 +1398,26 @@ h5 {
     left: 80vw;
     width: 3rem;
   }
+}
 
+@media screen and (max-width: 550px) {
+  /* ABOUT THIS PROJECT*/
+
+  .textAboutProject p {
+    font-size: 16px;
+  }
+  .textAboutProject h2 {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 485px) {
   /* ABOUT THIS PROJECT*/
 
   .textAboutProject p {
     font-size: 14px;
   }
   .textAboutProject h2 {
-    font-size: 45px;
+    font-size: 40px;
   }
 }
 

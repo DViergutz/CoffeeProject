@@ -1,10 +1,24 @@
 import React from "react";
-
+import { useRef } from "react";
 import Gaston from "../assets/img/Gaston.png";
 import Santiago from "../assets/img/Santiago.png";
 import David from "../assets/img/David.png";
+import ScrollToTop from "./ScrollToTop";
+import { GoDot } from "react-icons/go";
 
 function AboutThisProject() {
+  const technologies = useRef(null);
+  const mapping = useRef(null);
+  const admin = useRef(null);
+  const team = useRef(null);
+
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="mainAboutThisProject bg-fondo3">
       <div className="hero-about">
@@ -14,16 +28,21 @@ function AboutThisProject() {
           </h2>
           <p className="about-subheading">
             Utica Coffee is an e-commerce platform inspired by Utica Coffee
-            Roasting Co. Developed during a Coding Bootcamp (Intensive-full
-            practical training of approximately 600 hours in total) at Hack
-            Academy, it's a collaborative project showcasing Full Stack
-            Development skills.
+            Roasting Co. Developed during a Coding Bootcamp at Hack Academy,
+            it's a collaborative project showcasing
+            <span className="orangeBold"> Full Stack Development </span>
+            skills. A bootcamp is an intensive education program of around
+            <span className="orangeBold"> 600 hours </span>of total practice,
+            focusing on both backend and frontend technologies, aimed at
+            developing practical and technical skills. It emphasizes projects
+            and practical exercises to maximize learning.
           </p>
           <p className="about-subheading">
             Utilizing SQL, Express.js, React.js, and Node.js, the team
             collectively invested approximately 150 hours of work per member
             over the course of three weeks. The goal was to demonstrate
-            practical application of Bootcamp learnings.
+            <span className="orangeBold"> practical </span> application of
+            Bootcamp learnings.
           </p>
           <p className="about-subheading">
             The development process involved planning, design, implementation,
@@ -32,11 +51,12 @@ function AboutThisProject() {
           </p>
           <p className="about-subheading">
             Utica Coffee is a fully functional e-commerce platform reflecting
-            the team's dedication and proficiency in Full Stack Development.
+            the team's dedication and proficiency in{" "}
+            <span className="orangeBold"> Full Stack Development.</span>
           </p>
         </div>
       </div>
-      <div className="main-section ">
+      <div className="main-section">
         <div className="about-info d-flex flex-column align-items-center">
           <div className="text-center w-100">
             <h2 className="text-light ">
@@ -207,7 +227,7 @@ function AboutThisProject() {
             any point.
           </p>
         </div>
-        <div className="container">
+        <div className="container figmaCointainer">
           <div className="row">
             <div className="col">
               <div className="flow-chart-img"></div>
@@ -251,7 +271,7 @@ function AboutThisProject() {
           </p>
         </div>
         <div className="text-center d-flex flex-column align-items-center ">
-          <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4">
+          <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4 justify-content-between p-0">
             <div className="col mb-4">
               <div className="cardAbout h-100 card ">
                 <img
@@ -333,7 +353,7 @@ function AboutThisProject() {
             <div className="col mb-4">
               <div className="card h-100 cardAbout">
                 <img
-                  src={Gaston}
+                  src={David}
                   className="card-img-top cardPeople"
                   alt="Team Member 4"
                 />
@@ -348,29 +368,6 @@ function AboutThisProject() {
                     </a>
                     <a href="https://github.com/PtrSlk" className="btn">
                       <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col  mb-4">
-              <div className="card h-100 cardAbout">
-                <img
-                  src={David}
-                  className="card-img-top cardPeople"
-                  alt="Team Member 5"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Emily</h5>
-                  <h5 className="card-title">Brown</h5>
-                  <p>Full Stack Developer</p>
-                  <hr className="text-orange hrAbout" />
-                  <div className="imgCardAbout">
-                    <a href="#" className="btn">
-                      <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
-                    </a>
-                    <a href="#" className="btn">
-                      <i className="bi bi-github iconoGithub fs-2 hoverSocial"></i>
                     </a>
                   </div>
                 </div>

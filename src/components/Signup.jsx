@@ -43,13 +43,13 @@ function SignUp() {
       <Navigation />
       <div className="bg-fondo3 p-5 ">
         <div className="container login-wrapper">
-          <div className="row bg-dark-grey border-orange  ">
+          <div className="row bg-dark-grey border-orange mt-5 ">
             <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
               <div className="text-center">
                 <img
-                  src={
-                    "https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png"
-                  }
+                  src={`${
+                    import.meta.env.VITE_BUCKETS_URL
+                  }/fotos_varias/logo-utica-white.png`}
                   alt="UticaLogo"
                   className="utica-logo-login"
                 />
