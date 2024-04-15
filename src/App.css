@@ -428,10 +428,8 @@ h5 {
 }
  */
 
-@media (max-width: 576px) {
-  .main-section {
-    padding: 80px 50px 16px 50px;
-  }
+.main {
+  min-height: 100vh;
 }
 
 .about-wrapper {

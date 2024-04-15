@@ -131,7 +131,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div ref={about} className="container d-flex flex-row">
+      <div ref={about} className="container main d-flex flex-row">
         <div className="col-lg-5">
           {" "}
           <img
@@ -238,7 +238,7 @@ function Home() {
           </div>
         </div>{" "}
       </div>{" "}
-      <div id="categories" ref={categories} className="container">
+      <div id="categories" ref={categories} className="container main">
         <div className="splash">
           {" "}
           <img
@@ -286,7 +286,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="special-products" ref={specialProducts} className="">
+      <div id="special-products" ref={specialProducts} className="main">
         <div className="container">
           <div className="splash-beans">
             {" "}
