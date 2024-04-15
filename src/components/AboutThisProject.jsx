@@ -47,31 +47,34 @@ function AboutThisProject() {
       </div>
       <div className=" bg-fondo3">
         <div className="hero-about">
-          <div className="textAboutProject d-flex flex-column">
-            <h2 className="about-heading">
-              What Is <span className="text-orange">Utica </span>Coffee?
-            </h2>
-            <p className="about-subheading">
-              Utica Coffee is an e-commerce platform inspired by Utica Coffee
-              Roasting Co. Developed during a Coding Bootcamp at Hack Academy,
-              it's a collaborative project showcasing Full Stack Development
-              skills.
-            </p>
-            <p className="about-subheading">
-              Utilizing SQL, Express.js, React.js, and Node.js, the team
-              collectively invested approximately 150 hours of work per member
-              over the course of three weeks. The goal was to demonstrate
-              practical application of Bootcamp learnings.
-            </p>
-            <p className="about-subheading">
-              The development process involved planning, design, implementation,
-              testing, and deployment, emphasizing effective communication and
-              collaboration.
-            </p>
-            <p className="about-subheading">
-              Utica Coffee is a fully functional e-commerce platform reflecting
-              the team's dedication and proficiency in Full Stack Development.
-            </p>
+          <div className="container">
+            <div className="textAboutProject d-flex flex-column">
+              <h2 className="about-heading-2">
+                What Is <span className="text-orange">Utica </span>Coffee?
+              </h2>
+              <p className="about-subheading">
+                Utica Coffee is an e-commerce platform inspired by Utica Coffee
+                Roasting Co. Developed during a Coding Bootcamp at Hack Academy,
+                it's a collaborative project showcasing Full Stack Development
+                skills.
+              </p>
+              <p className="about-subheading">
+                Utilizing SQL, Express.js, React.js, and Node.js, the team
+                collectively invested approximately 150 hours of work per member
+                over the course of three weeks. The goal was to demonstrate
+                practical application of Bootcamp learnings.
+              </p>
+              <p className="about-subheading">
+                The development process involved planning, design,
+                implementation, testing, and deployment, emphasizing effective
+                communication and collaboration.
+              </p>
+              <p className="about-subheading">
+                Utica Coffee is a fully functional e-commerce platform
+                reflecting the team's dedication and proficiency in Full Stack
+                Development.
+              </p>
+            </div>
           </div>
         </div>
         <div className="main-section" ref={technologies}>

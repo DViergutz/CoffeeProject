@@ -141,7 +141,7 @@ function Home() {
           />
         </div>
         <div className="col-12 col-lg-7 z-2">
-          <h2 className="about-heading">
+          <h2 className="about-heading-1">
             Everything Starts With <span className="text-orange">Coffee</span>
           </h2>
           <div className="about-wrapper mb-md-5 mb-4">
