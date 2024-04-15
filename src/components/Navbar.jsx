@@ -12,7 +12,7 @@ function Navigation() {
 
   return (
     <Navbar expand="lg" className="navbar-collapse main-navbar">
-      <Container>
+      <div className="container">
         <Link to="/" onClick={() => window.scrollTo(0, 0)}>
           <Navbar.Brand className="m-0 p-0 brand-logo-no-hover">
             <img
@@ -141,7 +141,7 @@ function Navigation() {
             )}
           </Nav>
         </Navbar.Collapse>
-      </Container>
+      </div>
     </Navbar>
   );
 }

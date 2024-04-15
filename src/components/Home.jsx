@@ -112,7 +112,7 @@ function Home() {
             type="video/mp4"
           />
         </video>
-        <div id="hero" className="hero-section container ">
+        <div id="hero" className="hero-section container">
           <div className="content-wrapper">
             <h1 className="hero-text">Discover the Essence of Fresh Coffee</h1>
             <p className="hero-subheading hero-text-1">
@@ -131,10 +131,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div
-        ref={about}
-        className="main-section-everything-starts-with-coffee d-flex flex-row"
-      >
+      <div ref={about} className="container d-flex flex-row">
         <div className="col-lg-5">
           {" "}
           <img
@@ -143,11 +140,11 @@ function Home() {
             alt=""
           />
         </div>
-        <div className="col-lg-7 z-2">
+        <div className="col-12 col-lg-7 z-2">
           <h2 className="about-heading">
             Everything Starts With <span className="text-orange">Coffee</span>
           </h2>
-          <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
+          <div className="about-wrapper mb-md-5 mb-4">
             <div className="mr-md-3 mb-md-0 mb-3">
               <img
                 src={`${
@@ -160,13 +157,13 @@ function Home() {
             <div className="ms-3">
               {" "}
               <h5 className="fw-semibold">Our Mission</h5>
-              <p className="about-paragraph">
+              <p>
                 Every day we put into practice our belief that our community can
                 be revitalized through responsible development.
               </p>
             </div>
           </div>
-          <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
+          <div className="about-wrapper mb-md-5 mb-4">
             <div className="mr-md-3 mb-md-0 mb-3">
               <img
                 src={`${
@@ -179,14 +176,14 @@ function Home() {
             <div className=" ms-3">
               {" "}
               <h5 className="fw-semibold">The Utica Coffee Brand</h5>
-              <p className="about-paragraph">
+              <p>
                 Synonymous with the best qualities of Utica itself: simplicity,
                 a no-nonsense attitude, and a richness of unique, shared
                 culture.
               </p>
             </div>
           </div>
-          <div className=" d-flex flex-column flex-md-row align-items-center align-items-md-center mb-md-5 mb-4">
+          <div className="about-wrapper mb-md-5 mb-4">
             <div className="mr-md-3 mb-md-0 mb-3">
               <img
                 src={`${
@@ -199,7 +196,7 @@ function Home() {
             <div className=" ms-3">
               {" "}
               <h5 className="fw-semibold">The Best Part?</h5>
-              <p className="about-paragraph">
+              <p>
                 We get to roast, drink and share our phenomenal coffee in the
                 process. Time & love goes into every cup.
               </p>
@@ -241,7 +238,7 @@ function Home() {
           </div>
         </div>{" "}
       </div>{" "}
-      <div id="categories" ref={categories} className="main-section-categories">
+      <div id="categories" ref={categories} className="container">
         <div className="splash">
           {" "}
           <img
@@ -252,12 +249,12 @@ function Home() {
             className="img-splash"
           />
         </div>
-        <h2>
+        <h2 className="about-heading">
           Explore Our Coffee <span className="text-orange">Selections</span>
         </h2>
         <div className="container">
           <div className="row">
-            <div className=" col-lg-4">
+            <div className="category-item col-lg-4">
               <Link
                 to="/category/Flavored"
                 className="text-decoration-none"
@@ -268,14 +265,14 @@ function Home() {
                 </div>
               </Link>
             </div>
-            <div className="col-lg-4">
+            <div className="category-item col-lg-4">
               <Link to="/category/Blends" className="text-decoration-none">
                 <div className="category-card category-blends">
                   <h3 className="category-title">Blends</h3>
                 </div>
               </Link>
             </div>
-            <div className="col-lg-4">
+            <div className="category-item col-lg-4">
               <Link
                 to="/category/single origin"
                 className="text-decoration-none"
@@ -289,7 +286,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div id="special-products" ref={specialProducts} className="main-section">
+      <div id="special-products" ref={specialProducts} className="">
         <div className="container">
           <div className="splash-beans">
             {" "}
@@ -301,12 +298,12 @@ function Home() {
               className="img-splash-beans"
             />
           </div>
-          <h2 className="text-center">
+          <h2 className="about-heading">
             Discover Our <span className="text-orange">Special</span> Delights
           </h2>
           <div className="row">
             <div className="col-md-6 col-lg-6 col-xl-3 ">
-              <div className="d-flex flex-column h-100 ">
+              <div className="d-flex flex-column h-100 product-item">
                 <div className="special-product-card h-100 d-flex flex-column">
                   <Link to="/products/9" className="text-decoration-none">
                     <div className="special-product-1"></div>
@@ -365,7 +362,7 @@ function Home() {
               </div>
             </div>
             <div className="col-md-6 col-lg-6 col-xl-3 ">
-              <div className="d-flex flex-column h-100 ">
+              <div className="d-flex flex-column h-100 product-item">
                 <div className="special-product-card h-100 d-flex flex-column">
                   <Link
                     to="/products/3"
@@ -428,7 +425,7 @@ function Home() {
               </div>
             </div>
             <div className="col-md-6 col-lg-6 col-xl-3 ">
-              <div className="d-flex flex-column h-100 ">
+              <div className="d-flex flex-column h-100 product-item">
                 <div className="special-product-card h-100 d-flex flex-column">
                   <Link
                     to="/products/11"
@@ -491,7 +488,7 @@ function Home() {
               </div>
             </div>
             <div className="col-md-6 col-lg-6 col-xl-3 ">
-              <div className="d-flex flex-column h-100 ">
+              <div className="d-flex flex-column h-100 product-item">
                 <div className="special-product-card h-100 d-flex flex-column">
                   <Link
                     to="/products/7"
