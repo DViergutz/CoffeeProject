@@ -8,8 +8,10 @@ import { authUser } from "../redux/UserSlice.jsx";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "animate.css";
 
 function LoginUser() {
+  const [error, setError] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -21,6 +23,7 @@ function LoginUser() {
 
   // Manejar cambios en los campos del formulario
   const handleChange = (e) => {
+    setError(false);
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -28,7 +31,12 @@ function LoginUser() {
     });
   };
 
-  const notifyErrorLogin = () => toast("Please enter valid credentials!");
+  const notifyErrorLogin = () => setError(true);
+
+  /*   const notifyErrorLogin = () =>
+    toast.error("Please enter valid credentials!", { theme: "dark" });
+ */
+
   // Manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -76,12 +84,23 @@ function LoginUser() {
               <h3 className="text-dark mb-3 fw-semibold">Login</h3>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label text-dark">
+                  <label
+                    htmlFor="email"
+                    className={
+                      error
+                        ? "form-label text-dark animate__animated animate__headShake"
+                        : "form-label text-dark"
+                    }
+                  >
                     Email
                   </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className={
+                      error
+                        ? "form-control animate__animated animate__headShake inputError"
+                        : "form-control"
+                    }
                     id="email"
                     name="email"
                     value={formData.email}
@@ -89,12 +108,23 @@ function LoginUser() {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="password" className="form-label text-dark">
+                  <label
+                    htmlFor="password"
+                    className={
+                      error
+                        ? "form-label text-dark animate__animated animate__headShake"
+                        : "form-label text-dark"
+                    }
+                  >
                     Password
                   </label>
                   <input
                     type="password"
-                    className="form-control"
+                    className={
+                      error
+                        ? "form-control animate__animated animate__headShake inputError"
+                        : "form-control"
+                    }
                     id="password"
                     name="password"
                     value={formData.password}
@@ -102,12 +132,16 @@ function LoginUser() {
                   />
                 </div>
 
+                <p className={error ? "error" : "hidden"}>
+                  Please enter valid credentials!
+                </p>
                 <button
                   type="submit"
                   className="btn btn-subscribe w-100 my-3 text-light"
                 >
                   Login
                 </button>
+
                 <div className="d-flex">
                   <small className="text-dark">
                     Don't you have an Account ?{" "}

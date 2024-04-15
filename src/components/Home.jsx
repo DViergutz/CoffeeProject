@@ -24,7 +24,7 @@ function Home() {
   };
 
   const notifyNewsletter = () =>
-    toast("Action exeeded the scope of this project!");
+    toast.warn("Action exeeded the scope of this project!", { theme: "dark" });
 
   useEffect(() => {
     const handleScroll = () => {

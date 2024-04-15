@@ -7,7 +7,19 @@
 :root {
   --color: #dcb288;
 }
+/* error */
+.error {
+  color: red;
+  display: flex;
+}
 
+.hidden {
+  display: none;
+}
+
+.inputError {
+  border-color: red;
+}
 /* 
 /////////// OFFCANVAS////////// */
 .close-offcanvas {
