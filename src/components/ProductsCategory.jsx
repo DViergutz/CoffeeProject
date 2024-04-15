@@ -43,14 +43,14 @@ function ProductsCategory() {
           Coffee Selection
         </h2>
         <div className="container">
-          <div className="row mb-5 d-flex justify-content-center">
+          <div className="row mb-5 ">
             {productsOfCategory ? (
               productsOfCategory.map((product) => (
                 <div
                   className="col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center justify-content-center"
                   key={product.id}
                 >
-                  <div className="d-flex flex-column h-100  ">
+                  <div className="d-flex flex-column h-100 ">
                     <div className="special-product-card h-100 d-flex flex-column">
                       <Link
                         to={`/products/${product.id}`}

@@ -166,16 +166,19 @@ function ProductDetail() {
               </div>
             </div>
           </div>
-          <div className="relatedProducts mt-5 container">
+          <div className="relatedProducts mt-5">
             <h3 className="related-products">Related Products</h3>
             <div className="row mb-5">
               {relatedProducts ? (
                 relatedProducts.map((product) => (
-                  <div className="col-md-6 col-lg-3 " key={product.id}>
+                  <div
+                    className="col-md-6 col-lg-3 d-flex flex-column align-items-center justify-content-center"
+                    key={product.id}
+                  >
                     <div className="d-flex flex-column h-100 ">
-                      <div className="special-product-card-1 h-100 d-flex flex-column">
+                      <div className="special-product-card h-100 d-flex flex-column align-items-center justify-content-center">
                         <Card.Img
-                          className="card-img"
+                          className="card-img-top"
                           src={`${import.meta.env.VITE_BUCKETS_URL}/${
                             product.image
                           }`}

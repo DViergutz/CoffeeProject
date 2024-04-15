@@ -794,18 +794,6 @@ h5 {
   }
 }
 
-.special-product-card-1 {
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 1px solid #ee77281d;
-  border-radius: 10px;
-  padding: 16px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 16px;
-  margin-top: 80px;
-}
-
 .product-image {
   width: 100%;
   border-radius: 8px;
@@ -873,7 +861,7 @@ h5 {
   }
 }
 
-.card-img {
+/* .card-img {
   border: none !important;
   border-radius: 8px;
   width: auto;
@@ -888,7 +876,7 @@ h5 {
     width: auto;
     margin-top: -80px;
   }
-}
+} */
 
 .special-product-2 {
   background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Flavored-ChocolateAmaretto.png");
@@ -1323,6 +1311,7 @@ h5 {
 .card-img-top {
   max-width: 150px;
   height: auto;
+  margin-top: -80px;
   transition: transform 0.3s ease;
 }
 @media (min-width: 991px) {
