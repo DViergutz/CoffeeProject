@@ -297,9 +297,9 @@ function AboutThisProject() {
               </p>
             </div>
           </div>
-          <div className="text-center d-flex flex-column align-items-center ">
-            <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4 justify-content-between p-0">
-              <div className="col mb-4">
+          <div className="">
+            <div className="row">
+              <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
                 <div className="cardAbout h-100 card ">
                   <img
                     src={David}
@@ -325,7 +325,7 @@ function AboutThisProject() {
                   </div>
                 </div>
               </div>
-              <div className="col mb-4">
+              <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
                 <div className="card h-100 cardAbout">
                   <img
                     src={David}
@@ -351,7 +351,7 @@ function AboutThisProject() {
                   </div>
                 </div>
               </div>
-              <div className="col mb-4">
+              <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
                 <div className="card h-100 cardAbout">
                   <img
                     src={Gaston}
@@ -380,7 +380,7 @@ function AboutThisProject() {
                   </div>
                 </div>
               </div>
-              <div className="col mb-4">
+              <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
                 <div className="card h-100 cardAbout">
                   <img
                     src={David}
