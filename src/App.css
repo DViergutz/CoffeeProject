@@ -655,6 +655,7 @@ h5 {
 @media (min-width: 768px) {
   .about-heading {
     margin-top: 110px;
+    text-align: center;
   }
 }
 
@@ -789,6 +790,13 @@ h5 {
   margin-top: -80px;
 }
 
+@media (max-width: 568px) {
+  .special-product-1 {
+    height: 250px;
+    width: auto;
+  }
+}
+
 .card-img {
   border: none !important;
   border-radius: 8px;
@@ -815,6 +823,12 @@ h5 {
   background-repeat: no-repeat;
   margin-top: -80px;
 }
+@media (max-width: 568px) {
+  .special-product-2 {
+    height: 250px;
+    width: auto;
+  }
+}
 
 .special-product-3 {
   background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/SingleOrigin-Colombia.png");
@@ -825,6 +839,12 @@ h5 {
   background-repeat: no-repeat;
   margin-top: -80px;
 }
+@media (max-width: 568px) {
+  .special-product-3 {
+    height: 250px;
+    width: auto;
+  }
+}
 
 .special-product-4 {
   background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Blends-ItalianRoast.png");
@@ -834,6 +854,12 @@ h5 {
   height: 300px;
   background-repeat: no-repeat;
   margin-top: -80px;
+}
+@media (max-width: 568px) {
+  .special-product-4 {
+    height: 250px;
+    width: auto;
+  }
 }
 /* Blog section/newsletter */
 
