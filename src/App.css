@@ -293,14 +293,12 @@ h2 {
   color: rgb(255, 255, 255);
   font-family: myFont;
   font-size: 56px;
-  margin-bottom: 64px;
   font-weight: 600;
 }
 
 @media (max-width: 940px) {
   h2 {
     font-size: 42px;
-    margin-bottom: 48px;
   }
   .hero-about p {
     font-size: 17px;
@@ -648,36 +646,61 @@ h5 {
 }
 
 /* About section */
+.about-heading-3 {
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 32px;
+}
+@media (min-width: 991px) {
+  .about-heading-3 {
+    text-align: start;
+    margin-top: 126px;
+  }
+}
 
 .about-heading {
   text-align: center;
   margin-top: 90px;
+  margin-bottom: 64px;
 }
 
 @media (max-width: 768px) {
   .about-heading {
     margin-top: 110px;
+    margin-bottom: 64px;
   }
 }
 
 @media (min-width: 991px) {
   .about-heading {
     margin-top: 126px;
+    margin-bottom: 64px;
   }
 }
 
 .about-heading-1 {
   text-align: center;
   margin-top: 90px;
+  margin-bottom: 64px;
 }
+@media (max-width: 768px) {
+  .about-heading-1 {
+    margin-top: 110px;
+    margin-bottom: 64px;
+  }
+}
+
 @media (min-width: 991px) {
   .about-heading-1 {
     text-align: start;
+    margin-top: 126px;
+    margin-bottom: 64px;
   }
 }
 
 .about-heading-2 {
   text-align: start;
+  margin-bottom: 64px;
 }
 
 .about-icon {
@@ -901,11 +924,6 @@ h5 {
 }
 
 /* navbar */
-/*Esto sirve para alinear los elementos dentro del dropdown */
-
-/* .align-items-center {
-  align-items: start !important;
-} */
 
 .main-navbar {
   height: 126px;
@@ -1123,10 +1141,9 @@ h5 {
 
 .hero-about {
   margin-top: 126px;
-
   position: relative;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: start;

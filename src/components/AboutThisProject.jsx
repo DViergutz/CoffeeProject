@@ -77,13 +77,12 @@ function AboutThisProject() {
             </div>
           </div>
         </div>
-        <div className="main-section" ref={technologies}>
-          <div className="about-info d-flex flex-column align-items-center">
-            <div className="text-center w-100">
-              <h2 className="text-light ">
-                Technologies<span className="text-orange"> & </span> Tools
-              </h2>
-            </div>
+        <div className="container main" ref={technologies}>
+          <div className="about-info d-flex flex-column align-items-start">
+            <h2 className="about-heading-3">
+              Technologies<span className="text-orange"> & </span> Tools
+            </h2>
+
             <p>
               During our coding bootcamp journey, we immersed ourselves in a
               diverse array of technologies spanning both backend and frontend
@@ -230,8 +229,7 @@ function AboutThisProject() {
             </div>
           </div>
         </div>
-
-        <div className="main-section" ref={mapping}>
+        <div className="container main" ref={mapping}>
           <div className="about-info text-center d-flex flex-column align-items-center">
             <div className="text-center w-100">
               <h2 className="text-light ">
@@ -257,7 +255,7 @@ function AboutThisProject() {
             </div>
           </div>
         </div>
-        <div className="main-section" ref={admin}>
+        <div className="container main" ref={admin}>
           <div className="about-info text-center d-flex flex-column align-items-center">
             <div className="text-center w-100">
               <h2 className="text-light ">
@@ -278,11 +276,11 @@ function AboutThisProject() {
             </div>
           </div>
         </div>
-        <div className="main-section" ref={team}>
+        <div className="container main" ref={team}>
           <div className="about-info text-center d-flex flex-column align-items-center">
             <div className="text-center w-100">
               <h2 className="text-light ">
-                Meet <span className="text-orange">Our Team</span>
+                <span className="text-orange">Meet </span> Our Team
               </h2>
             </div>
             <p>
