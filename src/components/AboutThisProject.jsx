@@ -293,7 +293,7 @@ function AboutThisProject() {
             </p>
           </div>
           <div className="text-center d-flex flex-column align-items-center ">
-            <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4">
+            <div className="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 g-4 justify-content-between p-0">
               <div className="col mb-4">
                 <div className="cardAbout h-100 card ">
                   <img
@@ -378,7 +378,7 @@ function AboutThisProject() {
               <div className="col mb-4">
                 <div className="card h-100 cardAbout">
                   <img
-                    src="https://media.istockphoto.com/id/542703430/es/foto/sonriente-hombre.jpg?s=2048x2048&w=is&k=20&c=3ZmbfwZk4PyOkEX_a2Rl4yH6zuwOEl0DHeZEytXszKA="
+                    src={David}
                     className="card-img-top cardPeople"
                     alt="Team Member 4"
                   />
@@ -393,29 +393,6 @@ function AboutThisProject() {
                       </a>
                       <a href="https://github.com/PtrSlk" className="btn">
                         <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col  mb-4">
-                <div className="card h-100 cardAbout">
-                  <img
-                    src="https://media.istockphoto.com/id/1311406968/es/foto/retrato-del-guapo-joven-cauc%C3%A1sico-con-ropa-casual-sonriendo-y-mirando-a-la-c%C3%A1mara-sobre-el.jpg?s=2048x2048&w=is&k=20&c=fjJC9fq7QLEmw4z_-MVOwoJRT1YhMi327X72kuZA3w8="
-                    className="card-img-top cardPeople"
-                    alt="Team Member 5"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">Emily</h5>
-                    <h5 className="card-title">Brown</h5>
-                    <p>Full Stack Developer</p>
-                    <hr className="text-orange hrAbout" />
-                    <div className="imgCardAbout">
-                      <a href="#" className="btn">
-                        <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
-                      </a>
-                      <a href="#" className="btn">
-                        <i className="bi bi-github iconoGithub fs-2 hoverSocial"></i>
                       </a>
                     </div>
                   </div>
