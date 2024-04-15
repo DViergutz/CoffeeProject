@@ -78,7 +78,7 @@ function AboutThisProject() {
           </div>
         </div>
         <div className="container main" ref={technologies}>
-          <div className=" d-flex flex-column align-items-start">
+          <div className="about-content">
             <h2 className="about-heading-3">
               Technologies<span className="text-orange"> & </span> Tools
             </h2>
@@ -231,7 +231,7 @@ function AboutThisProject() {
           </div>
         </div>
         <div className="container main-about" ref={mapping}>
-          <div className=" text-center d-flex flex-column align-items-start">
+          <div className="about-content">
             <div>
               <h2 className="about-heading-3">
                 Mapping <span className="text-orange">User Flow</span>
@@ -259,7 +259,7 @@ function AboutThisProject() {
           </div>
         </div>
         <div className="container main-about" ref={admin}>
-          <div className="text-center d-flex flex-column align-items-start">
+          <div className="about-content">
             <div>
               <h2 className="about-heading-3">
                 <span className="text-orange">Admin </span> Dashboard
@@ -282,13 +282,13 @@ function AboutThisProject() {
           </div>
         </div>
         <div className="container main" ref={team}>
-          <div className=" text-center d-flex flex-column align-items-start">
-            <div className="text-center w-100">
+          <div className="about-content">
+            <div>
               <h2 className="about-heading-3">
                 <span className="text-orange">Meet </span> Our Team
               </h2>
             </div>
-            <div className="about-info-1">
+            <div className="about-info-2">
               <p>
                 Discover the Faces Behind Our Success! Get to know the talented
                 individuals who bring creativity, expertise, and passion to our
@@ -380,7 +380,7 @@ function AboutThisProject() {
                   </div>
                 </div>
               </div>
-              <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
+              <div className="col col-md-6 col-lg-3 mb-4 ">
                 <div className="card h-100 cardAbout">
                   <img
                     src={David}
