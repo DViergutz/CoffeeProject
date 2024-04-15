@@ -302,6 +302,9 @@ h2 {
     font-size: 42px;
     margin-bottom: 48px;
   }
+  .hero-about p {
+    font-size: 17px;
+  }
 }
 
 h3 {
@@ -408,25 +411,26 @@ h5 {
   }
 }
 
+
 @media (max-width: 576px) {
   .main-section-everything-starts-with-coffee {
     padding: 80px 16px 16px 16px;
   }
-} */
+}
 
-.main-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
   min-height: 100vh;
   width: 100%;
-  padding: 120px 10% 32px 10%;
+  padding: 120px 13vw 32px 13vw;
 }
+ */
 
 @media (max-width: 576px) {
   .main-section {
-    padding: 80px 16px 16px 16px;
+    padding: 80px 50px 16px 50px;
   }
 }
 
@@ -1245,6 +1249,11 @@ h5 {
   transition: transform 0.3s ease;
 }
 
+.orangeBold {
+  font-weight: bold;
+  color: #d96c21 !important;
+}
+
 .about-icons:hover {
   transform: translateY(-12px);
 }
@@ -1561,14 +1570,26 @@ h5 {
     left: 80vw;
     width: 3rem;
   }
+}
 
+@media screen and (max-width: 550px) {
+  /* ABOUT THIS PROJECT*/
+
+  .textAboutProject p {
+    font-size: 16px;
+  }
+  .textAboutProject h2 {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 485px) {
   /* ABOUT THIS PROJECT*/
 
   .textAboutProject p {
     font-size: 14px;
   }
   .textAboutProject h2 {
-    font-size: 45px;
+    font-size: 40px;
   }
 }
 
