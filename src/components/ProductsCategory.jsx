@@ -35,7 +35,7 @@ function ProductsCategory() {
           clicking this button.
         </p>
         <ResetDbButton />
-        <h2>
+        <h2 className="all-products-h2">
           Explore Our{" "}
           <span className="text-orange text-capitalize">
             {params.categoryName}
@@ -46,7 +46,10 @@ function ProductsCategory() {
           <div className="row mb-5 d-flex justify-content-center">
             {productsOfCategory ? (
               productsOfCategory.map((product) => (
-                <div className="col-md-6 col-lg-4 col-xl-3 " key={product.id}>
+                <div
+                  className="col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center justify-content-center"
+                  key={product.id}
+                >
                   <div className="d-flex flex-column h-100  ">
                     <div className="special-product-card h-100 d-flex flex-column">
                       <Link

@@ -28,91 +28,96 @@ function ProductsAll() {
   }, []);
 
   return (
-    <div className="main-section bg-fondo3  ">
-      <p className="fst-italic fw-light">
-        If the page doesn't display products below or the page seems to be
-        broken we please you to reset the tables to their initial state by
-        clicking this button.
-      </p>
-      <ResetDbButton />
+    <div className="bg-fondo3">
+      <div className="container main">
+        <p className="fst-italic fw-light">
+          If the page doesn't display products below or the page seems to be
+          broken we please you to reset the tables to their initial state by
+          clicking this button.
+        </p>
+        <ResetDbButton />
 
-      {/* <CartMenu show={show} /> */}
-      <h2>
-        Our Complete <span className="text-orange">Coffee</span> Collection
-      </h2>
-      <div className="container">
-        <div className="row mb-5 ">
-          {/* start card 1 */}
+        {/* <CartMenu show={show} /> */}
+        <h2 className="all-products-h2">
+          Our Complete <span className="text-orange">Coffee</span> Collection
+        </h2>
+        <div className="container">
+          <div className="row mb-5 ">
+            {/* start card 1 */}
 
-          {products ? (
-            products.map((product) => (
-              <div className="col-md-6 col-lg-4 col-xl-3 " key={product.id}>
-                <div className="d-flex flex-column h-100  ">
-                  <div className="special-product-card h-100 d-flex flex-column">
-                    <Link
-                      to={`/products/${product.id}`}
-                      className="text-decoration-none"
-                    >
-                      <Card.Img
-                        variant="top"
-                        className="card-img"
-                        src={`${import.meta.env.VITE_BUCKETS_URL}/${
-                          product.image
-                        }`}
-                      />
-                    </Link>
-                    <div className="text-start ">
-                      <p className="fs-3 fw-semibold">{product.name}</p>
-                      <p>{product.description}</p>
-                    </div>
+            {products ? (
+              products.map((product) => (
+                <div
+                  className="col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center justify-content-center"
+                  key={product.id}
+                >
+                  <div className="d-flex flex-column h-100  ">
+                    <div className="special-product-card h-100 d-flex flex-column">
+                      <Link
+                        to={`/products/${product.id}`}
+                        className="text-decoration-none"
+                      >
+                        <Card.Img
+                          variant="top"
+                          className="card-img"
+                          src={`${import.meta.env.VITE_BUCKETS_URL}/${
+                            product.image
+                          }`}
+                        />
+                      </Link>
+                      <div className="text-start ">
+                        <p className="fs-3 fw-semibold">{product.name}</p>
+                        <p>{product.description}</p>
+                      </div>
 
-                    <div className="mt-auto">
-                      <p className="fs-3 fw-semibold text-start">
-                        <span className="text-orange">${product.price}</span>{" "}
-                      </p>
-                      <div className="d-flex justify-content-evenly">
-                        <div className="me-2">
-                          <Link
-                            to={`/products/${product.id}`}
-                            className="text-decoration-none"
-                          >
-                            <button
-                              className="btn btn-view-product height65"
-                              onClick={() => window.scrollTo(0, 0)}
+                      <div className="mt-auto">
+                        <p className="fs-3 fw-semibold text-start">
+                          <span className="text-orange">${product.price}</span>{" "}
+                        </p>
+                        <div className="d-flex justify-content-evenly">
+                          <div className="me-2">
+                            <Link
+                              to={`/products/${product.id}`}
+                              className="text-decoration-none"
                             >
-                              View Product
-                            </button>
-                          </Link>
-                        </div>
-                        <button
-                          className="btn rounded-circle btn-cart "
-                          onClick={() =>
-                            dispatch(
-                              incrementQuantity(
-                                {
-                                  name: product.name,
-                                  id: product.id,
-                                  price: product.price,
-                                  image: product.image,
-                                  stock: product.stock,
-                                },
-                                dispatch(setIsCartOpen())
+                              <button
+                                className="btn btn-view-product height65"
+                                onClick={() => window.scrollTo(0, 0)}
+                              >
+                                View Product
+                              </button>
+                            </Link>
+                          </div>
+                          <button
+                            className="btn rounded-circle btn-cart "
+                            onClick={() =>
+                              dispatch(
+                                incrementQuantity(
+                                  {
+                                    name: product.name,
+                                    id: product.id,
+                                    price: product.price,
+                                    image: product.image,
+                                    stock: product.stock,
+                                  },
+                                  dispatch(setIsCartOpen())
+                                )
                               )
-                            )
-                          }
-                        >
-                          <i className="bi bi-cart"></i>
-                        </button>
+                            }
+                          >
+                            <i className="bi bi-cart"></i>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))
-          ) : (
-            <div>Loading...</div>
-          )}
-          {/* end card 1 */}
+              ))
+            ) : (
+              <div>Loading...</div>
+            )}
+            {/* end card 1 */}
+          </div>
         </div>
       </div>
     </div>
