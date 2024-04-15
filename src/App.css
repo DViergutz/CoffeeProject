@@ -885,7 +885,7 @@ h5 {
   }
 }
 
-.card-img {
+/* .card-img {
   border: none !important;
   border-radius: 8px;
   width: auto;
@@ -900,7 +900,7 @@ h5 {
     width: auto;
     margin-top: -80px;
   }
-}
+} */
 
 .special-product-2 {
   background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/product_images/Flavored-ChocolateAmaretto.png");
@@ -1335,6 +1335,7 @@ h5 {
 .card-img-top {
   max-width: 150px;
   height: auto;
+  margin-top: -80px;
   transition: transform 0.3s ease;
 }
 @media (min-width: 991px) {
