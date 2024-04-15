@@ -446,6 +446,8 @@ h5 {
 
 .main {
   min-height: 100vh;
+  padding-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .main-about {
