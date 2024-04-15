@@ -30,7 +30,7 @@ function NotFound() {
           onClick={() => window.scrollTo(0, 0)}
         >
           <button className="btn-hero">
-            <i class="bi bi-arrow-left"></i> Back to Home
+            <i className="bi bi-arrow-left"></i> Back to Home
           </button>
         </Link>
       </div>

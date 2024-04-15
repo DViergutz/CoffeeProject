@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function LoginUser() {
   const dispatch = useDispatch();
-  const navigate = useNavigate(); // Initialize navigate for navigation
+  const navigate = useNavigate();
 
   // Estado local para almacenar los valores del formulario
   const [formData, setFormData] = useState({
@@ -39,7 +39,7 @@ function LoginUser() {
         "http://localhost:3000/login/tokens",
         formData
       );
-      console.log("RESPUESTA DEL SERVIDOR : " + response.data);
+      console.log("Login Response: " + response.data);
 
       const { token, userId } = response.data;
 
@@ -57,9 +57,8 @@ function LoginUser() {
   };
 
   return (
-    <>
-      <Navigation />
-      <div className="bg-fondo3 p-5">
+    <div className="vh-100 bg-fondo3 d-flex flex-colum align-items-center justify-content-center">
+      <div className="p-5 ">
         <div className="container login-wrapper">
           <div className="row bg-dark-grey border-orange mt-5">
             <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
@@ -125,7 +124,7 @@ function LoginUser() {
         </div>
         <ToastContainer />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -20,194 +20,213 @@ function AboutThisProject() {
   };
 
   return (
-    <div className="mainAboutThisProject bg-fondo3">
-      <div className="hero-about">
-        <div className="textAboutProject d-flex flex-column">
-          <h2 className="about-heading">
-            What Is <span className="text-orange">Utica </span>Coffee?
-          </h2>
-          <p className="about-subheading">
-            Utica Coffee is an e-commerce platform inspired by Utica Coffee
-            Roasting Co. Developed during a Coding Bootcamp at Hack Academy,
-            it's a collaborative project showcasing
-            <span className="orangeBold"> Full Stack Development </span>
-            skills. A bootcamp is an intensive education program of around
-            <span className="orangeBold"> 600 hours </span>of total practice,
-            focusing on both backend and frontend technologies, aimed at
-            developing practical and technical skills. It emphasizes projects
-            and practical exercises to maximize learning.
-          </p>
-          <p className="about-subheading">
-            Utilizing SQL, Express.js, React.js, and Node.js, the team
-            collectively invested approximately 150 hours of work per member
-            over the course of three weeks. The goal was to demonstrate
-            <span className="orangeBold"> practical </span> application of
-            Bootcamp learnings.
-          </p>
-          <p className="about-subheading">
-            The development process involved planning, design, implementation,
-            testing, and deployment, emphasizing effective communication and
-            collaboration.
-          </p>
-          <p className="about-subheading">
-            Utica Coffee is a fully functional e-commerce platform reflecting
-            the team's dedication and proficiency in{" "}
-            <span className="orangeBold"> Full Stack Development.</span>
-          </p>
-        </div>
+    <div className="align-navigation-menu">
+      <div className="navigation-menu">
+        <ScrollToTop />{" "}
+        <ul>
+          {" "}
+          <li
+            onClick={() => scrollToSection(technologies)}
+            className="nav-link-home"
+          >
+            <GoDot />
+          </li>
+          <li
+            onClick={() => scrollToSection(mapping)}
+            className="nav-link-home"
+          >
+            <GoDot />
+          </li>
+          <li onClick={() => scrollToSection(admin)} className="nav-link-home">
+            <GoDot />{" "}
+          </li>
+          <li onClick={() => scrollToSection(team)} className="nav-link-home">
+            <GoDot />
+          </li>
+        </ul>
       </div>
-      <div className="main-section">
-        <div className="about-info d-flex flex-column align-items-center">
-          <div className="text-center w-100">
-            <h2 className="text-light ">
-              Technologies<span className="text-orange"> & </span> Tools
+      <div className="mainAboutThisProject bg-fondo3">
+        <div className="hero-about">
+          <div className="textAboutProject d-flex flex-column">
+            <h2 className="about-heading">
+              What Is <span className="text-orange">Utica </span>Coffee?
             </h2>
+            <p className="about-subheading">
+              Utica Coffee is an e-commerce platform inspired by Utica Coffee
+              Roasting Co. Developed during a Coding Bootcamp at Hack Academy,
+              it's a collaborative project showcasing Full Stack Development
+              skills.
+            </p>
+            <p className="about-subheading">
+              Utilizing SQL, Express.js, React.js, and Node.js, the team
+              collectively invested approximately 150 hours of work per member
+              over the course of three weeks. The goal was to demonstrate
+              practical application of Bootcamp learnings.
+            </p>
+            <p className="about-subheading">
+              The development process involved planning, design, implementation,
+              testing, and deployment, emphasizing effective communication and
+              collaboration.
+            </p>
+            <p className="about-subheading">
+              Utica Coffee is a fully functional e-commerce platform reflecting
+              the team's dedication and proficiency in Full Stack Development.
+            </p>
           </div>
-          <p>
-            During our coding bootcamp journey, we immersed ourselves in a
-            diverse array of technologies spanning both backend and frontend
-            development. We actively engaged with databases, honing our skills,
-            and employed practical tools to streamline our workflow effectively.
-          </p>
-          <p>
-            Our project underwent meticulous segmentation into three sprints,
-            with Github serving as our central collaboration hub. Discord
-            emerged as an indispensable platform, enabling seamless
-            communication throughout every phase of the development journey.
-          </p>
-          <p>
-            In pursuit of heightened productivity for this project, we curated a
-            select ensemble of tools designed to elevate our efficiency and
-            innovation.
-          </p>
         </div>
-        <div>
-          <div className="about-info">
-            <div className="row row-cols-2 row-cols-md-5 g-4">
-              <div className="col">
-                <div className="d-flex flex-column align-items-center p-4">
-                  <img
-                    className="about-icons mb-2"
-                    src={`${
-                      import.meta.env.VITE_BUCKETS_URL
-                    }/about_icons/bootstrap.png`}
-                    alt=""
-                  />
-                  <small className="text-orange ">Bootstrap</small>
+        <div className="main-section" ref={technologies}>
+          <div className="about-info d-flex flex-column align-items-center">
+            <div className="text-center w-100">
+              <h2 className="text-light ">
+                Technologies<span className="text-orange"> & </span> Tools
+              </h2>
+            </div>
+            <p>
+              During our coding bootcamp journey, we immersed ourselves in a
+              diverse array of technologies spanning both backend and frontend
+              development. We actively engaged with databases, honing our
+              skills, and employed practical tools to streamline our workflow
+              effectively.
+            </p>
+            <p>
+              Our project underwent meticulous segmentation into three sprints,
+              with Github serving as our central collaboration hub. Discord
+              emerged as an indispensable platform, enabling seamless
+              communication throughout every phase of the development journey.
+            </p>
+            <p>
+              In pursuit of heightened productivity for this project, we curated
+              a select ensemble of tools designed to elevate our efficiency and
+              innovation.
+            </p>
+          </div>
+          <div>
+            <div className="about-info">
+              <div className="row row-cols-2 row-cols-md-5 g-4">
+                <div className="col">
+                  <div className="d-flex flex-column align-items-center p-4">
+                    <img
+                      className="about-icons mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/bootstrap.png`}
+                      alt=""
+                    />
+                    <small className="text-orange ">Bootstrap</small>
+                  </div>
                 </div>
-              </div>
-              <div className="col">
-                <div className="d-flex flex-column align-items-center p-4">
-                  <img
-                    className="about-icons mb-2"
-                    src={`${
-                      import.meta.env.VITE_BUCKETS_URL
-                    }/about_icons/css3.png`}
-                    alt=""
-                  />
-                  <small className="text-orange ">CSS3</small>
+                <div className="col">
+                  <div className="d-flex flex-column align-items-center p-4">
+                    <img
+                      className="about-icons mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/css3.png`}
+                      alt=""
+                    />
+                    <small className="text-orange ">CSS3</small>
+                  </div>
                 </div>
-              </div>
-              <div className="col">
-                <div className="d-flex flex-column align-items-center p-4">
-                  <img
-                    className="about-icons mb-2"
-                    src={`${
-                      import.meta.env.VITE_BUCKETS_URL
-                    }/about_icons/discord.png`}
-                    alt=""
-                  />
-                  <small className="text-orange ">Discord</small>
+                <div className="col">
+                  <div className="d-flex flex-column align-items-center p-4">
+                    <img
+                      className="about-icons mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/discord.png`}
+                      alt=""
+                    />
+                    <small className="text-orange ">Discord</small>
+                  </div>
                 </div>
-              </div>
-              <div className="col">
-                <div className="d-flex flex-column align-items-center p-4">
-                  <img
-                    className="about-icons mb-2"
-                    src={`${
-                      import.meta.env.VITE_BUCKETS_URL
-                    }/about_icons/figma.png`}
-                    alt=""
-                  />
-                  <small className="text-orange ">Figma</small>
+                <div className="col">
+                  <div className="d-flex flex-column align-items-center p-4">
+                    <img
+                      className="about-icons mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/figma.png`}
+                      alt=""
+                    />
+                    <small className="text-orange ">Figma</small>
+                  </div>
                 </div>
-              </div>
-              <div className="col">
-                <div className="d-flex flex-column align-items-center p-4">
-                  <img
-                    className="about-icons mb-2"
-                    src={`${
-                      import.meta.env.VITE_BUCKETS_URL
-                    }/about_icons/github.png`}
-                    alt=""
-                  />
-                  <small className="text-orange ">Github</small>
+                <div className="col">
+                  <div className="d-flex flex-column align-items-center p-4">
+                    <img
+                      className="about-icons mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/github.png`}
+                      alt=""
+                    />
+                    <small className="text-orange ">Github</small>
+                  </div>
                 </div>
-              </div>
-              <div className="col">
-                <div className="d-flex flex-column align-items-center p-4">
-                  <img
-                    className="about-icons mb-2"
-                    src={`${
-                      import.meta.env.VITE_BUCKETS_URL
-                    }/about_icons/js.png`}
-                    alt=""
-                  />
-                  <small className="text-orange ">JavaScript</small>
+                <div className="col">
+                  <div className="d-flex flex-column align-items-center p-4">
+                    <img
+                      className="about-icons mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/js.png`}
+                      alt=""
+                    />
+                    <small className="text-orange ">JavaScript</small>
+                  </div>
                 </div>
-              </div>
-              <div className="col">
-                <div className="d-flex flex-column align-items-center p-4">
-                  <img
-                    className="about-icons mb-2"
-                    src={`${
-                      import.meta.env.VITE_BUCKETS_URL
-                    }/about_icons/nodejs.png`}
-                    alt=""
-                  />
-                  <small className="text-orange ">NodeJS</small>
+                <div className="col">
+                  <div className="d-flex flex-column align-items-center p-4">
+                    <img
+                      className="about-icons mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/nodejs.png`}
+                      alt=""
+                    />
+                    <small className="text-orange ">NodeJS</small>
+                  </div>
                 </div>
-              </div>
-              <div className="col">
-                <div className="d-flex flex-column align-items-center p-4">
-                  <img
-                    className="about-icons mb-2"
-                    src={`${
-                      import.meta.env.VITE_BUCKETS_URL
-                    }/about_icons/react.png`}
-                    alt=""
-                  />
-                  <small className="text-orange ">React</small>
+                <div className="col">
+                  <div className="d-flex flex-column align-items-center p-4">
+                    <img
+                      className="about-icons mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/react.png`}
+                      alt=""
+                    />
+                    <small className="text-orange ">React</small>
+                  </div>
                 </div>
-              </div>
-              <div className="col">
-                <div className="d-flex flex-column align-items-center p-4">
-                  <img
-                    className="about-icons mb-2"
-                    src={`${
-                      import.meta.env.VITE_BUCKETS_URL
-                    }/about_icons/redux.png`}
-                    alt=""
-                  />
-                  <small className="text-orange ">Redux</small>
+                <div className="col">
+                  <div className="d-flex flex-column align-items-center p-4">
+                    <img
+                      className="about-icons mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/redux.png`}
+                      alt=""
+                    />
+                    <small className="text-orange ">Redux</small>
+                  </div>
                 </div>
-              </div>
-              <div className="col">
-                <div className="d-flex flex-column align-items-center p-4">
-                  <img
-                    className="about-icons mb-2"
-                    src={`${
-                      import.meta.env.VITE_BUCKETS_URL
-                    }/about_icons/sql.png`}
-                    alt=""
-                  />
-                  <small className="text-orange ">SQL</small>
+                <div className="col">
+                  <div className="d-flex flex-column align-items-center p-4">
+                    <img
+                      className="about-icons mb-2"
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/about_icons/sql.png`}
+                      alt=""
+                    />
+                    <small className="text-orange ">SQL</small>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       <div className="main-section">
         <div className="about-info text-center d-flex flex-column align-items-center">

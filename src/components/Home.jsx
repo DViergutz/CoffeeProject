@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 import ScrollToTop from "./ScrollToTop";
 import "../App.css";
@@ -13,16 +13,51 @@ function Home() {
   const specialProducts = useRef(null);
   const blog = useRef(null);
   const about = useRef(null);
+  const [activeSection, setActiveSection] = useState(null);
 
-  const scrollToSection = (elementRef) => {
+  const scrollToSection = (elementRef, section) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
       behavior: "smooth",
     });
+    setActiveSection(section);
   };
 
   const notifyNewsletter = () =>
     toast("Action exeeded the scope of this project!");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition < about.current.offsetTop) {
+        setActiveSection("");
+      } else if (
+        scrollPosition >= about.current.offsetTop &&
+        scrollPosition < categories.current.offsetTop
+      ) {
+        setActiveSection("about");
+      } else if (
+        scrollPosition >= categories.current.offsetTop &&
+        scrollPosition < specialProducts.current.offsetTop
+      ) {
+        setActiveSection("categories");
+      } else if (
+        scrollPosition >= specialProducts.current.offsetTop &&
+        scrollPosition < blog.current.offsetTop
+      ) {
+        setActiveSection("specialProducts");
+      } else if (scrollPosition >= blog.current.offsetTop) {
+        setActiveSection("blog");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="align-navigation-menu">
@@ -30,23 +65,43 @@ function Home() {
         <ScrollToTop />{" "}
         <ul>
           {" "}
-          <li onClick={() => scrollToSection(about)} className="nav-link-home">
-            <GoDot />
+          <li
+            onClick={() => scrollToSection(about, "about")}
+            className={`nav-link-home ${
+              activeSection === "about" ? "active" : ""
+            }`}
+          >
+            <GoDot className={activeSection === "about" ? "active-dot" : ""} />
           </li>
           <li
-            onClick={() => scrollToSection(categories)}
-            className="nav-link-home"
+            onClick={() => scrollToSection(categories, "categories")}
+            className={`nav-link-home ${
+              activeSection === "categories" ? "active" : ""
+            }`}
           >
-            <GoDot />
+            <GoDot
+              className={activeSection === "categories" ? "active-dot" : ""}
+            />
           </li>
           <li
-            onClick={() => scrollToSection(specialProducts)}
-            className="nav-link-home"
+            onClick={() => scrollToSection(specialProducts, "specialProducts")}
+            className={`nav-link-home ${
+              activeSection === "specialProducts" ? "active" : ""
+            }`}
           >
-            <GoDot />{" "}
+            <GoDot
+              className={
+                activeSection === "specialProducts" ? "active-dot" : ""
+              }
+            />
           </li>
-          <li onClick={() => scrollToSection(blog)} className="nav-link-home">
-            <GoDot />
+          <li
+            onClick={() => scrollToSection(blog, "blog")}
+            className={`nav-link-home ${
+              activeSection === "blog" ? "active" : ""
+            }`}
+          >
+            <GoDot className={activeSection === "blog" ? "active-dot" : ""} />
           </li>
         </ul>
       </div>{" "}
@@ -57,10 +112,10 @@ function Home() {
             type="video/mp4"
           />
         </video>
-        <div id="hero" className="hero-section container">
+        <div id="hero" className="hero-section container ">
           <div className="content-wrapper">
-            <h1>Discover the Essence of Fresh Coffee</h1>
-            <p className="hero-subheading">
+            <h1 className="hero-text">Discover the Essence of Fresh Coffee</h1>
+            <p className="hero-subheading hero-text-1">
               Embark on a journey through our finest selection of coffee bean
               bags
             </p>
@@ -69,7 +124,7 @@ function Home() {
               className="text-decoration-none"
               onClick={() => window.scrollTo(0, 0)}
             >
-              <button className="btn-hero">
+              <button className="btn-hero hero-text-2">
                 Explore our products <i className="bi bi-arrow-right ms-2"></i>
               </button>
             </Link>
@@ -123,7 +178,7 @@ function Home() {
             </div>
             <div className=" ms-3">
               {" "}
-              <h5 className="fw-semibold">The Utica Coffe Brand</h5>
+              <h5 className="fw-semibold">The Utica Coffee Brand</h5>
               <p className="about-paragraph">
                 Synonymous with the best qualities of Utica itself: simplicity,
                 a no-nonsense attitude, and a richness of unique, shared
@@ -186,7 +241,7 @@ function Home() {
           </div>
         </div>{" "}
       </div>{" "}
-      <div id="categories" ref={categories} className="main-section">
+      <div id="categories" ref={categories} className="main-section-categories">
         <div className="splash">
           {" "}
           <img

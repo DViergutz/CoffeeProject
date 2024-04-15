@@ -73,10 +73,7 @@ function DashboardUser() {
             <thead className="tableHeadProduct">
               <tr>
                 <th>Id</th>
-                <th>
-                  <p className="fw-normal">Firstname</p>
-                  <p>Lastname</p>
-                </th>
+                <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Address</th>
@@ -102,7 +99,7 @@ function DashboardUser() {
                     <td>{moment(new Date(user.createdAt)).fromNow()}</td>
 
                     <td>
-                      <Link to={`/admin/users/edit/${user.id}`} className="">
+                      <Link to={`/admin/users/${user.id}`} className="">
                         <button className="btn btn-outline-warning mb-2">
                           <i className="bi bi-pen text-dark"></i>
                         </button>

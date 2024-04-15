@@ -42,12 +42,14 @@ function EditProduct() {
 
   const handleSubmitEdit = async (e) => {
     e.preventDefault();
+    const data = new FormData(e.target);
     console.log(productData);
     try {
-      const response = await axios.patch(
-        `http://localhost:3000/products/${id}`,
-        productData
-      );
+      const response = await axios({
+        url: `http://localhost:3000/products/${id}`,
+        method: "PATCH",
+        data,
+      });
       console.log(response.data); // Handle response from server
     } catch (error) {
       console.error("Error updating product:", error);
@@ -152,7 +154,13 @@ function EditProduct() {
                   <label htmlFor="formFile" className="form-label">
                     Upload Image
                   </label>
-                  <input className="form-control" type="file" id="formFile" />
+                  <input
+                    className="form-control"
+                    type="file"
+                    id="productImage"
+                    name="productImage"
+                    onChange={handleChange}
+                  />
                 </div>
 
                 <button

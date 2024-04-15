@@ -41,22 +41,33 @@
 
 .btn-delete-product {
   background-color: transparent;
-  color: #ee7728cf;
-  border: 1px solid #ee77281d;
+  color: #ffffff;
+  opacity: 0.15;
+  border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 .btn-delete-product:hover {
-  background-color: #ee7828;
+  opacity: 0.8;
   color: white;
+}
+
+.btn-view-product-offcanvas-disabled {
+  color: rgba(0, 0, 0, 0.46);
+  border: none;
+  padding: 3px 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  background-color: transparent;
+  cursor: default;
 }
 
 .btn-view-product-offcanvas {
   background-color: transparent;
   color: #ee7828;
-  border: 1px solid #ee77281d;
+  border: none;
   padding: 3px 10px;
   font-size: 16px;
   border-radius: 50px;
@@ -118,7 +129,7 @@ footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-.logo-footer {
+total .logo-footer {
   height: 150px;
   width: auto;
   background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png");
@@ -174,7 +185,10 @@ footer {
   color: #ee7828;
   cursor: pointer;
 }
-
+.active-dot {
+  stroke-width: 3;
+  color: #ee7828;
+}
 /* /////// */
 
 .hero-section {
@@ -187,12 +201,42 @@ footer {
   z-index: 1;
 }
 
+.hero-text {
+  opacity: 0; /* Inicialmente, el texto estará oculto */
+  animation: slideIn 1s ease forwards; /* Animación de aparición gradual con desplazamiento */
+}
+.hero-text-1 {
+  opacity: 0; /* Inicialmente, el texto estará oculto */
+  animation: slideIn 1s ease forwards; /* Animación de aparición gradual con desplazamiento */
+  animation-delay: 0.3s;
+}
+.hero-text-2 {
+  opacity: 0; /* Inicialmente, el texto estará oculto */
+  animation: slideIn 1s ease forwards; /* Animación de aparición gradual con desplazamiento */
+  animation-delay: 0.6s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(
+      -500px
+    ); /* Inicialmente, el texto estará fuera de la pantalla a la izquierda */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(
+      0
+    ); /* Al final, el texto estará en su posición original */
+  }
+}
+
 .background-video {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  margin-top: 32px;
+  margin-top: 126px;
 }
 
 .background-video video {
@@ -368,6 +412,16 @@ h5 {
   padding: 120px 13vw 32px 13vw;
 }
 
+.main-section-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  width: 100%;
+  padding: 180px 10% 32px 10%;
+}
+
 @media (max-width: 940px) {
   .main-section {
     padding: 64px 10% 32px 10%;
@@ -483,6 +537,8 @@ h5 {
 .category-title {
   position: relative;
   z-index: 2;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 rgb(19, 18, 18),
+    -2px 2px 0 rgb(20, 19, 19), 2px 2px 0 black;
   /*font-size: 24px;*/
   color: white;
 }
@@ -736,7 +792,7 @@ h5 {
 .background-newsletter {
   background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/premium6.png");
   background-size: cover;
-  background-position: center 1px;
+  background-position: center 50px;
 }
 
 .btn-subscribe {
@@ -765,7 +821,7 @@ h5 {
 
 .main-navbar {
   height: 126px;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -788,6 +844,7 @@ h5 {
   font-size: 12px;
   color: white;
   padding-left: 10px;
+  cursor: pointer;
 }
 
 .navLink:focus {
@@ -806,7 +863,8 @@ h5 {
 }
 
 .dropdown-item {
-  color: #f0f2dc;
+  color: #e4e4e4;
+  font-size: 0.9rem;
 }
 
 .navLink:hover {
@@ -885,9 +943,8 @@ h5 {
 }
 
 .img-checkout {
-  height: 85px;
-  width: 20px;
-  background-image: url("https://uticacoffeeroasting.com/cdn/shop/products/Adirondack10oz_720x.png?v=1617817727");
+  height: auto;
+  width: 60px;
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -977,6 +1034,7 @@ h5 {
 }
 
 .hero-about {
+  margin-top: 126px;
   padding: 0 13vw;
   position: relative;
   height: 100vh;
@@ -988,6 +1046,20 @@ h5 {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.disabled {
+  opacity: 0.2;
+}
+
+.btn-hero-disabled {
+  background-color: #ee772838;
+  color: rgba(255, 255, 255, 0.351);
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  pointer-events: none;
 }
 
 .btn-hero {
@@ -1011,6 +1083,15 @@ h5 {
     padding: 8px 16px;
     margin-bottom: 16px;
   }
+}
+
+.empty-cart-1 {
+  height: 50%;
+  margin-top: 5rem;
+}
+
+.empty-cart {
+  height: 250px;
 }
 
 .btn-cart {
@@ -1171,8 +1252,8 @@ h5 {
 }
 
 .imgLogoUticaDashboard {
-  width: 6.8rem;
-  height: 6.8rem;
+  width: auto;
+  height: 95%;
 }
 
 .navbar {
@@ -1385,7 +1466,7 @@ h5 {
     position: relative;
   }
 
-  .mobileNav a {
+  .mobileNav i {
     color: white;
     padding: 10px 16px;
     text-decoration: none;
@@ -1422,14 +1503,30 @@ h5 {
 }
 
 /* Checkout Section */
+.checkout-payment-icon {
+  width: 45px;
+  height: auto;
+  opacity: 1;
+}
+
+.h2-checkout {
+  padding-top: 32px;
+}
+
+.checkout-section {
+  margin-top: 126px;
+}
+
 .checkout-products {
-  background-color: rgb(238, 236, 236);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid #ee77281d;
   border-radius: 10px;
   padding: 16px;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 /* background-color: rgba(0, 0, 0, 0.1);
@@ -1450,7 +1547,7 @@ h5 {
 
 .login-wrapper {
   max-width: 1000px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .border-orange {
