@@ -105,84 +105,100 @@ function Checkout() {
             ) : (
               <></>
             )}
+            <div>
+              {itemsInCart.map((item) => (
+                <div key={item.id}>
+                  <div className="d-flex py-3">
+                    <div className="col-3 fw-semibold d-flex justify-content-center align-items-center">
+                      <img
+                        className="img-checkout"
+                        src={`${import.meta.env.VITE_BUCKETS_URL}/${
+                          item.image
+                        }`}
+                        alt=""
+                      />
+                    </div>
+                    <div className="col-3 fw-semibold d-flex justify-content-center align-items-center">
+                      ${item.price}
+                    </div>
+                    <div className="col-3 fw-semibold d-flex justify-content-center align-items-center">
+                      <div>
+                        {item.quantity === 1 ? (
+                          <i className="bi bi-dash-circle fs-8 text-secondary btn-view-product-offcanvas-disabled"></i>
+                        ) : (
+                          <button
+                            className="btn-view-product-offcanvas"
+                            onClick={() => {
+                              dispatch(
+                                decrementQuantity({
+                                  name: item.name,
+                                  id: item.id,
+                                  price: item.price,
+                                  image: item.image,
+                                })
+                              );
+                            }}
+                          >
+                            <i className="bi bi-dash-circle fs-8 text-light"></i>
+                          </button>
+                        )}
 
-            {itemsInCart.map((item) => (
-              <div key={item.id}>
-                <div className="d-flex py-3">
-                  <div className="col-3 fw-semibold d-flex justify-content-center align-items-center">
-                    <img
-                      className="img-checkout"
-                      src={`${import.meta.env.VITE_BUCKETS_URL}/${item.image}`}
-                      alt=""
-                    />
-                  </div>
-                  <div className="col-3 fw-semibold d-flex justify-content-center align-items-center">
-                    ${item.price}
-                  </div>
-                  <div className="col-3 fw-semibold d-flex justify-content-center align-items-center">
-                    <div>
-                      {item.quantity === 1 ? (
-                        <i className="bi bi-dash-circle fs-8 text-secondary btn-view-product-offcanvas-disabled"></i>
-                      ) : (
+                        <span className="qty-box">{item.quantity}</span>
                         <button
                           className="btn-view-product-offcanvas"
-                          onClick={() => {
+                          onClick={() =>
                             dispatch(
-                              decrementQuantity({
+                              incrementQuantity({
                                 name: item.name,
                                 id: item.id,
                                 price: item.price,
                                 image: item.image,
+                                stock: item.stock,
                               })
-                            );
-                          }}
+                            )
+                          }
                         >
-                          <i className="bi bi-dash-circle fs-8 text-light"></i>
+                          <i className="bi bi-plus-circle fs-8 text-light"></i>
                         </button>
-                      )}
-
-                      <span className="qty-box">{item.quantity}</span>
+                      </div>
+                    </div>
+                    <div className="col-2 fw-semibold d-flex justify-content-center align-items-center fs-5">
+                      ${item.price * item.quantity}
+                    </div>
+                    <div className="col-1 d-flex justify-content-center align-items-center">
                       <button
-                        className="btn-view-product-offcanvas"
-                        onClick={() =>
-                          dispatch(
-                            incrementQuantity({
-                              name: item.name,
-                              id: item.id,
-                              price: item.price,
-                              image: item.image,
-                              stock: item.stock,
-                            })
-                          )
-                        }
+                        className="btn-delete-product mb-1"
+                        onClick={() => {
+                          dispatch(deleteOneProduct({ id: item.id }));
+
+                          // Check if itemsInCart will be empty after deleting
+                          if (itemsInCart.length === 1) {
+                            // If it will be empty, close the off-canvas
+                            dispatch(setIsCartOpen(false));
+                          }
+                        }}
                       >
-                        <i className="bi bi-plus-circle fs-8 text-light"></i>
+                        <i className="bi bi-trash3"></i>
                       </button>
                     </div>
                   </div>
-                  <div className="col-2 fw-semibold d-flex justify-content-center align-items-center fs-5">
-                    ${item.price * item.quantity}
-                  </div>
-                  <div className="col-1 d-flex justify-content-center align-items-center">
-                    <button
-                      className="btn-delete-product mb-1"
-                      onClick={() => {
-                        dispatch(deleteOneProduct({ id: item.id }));
-
-                        // Check if itemsInCart will be empty after deleting
-                        if (itemsInCart.length === 1) {
-                          // If it will be empty, close the off-canvas
-                          dispatch(setIsCartOpen(false));
-                        }
-                      }}
-                    >
-                      <i className="bi bi-trash3"></i>
-                    </button>
-                  </div>
+                  <hr className="text-orange" />
                 </div>
-                <hr className="text-orange" />
-              </div>
-            ))}
+              ))}
+              {itemsInCart.length === 0 ? (
+                <></>
+              ) : (
+                <Link
+                  to="/products/"
+                  className="text-decoration-none"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <button className="btn-view-product ms-3 mt-4">
+                    <i className="bi bi-arrow-left me-2"></i> Continue Shipping
+                  </button>
+                </Link>
+              )}
+            </div>
           </div>
           <div className="col-md-4 bg-light border rounded p-4 checkout-card">
             <div className=" fw-bold mb-3">CARD DETAILS</div>
