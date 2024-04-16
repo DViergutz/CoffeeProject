@@ -300,7 +300,7 @@ function AboutThisProject() {
           <div className="">
             <div className="row">
               <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
-                <div className="cardAbout h-100 card ">
+                <div className="card h-100 cardAbout">
                   <img
                     src={David}
                     className="card-img-top cardPeople "
@@ -380,7 +380,7 @@ function AboutThisProject() {
                   </div>
                 </div>
               </div>
-              <div className="col col-md-6 col-lg-3 mb-4 ">
+              <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
                 <div className="card h-100 cardAbout">
                   <img
                     src={David}
