@@ -843,6 +843,17 @@ h5 {
 }
 
 /* Esta es la de Product-Detail */
+.special-product-card-tank-you {
+  /*  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ee77281d;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  padding-top: 150px;
+}
+
 .special-product-card-2 {
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid #ee77281d;
@@ -1104,17 +1115,10 @@ h5 {
   background-repeat: no-repeat;
 }
 
-.thank-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .logo-container {
   stroke: 0.1px;
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
 }
 .svg-utica {
   transition: all;
