@@ -841,6 +841,17 @@ h5 {
     max-width: 320px;
   }
 }
+.special-product-card-2 {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ee77281d;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 72px;
+  margin-top: 32px;
+}
 
 .special-product-card-1 {
   background-color: rgba(0, 0, 0, 0.1);
@@ -1038,6 +1049,18 @@ h5 {
 
 /* navbar */
 
+.cart-wrapper {
+  position: relative;
+}
+.cart-badge {
+  height: 8px;
+  width: 8px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .main-navbar {
   height: 126px;
   position: fixed;
@@ -1090,12 +1113,28 @@ h5 {
   background-color: transparent !important;
 }
 
-.navLink {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 12px;
-  color: white;
-  padding-left: 10px;
-  cursor: pointer;
+@media (min-width: 991px) {
+  .navLink {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 991px) {
+  .navLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 16px 8px 16px 8px;
+  }
 }
 
 .navLink:focus {
