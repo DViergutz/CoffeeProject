@@ -42,7 +42,8 @@ function Checkout() {
           title: "Thank you for placing order!",
           text: "We will keep you updated about the state of your order.",
           icon: "success",
-          footer: '<a href="/">Return to Home</a>',
+          confirmButtonText:
+            '<a href="/thank-you" style="color: white; text-decoration: none;">Continue</a>',
         });
       } catch (error) {
         console.error("Error:", error);
@@ -194,7 +195,7 @@ function Checkout() {
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   <button className="btn-view-product ms-3 mt-4">
-                    <i className="bi bi-arrow-left me-2"></i> Continue Shipping
+                    <i className="bi bi-arrow-left me-2"></i> Continue Shopping
                   </button>
                 </Link>
               )}
