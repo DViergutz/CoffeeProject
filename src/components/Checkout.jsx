@@ -38,13 +38,15 @@ function Checkout() {
           },
         });
         console.log(response.data);
-        Swal.fire({
+        /* Swal.fire({
           title: "Thank you for placing order!",
           text: "We will keep you updated about the state of your order.",
           icon: "success",
           confirmButtonText:
             '<a href="/thank-you" style="color: white; text-decoration: none;">Continue</a>',
-        });
+        }); */
+        navigate("/thank-you");
+        window.location.reload();
       } catch (error) {
         console.error("Error:", error);
       }
