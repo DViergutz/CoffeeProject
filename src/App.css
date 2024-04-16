@@ -841,6 +841,8 @@ h5 {
     max-width: 320px;
   }
 }
+
+/* Esta es la de Product-Detail */
 .special-product-card-2 {
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid #ee77281d;
@@ -850,7 +852,7 @@ h5 {
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 72px;
-  margin-top: 32px;
+  margin-top: 40px;
 }
 
 .special-product-card-1 {
@@ -1051,14 +1053,31 @@ h5 {
 
 .cart-wrapper {
   position: relative;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .cart-badge {
-  height: 8px;
-  width: 8px;
-  background-color: red;
+  height: 18px;
+  width: 18px;
+  background-color: #d26b26;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -4px;
+  right: -10px;
+  border-radius: 50%;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.badge-text {
+  color: white;
+  font-size: 11px;
+  margin-left: -1px;
+  margin-top: 14px;
 }
 
 .main-navbar {
