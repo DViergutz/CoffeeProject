@@ -19,10 +19,11 @@ function ThankYouForYourBuy() {
     <div className="background-thank">
       <div className=" main container ">
         <div className=" special-product-card-tank-you d-flex flex-column align-items-center justify-content-center ">
-          <h2>Thank you!!</h2>
-          <p className="mt-4 mb-4 fs-2 fw-semibold">
-            Your coffee <span className="text-orange">order is confirmed!</span>
-          </p>
+          {/* <h2>Thank you!!</h2> */}
+          <h2 className="mt-4 mb-4 fw-semibold text-center">
+            <span className="text-orange">Thank you!!</span> Your coffee order
+            is <span className="text-orange">confirmed!</span>
+          </h2>
           <p className="fs-5">Dive into virtual coffee art.</p>
           <p className="fs-5 text-center">
             While you wait
