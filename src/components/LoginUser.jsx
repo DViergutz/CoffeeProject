@@ -57,7 +57,7 @@ function LoginUser() {
         dispatch(
           authUser({ token: response.data.token, userId: response.data.userId })
         );
-        navigate("/");
+        window.history.back();
       }
     } catch (error) {
       console.error("Error al iniciar sesión:", error);
