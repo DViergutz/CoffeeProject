@@ -825,7 +825,8 @@ h5 {
 }
 
 .special-product-card {
-  background-color: rgba(0, 0, 0, 0.1);
+  /*   background-color: rgba(0, 0, 0, 0.1); */
+
   border: 1px solid #ee77281d;
   border-radius: 10px;
   padding: 16px;
@@ -835,7 +836,23 @@ h5 {
   margin-bottom: 16px;
   margin-top: 80px;
   max-width: 320px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(155, 96, 28, 0.253) 0%,
+    rgb(255, 255, 255, 0) 100%
+  );
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  transition: 0.3s;
 }
+
+.special-product-card:hover {
+  background-size: 100% 100%;
+  .card-img-top {
+    transform: translateY(-12px);
+  }
+}
+
 @media (max-width: 768px) {
   .special-product-card {
     max-width: 320px;
