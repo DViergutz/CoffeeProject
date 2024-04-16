@@ -297,108 +297,139 @@ function AboutThisProject() {
               </p>
             </div>
           </div>
-          <div className="">
-            <div className="row">
-              <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
-                <div className="card h-100 cardAbout">
+          <div className="row mb-5">
+            <div className="col-md-6 col-xl-3 d-flex align-items-center justify-content-evenly">
+              <div className="d-flex flex-column h-100">
+                <div className="special-product-card-1 h-100 d-flex flex-column align-items-center">
                   <img
                     src={David}
-                    className="card-img-top cardPeople "
+                    className="card-img-1 "
                     alt="Team Member 1"
                   />
-                  <div className="card-body">
-                    <h5 className="card-title">Santiago</h5>
-                    <h5 className="card-title">Ternande</h5>
-                    <p>Full Stack Developer</p>
-                    <hr className="text-orange hrAbout" />
-                    <div className="imgCardAbout">
-                      <a
-                        href="https://www.linkedin.com/in/santiagoternande/"
-                        className="btn"
-                      >
-                        <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
-                      </a>
-                      <a href="https://github.com/Machine-45" className="btn">
-                        <i className="bi bi-github iconoGithub fs-2 hoverSocial"></i>
-                      </a>
+                  <div className="mt-3">
+                    <p className="fs-2 text-center team-name">
+                      Santiago Ternande
+                    </p>
+                  </div>
+                  <div className="mt-auto">
+                    <p className=" text-center mt-2">
+                      <span className="text-orange">Full Stack Developer</span>{" "}
+                    </p>
+                    <hr className="text-orange mt-4" />
+                    <div className="mt-auto">
+                      <div className="d-flex justify-content-center">
+                        <a
+                          href="https://www.linkedin.com/in/santiagoternande/"
+                          className="btn"
+                          target="_blank"
+                        >
+                          <i className="bi bi-linkedin iconLinkedin  fs-3 hoverSocial"></i>
+                        </a>
+                        <a href="https://github.com/Machine-45" className="btn">
+                          <i className="bi bi-github iconoGithub fs-3 hoverSocial"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
-                <div className="card h-100 cardAbout">
+            </div>
+            <div className="col-md-6 col-xl-3 d-flex align-items-center justify-content-evenly">
+              <div className="d-flex flex-column h-100">
+                <div className="special-product-card-1 h-100 d-flex flex-column align-items-center">
                   <img
                     src={David}
-                    className="card-img-top cardPeople"
-                    alt="Team Member 2"
+                    className="card-img-1 "
+                    alt="Team Member 1"
                   />
-                  <div className="card-body">
-                    <h5 className="card-title">David</h5>
-                    <h5 className="card-title">Viergutz</h5>
-                    <p>Full Stack Developer</p>
-                    <hr className="text-orange hrAbout" />
-                    <div className="imgCardAbout">
-                      <a
-                        href="https://www.linkedin.com/in/david-viergutz-b243b425a/"
-                        className="btn"
-                      >
-                        <i className="bi bi-linkedin hoverSocial  fs-2 hoverSocial"></i>
-                      </a>
-                      <a href="https://github.com/DViergutz" className="btn">
-                        <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
-                      </a>
+                  <div className="mt-3">
+                    <p className="fs-2 text-center team-name">David Viergutz</p>
+                  </div>
+                  <div className="mt-auto">
+                    <p className="text-center mt-2">
+                      <span className="text-orange">Full Stack Developer</span>{" "}
+                    </p>
+                    <hr className="text-orange mt-4" />
+                    <div className="mt-auto">
+                      <div className="d-flex justify-content-center">
+                        <a
+                          href="https://www.linkedin.com/in/david-viergutz-b243b425a/"
+                          className="btn"
+                          target="_blank"
+                        >
+                          <i className="bi bi-linkedin iconLinkedin  fs-3 hoverSocial"></i>
+                        </a>
+                        <a href="https://github.com/DViergutz" className="btn">
+                          <i className="bi bi-github iconoGithub fs-3 hoverSocial"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
-                <div className="card h-100 cardAbout">
+            </div>
+            <div className="col-md-6 col-xl-3 d-flex align-items-center justify-content-evenly">
+              <div className="d-flex flex-column h-100">
+                <div className="special-product-card-1 h-100 d-flex flex-column align-items-center">
                   <img
                     src={Gaston}
-                    className="card-img-top cardPeople"
-                    alt="Team Member 3"
+                    className="card-img-1 "
+                    alt="Team Member 1"
                   />
-                  <div className="card-body">
-                    <h5 className="card-title">Gaston</h5>
-                    <h5 className="card-title">Silva</h5>
-                    <p>Full Stack Developer</p>
-                    <hr className="text-orange hrAbout" />
-                    <div className="imgCardAbout">
-                      <a
-                        href="https://www.linkedin.com/in/gaston-silva-1a788a1b9/"
-                        className="btn"
-                      >
-                        <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
-                      </a>
-                      <a
-                        href="https://github.com/GastonSilva11"
-                        className="btn"
-                      >
-                        <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
-                      </a>
+                  <div className="mt-3">
+                    <p className="fs-2 text-center team-name">Gastón Silva</p>
+                  </div>
+                  <div className="mt-auto">
+                    <p className=" text-center mt-2">
+                      <span className="text-orange">Full Stack Developer</span>{" "}
+                    </p>
+                    <hr className="text-orange mt-4" />
+                    <div className="mt-auto">
+                      <div className="d-flex justify-content-center">
+                        <a
+                          href="https://www.linkedin.com/in/gaston-silva-1a788a1b9/"
+                          className="btn"
+                          target="_blank"
+                        >
+                          <i className="bi bi-linkedin iconLinkedin  fs-3 hoverSocial"></i>
+                        </a>
+                        <a
+                          href="https://github.com/GastonSilva11"
+                          className="btn"
+                        >
+                          <i className="bi bi-github iconoGithub fs-3 hoverSocial"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col col-md-6 col-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center">
-                <div className="card h-100 cardAbout">
+            </div>
+            <div className="col-md-6 col-xl-3 d-flex align-items-center justify-content-evenly">
+              <div className="d-flex flex-column h-100">
+                <div className="special-product-card-1 h-100 d-flex flex-column align-items-center">
                   <img
                     src={David}
-                    className="card-img-top cardPeople"
-                    alt="Team Member 4"
+                    className="card-img-1 "
+                    alt="Team Member 1"
                   />
-                  <div className="card-body">
-                    <h5 className="card-title">Peter</h5>
-                    <h5 className="card-title">Williams</h5>
-                    <p>Full Stack Developer</p>
-                    <hr className="text-orange hrAbout" />
-                    <div className="imgCardAbout">
-                      <a href="#" className="btn">
-                        <i className="bi bi-linkedin iconLinkedin  fs-2 hoverSocial"></i>
-                      </a>
-                      <a href="https://github.com/PtrSlk" className="btn">
-                        <i className="bi bi-github iconoGithub  fs-2 hoverSocial"></i>
-                      </a>
+                  <div className="mt-3">
+                    <p className="fs-2 text-center team-name">Peter Slowak</p>
+                  </div>
+                  <div className="mt-auto">
+                    <p className=" text-center mt-2">
+                      <span className="text-orange">Full Stack Developer</span>{" "}
+                    </p>
+                    <hr className="text-orange mt-4" />
+                    <div className="mt-auto">
+                      <div className="d-flex justify-content-center">
+                        <a href="" className="btn" target="_blank">
+                          <i className="bi bi-linkedin iconLinkedin  fs-3 hoverSocial"></i>
+                        </a>
+                        <a href="https://github.com/PtrSlk" className="btn">
+                          <i className="bi bi-github iconoGithub fs-3 hoverSocial"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
