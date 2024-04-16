@@ -9,7 +9,13 @@ function Navigation() {
   const isLogged = useSelector((state) => state.user.isLogged);
   const dispatch = useDispatch();
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
-  const itemsInCart = useSelector((state) => state.cart.inCart.length);
+  const itemsInCart = useSelector((state) => state.cart.inCart);
+
+  const cartItems = Object.values(itemsInCart);
+  const totalQuantity = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   return (
     <Navbar expand="lg" className="navbar-collapse main-navbar">
@@ -94,9 +100,11 @@ function Navigation() {
               ADMIN
             </Nav.Link>
             <div className="d-flex align-items-center ms-3 text-light cart-wrapper">
-              <div className="cart-badge">
-                <p className="badge-text">{itemsInCart}</p>
-              </div>
+              {totalQuantity > 0 && (
+                <div className="cart-badge">
+                  <p className="badge-text">{totalQuantity}</p>
+                </div>
+              )}
               <i
                 className="bi bi-cart2 fs-5 navLink"
                 onClick={() => dispatch(setIsCartOpen())}
