@@ -32,7 +32,7 @@ function Navigation() {
 
         <Navbar.Collapse
           id="responsive-navbar-nav"
-          className="collapse ps-3 bg-dark-grey"
+          className="collapse ps-3 py-3 bg-dark-grey"
         >
           <Nav className="me-auto">
             <Nav.Link
@@ -83,7 +83,7 @@ function Navigation() {
             </NavDropdown>
           </Nav>
 
-          <Nav className="d-flex align-items-start align-items-center ">
+          <Nav className="">
             <Nav.Link
               as={Link}
               to="/admin/login"
@@ -92,16 +92,19 @@ function Navigation() {
             >
               ADMIN
             </Nav.Link>
-            <i
-              className="bi bi-cart2 fs-5 text-orange ms-3 navLink"
-              onClick={() => dispatch(setIsCartOpen())}
-            ></i>{" "}
+            <div className="d-flex align-items-center ms-3 text-light cart-wrapper">
+              <div className="cart-badge"></div>
+              <i
+                className="bi bi-cart2 fs-5 navLink"
+                onClick={() => dispatch(setIsCartOpen())}
+              ></i>
+            </div>
             {isLogged ? (
               <></>
             ) : (
               <NavDropdown
                 className="navLink navDropdown"
-                title={<i className="bi bi-person-fill fs-5 "></i>}
+                title={<i className="bi bi-person-fill fs-5"></i>}
                 id="navbarScrollingDropdown"
               >
                 <NavDropdown.Item

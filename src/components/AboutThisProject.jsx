@@ -308,7 +308,7 @@ function AboutThisProject() {
                   />
                   <div className="mt-3">
                     <p className="fs-2 text-center team-name">
-                      Santiago Ternande
+                      Santiago <span className="fw-semibold"> Ternande</span>
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -343,7 +343,9 @@ function AboutThisProject() {
                     alt="Team Member 1"
                   />
                   <div className="mt-3">
-                    <p className="fs-2 text-center team-name">David Viergutz</p>
+                    <p className="fs-2 text-center team-name">
+                      David <span className="fw-semibold"> Viergutz</span>{" "}
+                    </p>
                   </div>
                   <div className="mt-auto">
                     <p className="text-center mt-2">
@@ -377,7 +379,9 @@ function AboutThisProject() {
                     alt="Team Member 1"
                   />
                   <div className="mt-3">
-                    <p className="fs-2 text-center team-name">Gastón Silva</p>
+                    <p className="fs-2 text-center team-name">
+                      Gastón <span className="fw-semibold"> Silva</span>
+                    </p>
                   </div>
                   <div className="mt-auto">
                     <p className=" text-center mt-2">
@@ -414,7 +418,9 @@ function AboutThisProject() {
                     alt="Team Member 1"
                   />
                   <div className="mt-3">
-                    <p className="fs-2 text-center team-name">Peter Slowak</p>
+                    <p className="fs-2 text-center team-name">
+                      Peter <span className="fw-semibold"> Slowak</span>
+                    </p>
                   </div>
                   <div className="mt-auto">
                     <p className=" text-center mt-2">

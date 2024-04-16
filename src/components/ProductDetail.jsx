@@ -80,7 +80,7 @@ function ProductDetail() {
               )}
             </div>
             <div className="col-md-6 col-lg-5 ">
-              <div className="m-0 special-product-card-1 d-flex flex-column justify-content-start p-5">
+              <div className="m-0 special-product-card-2 d-flex flex-column justify-content-start p-5">
                 <h4 className=" text-start">
                   {oneProduct ? (
                     <div>{oneProduct.name}</div>
