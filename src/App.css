@@ -1077,6 +1077,38 @@ h5 {
   background-color: #121212;
 }
 
+/* //////////////////////////// THANK YOU FOR YOU BUY ////////////////////////////// */
+.background-thank {
+  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/Fondo3.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.thank-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-container {
+  stroke: 0.1px;
+  height: 400px;
+  width: 400px;
+}
+.svg-utica {
+  transition: all;
+  transition-duration: 2s;
+  stroke-width: 0.8px;
+}
+
+.svg-utica:hover {
+  stroke-width: 3px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
 .brand-logo-no-hover:hover {
   background-color: transparent !important;
 }

@@ -48,7 +48,7 @@ function ProductsAll() {
             {products ? (
               products.map((product) => (
                 <div
-                  className="col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center justify-content-center"
+                  className="col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center justify-content-center item-card-products"
                   key={product.id}
                 >
                   <div className="d-flex flex-column h-100">
