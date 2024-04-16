@@ -1076,19 +1076,20 @@ h5 {
   width: 18px;
   background-color: #d26b26;
   position: absolute;
-  top: -4px;
-  right: -10px;
+  top: 2px;
+  right: -6px;
   border-radius: 50%;
   padding: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5;
 }
 .badge-text {
   color: white;
   font-size: 11px;
-  margin-left: -1px;
-  margin-top: 14px;
+  margin-left: -2px;
+  margin-top: 16px;
 }
 
 .main-navbar {
