@@ -809,7 +809,6 @@ h5 {
 
 .special-product-card {
   /*   background-color: rgba(0, 0, 0, 0.1); */
-
   border: 1px solid #ee77281d;
   border-radius: 10px;
   padding: 16px;
@@ -829,10 +828,30 @@ h5 {
   transition: 0.3s;
 }
 
+.product-name {
+  color: #c9c9c9;
+}
+
+.product-description {
+  color: #6d6e6e;
+  transition: 0.8s;
+}
+
+@media (max-width: 1024px) {
+  .product-description {
+    color: #fafafa;
+  }
+}
 .special-product-card:hover {
   background-size: 100% 100%;
   .card-img-top {
     transform: translateY(-12px);
+  }
+  .product-name {
+    color: white;
+  }
+  .product-description {
+    color: #ffffff;
   }
 }
 
