@@ -41,65 +41,67 @@ function LoginAdmin() {
     }
   };
   return (
-    <div className="vh-100 bg-fondo3 d-flex flex-colum align-items-center justify-content-center">
-      <div className=" p-5 ">
-        <div className="container login-wrapper">
-          <div className="row bg-dark-grey border-orange mt-5 ">
-            <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
-              <div className="text-center">
-                <img
-                  src={`${
-                    import.meta.env.VITE_BUCKETS_URL
-                  }/fotos_varias/logo-utica-white.png`}
-                  alt="UticaLogo"
-                  className="utica-logo-login"
-                />
+    <div className="bg-fondo3">
+      <div className="container main d-flex flex-colum align-items-center justify-content-center">
+        <div className="p-2 pt-5">
+          <div className="container login-wrapper">
+            <div className="row bg-dark-grey border-orange mt-5 ">
+              <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
+                <div className="text-center">
+                  <img
+                    src={`${
+                      import.meta.env.VITE_BUCKETS_URL
+                    }/fotos_varias/logo-utica-white.png`}
+                    alt="UticaLogo"
+                    className="utica-logo-login"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="col-md-6 bg-light p-5 rounded-end">
-              <h3 className="text-dark mb-3 fw-semibold">Login Admin</h3>
-              <form onSubmit={handleSubmit}>
-                <div className="mb-2">
-                  <label forhtml="email" className="form-label text-dark">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control form-control-sm"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                  <small className="text-secondary">Try: test@test.com</small>
-                </div>
+              <div className="col-md-6 bg-light p-4 p-md-5 rounded-end">
+                <h3 className="text-dark mb-3 fw-semibold">Login Admin</h3>
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-2">
+                    <label forhtml="email" className="form-label text-dark">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control form-control-sm"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                    <small className="text-secondary">Try: test@test.com</small>
+                  </div>
 
-                <div className="mb-2">
-                  <label
-                    forhtml="username"
-                    className="form-label text-dark mt-2"
+                  <div className="mb-2">
+                    <label
+                      forhtml="username"
+                      className="form-label text-dark mt-2"
+                    >
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      className="form-control form-control-sm"
+                      id="password"
+                      name="password"
+                      value={formData.password}
+                      onChange={handleChange}
+                    />
+                    <small className="text-secondary">Try: 123</small>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="btn btn-subscribe w-100 my-3 text-light"
                   >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    className="form-control form-control-sm"
-                    id="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                  />
-                  <small className="text-secondary">Try: 123</small>
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn btn-subscribe w-100 my-3 text-light"
-                >
-                  Login
-                </button>
-                <div className="d-flex"></div>
-              </form>
+                    Login
+                  </button>
+                  <div className="d-flex"></div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
