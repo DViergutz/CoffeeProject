@@ -114,7 +114,7 @@ function ProductDetail() {
                     className="btn-hero p-2 w-100 mt-4"
                     onClick={handleIncrement}
                   >
-                    Add to Cart <i className="bi bi-cart"></i>
+                    Add to Cart <i className="bi bi-cart ms-2"></i>
                   </button>
                 </div>
               </div>
@@ -167,7 +167,7 @@ function ProductDetail() {
             </div>
           </div>
           <div className="relatedProducts mt-5">
-            <h3 className="related-products">Related Products</h3>
+            <h3 className="related-products">Related Roasts</h3>
             <div className="row mb-5">
               {relatedProducts ? (
                 relatedProducts.map((product) => (
@@ -196,9 +196,9 @@ function ProductDetail() {
                           </p>
                           <div className="d-flex justify-content-evenly">
                             <div className="me-2">
-                              <Link to={`/products/${product.id}`} className="">
+                              <Link to={`/products/${product.id}`}>
                                 <button
-                                  className="btn btn-view-product height65"
+                                  className="btn-view-product height65"
                                   onClick={() => window.scrollTo(0, 0)}
                                 >
                                   View Product

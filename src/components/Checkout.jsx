@@ -212,7 +212,7 @@ function Checkout() {
                   Card Number
                 </label>
                 <input
-                  className="form-control mb-4 mt-1"
+                  className="form-control mb-4 mt-1 input-style"
                   type="text"
                   id="card-number"
                   name="card-number"
@@ -228,7 +228,7 @@ function Checkout() {
                     Expiration Date
                   </label>
                   <input
-                    className="form-control mb-4 mt-1"
+                    className="form-control mb-4 mt-1 input-style"
                     type="text"
                     id="expiration-date"
                     name="expiration-date"
@@ -240,7 +240,7 @@ function Checkout() {
                     CVV
                   </label>
                   <input
-                    className="form-control mt-1"
+                    className="form-control mt-1 input-style"
                     type="number"
                     id="cvv"
                     name="cvv"
@@ -257,7 +257,7 @@ function Checkout() {
                     id="Visa"
                     name="paymentMethod"
                     value="Visa"
-                    className="ms-2"
+                    className="ms-2 form-check-input input-style"
                     checked={selectedOption === "Visa"}
                     onChange={handleOptionChange}
                   />
@@ -277,7 +277,7 @@ function Checkout() {
                     id="Mastercard"
                     name="paymentMethod"
                     value="Mastercard"
-                    className="ms-4"
+                    className="ms-4 form-check-input input-style"
                     checked={selectedOption === "Mastercard"}
                     onChange={handleOptionChange}
                   />
@@ -297,7 +297,7 @@ function Checkout() {
                     id="MercadoPago"
                     name="paymentMethod"
                     value="MercadoPago"
-                    className="ms-4"
+                    className="ms-4 form-check-input input-style"
                     checked={selectedOption === "MercadoPago"}
                     onChange={handleOptionChange}
                   />
