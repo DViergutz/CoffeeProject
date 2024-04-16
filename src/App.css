@@ -99,14 +99,6 @@
 .bold {
   font-weight: 700;
 }
-.main-section-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-  padding: 32px 10% 16px 10%;
-}
 
 @media (max-width: 940px) {
   .main-section-footer {
@@ -141,7 +133,7 @@ footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-total .logo-footer {
+.logo-footer {
   height: 150px;
   width: auto;
   background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/logo-utica-white.png");
