@@ -23,6 +23,7 @@ import DashboardEditAdmin from "./components/DashboardEditAdmin";
 import DashboardCreateAdmin from "./components/DashboardCreateAdmin";
 import LoginAdmin from "./components/LoginAdmin";
 import LogLayout from "./components/LogLayout";
+import ThankYouForYourBuy from "./components/ThankYouForYourBuy";
 
 const router = createBrowserRouter([
   {
@@ -128,6 +129,10 @@ const router = createBrowserRouter([
       {
         path: "/about-this-project",
         element: <AboutThisProject />,
+      },
+      {
+        path: "/thank-you",
+        element: <ThankYouForYourBuy />,
       },
     ],
   },
