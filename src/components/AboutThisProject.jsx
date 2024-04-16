@@ -1,5 +1,4 @@
-import React from "react";
-import { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Gaston from "../assets/img/Gaston.png";
 import Santiago from "../assets/img/Santiago.png";
 import David from "../assets/img/David.png";
@@ -11,13 +10,46 @@ function AboutThisProject() {
   const mapping = useRef(null);
   const admin = useRef(null);
   const team = useRef(null);
+  const [activeSection, setActiveSection] = useState(null);
 
-  const scrollToSection = (elementRef) => {
+  const scrollToSection = (elementRef, section) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
       behavior: "smooth",
     });
+    setActiveSection(section);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition < technologies.current.offsetTop) {
+        setActiveSection("");
+      } else if (
+        scrollPosition >= technologies.current.offsetTop &&
+        scrollPosition < mapping.current.offsetTop
+      ) {
+        setActiveSection("technologies");
+      } else if (
+        scrollPosition >= mapping.current.offsetTop &&
+        scrollPosition < admin.current.offsetTop
+      ) {
+        setActiveSection("mapping");
+      } else if (
+        scrollPosition >= admin.current.offsetTop &&
+        scrollPosition < team.current.offsetTop
+      ) {
+        setActiveSection("admin");
+      } else if (scrollPosition >= team.current.offsetTop) {
+        setActiveSection("team");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="align-navigation-menu">
@@ -26,22 +58,40 @@ function AboutThisProject() {
         <ul>
           {" "}
           <li
-            onClick={() => scrollToSection(technologies)}
-            className="nav-link-home"
+            onClick={() => scrollToSection(technologies, "technologies")}
+            className={`nav-link-home ${
+              activeSection === "technologies" ? "active" : ""
+            }`}
           >
-            <GoDot />
+            <GoDot
+              className={activeSection === "technologies" ? "active-dot" : ""}
+            />
           </li>
           <li
-            onClick={() => scrollToSection(mapping)}
-            className="nav-link-home"
+            onClick={() => scrollToSection(mapping, "mapping")}
+            className={`nav-link-home ${
+              activeSection === "mapping" ? "active" : ""
+            }`}
           >
-            <GoDot />
+            <GoDot
+              className={activeSection === "mapping" ? "active-dot" : ""}
+            />
           </li>
-          <li onClick={() => scrollToSection(admin)} className="nav-link-home">
-            <GoDot />{" "}
+          <li
+            onClick={() => scrollToSection(admin, "admin")}
+            className={`nav-link-home ${
+              activeSection === "admin" ? "active" : ""
+            }`}
+          >
+            <GoDot className={activeSection === "admin" ? "active-dot" : ""} />{" "}
           </li>
-          <li onClick={() => scrollToSection(team)} className="nav-link-home">
-            <GoDot />
+          <li
+            onClick={() => scrollToSection(team, "team")}
+            className={`nav-link-home ${
+              activeSection === "team" ? "active" : ""
+            }`}
+          >
+            <GoDot className={activeSection === "team" ? "active-dot" : ""} />
           </li>
         </ul>
       </div>
@@ -230,6 +280,7 @@ function AboutThisProject() {
             </div>
           </div>
         </div>
+
         <div className="container main-about" ref={mapping}>
           <div className="about-content">
             <div>
@@ -249,11 +300,12 @@ function AboutThisProject() {
                 you never feel 'stuck' at any point.
               </p>
             </div>
-          </div>
-          <div className="container">
-            <div className="row">
-              <div className="col">
-                <div className="flow-chart-img"></div>
+
+            <div className="container">
+              <div className="row">
+                <div className="col">
+                  <div className="flow-chart-img"></div>
+                </div>{" "}
               </div>
             </div>
           </div>
@@ -281,6 +333,7 @@ function AboutThisProject() {
             </div>
           </div>
         </div>
+        <div></div>
         <div className="container main" ref={team}>
           <div className="about-content">
             <div>
