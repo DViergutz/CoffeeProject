@@ -354,22 +354,26 @@ function AboutThisProject() {
             <div className="col-md-6 col-xl-3 d-flex align-items-center justify-content-evenly">
               <div className="d-flex flex-column h-100">
                 <div className="special-product-card-1 h-100 d-flex flex-column align-items-center">
-                  <img
-                    src={David}
-                    className="card-img-1 "
-                    alt="Team Member 1"
-                  />
-                  <div className="mt-3">
-                    <p className="fs-2 text-center team-name">
-                      Santiago <span className="fw-semibold"> Ternande</span>
-                    </p>
+                  <div className="card-top-wrapper">
+                    <div className=""></div>
+                    <img
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/team/santi-img.png`}
+                      className="card-img-1"
+                      alt="Team Member 1"
+                    />
                   </div>
-                  <div className="mt-auto">
-                    <p className=" text-center mt-2">
-                      <span className="text-orange">Full Stack Developer</span>{" "}
+                  <div className="mt-auto card-info-wrapper">
+                    <p className="fs-4 text-center team-name mt-3">
+                      SANTIAGO TERNANDE
                     </p>
-                    <hr className="text-orange mt-4" />
+                    <p className=" text-center mt-2">
+                      <span className="text-orange">Full Stack Developer</span>
+                    </p>
+
                     <div className="mt-auto">
+                      <hr className="text-orange" />
                       <div className="d-flex justify-content-center">
                         <a
                           href="https://www.linkedin.com/in/santiagoternande/"
