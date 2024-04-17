@@ -32,65 +32,14 @@ const cartSlice = createSlice({
       }
     },
 
-    /*  incrementQuantity: (state, action) => {
-      const itemIndex = state.inCart.findIndex(
-        (product) => product.id === action.payload.id
-      ); ////index me da -1 si no esta en el array
-      if (itemIndex >= 0) {
-        const cart = state.inCart.map((item, index) => {
-          if (index === itemIndex) {
-            if (item.quantity + 1 <= action.payload.stock) {
-              return { ...item, quantity: item.quantity + 1 };
-            } else {
-              return item; 
-            }
-          }
-          return item;
-        });
-        return { ...state, inCart: cart };
-      } else {
-        if (action.payload.stock > 0) {
-          return {
-            ...state,
-            inCart: [...state.inCart, { ...action.payload, quantity: 1 }],
-          };
-        } else {
-          return state; 
-        }
-      }
-    }, */
-
     incrementQuantity: (state, action) => {
-      const itemIndex = state.inCart.findIndex(
-        (product) => product.id === action.payload.id
-      ); ////index me da -1 si no esta en el array
-      if (itemIndex >= 0) {
-        const cart = state.inCart.map((item, index) => {
-          if (index === itemIndex) {
-            if (item.quantity + 1 <= action.payload.stock) {
-              return { ...item, quantity: item.quantity + 1 };
-            } else {
-              return item;
-            }
-          }
-          return item;
-        });
-
-        if (cart[itemIndex] === state.inCart[itemIndex]) {
-          return { ...state, inCart: cart, showToast: true };
-        } else {
-          return { ...state, inCart: cart, showToast: false };
-        }
+      const selectedItem = state.inCart.find(
+        (item) => item.id === action.payload.id
+      );
+      if (!selectedItem && action.payload.stock > 0) {
+        state.inCart.push({ ...action.payload, quantity: 1 });
       } else {
-        if (action.payload.stock > 0) {
-          return {
-            ...state,
-            inCart: [...state.inCart, { ...action.payload, quantity: 1 }],
-            showToast: false,
-          };
-        } else {
-          return state;
-        }
+        selectedItem.quantity = selectedItem.quantity + 1;
       }
     },
 
