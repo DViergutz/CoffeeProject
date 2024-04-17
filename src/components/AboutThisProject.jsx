@@ -359,93 +359,19 @@ function AboutThisProject() {
                     <img
                       src={`${
                         import.meta.env.VITE_BUCKETS_URL
-                      }/team/santi-img.png`}
+                      }/team/gaston-img.png`}
                       className="card-img-1"
                       alt="Team Member 1"
                     />
                   </div>
                   <div className="mt-auto card-info-wrapper">
-                    <p className="fs-4 text-center team-name mt-3">
-                      SANTIAGO TERNANDE
-                    </p>
+                    <p className="fs-2  team-name mt-1">Gastón Silva</p>
                     <p className=" text-center mt-2">
                       <span className="text-orange">Full Stack Developer</span>
                     </p>
 
                     <div className="mt-auto">
-                      <hr className="text-orange" />
-                      <div className="d-flex justify-content-center">
-                        <a
-                          href="https://www.linkedin.com/in/santiagoternande/"
-                          className="btn"
-                          target="_blank"
-                        >
-                          <i className="bi bi-linkedin iconLinkedin  fs-3 hoverSocial"></i>
-                        </a>
-                        <a href="https://github.com/Machine-45" className="btn">
-                          <i className="bi bi-github iconoGithub fs-3 hoverSocial"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-3 d-flex align-items-center justify-content-evenly">
-              <div className="d-flex flex-column h-100">
-                <div className="special-product-card-1 h-100 d-flex flex-column align-items-center">
-                  <img
-                    src={David}
-                    className="card-img-1 "
-                    alt="Team Member 1"
-                  />
-                  <div className="mt-3">
-                    <p className="fs-2 text-center team-name">
-                      David <span className="fw-semibold"> Viergutz</span>{" "}
-                    </p>
-                  </div>
-                  <div className="mt-auto">
-                    <p className="text-center mt-2">
-                      <span className="text-orange">Full Stack Developer</span>{" "}
-                    </p>
-                    <hr className="text-orange mt-4" />
-                    <div className="mt-auto">
-                      <div className="d-flex justify-content-center">
-                        <a
-                          href="https://www.linkedin.com/in/david-viergutz-b243b425a/"
-                          className="btn"
-                          target="_blank"
-                        >
-                          <i className="bi bi-linkedin iconLinkedin  fs-3 hoverSocial"></i>
-                        </a>
-                        <a href="https://github.com/DViergutz" className="btn">
-                          <i className="bi bi-github iconoGithub fs-3 hoverSocial"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-3 d-flex align-items-center justify-content-evenly">
-              <div className="d-flex flex-column h-100">
-                <div className="special-product-card-1 h-100 d-flex flex-column align-items-center">
-                  <img
-                    src={Gaston}
-                    className="card-img-1 "
-                    alt="Team Member 1"
-                  />
-                  <div className="mt-3">
-                    <p className="fs-2 text-center team-name">
-                      Gastón <span className="fw-semibold"> Silva</span>
-                    </p>
-                  </div>
-                  <div className="mt-auto">
-                    <p className=" text-center mt-2">
-                      <span className="text-orange">Full Stack Developer</span>{" "}
-                    </p>
-                    <hr className="text-orange mt-4" />
-                    <div className="mt-auto">
+                      <hr className="text-orange mb-4" />
                       <div className="d-flex justify-content-center">
                         <a
                           href="https://www.linkedin.com/in/gaston-silva-1a788a1b9/"
@@ -457,6 +383,7 @@ function AboutThisProject() {
                         <a
                           href="https://github.com/GastonSilva11"
                           className="btn"
+                          target="_blank"
                         >
                           <i className="bi bi-github iconoGithub fs-3 hoverSocial"></i>
                         </a>
@@ -469,22 +396,24 @@ function AboutThisProject() {
             <div className="col-md-6 col-xl-3 d-flex align-items-center justify-content-evenly">
               <div className="d-flex flex-column h-100">
                 <div className="special-product-card-1 h-100 d-flex flex-column align-items-center">
-                  <img
-                    src={David}
-                    className="card-img-1 "
-                    alt="Team Member 1"
-                  />
-                  <div className="mt-3">
-                    <p className="fs-2 text-center team-name">
-                      Peter <span className="fw-semibold"> Slowak</span>
-                    </p>
+                  <div className="card-top-wrapper">
+                    <div className=""></div>
+                    <img
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/team/david-img.png`}
+                      className="card-img-1"
+                      alt="Team Member 1"
+                    />
                   </div>
-                  <div className="mt-auto">
+                  <div className="mt-auto card-info-wrapper">
+                    <p className="fs-2  team-name mt-1">Peter Slowak</p>
                     <p className=" text-center mt-2">
-                      <span className="text-orange">Full Stack Developer</span>{" "}
+                      <span className="text-orange">Full Stack Developer</span>
                     </p>
-                    <hr className="text-orange mt-4" />
+
                     <div className="mt-auto">
+                      <hr className="text-orange mb-4" />
                       <div className="d-flex justify-content-center">
                         <a
                           href="https://www.linkedin.com/in/peter-slowak-20a59a1b6/"
@@ -493,7 +422,95 @@ function AboutThisProject() {
                         >
                           <i className="bi bi-linkedin iconLinkedin  fs-3 hoverSocial"></i>
                         </a>
-                        <a href="https://github.com/PtrSlk" className="btn">
+                        <a
+                          href="https://github.com/PtrSlk"
+                          className="btn"
+                          target="_blank"
+                        >
+                          <i className="bi bi-github iconoGithub fs-3 hoverSocial"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-xl-3 d-flex align-items-center justify-content-evenly">
+              <div className="d-flex flex-column h-100">
+                <div className="special-product-card-1 h-100 d-flex flex-column align-items-center">
+                  <div className="card-top-wrapper">
+                    <div className=""></div>
+                    <img
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/team/santii-img.png`}
+                      className="card-img-1"
+                      alt="Team Member 1"
+                    />
+                  </div>
+                  <div className="mt-auto card-info-wrapper">
+                    <p className="fs-2  team-name mt-1">Santiago Ternande</p>
+                    <p className=" text-center mt-2">
+                      <span className="text-orange">Full Stack Developer</span>
+                    </p>
+
+                    <div className="mt-auto">
+                      <hr className="text-orange mb-4" />
+                      <div className="d-flex justify-content-center">
+                        <a
+                          href="https://www.linkedin.com/in/santiagoternande/"
+                          className="btn"
+                          target="_blank"
+                        >
+                          <i className="bi bi-linkedin iconLinkedin  fs-3 hoverSocial"></i>
+                        </a>
+                        <a
+                          href="https://github.com/Machine-45"
+                          className="btn"
+                          target="_blank"
+                        >
+                          <i className="bi bi-github iconoGithub fs-3 hoverSocial"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-xl-3 d-flex align-items-center justify-content-evenly">
+              <div className="d-flex flex-column h-100">
+                <div className="special-product-card-1 h-100 d-flex flex-column align-items-center">
+                  <div className="card-top-wrapper">
+                    <div className=""></div>
+                    <img
+                      src={`${
+                        import.meta.env.VITE_BUCKETS_URL
+                      }/team/david-img.png`}
+                      className="card-img-1"
+                      alt="Team Member 1"
+                    />
+                  </div>
+                  <div className="mt-auto card-info-wrapper">
+                    <p className="fs-2  team-name mt-1">David Viergutz</p>
+                    <p className=" text-center mt-2">
+                      <span className="text-orange">Full Stack Developer</span>
+                    </p>
+
+                    <div className="mt-auto">
+                      <hr className="text-orange mb-4" />
+                      <div className="d-flex justify-content-center">
+                        <a
+                          href="https://www.linkedin.com/in/david-viergutz-b243b425a/"
+                          className="btn"
+                          target="_blank"
+                        >
+                          <i className="bi bi-linkedin iconLinkedin  fs-3 hoverSocial"></i>
+                        </a>
+                        <a
+                          href="https://github.com/DViergutz"
+                          className="btn"
+                          target="_blank"
+                        >
                           <i className="bi bi-github iconoGithub fs-3 hoverSocial"></i>
                         </a>
                       </div>
