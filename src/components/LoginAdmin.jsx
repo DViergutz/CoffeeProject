@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 function LoginAdmin() {
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
   const notifyErrorLogin = () => toast("Please enter valid credentials!");
 
@@ -21,6 +22,8 @@ function LoginAdmin() {
     });
   };
 
+  const notifyErrorAdminLogin = () => setError(true);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -32,7 +35,7 @@ function LoginAdmin() {
       const { token, adminId } = response.data;
 
       if (token === undefined || adminId === undefined) {
-        notifyErrorLogin();
+        notifyErrorAdminLogin();
       } else {
         navigate("/admin");
       }

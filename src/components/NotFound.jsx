@@ -23,7 +23,10 @@ function NotFound() {
           </p>
           <p className="mb-5 fs-4"> Please try again shortly</p>
           <h3 className="mb-5">
-            <i>{routeError.statusText || routeError.message}</i>
+            <i>
+              {routeError.status} -{" "}
+              {routeError.statusText || routeError.message}
+            </i>
           </h3>
           <Link
             to="/"
