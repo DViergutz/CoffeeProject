@@ -5,6 +5,8 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import bag2 from "../assets/img/bag2.svg";
 import ResetDbButton from "./ResetDbButton";
+import { Chart as ChartJS } from "chart.js/auto";
+import { Doughnut } from "react-chartjs-2";
 
 function Dashboard() {
   const [orders, setOrders] = useState([]);
@@ -101,6 +103,51 @@ function Dashboard() {
     }
   }, [orders]);
 
+  ///////////////////PIE CHART///////////////
+  const calculateStatusPercentages = (orders) => {
+    // Count the occurrences of each status
+    const statusCounts = orders.reduce((counts, order) => {
+      counts[order.status] = (counts[order.status] || 0) + 1;
+      return counts;
+    }, {});
+    // Calculate total number of orders
+    const totalOrders = orders.length;
+
+    // Calculate percentage for each status
+    const statusPercentages = {};
+    for (const status in statusCounts) {
+      statusPercentages[status] = (
+        (statusCounts[status] / totalOrders) *
+        100
+      ).toFixed(2);
+    }
+    return statusPercentages;
+  };
+  // Function to generate data for the Doughnut chart
+  const generateChartData = (statusPercentages) => {
+    const labels = Object.keys(statusPercentages);
+    const data = Object.values(statusPercentages);
+    const backgroundColors = [
+      "rgba(46, 204, 113, 0.6)",
+      "rgba(255, 99, 132, 0.6)",
+      "rgba(54, 162, 235, 0.6)",
+    ];
+    return {
+      labels: labels,
+      datasets: [
+        {
+          data: data,
+          backgroundColor: backgroundColors,
+        },
+      ],
+    };
+  };
+  const statusPercentages = calculateStatusPercentages(orders);
+  const chartData = generateChartData(statusPercentages);
+  //////////////////////////////////////
+
+  /////////////////////////ITEM QUANTITY CHART////////////////
+
   const deleteOrder = async (id) => {
     Swal.fire({
       title: "Do you really want to delete this order?",
@@ -193,6 +240,9 @@ function Dashboard() {
             </div>
           </div>
 
+          <div>
+            <Doughnut data={chartData} />
+          </div>
           {/* TABLE */}
 
           <div className="lastOrders">
