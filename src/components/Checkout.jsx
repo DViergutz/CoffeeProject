@@ -61,7 +61,7 @@ function Checkout() {
   return (
     <div className="bg-fondo3">
       <div className="container pb-5 checkout-section">
-        <h2 className="h2-checkout">
+        <h2 className="h2-checkout mb-5">
           Shopping <span className="text-orange"> Cart</span>
         </h2>
         <div className="row">
