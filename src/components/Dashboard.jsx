@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import moment from "moment";
 import Swal from "sweetalert2";
-import { Link, useNavigate } from "react-router-dom";
-
-import profile from "../assets/img/profileImg.png";
+import { useNavigate } from "react-router-dom";
 import bag2 from "../assets/img/bag2.svg";
 import ResetDbButton from "./ResetDbButton";
 
 function Dashboard() {
-  const [orders, setOrders] = useState();
+  const [orders, setOrders] = useState([]);
+  const [monthlySales, setMonthlySales] = useState(0);
+  const [highestTotalPriceOrder, setHighestTotalPriceOrder] = useState(null);
+  const [mostSoldItem, setMostSoldItem] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,6 +45,61 @@ function Dashboard() {
       console.error("Error updating product:", error);
     }
   };
+
+  useEffect(() => {
+    const totalSales = orders.reduce(
+      (acc, order) => acc + parseFloat(order.totalPrice),
+      0
+    );
+    setMonthlySales(totalSales);
+  }, [orders]);
+
+  useEffect(() => {
+    if (orders.length > 0) {
+      const highestTotalPrice = orders.reduce((prevOrder, currentOrder) => {
+        return parseFloat(prevOrder.totalPrice) >
+          parseFloat(currentOrder.totalPrice)
+          ? prevOrder
+          : currentOrder;
+      });
+      setHighestTotalPriceOrder(highestTotalPrice);
+    }
+  }, [orders]);
+
+  useEffect(() => {
+    if (orders.length > 0) {
+      const productQuantityMap = new Map();
+      orders.forEach((order) => {
+        order.products.forEach((product) => {
+          const quantitySold = productQuantityMap.get(product.id) || 0;
+          productQuantityMap.set(product.id, quantitySold + product.quantity);
+        });
+      });
+
+      let mostSoldProductId;
+      let highestQuantitySold = 0;
+      productQuantityMap.forEach((quantitySold, productId) => {
+        if (quantitySold > highestQuantitySold) {
+          mostSoldProductId = productId;
+          highestQuantitySold = quantitySold;
+        }
+      });
+      const mostSoldItem = orders.reduce((mostSoldItem, order) => {
+        const product = order.products.find(
+          (product) => product.id === mostSoldProductId
+        );
+        if (
+          product &&
+          (!mostSoldItem || product.quantity > mostSoldItem.quantity)
+        ) {
+          return product;
+        }
+        return mostSoldItem;
+      }, null);
+      const totalQuantitySold = productQuantityMap.get(mostSoldProductId);
+      setMostSoldItem({ ...mostSoldItem, totalQuantitySold });
+    }
+  }, [orders]);
 
   const deleteOrder = async (id) => {
     Swal.fire({
@@ -98,11 +154,9 @@ function Dashboard() {
                   <img src={bag2} alt="bag-icon" className="dashboardIcon" />
                 </div>
                 <div className="cardDetails">
-                  <p>Montly Sales (USD)</p>
+                  <p>Montly Sales ($)</p>
 
-                  <p className="numberDashboard">
-                    450.980 <span>12%</span>
-                  </p>
+                  <p className="numberDashboard">{monthlySales}</p>
                 </div>
               </div>
               <a>View all</a>
@@ -113,10 +167,12 @@ function Dashboard() {
                   <img src={bag2} alt="bag-icon" className="dashboardIcon" />
                 </div>
                 <div className="cardDetails">
-                  <p>Montly Sales (USD)</p>
+                  <p>Highest Sale ($)</p>
 
                   <p className="numberDashboard">
-                    450.980 <span>12%</span>
+                    {highestTotalPriceOrder
+                      ? highestTotalPriceOrder.totalPrice
+                      : "N/A"}{" "}
                   </p>
                 </div>
               </div>
@@ -128,11 +184,9 @@ function Dashboard() {
                   <img src={bag2} alt="bag-icon" className="dashboardIcon" />
                 </div>
                 <div className="cardDetails">
-                  <p>Montly Sales (USD)</p>
+                  <p>Most Sold Item</p>
 
-                  <p className="numberDashboard">
-                    450.980 <span>12%</span>
-                  </p>
+                  <p className="numberDashboard">{mostSoldItem.productName}</p>
                 </div>
               </div>
               <a>View all</a>
@@ -177,7 +231,13 @@ function Dashboard() {
                       <td>{order.method}</td>
                       <td className="w-25">
                         <select
-                          className="form-select"
+                          className={`form-select ${
+                            order.status === "Pending"
+                              ? "status-pending"
+                              : order.status === "Processing"
+                              ? "status-processing"
+                              : "status-delivered"
+                          }`}
                           aria-label="order"
                           name="status"
                           value={order.status}

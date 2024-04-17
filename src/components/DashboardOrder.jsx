@@ -114,7 +114,13 @@ function DashboardOrder() {
                     <td>{order.method}</td>
                     <td className="w-25">
                       <select
-                        className="form-select"
+                        className={`form-select ${
+                          order.status === "Pending"
+                            ? "status-pending"
+                            : order.status === "Processing"
+                            ? "status-processing"
+                            : "status-delivered"
+                        }`}
                         aria-label="order"
                         name="status"
                         value={order.status}
