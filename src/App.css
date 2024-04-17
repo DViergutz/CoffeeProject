@@ -1777,6 +1777,10 @@ h5 {
 .cardDetails > p {
   margin: 0;
 }
+
+.pie-chart {
+  max-width: 300px;
+}
 .numberDashboard {
   font-size: 1.4rem;
   font-weight: bold;
