@@ -680,8 +680,8 @@ h5 {
 }
 .img-splash {
   height: 550px;
-  margin-top: -500px;
-  margin-left: 1400px;
+  margin-top: -350px;
+  margin-left: 1200px;
   filter: brightness(0.5) grayscale(30%);
 }
 
@@ -693,7 +693,7 @@ h5 {
 }
 .img-splash-beans {
   height: 600px;
-  margin-top: -300px;
+  margin-top: -200px;
   margin-left: 1000px;
   opacity: 70%;
 }

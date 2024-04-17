@@ -46,7 +46,6 @@ function Checkout() {
             '<a href="/thank-you" style="color: white; text-decoration: none;">Continue</a>',
         }); */
         navigate("/thank-you");
-        window.location.reload();
       } catch (error) {
         console.error("Error:", error);
       }
