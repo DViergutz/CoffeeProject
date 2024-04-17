@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import profile from "../assets/img/profileImg.png";
-import bag from "../assets/img/bag.svg";
-import home from "../assets/img/home.svg";
-import user from "../assets/img/user.svg";
-import cart from "../assets/img/cart.svg";
 import burger from "../assets/img/burger.svg";
 import close from "../assets/img/close.svg";
-import backHome from "../assets/img/return.svg";
 import { Link } from "react-router-dom";
 
 function PanelAdmin() {

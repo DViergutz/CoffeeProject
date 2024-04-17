@@ -1619,9 +1619,25 @@ h5 {
 
 /* PANEL ADMIN*/
 
+.status-pending {
+  color: red;
+}
+
+.status-processing {
+  color: blue;
+}
+
+.status-delivered {
+  color: green;
+}
+
 .mainAdmin {
   display: flex;
   height: 100vh;
+}
+
+.w-15 {
+  width: 15%;
 }
 
 .mainAdmin p {
