@@ -5,6 +5,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 
 import { incrementQuantity, setIsCartOpen } from "../redux/CartSlice.jsx";
+import DotLoader from "react-spinners/DotLoader.js";
 
 function ProductDetail() {
   const [oneProduct, setOneProduct] = useState();
@@ -76,7 +77,11 @@ function ProductDetail() {
                   alt={oneProduct.image}
                 />
               ) : (
-                <div>Loading...</div>
+                <div className="d-flex justify-content-center align-items-center vh-100">
+                  <div className="d-flex justify-content-center align-items-center">
+                    <DotLoader color="#ee7828" size={80} />
+                  </div>
+                </div>
               )}
             </div>
             <div className="col-md-6 col-lg-5 ">
@@ -232,7 +237,9 @@ function ProductDetail() {
                   </div>
                 ))
               ) : (
-                <div>Loading...</div>
+                <div className="d-flex justify-content-center mt-3 ">
+                  <DotLoader color="#ee7828" size={80} />
+                </div>
               )}
             </div>
           </div>
