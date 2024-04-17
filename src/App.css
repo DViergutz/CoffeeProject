@@ -1601,6 +1601,10 @@ h5 {
   height: 100vh;
 }
 
+.w-15 {
+  width: 15%;
+}
+
 .mainAdmin p {
   color: black;
 }

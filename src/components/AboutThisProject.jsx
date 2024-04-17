@@ -482,7 +482,11 @@ function AboutThisProject() {
                     <hr className="text-orange mt-4" />
                     <div className="mt-auto">
                       <div className="d-flex justify-content-center">
-                        <a href="" className="btn" target="_blank">
+                        <a
+                          href="https://www.linkedin.com/in/peter-slowak-20a59a1b6/"
+                          className="btn"
+                          target="_blank"
+                        >
                           <i className="bi bi-linkedin iconLinkedin  fs-3 hoverSocial"></i>
                         </a>
                         <a href="https://github.com/PtrSlk" className="btn">
