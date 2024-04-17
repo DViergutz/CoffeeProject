@@ -140,6 +140,7 @@ footer {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
+  opacity: 0.6;
 }
 .footer-icon {
   transition: transform 0.3s ease; /* Adding transition effect */
