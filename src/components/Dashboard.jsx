@@ -163,7 +163,7 @@ function Dashboard() {
                       {/* <td>{order.products}</td> */}
                       <td>{order.userId}</td>
                       <td className="w-25">
-                        <ul style={{ listStyleType: "none" }}>
+                        <ul className="ps-0" style={{ listStyleType: "none" }}>
                           {order.products.map((item) => (
                             <li key={item.productName}>
                               <p>
@@ -173,7 +173,7 @@ function Dashboard() {
                           ))}
                         </ul>
                       </td>
-                      <td>$ {order.totalPrice}</td>
+                      <td className="w-15">$ {order.totalPrice}</td>
                       <td>{order.method}</td>
                       <td className="w-25">
                         <select
