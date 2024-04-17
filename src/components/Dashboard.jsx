@@ -17,6 +17,28 @@ function Dashboard() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Fetch products
+        const productsResponse = await axios.get(
+          "http://localhost:3000/products"
+        );
+        setProducts(productsResponse.data);
+
+        // Fetch last orders
+        const ordersResponse = await axios.get(
+          "http://localhost:3000/orders/last"
+        );
+        setOrders(ordersResponse.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  /*  useEffect(() => {
     const fetchAllProducts = async () => {
       try {
         const response = await axios({
@@ -45,7 +67,7 @@ function Dashboard() {
       }
     };
     fetchLastOrders();
-  }, []);
+  }, []); */
 
   const handleStatusChange = async (id, newStatus) => {
     const newOrderStatus = newStatus;
