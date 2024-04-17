@@ -154,8 +154,8 @@ function AboutThisProject() {
             </div>
           </div>
           <div>
-            <div>
-              <div className="row row-cols-2 row-cols-md-5 g-4">
+            <div className="d-flex align-items-center justify-content-center">
+              <div className="row row-cols-2 row-cols-md-5 g-4 img-width-about">
                 <div className="col">
                   <div className="d-flex flex-column align-items-center p-4">
                     <img
@@ -302,15 +302,20 @@ function AboutThisProject() {
             </div>
 
             <div className="container">
-              <div className="row">
-                <div className="col">
-                  <div className="flow-chart-img"></div>
-                </div>{" "}
+              <div className="d-flex align-items-center justify-content-center">
+                <img
+                  src={`${
+                    import.meta.env.VITE_BUCKETS_URL
+                  }/fotos_varias/Flow-chart.png`}
+                  className="flow-chart-img"
+                  alt="Flow chart"
+                />
+                {/* <div className="flow-chart-img"></div> */}
               </div>
             </div>
           </div>
         </div>
-        <div className="container main-about" ref={admin}>
+        <div className="container main-about-1" ref={admin}>
           <div className="about-content">
             <div>
               <h2 className="about-heading-3">
@@ -327,7 +332,7 @@ function AboutThisProject() {
           </div>
           <div className="container">
             <div className="row">
-              <div className="col">
+              <div className="col d-flex align-items-center justify-content-center">
                 <div className="admin-panel-img"></div>
               </div>
             </div>
