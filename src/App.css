@@ -895,38 +895,25 @@ h5 {
   border-radius: 0px 10px 10px 10px;
   padding: 16px;
   text-align: center;
-  /* backdrop-filter: blur(10px); */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
-  /* min-width: 280px; */
-  /* max-width: 350px; */
 }
 
 .card-top-wrapper {
   position: relative;
   width: 100%;
-  /* padding-left: 16px;
-  padding-right: 16px; */
 }
 
-/* .orange-frame {
-  height: 220px;
-  width: 90%;
-  z-index: 5;
-  border-top: 4px solid orange;
-  border-left: 4px solid orange;
-  border-right: 4px solid orange;
-  margin-left: 16px;
-   margin-right: 16px;
-  position: absolute;
-  bottom: 0;
-} */
-
 .card-img-1 {
-  z-index: 100000;
-  max-width: 265px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 255px;
   height: auto;
-  margin-top: -80px;
+  filter: saturate(0);
+}
+.special-product-card-1 .card-img-1 {
+  transition: filter 0.3s ease;
 }
 
 @media (min-width: 991px) {
@@ -938,22 +925,19 @@ h5 {
 
 /* Esta card es la de members */
 .special-product-card-1 {
-  /* background-color: rgba(0, 0, 0, 0.1);
-  border: 1px solid #ee77281d;
-  border-radius: 10px; */
-  /* text-align: center; */
-  /* backdrop-filter: blur(10px); */
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  /* padding: 16px; */
-  /* max-width: 280px; */
+  margin-top: 170px;
   min-width: 280px;
-  margin-bottom: 72px;
+  margin-bottom: 120px;
+}
+
+.special-product-card-1:hover .card-img-1 {
+  filter: saturate(1);
 }
 
 @media (min-width: 768px) {
   .special-product-card-1 {
     max-width: 350px;
-    margin-bottom: 90px;
+    margin-bottom: 120px;
   }
 }
 
@@ -965,7 +949,8 @@ h5 {
 
 @media (min-width: 1200px) {
   .special-product-card-1 {
-    max-width: 270px;
+    min-width: none;
+    max-width: 200px;
   }
 }
 
