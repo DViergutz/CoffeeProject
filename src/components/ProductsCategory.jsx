@@ -6,6 +6,7 @@ import Card from "react-bootstrap/Card";
 import { setIsCartOpen, incrementQuantity } from "../redux/CartSlice.jsx";
 import { useDispatch } from "react-redux";
 import ResetDbButton from "./ResetDbButton.jsx";
+import DotLoader from "react-spinners/DotLoader.js";
 
 function ProductsCategory() {
   const params = useParams();
@@ -119,7 +120,9 @@ function ProductsCategory() {
                   </div>
                 ))
               ) : (
-                <div>Loading...</div>
+                <div className="d-flex justify-content-center mt-3 ">
+                  <DotLoader color="#ee7828" size={80} />
+                </div>
               )}
             </div>
           </div>

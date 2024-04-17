@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { setIsCartOpen, incrementQuantity } from "../redux/CartSlice.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import ResetDbButton from "./ResetDbButton.jsx";
+import DotLoader from "react-spinners/DotLoader.js";
 
 function ProductsAll() {
   const [products, setproducts] = useState();
@@ -118,7 +119,9 @@ function ProductsAll() {
                 </div>
               ))
             ) : (
-              <div>Loading...</div>
+              <div className="d-flex justify-content-center ">
+                <DotLoader color="#ee7828" size={80} />
+              </div>
             )}
             {/* end card 1 */}
           </div>
