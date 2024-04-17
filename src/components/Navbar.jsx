@@ -105,8 +105,9 @@ function Navigation() {
                   <p className="badge-text">{totalQuantity}</p>
                 </div>
               )}
+
               <i
-                className="bi bi-cart2 fs-5 navLink"
+                className="bi bi-cart-fill fs-5 navLink"
                 onClick={() => dispatch(setIsCartOpen())}
               ></i>
             </div>
@@ -144,7 +145,7 @@ function Navigation() {
                 onClick={() => window.scrollTo(0, 0)}
               >
                 <button
-                  className="btn btn-view-product-logout height65 w-80"
+                  className="btn-view-product-logout"
                   onClick={() => dispatch(logout())}
                 >
                   LOGOUT

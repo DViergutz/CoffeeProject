@@ -579,7 +579,7 @@ function Home() {
                       required
                     />
                     <button
-                      type="button"
+                      type="button" // Cambia el tipo de botón a "button"
                       className="btn btn-subscribe" // Custom class for styling
                       onClick={notifyNewsletter}
                     >
