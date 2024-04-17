@@ -43,6 +43,7 @@ function LoginAdmin() {
       console.error("Error al iniciar sesión:", error);
     }
   };
+
   return (
     <div className="bg-fondo3">
       <div className="container main d-flex flex-colum align-items-center justify-content-center">
@@ -63,13 +64,24 @@ function LoginAdmin() {
               <div className="col-md-6 bg-light p-4 p-md-5 rounded-end">
                 <h3 className="text-dark mb-3 fw-semibold">Login Admin</h3>
                 <form onSubmit={handleSubmit}>
-                  <div className="mb-2">
-                    <label forhtml="email" className="form-label text-dark">
+                  <div className="mb-3">
+                    <label
+                      htmlFor="email"
+                      className={
+                        error
+                          ? "form-label text-dark animate__animated animate__headShake"
+                          : "form-label text-dark "
+                      }
+                    >
                       Email
                     </label>
                     <input
                       type="email"
-                      className="form-control form-control-sm input-style"
+                      className={
+                        error
+                          ? "form-control  animate__animated animate__headShake inputError input-style"
+                          : "form-control input-style"
+                      }
                       id="email"
                       name="email"
                       value={formData.email}
@@ -80,14 +92,22 @@ function LoginAdmin() {
 
                   <div className="mb-2">
                     <label
-                      forhtml="username"
-                      className="form-label text-dark mt-2"
+                      htmlFor="password"
+                      className={
+                        error
+                          ? "form-label text-dark animate__animated animate__headShake"
+                          : "form-label text-dark"
+                      }
                     >
                       Password
                     </label>
                     <input
                       type="password"
-                      className="form-control form-control-sm input-style"
+                      className={
+                        error
+                          ? "form-control  animate__animated animate__headShake inputError input-style"
+                          : "form-control input-style"
+                      }
                       id="password"
                       name="password"
                       value={formData.password}
