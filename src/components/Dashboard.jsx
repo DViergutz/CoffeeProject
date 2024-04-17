@@ -6,14 +6,31 @@ import { useNavigate } from "react-router-dom";
 import bag2 from "../assets/img/bag2.svg";
 import ResetDbButton from "./ResetDbButton";
 import { Chart as ChartJS } from "chart.js/auto";
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut, Bar } from "react-chartjs-2";
 
 function Dashboard() {
   const [orders, setOrders] = useState([]);
   const [monthlySales, setMonthlySales] = useState(0);
   const [highestTotalPriceOrder, setHighestTotalPriceOrder] = useState(null);
   const [mostSoldItem, setMostSoldItem] = useState([]);
+  const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchAllProducts = async () => {
+      try {
+        const response = await axios({
+          method: "GET",
+          url: `http://localhost:3000/products`,
+        });
+        setProducts(response.data);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+    fetchAllProducts();
+    setProducts(products);
+  }, []);
 
   useEffect(() => {
     const fetchLastOrders = async () => {
@@ -41,12 +58,13 @@ function Dashboard() {
       const response = await axios.patch(`http://localhost:3000/orders/${id}`, {
         status: newStatus,
       });
-      console.log(response.data);
       // navigate(0);
     } catch (error) {
       console.error("Error updating product:", error);
     }
   };
+
+  //////////////////////////////////// TOTAL SALES//////////////////////
 
   useEffect(() => {
     const totalSales = orders.reduce(
@@ -56,6 +74,7 @@ function Dashboard() {
     setMonthlySales(totalSales);
   }, [orders]);
 
+  //////////////////////////// HIGHEST ORDER ////////////////////
   useEffect(() => {
     if (orders.length > 0) {
       const highestTotalPrice = orders.reduce((prevOrder, currentOrder) => {
@@ -68,6 +87,7 @@ function Dashboard() {
     }
   }, [orders]);
 
+  ////////////////// MOST ITEM SOLD///////////////////
   useEffect(() => {
     if (orders.length > 0) {
       const productQuantityMap = new Map();
@@ -105,15 +125,14 @@ function Dashboard() {
 
   ///////////////////PIE CHART///////////////
   const calculateStatusPercentages = (orders) => {
-    // Count the occurrences of each status
     const statusCounts = orders.reduce((counts, order) => {
       counts[order.status] = (counts[order.status] || 0) + 1;
       return counts;
     }, {});
-    // Calculate total number of orders
+    // Calcula numero total de oders
     const totalOrders = orders.length;
 
-    // Calculate percentage for each status
+    // Calcula porcentajes
     const statusPercentages = {};
     for (const status in statusCounts) {
       statusPercentages[status] = (
@@ -123,31 +142,48 @@ function Dashboard() {
     }
     return statusPercentages;
   };
-  // Function to generate data for the Doughnut chart
+  // Function para generar data Doughnut chart
   const generateChartData = (statusPercentages) => {
     const labels = Object.keys(statusPercentages);
     const data = Object.values(statusPercentages);
-    const backgroundColors = [
-      "rgba(46, 204, 113, 0.6)",
-      "rgba(255, 99, 132, 0.6)",
-      "rgba(54, 162, 235, 0.6)",
-    ];
+
     return {
       labels: labels,
       datasets: [
         {
           data: data,
-          backgroundColor: backgroundColors,
+          backgroundColor: [
+            "rgba(46, 204, 113, 0.6)",
+            "rgba(255, 99, 132, 0.6)",
+            "rgba(54, 162, 235, 0.6)",
+          ],
         },
       ],
     };
   };
   const statusPercentages = calculateStatusPercentages(orders);
   const chartData = generateChartData(statusPercentages);
-  //////////////////////////////////////
 
-  /////////////////////////ITEM QUANTITY CHART////////////////
+  //////////////////BAR CHART////////////////////
 
+  const generateChartBarData = () => {
+    const labels = products.map((product) => product.name);
+    const data = products.map((product) => product.stock);
+
+    return {
+      labels: labels,
+      datasets: [
+        {
+          label: "Stock",
+          data: data,
+          backgroundColor: "rgba(54, 162, 235, 0.6)",
+        },
+      ],
+    };
+  };
+
+  const chartBarData = generateChartBarData();
+  ////////////////////////////////////////////////////
   const deleteOrder = async (id) => {
     Swal.fire({
       title: "Do you really want to delete this order?",
@@ -240,8 +276,12 @@ function Dashboard() {
             </div>
           </div>
 
-          <div>
+          <div className="pie-chart">
             <Doughnut data={chartData} />
+          </div>
+
+          <div className="bar-chart">
+            <Bar data={chartBarData} />
           </div>
           {/* TABLE */}
 

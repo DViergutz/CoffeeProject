@@ -15,6 +15,8 @@ function ThankYouForYourBuy() {
     }
   };
 
+  ///////useEFFECT QUE ME BORRE el carrito array de dependecnvias vacio////////
+
   return (
     <div className="background-thank">
       <div className=" main container ">
