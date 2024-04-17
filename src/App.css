@@ -910,6 +910,10 @@ h5 {
   bottom: 0;
   width: 255px;
   height: auto;
+  filter: saturate(0);
+}
+.special-product-card-1 .card-img-1 {
+  transition: filter 0.3s ease;
 }
 
 @media (min-width: 991px) {
@@ -924,6 +928,10 @@ h5 {
   margin-top: 170px;
   min-width: 280px;
   margin-bottom: 120px;
+}
+
+.special-product-card-1:hover .card-img-1 {
+  filter: saturate(1);
 }
 
 @media (min-width: 768px) {
