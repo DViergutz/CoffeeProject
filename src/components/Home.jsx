@@ -568,19 +568,24 @@ function Home() {
                 offers!
               </p>
             </div>
-            <form>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                notifyNewsletter();
+              }}
+            >
               <div className="row justify-content-center">
                 <div className="col-md-6">
                   <div className="input-group mb-3">
                     <input
                       type="email"
-                      className="form-control subscribe-input"
+                      className="form-control subscribe-input input-style"
                       placeholder="Your email address"
                       required
                     />
                     <button
-                      type="button" // Cambia el tipo de botón a "button"
-                      className="btn btn-subscribe" // Custom class for styling
+                      type="button"
+                      className="btn btn-subscribe"
                       onClick={notifyNewsletter}
                     >
                       Subscribe

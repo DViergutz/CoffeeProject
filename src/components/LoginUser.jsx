@@ -99,8 +99,8 @@ function LoginUser() {
                       type="text"
                       className={
                         error
-                          ? "form-control animate__animated animate__headShake inputError"
-                          : "form-control"
+                          ? "form-control animate__animated animate__headShake inputError input-style"
+                          : "form-control input-style"
                       }
                       id="email"
                       name="email"
@@ -123,8 +123,8 @@ function LoginUser() {
                       type="password"
                       className={
                         error
-                          ? "form-control animate__animated animate__headShake inputError"
-                          : "form-control"
+                          ? "form-control animate__animated animate__headShake inputError input-style"
+                          : "form-control input-style"
                       }
                       id="password"
                       name="password"

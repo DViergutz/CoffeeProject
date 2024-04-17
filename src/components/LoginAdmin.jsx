@@ -69,7 +69,7 @@ function LoginAdmin() {
                     </label>
                     <input
                       type="email"
-                      className="form-control form-control-sm"
+                      className="form-control form-control-sm input-style"
                       id="email"
                       name="email"
                       value={formData.email}
@@ -87,7 +87,7 @@ function LoginAdmin() {
                     </label>
                     <input
                       type="password"
-                      className="form-control form-control-sm"
+                      className="form-control form-control-sm input-style"
                       id="password"
                       name="password"
                       value={formData.password}

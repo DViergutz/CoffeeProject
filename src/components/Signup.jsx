@@ -70,7 +70,7 @@ function SignUp() {
                         <br />
                         <input
                           type="text"
-                          className="form-control form-control-sm"
+                          className="form-control form-control-sm input-style"
                           id="firstname"
                           name="firstname"
                           value={formData.firstname}
@@ -87,7 +87,7 @@ function SignUp() {
                       </label>
                       <input
                         type="text"
-                        className="form-control form-control-sm"
+                        className="form-control form-control-sm input-style"
                         id="lastname"
                         name="lastname"
                         value={formData.lastname}
@@ -102,7 +102,7 @@ function SignUp() {
                     </label>
                     <input
                       type="email"
-                      className="form-control form-control-sm"
+                      className="form-control form-control-sm input-style"
                       id="email"
                       name="email"
                       value={formData.email}
@@ -116,7 +116,7 @@ function SignUp() {
                     </label>
                     <input
                       type="password"
-                      className="form-control form-control-sm"
+                      className="form-control form-control-sm input-style"
                       id="password"
                       name="password"
                       value={formData.password}
@@ -130,7 +130,7 @@ function SignUp() {
                     </label>
                     <input
                       type="text"
-                      className="form-control form-control-sm"
+                      className="form-control form-control-sm input-style"
                       id="phone"
                       name="phone"
                       value={formData.phone}
@@ -144,7 +144,7 @@ function SignUp() {
                     </label>
                     <input
                       type="text"
-                      className="form-control form-control-sm"
+                      className="form-control form-control-sm input-style"
                       id="address"
                       name="address"
                       value={formData.address}
