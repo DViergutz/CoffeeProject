@@ -442,6 +442,16 @@ h5 {
   margin-bottom: 0;
 }
 
+.main-about-1 {
+  min-height: 100vh;
+}
+
+@media (max-width: 991px) {
+  .main-about-1 {
+    min-height: 60vh;
+  }
+}
+
 .main-about {
   min-height: 100vh;
 }
@@ -908,7 +918,7 @@ h5 {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 255px;
+  max-width: 255px;
   height: auto;
   filter: saturate(0);
 }
@@ -925,7 +935,7 @@ h5 {
 
 /* Esta card es la de members */
 .special-product-card-1 {
-  margin-top: 170px;
+  margin-top: 190px;
   min-width: 280px;
   margin-bottom: 120px;
 }
@@ -1336,9 +1346,10 @@ h5 {
 }
 
 .flow-chart-img {
-  height: 650px;
+  height: 580px;
   width: 100%;
-  background-image: url("https://abtomsvdwctapkbvozbb.supabase.co/storage/v1/object/public/fotos_varias/Flow-chart.png");
+  max-width: 900px;
+  /* background-image: url(`${import.meta.env.VITE_BUCKETS_URL}/fotos_varias/Flow-chart.png`); */
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1366,10 +1377,10 @@ h5 {
 }
 
 .admin-panel-img {
-  height: 580px;
+  height: 500px;
   width: 100%;
+  max-width: 950px;
   background-image: url("https://unicornbeer.vercel.app/assets/Admin_dashboard-82c3d7dc.png");
-  /* background-image: url(`${import.meta.env.VITE_BUCKETS_URL}/fotos_varias/panel-admin-idea.png`); */
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1382,15 +1393,15 @@ h5 {
 @media (max-width: 991px) {
   .admin-panel-img {
     width: 100%;
-    height: 400px;
+    height: 360px;
   }
 }
 @media (max-width: 768px) {
   .admin-panel-img {
-    height: 300px;
+    height: 230px;
   }
 }
-@media (max-width: 461px) {
+@media (max-width: 468px) {
   .admin-panel-img {
     height: 200px;
   }
@@ -1515,6 +1526,10 @@ h5 {
   opacity: 0.7;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.img-width-about {
+  max-width: 1000px;
 }
 
 .about-icons {
@@ -1885,7 +1900,7 @@ h5 {
   /* ABOUT THIS PROJECT*/
 
   .textAboutProject p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .textAboutProject h2 {
     font-size: 40px;
