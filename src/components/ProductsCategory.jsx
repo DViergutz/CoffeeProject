@@ -30,13 +30,7 @@ function ProductsCategory() {
   return (
     <>
       <div className="bg-fondo3 ">
-        <div className="container main">
-          <p className="fst-italic fw-light">
-            If the page doesn't display products below or the page seems to be
-            broken we please you to reset the tables to their initial state by
-            clicking this button.
-          </p>
-          <ResetDbButton />
+        <div className="container main prod-detail-margin">
           <h2 className="all-products-h2">
             Explore Our{" "}
             <span className="text-orange text-capitalize">
