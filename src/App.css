@@ -140,6 +140,7 @@ footer {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
+  opacity: 0.6;
 }
 .footer-icon {
   transition: transform 0.3s ease; /* Adding transition effect */
@@ -513,7 +514,7 @@ h5 {
 @media (min-width: 991px) {
   .about-info-1 {
     max-width: 680px;
-    margin-bottom: 60px;
+    margin-bottom: 32px;
   }
 }
 
@@ -1597,9 +1598,9 @@ h5 {
   width: 1.6rem;
 }
 
-.returnToWebsite > a > img {
+/* .returnToWebsite > a > img {
   width: 1.6rem;
-}
+} */
 
 .navbar > a {
   display: flex;
@@ -1658,14 +1659,11 @@ h5 {
 
 .imgLogoUticaDashboard {
   width: auto;
-  height: 95%;
+  height: 90%;
 }
 
 .navbar {
-  display: flex;
-  flex-direction: column;
-
-  align-items: flex-start;
+  margin: 16px;
 }
 
 .firstSectionDashboard a {
@@ -1679,6 +1677,7 @@ h5 {
   justify-content: center;
   background-color: rgb(54, 41, 41);
   height: 13vh;
+  padding-top: 16px;
 }
 
 .secondSectionDashboard {
@@ -1848,7 +1847,7 @@ h5 {
 
 /* MOBILE VERSION */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 991px) {
   .firstSectionDashboard {
     display: none;
   }

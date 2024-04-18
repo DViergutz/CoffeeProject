@@ -50,10 +50,7 @@ function ResetDbButton() {
 
   return (
     <>
-      <button
-        className="btn btn-hero height65 mb-5 mt-0 fs-5 w-25 p-2"
-        onClick={() => resetDb()}
-      >
+      <button className="btn btn-hero" onClick={() => resetDb()}>
         Reset Database
       </button>
     </>

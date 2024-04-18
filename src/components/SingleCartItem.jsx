@@ -89,7 +89,7 @@ function SingleCartItem({ item, index }) {
         >
           <Toast.Body closeButton={false} className="text-dark toast-cart">
             <div className="d-flex">
-              <div>Has alcanzado el límite de stock!</div>
+              <div>You have reached the stock limit!</div>
               <Button
                 variant="secondary"
                 size="sm"
