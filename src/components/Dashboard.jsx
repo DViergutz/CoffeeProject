@@ -295,7 +295,7 @@ function Dashboard() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="mb-5">
             <div className="row">
               <div className="col-4 graphics-wrapper">
                 <div className="d-flex flex-column justify-content-center admin-card-pie">
@@ -318,10 +318,10 @@ function Dashboard() {
 
           {/* TABLE */}
 
-          <div className="lastOrders">
+          <div>
             <table className="dashboardTable">
               <thead className="tableHeadDashboard">
-                <tr>
+                <tr className="text-light">
                   <th>Order Id</th>
                   <th>User</th>
                   <th>Products</th>
@@ -343,7 +343,7 @@ function Dashboard() {
                         <ul className="ps-0" style={{ listStyleType: "none" }}>
                           {order.products.map((item) => (
                             <li key={item.productName}>
-                              <p>
+                              <p className="text-dark">
                                 {item.productName} - Quantity: {item.quantity}
                               </p>
                             </li>
@@ -352,7 +352,7 @@ function Dashboard() {
                       </td>
                       <td className="w-15">$ {order.totalPrice}</td>
                       <td>{order.method}</td>
-                      <td className="w-25">
+                      <td className="w-15">
                         <select
                           className={`form-select ${
                             order.status === "Pending"

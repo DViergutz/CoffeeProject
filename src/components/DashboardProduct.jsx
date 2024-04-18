@@ -66,21 +66,20 @@ function DashboardProduct() {
       <div className="administrationPanelMain">
         <div className="row ">
           <div className="col">
-            <h5>Products</h5>
+            <h4 className="text-dark fs-4 mb-3">Products</h4>
           </div>
-          <div className="col text-end">
-            <Link
-              to="/admin/products/create"
-              className="btn btn-outline-success"
-            >
-              <i className="bi bi-plus-square"> Add Product</i>
+          <div className="col text-end mb-5">
+            <Link to="/admin/products/create" className="">
+              <button className="btn-hero ">
+                <i className="bi bi-plus"> </i>Add Product
+              </button>
             </Link>
           </div>
         </div>
 
         <div>
           <table className="dashboardTable">
-            <thead className="tableHeadProduct">
+            <thead className="tableHeadProduct text-light">
               <tr>
                 <th>Name</th>
                 <th>Description</th>

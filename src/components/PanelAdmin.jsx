@@ -71,13 +71,13 @@ function PanelAdmin() {
           <div className="administrationPanel">
             <img src={burger} alt="" onClick={() => setMobileNav(true)} />
             <h4 className="fs-5 fw-semibold text-dark">Administration Panel</h4>
-            <div className="d-flex  align-items-center">
+            <div className="d-flex  align-items-center me-4">
               <small className="fw-light mx-2">
                 If the page isn't displaying products or appears broken:
               </small>
               <ResetDbButton />
             </div>
-            <i className="bi bi-person-circle fs-1 me-4 profile-img"></i>
+            {/* <i className="bi bi-person-circle fs-1 me-4 profile-img"></i> */}
           </div>
 
           {mobileNav && (

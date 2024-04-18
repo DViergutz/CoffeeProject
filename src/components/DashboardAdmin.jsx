@@ -59,7 +59,7 @@ function DashboardAdmin() {
       <div className="administrationPanelMain">
         <div className="row ">
           <div className="col">
-            <h5>Admins</h5>
+            <h4 className="text-dark fs-4 mb-3">Admins</h4>
           </div>
           <div className="col text-end">
             <Link to="/admin/admins/create" className="btn btn-outline-success">
@@ -70,7 +70,7 @@ function DashboardAdmin() {
         <div className="lastOrders">
           <table className="dashboardTable">
             <thead className="tableHeadDashboard">
-              <tr>
+              <tr className="text-light">
                 <th>Id</th>
                 <th>Firstname</th>
                 <th>Lastname</th>

@@ -57,13 +57,14 @@ function DashboardUser() {
   return (
     <div className="infoDashboard">
       <div className="administrationPanelMain">
+        <h4 className="text-dark fs-4 mb-0">Users</h4>
         <div className="row ">
-          <div className="col">
-            <h5>Users</h5>
-          </div>
-          <div className="col text-end">
-            <Link to="/admin/users/create" className="btn btn-outline-success">
-              <i className="bi bi-plus-square"> Add User</i>
+          <div className="col"></div>
+          <div className="col text-end mb-5">
+            <Link to="/admin/users/create" className="">
+              <button className="btn-hero ">
+                <i className="bi bi-plus"> </i>Add User
+              </button>
             </Link>
           </div>
         </div>
@@ -71,7 +72,7 @@ function DashboardUser() {
         <div className="lastOrders">
           <table className="dashboardTable">
             <thead className="tableHeadProduct">
-              <tr>
+              <tr className="text-light">
                 <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
@@ -89,7 +90,7 @@ function DashboardUser() {
                     <td>
                       <span>
                         {user.firstname}
-                        <p className="fw-bold">{user.lastname}</p>
+                        <p className="fw-bold text-dark">{user.lastname}</p>
                       </span>
                     </td>
 

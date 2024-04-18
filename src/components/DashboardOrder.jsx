@@ -81,7 +81,7 @@ function DashboardOrder() {
         <div className="lastOrders">
           <table className="dashboardTable">
             <thead className="tableHeadDashboard">
-              <tr>
+              <tr className="text-light">
                 <th>Order Id</th>
                 <th>User</th>
                 <th>Products</th>
@@ -103,7 +103,7 @@ function DashboardOrder() {
                       <ul className="ps-0" style={{ listStyleType: "none" }}>
                         {order.products.map((item) => (
                           <li key={item.productName}>
-                            <p>
+                            <p className="text-dark">
                               {item.productName} - Quantity: {item.quantity}
                             </p>
                           </li>
@@ -112,7 +112,7 @@ function DashboardOrder() {
                     </td>
                     <td className="w-15">$ {order.totalPrice}</td>
                     <td>{order.method}</td>
-                    <td className="w-25">
+                    <td className="w-15">
                       <select
                         className={`form-select ${
                           order.status === "Pending"
