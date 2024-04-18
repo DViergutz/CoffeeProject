@@ -189,8 +189,12 @@ function ProductDetail() {
                           }`}
                         />
                         <div className="text-start ">
-                          <p className="fs-3 fw-semibold">{product.name}</p>
-                          <p>{product.description}</p>
+                          <p className="fs-3 fw-semibold product-name">
+                            {product.name}
+                          </p>
+                          <p className="product-description">
+                            {product.description}
+                          </p>
                         </div>
 
                         <div className="mt-auto">
