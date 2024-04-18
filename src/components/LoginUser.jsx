@@ -17,8 +17,8 @@ function LoginUser() {
 
   // Estado local para almacenar los valores del formulario
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "user@user.com",
+    password: "user",
   });
 
   // Manejar cambios en los campos del formulario
@@ -107,6 +107,7 @@ function LoginUser() {
                       value={formData.email}
                       onChange={handleChange}
                     />
+                    <small className="text-secondary">Try: user@user.com</small>
                   </div>
                   <div className="mb-3">
                     <label
@@ -131,6 +132,7 @@ function LoginUser() {
                       value={formData.password}
                       onChange={handleChange}
                     />
+                    <small className="text-secondary">Try: user</small>
                   </div>
 
                   <p className={error ? "error" : "hidden"}>
