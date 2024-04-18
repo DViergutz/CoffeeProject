@@ -1,10 +1,17 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
+import { deleteAllProducts } from "../redux/CartSlice.jsx";
+import { useDispatch } from "react-redux";
 
 function ThankYouForYourBuy() {
+  const dispatch = useDispatch();
   const logoRef = useRef(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    dispatch(deleteAllProducts());
+  }, []);
 
   const handleMouseMove = (event) => {
     if (logoRef.current != null) {
@@ -14,8 +21,6 @@ function ThankYouForYourBuy() {
       setCursor({ x: x, y: y });
     }
   };
-
-  ///////useEFFECT QUE ME BORRE el carrito array de dependecnvias vacio////////
 
   return (
     <div className="background-thank">

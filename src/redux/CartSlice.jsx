@@ -70,6 +70,12 @@ const cartSlice = createSlice({
         return state;
       }
     },
+    deleteAllProducts: (state) => {
+      return {
+        ...state,
+        inCart: [], // Empty the inCart array
+      };
+    },
   },
 });
 
@@ -83,6 +89,7 @@ export const {
   setIsCartOpen,
   setShowToast,
   deleteOneProduct,
+  deleteAllProducts,
 } = actions;
 
 export default reducer;

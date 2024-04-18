@@ -17,8 +17,8 @@ function LoginUser() {
 
   // Estado local para almacenar los valores del formulario
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "user@user.com",
+    password: "user",
   });
 
   // Manejar cambios en los campos del formulario
@@ -49,13 +49,17 @@ function LoginUser() {
       );
       console.log("Login Response: " + response.data);
 
-      const { token, userId } = response.data;
+      const { token, userId, name } = response.data;
 
       if (token === undefined || userId === undefined) {
         notifyErrorLogin();
       } else {
         dispatch(
-          authUser({ token: response.data.token, userId: response.data.userId })
+          authUser({
+            token: response.data.token,
+            userId: response.data.userId,
+            name: response.data.name,
+          })
         );
         window.history.back();
       }
@@ -107,6 +111,7 @@ function LoginUser() {
                       value={formData.email}
                       onChange={handleChange}
                     />
+                    <small className="text-secondary">Try: user@user.com</small>
                   </div>
                   <div className="mb-3">
                     <label
@@ -131,6 +136,7 @@ function LoginUser() {
                       value={formData.password}
                       onChange={handleChange}
                     />
+                    <small className="text-secondary">Try: user</small>
                   </div>
 
                   <p className={error ? "error" : "hidden"}>

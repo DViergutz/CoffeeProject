@@ -309,8 +309,10 @@ function Home() {
                     <div className="special-product-1"></div>
                   </Link>
                   <div className="text-start ">
-                    <p className="fs-3 fw-semibold">Art of Darkness</p>
-                    <p>
+                    <p className="fs-3 fw-semibold product-name">
+                      Art of Darkness
+                    </p>
+                    <p className="product-description">
                       A bold and mysterious brew, offering a rich, velvety
                       experience. Dark chocolate undertones entwine with smoky
                       caramel hints, inviting you into the enigmatic depths of
@@ -372,8 +374,10 @@ function Home() {
                     <div className="special-product-2"></div>
                   </Link>
                   <div className="text-start ">
-                    <p className="fs-3 fw-semibold">Chocolate Amaretto</p>
-                    <p>
+                    <p className="fs-3 fw-semibold product-name">
+                      Chocolate Amaretto
+                    </p>
+                    <p className="product-description">
                       Dive into decadence with our Chocolate Amaretto blend.
                       Rich chocolate and almond-infused notes dance harmoniously
                       with bold coffee, creating an indulgent experience
@@ -435,8 +439,10 @@ function Home() {
                     <div className="special-product-3"></div>
                   </Link>
                   <div className="text-start ">
-                    <p className="fs-3 fw-semibold">Colombia Organic</p>
-                    <p>
+                    <p className="fs-3 fw-semibold product-name">
+                      Colombia Organic
+                    </p>
+                    <p className="product-description">
                       From Colombia's fertile lands, our Organic blend offers a
                       pure taste of nature's bounty. Smooth and vibrant with
                       notes of cocoa and citrus, it's a testament to
@@ -499,8 +505,10 @@ function Home() {
                   </Link>
 
                   <div className="text-start ">
-                    <p className="fs-3 fw-semibold">Italian Roast</p>
-                    <p>
+                    <p className="fs-3 fw-semibold product-name">
+                      Italian Roast
+                    </p>
+                    <p className="product-description">
                       Immerse yourself in the bold intensity of Italy with our
                       signature blend. Robust and full-bodied, it embodies the
                       essence of Italian coffee culture in every rich and

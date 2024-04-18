@@ -10,8 +10,8 @@ function LoginAdmin() {
   const notifyErrorLogin = () => toast("Please enter valid credentials!");
 
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "test@test.com",
+    password: "123",
   });
 
   const handleChange = (e) => {
