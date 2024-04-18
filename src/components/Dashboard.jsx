@@ -241,62 +241,81 @@ function Dashboard() {
 
       <div className="infoDashboard">
         <div className="administrationPanelMain">
-          <h5>Dashboard</h5>
-          <p>Last 30 days</p>
-
-          <div className="cardContainer">
-            <div className="dashboardCard">
-              <div>
-                <div className="dashboardIconContainer">
-                  <img src={bag2} alt="bag-icon" className="dashboardIcon" />
-                </div>
-                <div className="cardDetails">
-                  <p>Montly Sales ($)</p>
-
-                  <p className="numberDashboard">{monthlySales}</p>
+          <h4 className="text-dark fs-4">Dashboard</h4>
+          <p className="fw-semibold text-dark">Last 30 days</p>
+          <div className="my-4">
+            <div className="row">
+              <div className="col">
+                <div className="d-flex flex-column admin-card">
+                  <div>
+                    <i class="bi bi-receipt fs-1 text-light"></i>
+                  </div>
+                  <div>
+                    <p className="fs-3 fw-semibold text-light">Monthly Sales</p>
+                    <p className="fw-bold fs-1">{monthlySales}</p>
+                  </div>
+                  <div>
+                    <a className="text-light text-decoration-none">View all</a>
+                  </div>
                 </div>
               </div>
-              <a>View all</a>
+              <div className="col">
+                <div className="d-flex flex-column admin-card-1">
+                  <div>
+                    <i class="bi bi-bar-chart-fill fs-1 text-light"></i>
+                  </div>
+                  <div>
+                    <p className="fs-3 fw-semibold text-light">Highest Sale</p>
+                    <p className="fw-bold fs-1">
+                      {highestTotalPriceOrder
+                        ? highestTotalPriceOrder.totalPrice
+                        : "N/A"}{" "}
+                    </p>
+                  </div>
+                  <div>
+                    <a className="text-light text-decoration-none">View all</a>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <div className="d-flex flex-column admin-card-2">
+                  <div>
+                    <i class="bi bi-bag-fill fs-1 text-light"></i>
+                  </div>
+                  <div>
+                    <p className="fs-3 fw-semibold text-light">
+                      Most Sold Item
+                    </p>
+                    <p className="fw-bold fs-1">{mostSoldItem.productName}</p>
+                  </div>
+                  <div>
+                    <a className="text-light text-decoration-none">View all</a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="dashboardCard shadow">
-              <div>
-                <div className="dashboardIconContainer">
-                  <img src={bag2} alt="bag-icon" className="dashboardIcon" />
-                </div>
-                <div className="cardDetails">
-                  <p>Highest Sale ($)</p>
-
-                  <p className="numberDashboard">
-                    {highestTotalPriceOrder
-                      ? highestTotalPriceOrder.totalPrice
-                      : "N/A"}{" "}
-                  </p>
+          </div>
+          <div>
+            <div className="row">
+              <div className="col-4 graphics-wrapper">
+                <div className="d-flex flex-column justify-content-center admin-card-pie">
+                  <p className="fs-3 fw-bold text-dark">Order Status</p>
+                  <div className="pie-chart d-flex align-items-center justify-content-center">
+                    <Doughnut data={chartData} />
+                  </div>
                 </div>
               </div>
-              <a>View all</a>
-            </div>
-            <div className="dashboardCard">
-              <div>
-                <div className="dashboardIconContainer">
-                  <img src={bag2} alt="bag-icon" className="dashboardIcon" />
-                </div>
-                <div className="cardDetails">
-                  <p>Most Sold Item</p>
-
-                  <p className="numberDashboard">{mostSoldItem.productName}</p>
+              <div className="col-8 graphics-wrapper">
+                <div className="d-flex flex-column justify-content-center admin-card-pie">
+                  <p className="fs-3 fw-bold text-dark">Stock</p>
+                  <div className="bar-chart d-flex align-items-center justify-content-center">
+                    <Bar data={chartBarData} />
+                  </div>
                 </div>
               </div>
-              <a>View all</a>
             </div>
           </div>
 
-          <div className="pie-chart">
-            <Doughnut data={chartData} />
-          </div>
-
-          <div className="bar-chart">
-            <Bar data={chartBarData} />
-          </div>
           {/* TABLE */}
 
           <div className="lastOrders">

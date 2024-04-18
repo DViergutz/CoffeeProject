@@ -406,7 +406,7 @@ function AboutThisProject() {
                     <img
                       src={`${
                         import.meta.env.VITE_BUCKETS_URL
-                      }/team/david-img.png`}
+                      }/team/peter-img.png`}
                       className="card-img-1"
                       alt="Team Member 1"
                     />

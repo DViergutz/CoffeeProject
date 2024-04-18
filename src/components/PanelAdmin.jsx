@@ -70,16 +70,14 @@ function PanelAdmin() {
         <div className="secondSectionDashboard">
           <div className="administrationPanel">
             <img src={burger} alt="" onClick={() => setMobileNav(true)} />
-            <p className="titlePanel">Administration Panel</p>
-            <div className="d-flex align-items-center flex-column">
-              <p className="fw-light">
-                If the page isn't displaying products or appears broken, please:
-              </p>
+            <h4 className="fs-5 fw-semibold text-dark">Administration Panel</h4>
+            <div className="d-flex  align-items-center">
+              <small className="fw-light mx-2">
+                If the page isn't displaying products or appears broken:
+              </small>
               <ResetDbButton />
             </div>
-            <div className="profileImg">
-              <img src={profile} alt="" />
-            </div>
+            <i className="bi bi-person-circle fs-1 me-4 profile-img"></i>
           </div>
 
           {mobileNav && (
