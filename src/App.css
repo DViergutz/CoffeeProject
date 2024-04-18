@@ -1393,6 +1393,7 @@ h5 {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
+  box-shadow: 0 4px 8px rgba(235, 231, 231, 0.1);
 }
 @media (max-width: 1201px) {
   .admin-panel-img {
