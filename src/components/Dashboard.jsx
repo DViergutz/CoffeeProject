@@ -4,7 +4,7 @@ import moment from "moment";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import bag2 from "../assets/img/bag2.svg";
-import ResetDbButton from "./ResetDbButton";
+
 import { Chart as ChartJS } from "chart.js/auto";
 import { Doughnut, Bar } from "react-chartjs-2";
 
@@ -241,14 +241,6 @@ function Dashboard() {
 
       <div className="infoDashboard">
         <div className="administrationPanelMain">
-          <div className="d-flex align-items-center flex-column">
-            <p className="fst-italic fw-light">
-              If the page doesn't display products below or the page seems to be
-              broken we please you to reset the tables to their initial state by
-              clicking this button.
-            </p>
-            <ResetDbButton />
-          </div>
           <h5>Dashboard</h5>
           <p>Last 30 days</p>
 
