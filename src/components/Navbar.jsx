@@ -10,6 +10,7 @@ function Navigation() {
   const dispatch = useDispatch();
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
   const itemsInCart = useSelector((state) => state.cart.inCart);
+  const userName = useSelector((state) => state.user.userName);
 
   const cartItems = Object.values(itemsInCart);
   const totalQuantity = cartItems.reduce(

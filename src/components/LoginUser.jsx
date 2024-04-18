@@ -49,13 +49,17 @@ function LoginUser() {
       );
       console.log("Login Response: " + response.data);
 
-      const { token, userId } = response.data;
+      const { token, userId, name } = response.data;
 
       if (token === undefined || userId === undefined) {
         notifyErrorLogin();
       } else {
         dispatch(
-          authUser({ token: response.data.token, userId: response.data.userId })
+          authUser({
+            token: response.data.token,
+            userId: response.data.userId,
+            name: response.data.name,
+          })
         );
         window.history.back();
       }

@@ -109,7 +109,7 @@ function Dashboard() {
     }
   }, [orders]);
 
-  ////////////////// MOST ITEM SOLD///////////////////
+  ////////////////// MOST SOLD ITEM///////////////////
   useEffect(() => {
     if (orders.length > 0) {
       const productQuantityMap = new Map();
