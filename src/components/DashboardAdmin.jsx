@@ -14,7 +14,7 @@ function DashboardAdmin() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/admin`,
+          url: `${import.meta.env.VITE_API_URL}/admin`,
         });
         setadmins(response.data);
       } catch (error) {
@@ -37,9 +37,11 @@ function DashboardAdmin() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/admin/${id}`);
+          await axios.delete(`${import.meta.env.VITE_API_URL}/admin/${id}`);
           // Fetch admins again after deletion
-          const response = await axios.get("http://localhost:3000/admin");
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/admin`
+          );
           setadmins(response.data);
         } catch (error) {
           console.error("Error:", error);
@@ -76,7 +78,7 @@ function DashboardAdmin() {
                 <th>Lastname</th>
                 <th>Email</th>
                 <th>Created at</th>
-                <th>Action</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody className="bodyTableadmins">

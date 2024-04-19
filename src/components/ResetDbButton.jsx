@@ -30,7 +30,7 @@ function ResetDbButton() {
         try {
           const response = await axios({
             method: "GET",
-            url: `http://localhost:3000/resetDb`,
+            url: `${import.meta.env.VITE_API_URL}/resetDb`,
           });
           console.log(response.data);
         } catch (error) {

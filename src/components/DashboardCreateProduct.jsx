@@ -30,7 +30,7 @@ function CreateProduct() {
     const data = new FormData(e.target);
     try {
       const response = await axios({
-        url: `http://localhost:3000/products`,
+        url: `${import.meta.env.VITE_API_URL}/products`,
         method: "POST",
         data,
       });

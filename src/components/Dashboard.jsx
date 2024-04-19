@@ -21,13 +21,13 @@ function Dashboard() {
       try {
         // Fetch products
         const productsResponse = await axios.get(
-          "http://localhost:3000/products"
+          `${import.meta.env.VITE_API_URL}/products`
         );
         setProducts(productsResponse.data);
 
         // Fetch last orders
         const ordersResponse = await axios.get(
-          "http://localhost:3000/orders/last"
+          `${import.meta.env.VITE_API_URL}/orders/last`
         );
         setOrders(ordersResponse.data);
       } catch (error) {
@@ -43,7 +43,7 @@ function Dashboard() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/products`,
+          url: `${import.meta.env.VITE_API_URL}/products`,
         });
         setProducts(response.data);
       } catch (error) {
@@ -59,7 +59,7 @@ function Dashboard() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/orders/last`,
+          url: `${import.meta.env.VITE_API_URL}/orders/last`,
         });
         setOrders(response.data);
       } catch (error) {
@@ -77,9 +77,12 @@ function Dashboard() {
       )
     );
     try {
-      const response = await axios.patch(`http://localhost:3000/orders/${id}`, {
-        status: newStatus,
-      });
+      const response = await axios.patch(
+        `${import.meta.env.VITE_API_URL}/orders/${id}`,
+        {
+          status: newStatus,
+        }
+      );
       // navigate(0);
     } catch (error) {
       console.error("Error updating product:", error);
@@ -218,9 +221,11 @@ function Dashboard() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/orders/${id}`);
+          await axios.delete(`${import.meta.env.VITE_API_URL}/orders/${id}`);
           // Fetch admins again after deletion
-          const response = await axios.get("http://localhost:3000/orders/last");
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/orders/last`
+          );
           setOrders(response.data);
         } catch (error) {
           console.error("Error:", error);

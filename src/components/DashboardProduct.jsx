@@ -12,7 +12,7 @@ function DashboardProduct() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/products`,
+          url: `${import.meta.env.VITE_API_URL}/products`,
         });
         setProducts(response.data);
       } catch (error) {
@@ -45,9 +45,11 @@ function DashboardProduct() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/products/${id}`);
+          await axios.delete(`${import.meta.env.VITE_API_URL}/products/${id}`);
           // Fetch products again after deletion
-          const response = await axios.get("http://localhost:3000/products");
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/products`
+          );
           setProducts(response.data);
         } catch (error) {
           console.error("Error:", error);

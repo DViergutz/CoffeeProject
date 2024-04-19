@@ -13,7 +13,7 @@ function DashboardUser() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/users`,
+          url: `${import.meta.env.VITE_API_URL}/users`,
         });
         setUsers(response.data);
         // console.log(response.data);
@@ -37,9 +37,11 @@ function DashboardUser() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/users/${id}`);
+          await axios.delete(`${import.meta.env.VITE_API_URL}/users/${id}`);
           // Fetch users again after deletion
-          const response = await axios.get("http://localhost:3000/users");
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/users`
+          );
           setUsers(response.data);
           console.log(response.data);
         } catch (error) {

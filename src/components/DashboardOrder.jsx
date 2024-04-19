@@ -13,7 +13,7 @@ function DashboardOrder() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/orders`,
+          url: `${import.meta.env.VITE_API_URL}/orders`,
         });
         setOrders(response.data);
       } catch (error) {
@@ -31,9 +31,12 @@ function DashboardOrder() {
       )
     );
     try {
-      const response = await axios.patch(`http://localhost:3000/orders/${id}`, {
-        status: newStatus,
-      });
+      const response = await axios.patch(
+        `${import.meta.env.VITE_API_URL}/orders/${id}`,
+        {
+          status: newStatus,
+        }
+      );
       console.log(response.data);
       // navigate(0);
     } catch (error) {
@@ -53,9 +56,11 @@ function DashboardOrder() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/orders/${id}`);
+          await axios.delete(`${import.meta.env.VITE_API_URL}/orders/${id}`);
           // Fetch admins again after deletion
-          const response = await axios.get("http://localhost:3000/orders");
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/orders`
+          );
           setOrders(response.data);
         } catch (error) {
           console.error("Error:", error);

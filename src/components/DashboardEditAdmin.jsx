@@ -15,7 +15,9 @@ function EditAdmin() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/admin/${id}`);
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/admin/${id}`
+        );
         setadminData(response.data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -38,7 +40,7 @@ function EditAdmin() {
     console.log(adminData);
     try {
       const response = await axios.patch(
-        `http://localhost:3000/admin/${id}`,
+        `${import.meta.env.VITE_API_URL}/admin/${id}`,
         adminData
       );
     } catch (error) {

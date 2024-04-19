@@ -18,7 +18,9 @@ function EditUser() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/users/${id}`);
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/users/${id}`
+        );
         setUserData(response.data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -41,7 +43,7 @@ function EditUser() {
     console.log(userData);
     try {
       const response = await axios.patch(
-        `http://localhost:3000/users/${id}`,
+        `${import.meta.env.VITE_API_URL}/users/${id}`,
         userData
       );
       console.log(response.data); // Handle response from server
