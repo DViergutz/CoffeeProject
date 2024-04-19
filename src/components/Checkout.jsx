@@ -279,7 +279,7 @@ function Checkout() {
                   className="btn-hero p-2 w-100 mt-4"
                   onClick={handleCreateOrder}
                 >
-                  Checkout<i className="ms-2 bi bi-lock-fill"></i>
+                  Checkout<i className="ms-2 bi bi-cart"></i>
                 </button>
               )}
             </div>
