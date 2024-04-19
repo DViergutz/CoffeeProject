@@ -1599,6 +1599,10 @@ h5 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.301);
 }
 
+.dashboardHeight60 {
+  height: 60px;
+}
+
 .dashboardTable tr:hover {
   background-color: rgba(73, 65, 65, 0.062);
 }

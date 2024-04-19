@@ -59,11 +59,12 @@ function DashboardUser() {
   return (
     <div className="infoDashboard">
       <div className="administrationPanelMain">
-        <h4 className="text-dark fs-4 mb-0">Users</h4>
-        <div className="row ">
-          <div className="col"></div>
-          <div className="col text-end mb-5">
-            <Link to="/admin/users/create" className="">
+        <div className="row align-items-center mb-4">
+          <div className="col">
+            <h4 className="text-dark fs-4 mb-0">Users</h4>
+          </div>
+          <div className="col text-end">
+            <Link to="/admin/users/create">
               <button className="btn-hero ">
                 <i className="bi bi-plus"> </i>Add User
               </button>

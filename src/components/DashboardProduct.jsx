@@ -66,12 +66,12 @@ function DashboardProduct() {
   return (
     <div className="infoDashboard">
       <div className="administrationPanelMain">
-        <div className="row ">
+        <div className="row align-items-center mb-4">
           <div className="col">
-            <h4 className="text-dark fs-4 mb-3">Products</h4>
+            <h4 className="text-dark fs-4 mb-0">Products</h4>
           </div>
-          <div className="col text-end mb-5">
-            <Link to="/admin/products/create" className="">
+          <div className="col text-end">
+            <Link to="/admin/products/create">
               <button className="btn-hero ">
                 <i className="bi bi-plus"> </i>Add Product
               </button>

@@ -59,16 +59,19 @@ function DashboardAdmin() {
   return (
     <div className="infoDashboard">
       <div className="administrationPanelMain">
-        <div className="row ">
+        <div className="row align-items-center mb-4">
           <div className="col">
-            <h4 className="text-dark fs-4 mb-3">Admins</h4>
+            <h4 className="text-dark fs-4">Admins</h4>
           </div>
           <div className="col text-end">
-            <Link to="/admin/admins/create" className="btn btn-outline-success">
-              <i className="bi bi-plus-square"> Add Admin</i>
+            <Link to="/admin/admins/create">
+              <button className="btn-hero ">
+                <i className="bi bi-plus"> </i>Add Admin
+              </button>
             </Link>
           </div>
         </div>
+
         <div className="lastOrders">
           <table className="dashboardTable">
             <thead className="tableHeadDashboard">

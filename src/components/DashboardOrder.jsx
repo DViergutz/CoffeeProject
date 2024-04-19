@@ -78,11 +78,12 @@ function DashboardOrder() {
   return (
     <div className="infoDashboard">
       <div className="administrationPanelMain">
-        <div className="row ">
+        <div className="row dashboardHeight60 align-items-center mb-4">
           <div className="col">
-            <h5>Orders</h5>
+            <h4 className="text-dark fs-4 mb-0">Orders</h4>
           </div>
         </div>
+
         <div className="lastOrders">
           <table className="dashboardTable">
             <thead className="tableHeadDashboard">
