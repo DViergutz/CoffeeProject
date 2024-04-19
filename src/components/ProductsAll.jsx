@@ -17,7 +17,7 @@ function ProductsAll() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/products`,
+          url: `${import.meta.env.VITE_API_URL}/products`,
         });
         setproducts(response.data);
       } catch (error) {

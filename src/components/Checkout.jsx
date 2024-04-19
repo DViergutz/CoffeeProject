@@ -27,12 +27,12 @@ function Checkout() {
   };
 
   const handleCreateOrder = async () => {
-    if (selectedOption != null) {
-      if (user.isLogged) {
+    if (user.isLogged) {
+      if (selectedOption != null) {
         try {
           const response = await axios({
             method: "post",
-            url: `http://localhost:3000/orders`,
+            url: `${import.meta.env.VITE_API_URL}/orders`,
             data: {
               user,
               itemsInCart,
@@ -53,15 +53,15 @@ function Checkout() {
           console.error("Error:", error);
         }
       } else {
-        navigate("/user/login");
+        Swal.fire({
+          title: "Error!",
+          text: "Please select a payment option.",
+          icon: "error",
+          confirmButtonText: "Continue",
+        });
       }
     } else {
-      Swal.fire({
-        title: "Error!",
-        text: "Please select a payment option.",
-        icon: "error",
-        confirmButtonText: "Continue",
-      });
+      navigate("/user/login");
     }
   };
   /*   useEffect(() => {
