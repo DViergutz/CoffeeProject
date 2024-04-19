@@ -47,15 +47,15 @@ function CartOffCanvas() {
         <div>
           {itemsInCart.length === 0 ? (
             <div className="row pb-3 disabled">
-              <div className="col-4 text-center text-light">PRODUCT</div>
-              <div className="col-4 text-center text-light">QUANTITY</div>
-              <div className="col-4 text-center text-light">UNIT PRICE</div>
+              <div className="col-4 text-center text-light">Product</div>
+              <div className="col-4 text-center text-light">Quantity</div>
+              <div className="col-4 text-center text-light">Unit Price</div>
             </div>
           ) : (
             <div className="row pb-3">
-              <div className="col-4 text-center text-light">PRODUCT</div>
-              <div className="col-4 text-center text-light">QUANTITY</div>
-              <div className="col-4 text-center text-light">UNIT PRICE</div>
+              <div className="col-4 text-center text-light">Product</div>
+              <div className="col-4 text-center text-light">Quantity</div>
+              <div className="col-4 text-center text-light">Unit Price</div>
             </div>
           )}
           <hr className="text-orange" />

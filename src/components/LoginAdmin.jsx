@@ -29,7 +29,7 @@ function LoginAdmin() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/login/tokens/admin",
+        `${import.meta.env.VITE_API_URL}/login/tokens/admin`,
         formData
       );
 

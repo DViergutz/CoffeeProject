@@ -20,9 +20,12 @@ function EditUser() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/users/${id}`, {
-          headers: { Authorization: "Bearer " + token },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/users/${id}`,
+          {
+            headers: { Authorization: "Bearer " + token },
+          }
+        );
         setUserData(response.data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -45,8 +48,10 @@ function EditUser() {
     console.log(userData);
     try {
       const response = await axios.patch(
-        `http://localhost:3000/users/${id}`,
-        { headers: { Authorization: "Bearer " + token } },
+        `${import.meta.env.VITE_API_URL}/users/${id}`,
+        {
+          headers: { Authorization: "Bearer " + token },
+        },
         userData
       );
       console.log(response.data); // Handle response from server
@@ -146,7 +151,9 @@ function EditUser() {
                 </div>
 
                 <div className="mb-2">
-                  <label htmlFor="address">Address</label>
+                  <label htmlFor="address" className="form-label">
+                    Address
+                  </label>
                   <input
                     className="form-control"
                     id="address"

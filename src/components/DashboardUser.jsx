@@ -14,7 +14,7 @@ function DashboardUser() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/users`,
+          url: `${import.meta.env.VITE_API_URL}/users`,
           headers: { Authorization: "Bearer " + token },
         });
         setUsers(response.data);
@@ -39,13 +39,16 @@ function DashboardUser() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/users/${id}`, {
+          await axios.delete(`${import.meta.env.VITE_API_URL}/users/${id}`, {
             headers: { Authorization: "Bearer " + token },
           });
           // Fetch users again after deletion
-          const response = await axios.get("http://localhost:3000/users", {
-            headers: { Authorization: "Bearer " + token },
-          });
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/users`,
+            {
+              headers: { Authorization: "Bearer " + token },
+            }
+          );
           setUsers(response.data);
           console.log(response.data);
         } catch (error) {
@@ -63,11 +66,12 @@ function DashboardUser() {
   return (
     <div className="infoDashboard">
       <div className="administrationPanelMain">
-        <h4 className="text-dark fs-4 mb-0">Users</h4>
-        <div className="row ">
-          <div className="col"></div>
-          <div className="col text-end mb-5">
-            <Link to="/admin/users/create" className="">
+        <div className="row align-items-center mb-4">
+          <div className="col">
+            <h4 className="text-dark fs-4 mb-0">Users</h4>
+          </div>
+          <div className="col text-end">
+            <Link to="/admin/users/create">
               <button className="btn-hero ">
                 <i className="bi bi-plus"> </i>Add User
               </button>
@@ -85,7 +89,7 @@ function DashboardUser() {
                 <th>Phone</th>
                 <th>Address</th>
                 <th>Created at</th>
-                <th>Action</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody className="bodyTableProducts">

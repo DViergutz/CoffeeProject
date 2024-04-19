@@ -30,7 +30,7 @@ function CreateProduct() {
     const data = new FormData(e.target);
     try {
       const response = await axios({
-        url: `http://localhost:3000/products`,
+        url: `${import.meta.env.VITE_API_URL}/products`,
         method: "POST",
         data,
       });
@@ -89,7 +89,9 @@ function CreateProduct() {
                 </div>
 
                 <div className="mb-2">
-                  <label htmlFor="description">Description</label>
+                  <label htmlFor="description" className="form-label">
+                    Description
+                  </label>
                   <textarea
                     className="form-control"
                     id="description"

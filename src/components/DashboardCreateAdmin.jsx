@@ -26,7 +26,7 @@ function CreateAdmin() {
     console.log(adminData);
     try {
       const response = await axios.post(
-        `http://localhost:3000/admin`,
+        `${import.meta.env.VITE_API_URL}/admin`,
         { headers: { Authorization: "Bearer " + token } },
         adminData
       );

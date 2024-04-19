@@ -16,9 +16,12 @@ function EditAdmin() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/admin/${id}`, {
-          headers: { Authorization: "Bearer " + token },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/admin/${id}`,
+          {
+            headers: { Authorization: "Bearer " + token },
+          }
+        );
         setadminData(response.data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -41,8 +44,10 @@ function EditAdmin() {
     console.log(adminData);
     try {
       const response = await axios.patch(
-        `http://localhost:3000/admin/${id}`,
-        { headers: { Authorization: "Bearer " + token } },
+        `${import.meta.env.VITE_API_URL}/admin/${id}`,
+        {
+          headers: { Authorization: "Bearer " + token },
+        },
         adminData
       );
     } catch (error) {

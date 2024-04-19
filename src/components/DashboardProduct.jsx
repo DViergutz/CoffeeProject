@@ -12,7 +12,7 @@ function DashboardProduct() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/products`,
+          url: `${import.meta.env.VITE_API_URL}/products`,
         });
         setProducts(response.data);
       } catch (error) {
@@ -45,9 +45,11 @@ function DashboardProduct() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/products/${id}`);
+          await axios.delete(`${import.meta.env.VITE_API_URL}/products/${id}`);
           // Fetch products again after deletion
-          const response = await axios.get("http://localhost:3000/products");
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/products`
+          );
           setProducts(response.data);
         } catch (error) {
           console.error("Error:", error);
@@ -64,12 +66,12 @@ function DashboardProduct() {
   return (
     <div className="infoDashboard">
       <div className="administrationPanelMain">
-        <div className="row ">
+        <div className="row align-items-center mb-4">
           <div className="col">
-            <h4 className="text-dark fs-4 mb-3">Products</h4>
+            <h4 className="text-dark fs-4 mb-0">Products</h4>
           </div>
-          <div className="col text-end mb-5">
-            <Link to="/admin/products/create" className="">
+          <div className="col text-end">
+            <Link to="/admin/products/create">
               <button className="btn-hero ">
                 <i className="bi bi-plus"> </i>Add Product
               </button>
@@ -87,7 +89,7 @@ function DashboardProduct() {
                 <th>Stock</th>
                 <th>Category</th>
                 <th>Image</th>
-                <th>Action</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody className="bodyTableProducts">

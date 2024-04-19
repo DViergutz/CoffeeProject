@@ -14,7 +14,8 @@ function DashboardOrder() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/orders`,
+          url: `${import.meta.env.VITE_API_URL}/orders`,
+
           headers: { Authorization: "Bearer " + token },
         });
         setOrders(response.data);
@@ -33,10 +34,15 @@ function DashboardOrder() {
       )
     );
     try {
-      const response = await axios.patch(`http://localhost:3000/orders/${id}`, {
-        headers: { Authorization: "Bearer " + token },
-        status: newStatus,
-      });
+      const response = await axios.patch(
+        `${import.meta.env.VITE_API_URL}/orders/${id}`,
+        {
+          headers: { Authorization: "Bearer " + token },
+        },
+        {
+          status: newStatus,
+        }
+      );
       console.log(response.data);
       // navigate(0);
     } catch (error) {
@@ -56,13 +62,16 @@ function DashboardOrder() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/orders/${id}`, {
+          await axios.delete(`${import.meta.env.VITE_API_URL}/orders/${id}`, {
             headers: { Authorization: "Bearer " + token },
           });
           // Fetch admins again after deletion
-          const response = await axios.get("http://localhost:3000/orders", {
-            headers: { Authorization: "Bearer " + token },
-          });
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/orders`,
+            {
+              headers: { Authorization: "Bearer " + token },
+            }
+          );
           setOrders(response.data);
         } catch (error) {
           console.error("Error:", error);
@@ -80,11 +89,12 @@ function DashboardOrder() {
   return (
     <div className="infoDashboard">
       <div className="administrationPanelMain">
-        <div className="row ">
+        <div className="row dashboardHeight60 align-items-center mb-4">
           <div className="col">
-            <h5>Orders</h5>
+            <h4 className="text-dark fs-4 mb-0">Orders</h4>
           </div>
         </div>
+
         <div className="lastOrders">
           <table className="dashboardTable">
             <thead className="tableHeadDashboard">

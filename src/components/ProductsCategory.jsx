@@ -17,7 +17,9 @@ function ProductsCategory() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/category/${params.categoryName}`,
+          url: `${import.meta.env.VITE_API_URL}/category/${
+            params.categoryName
+          }`,
         });
         setproductsOfCategory(response.data);
       } catch (error) {

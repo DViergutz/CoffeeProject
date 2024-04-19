@@ -32,7 +32,7 @@ function ProductDetail() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/products/${productId}`,
+          url: `${import.meta.env.VITE_API_URL}/products/${productId}`,
         });
         setOneProduct(response.data);
       } catch (error) {
@@ -48,7 +48,9 @@ function ProductDetail() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/category/${oneProduct.category.name}`,
+          url: `${import.meta.env.VITE_API_URL}/category/${
+            oneProduct.category.name
+          }`,
         });
 
         const filteredRelatedProducts = response.data.filter(
