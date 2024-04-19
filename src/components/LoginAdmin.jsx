@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { authUser } from "../redux/UserSlice.jsx";
 
 function LoginAdmin() {
   const [error, setError] = useState(false);
   const navigate = useNavigate();
   const notifyErrorLogin = () => toast("Please enter valid credentials!");
-
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     email: "test@test.com",
     password: "123",
@@ -37,6 +38,15 @@ function LoginAdmin() {
       if (token === undefined || adminId === undefined) {
         notifyErrorAdminLogin();
       } else {
+        ///////////////////////////////
+        dispatch(
+          authUser({
+            token: response.data.token,
+            userId: response.data.userId,
+            name: response.data.name,
+            role: response.data.role,
+          })
+        );
         navigate("/admin");
       }
     } catch (error) {

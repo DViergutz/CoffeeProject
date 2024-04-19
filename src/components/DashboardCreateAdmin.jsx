@@ -5,7 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 function CreateAdmin() {
   const { id } = useParams();
   const navigate = useNavigate();
-
+  const token = useSelector((state) => state.user.token);
   const [adminData, setAdminData] = useState({
     firstname: "",
     lastname: "",
@@ -27,6 +27,7 @@ function CreateAdmin() {
     try {
       const response = await axios.post(
         `http://localhost:3000/admin`,
+        { headers: { Authorization: "Bearer " + token } },
         adminData
       );
     } catch (error) {

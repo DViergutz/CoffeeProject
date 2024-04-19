@@ -7,6 +7,7 @@ import bag2 from "../assets/img/bag2.svg";
 
 import { Chart as ChartJS } from "chart.js/auto";
 import { Doughnut, Bar } from "react-chartjs-2";
+import { useSelector } from "react-redux";
 
 function Dashboard() {
   const [orders, setOrders] = useState([]);
@@ -15,8 +16,8 @@ function Dashboard() {
   const [mostSoldItem, setMostSoldItem] = useState([]);
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
-
-  useEffect(() => {
+  const token = useSelector((state) => state.user.token);
+  /*   useEffect(() => {
     const fetchData = async () => {
       try {
         // Fetch products
@@ -36,9 +37,9 @@ function Dashboard() {
     };
 
     fetchData();
-  }, []);
+  }, []); */
 
-  /*  useEffect(() => {
+  useEffect(() => {
     const fetchAllProducts = async () => {
       try {
         const response = await axios({
@@ -60,14 +61,16 @@ function Dashboard() {
         const response = await axios({
           method: "GET",
           url: `http://localhost:3000/orders/last`,
+          headers: { Authorization: "Bearer " + token },
         });
         setOrders(response.data);
+        console.log(token);
       } catch (error) {
         console.error("Error:", error);
       }
     };
     fetchLastOrders();
-  }, []); */
+  }, []);
 
   const handleStatusChange = async (id, newStatus) => {
     const newOrderStatus = newStatus;
@@ -79,6 +82,7 @@ function Dashboard() {
     try {
       const response = await axios.patch(`http://localhost:3000/orders/${id}`, {
         status: newStatus,
+        headers: { Authorization: "Bearer " + token },
       });
       // navigate(0);
     } catch (error) {
@@ -218,9 +222,14 @@ function Dashboard() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/orders/${id}`);
+          await axios.delete(`http://localhost:3000/orders/${id}`, {
+            headers: { Authorization: "Bearer " + token },
+          });
           // Fetch admins again after deletion
-          const response = await axios.get("http://localhost:3000/orders/last");
+          const response = await axios.get(
+            "http://localhost:3000/orders/last",
+            { headers: { Authorization: "Bearer " + token } }
+          );
           setOrders(response.data);
         } catch (error) {
           console.error("Error:", error);

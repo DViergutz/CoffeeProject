@@ -3,17 +3,19 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import moment from "moment";
+import { useSelector } from "react-redux";
 
 function DashboardOrder() {
   const [orders, setOrders] = useState();
   const navigate = useNavigate();
-
+  const token = useSelector((state) => state.user.token);
   useEffect(() => {
     const fetchAllOrders = async () => {
       try {
         const response = await axios({
           method: "GET",
           url: `http://localhost:3000/orders`,
+          headers: { Authorization: "Bearer " + token },
         });
         setOrders(response.data);
       } catch (error) {
@@ -32,6 +34,7 @@ function DashboardOrder() {
     );
     try {
       const response = await axios.patch(`http://localhost:3000/orders/${id}`, {
+        headers: { Authorization: "Bearer " + token },
         status: newStatus,
       });
       console.log(response.data);
@@ -53,9 +56,13 @@ function DashboardOrder() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/orders/${id}`);
+          await axios.delete(`http://localhost:3000/orders/${id}`, {
+            headers: { Authorization: "Bearer " + token },
+          });
           // Fetch admins again after deletion
-          const response = await axios.get("http://localhost:3000/orders");
+          const response = await axios.get("http://localhost:3000/orders", {
+            headers: { Authorization: "Bearer " + token },
+          });
           setOrders(response.data);
         } catch (error) {
           console.error("Error:", error);

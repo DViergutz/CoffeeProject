@@ -4,16 +4,18 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import moment from "moment";
+import { useSelector } from "react-redux";
 
 function DashboardUser() {
   const [users, setUsers] = useState();
-
+  const token = useSelector((state) => state.user.token);
   useEffect(() => {
     const fetchAllUsers = async () => {
       try {
         const response = await axios({
           method: "GET",
           url: `http://localhost:3000/users`,
+          headers: { Authorization: "Bearer " + token },
         });
         setUsers(response.data);
         // console.log(response.data);
@@ -37,9 +39,13 @@ function DashboardUser() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/users/${id}`);
+          await axios.delete(`http://localhost:3000/users/${id}`, {
+            headers: { Authorization: "Bearer " + token },
+          });
           // Fetch users again after deletion
-          const response = await axios.get("http://localhost:3000/users");
+          const response = await axios.get("http://localhost:3000/users", {
+            headers: { Authorization: "Bearer " + token },
+          });
           setUsers(response.data);
           console.log(response.data);
         } catch (error) {

@@ -11,6 +11,7 @@ function Navigation() {
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
   const itemsInCart = useSelector((state) => state.cart.inCart);
   const userName = useSelector((state) => state.user.userName);
+  const isAdmin = useSelector((state) => state.user.role);
 
   const cartItems = Object.values(itemsInCart);
   const totalQuantity = cartItems.reduce(
@@ -94,7 +95,7 @@ function Navigation() {
           <Nav className="">
             <Nav.Link
               as={Link}
-              to="/admin/login"
+              to={isAdmin === "admin" ? "/admin" : "/admin/login"}
               className="navLink"
               onClick={() => window.scrollTo(0, 0)}
             >

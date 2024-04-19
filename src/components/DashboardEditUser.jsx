@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { Email } from "@mui/icons-material";
+import { useSelector } from "react-redux";
 
 function EditUser() {
+  const token = useSelector((state) => state.user.token);
   const { id } = useParams();
   const navigate = useNavigate(); // Initialize navigate for navigation
 
@@ -18,7 +20,9 @@ function EditUser() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/users/${id}`);
+        const response = await axios.get(`http://localhost:3000/users/${id}`, {
+          headers: { Authorization: "Bearer " + token },
+        });
         setUserData(response.data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -42,6 +46,7 @@ function EditUser() {
     try {
       const response = await axios.patch(
         `http://localhost:3000/users/${id}`,
+        { headers: { Authorization: "Bearer " + token } },
         userData
       );
       console.log(response.data); // Handle response from server

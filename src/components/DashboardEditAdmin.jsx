@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function EditAdmin() {
   const { id } = useParams();
   const navigate = useNavigate(); // Initialize navigate for navigation
-
+  const token = useSelector((state) => state.user.token);
   const [adminData, setadminData] = useState({
     firstname: "",
     lastname: "",
@@ -15,7 +16,9 @@ function EditAdmin() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/admin/${id}`);
+        const response = await axios.get(`http://localhost:3000/admin/${id}`, {
+          headers: { Authorization: "Bearer " + token },
+        });
         setadminData(response.data);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -39,6 +42,7 @@ function EditAdmin() {
     try {
       const response = await axios.patch(
         `http://localhost:3000/admin/${id}`,
+        { headers: { Authorization: "Bearer " + token } },
         adminData
       );
     } catch (error) {

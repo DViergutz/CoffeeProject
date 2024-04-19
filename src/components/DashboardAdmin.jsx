@@ -3,18 +3,20 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import moment from "moment";
+import { useSelector } from "react-redux";
 
 // new comment
 
 function DashboardAdmin() {
   const [admins, setadmins] = useState();
-
+  const token = useSelector((state) => state.user.token);
   useEffect(() => {
     const fetchAlladmins = async () => {
       try {
         const response = await axios({
           method: "GET",
           url: `http://localhost:3000/admin`,
+          headers: { Authorization: "Bearer " + token },
         });
         setadmins(response.data);
       } catch (error) {
@@ -37,9 +39,13 @@ function DashboardAdmin() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/admin/${id}`);
+          await axios.delete(`http://localhost:3000/admin/${id}`, {
+            headers: { Authorization: "Bearer " + token },
+          });
           // Fetch admins again after deletion
-          const response = await axios.get("http://localhost:3000/admin");
+          const response = await axios.get("http://localhost:3000/admin", {
+            headers: { Authorization: "Bearer " + token },
+          });
           setadmins(response.data);
         } catch (error) {
           console.error("Error:", error);

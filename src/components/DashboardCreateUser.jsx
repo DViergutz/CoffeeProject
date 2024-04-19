@@ -5,7 +5,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 function CreateUser() {
   const { id } = useParams();
   const navigate = useNavigate();
-
+  const token = useSelector((state) => state.user.token);
   const [userData, setuserData] = useState({
     firstname: "",
     lastname: "",
@@ -29,6 +29,7 @@ function CreateUser() {
     try {
       const response = await axios.post(
         `http://localhost:3000/users`,
+        { headers: { Authorization: "Bearer " + token } },
         userData
       );
       console.log(response.data);
