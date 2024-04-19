@@ -87,7 +87,7 @@ function DashboardProduct() {
                 <th>Stock</th>
                 <th>Category</th>
                 <th>Image</th>
-                <th>Action</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody className="bodyTableProducts">

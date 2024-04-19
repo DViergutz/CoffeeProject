@@ -27,32 +27,41 @@ function Checkout() {
   };
 
   const handleCreateOrder = async () => {
-    if (user.isLogged) {
-      try {
-        const response = await axios({
-          method: "post",
-          url: `http://localhost:3000/orders`,
-          data: {
-            user,
-            itemsInCart,
-            method: selectedOption,
-            totalPrice,
-          },
-        });
-        console.log(response.data);
-        /* Swal.fire({
+    if (selectedOption != null) {
+      if (user.isLogged) {
+        try {
+          const response = await axios({
+            method: "post",
+            url: `http://localhost:3000/orders`,
+            data: {
+              user,
+              itemsInCart,
+              method: selectedOption,
+              totalPrice,
+            },
+          });
+          console.log(response.data);
+          /* Swal.fire({
           title: "Thank you for placing order!",
           text: "We will keep you updated about the state of your order.",
           icon: "success",
           confirmButtonText:
             '<a href="/thank-you" style="color: white; text-decoration: none;">Continue</a>',
         }); */
-        navigate("/thank-you");
-      } catch (error) {
-        console.error("Error:", error);
+          navigate("/thank-you");
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      } else {
+        navigate("/user/login");
       }
     } else {
-      navigate("/user/login");
+      Swal.fire({
+        title: "Error!",
+        text: "Please select a payment option.",
+        icon: "error",
+        confirmButtonText: "Continue",
+      });
     }
   };
   /*   useEffect(() => {
@@ -185,6 +194,7 @@ function Checkout() {
                     className="ms-2 form-check-input input-style"
                     checked={selectedOption === "Visa"}
                     onChange={handleOptionChange}
+                    required
                   />
                   <label htmlFor="Visa" className="ms-2">
                     <img
@@ -205,6 +215,7 @@ function Checkout() {
                     className="ms-4 form-check-input input-style"
                     checked={selectedOption === "Mastercard"}
                     onChange={handleOptionChange}
+                    required
                   />
                   <label htmlFor="Mastercard" className="ms-2">
                     <img
@@ -225,6 +236,7 @@ function Checkout() {
                     className="ms-4 form-check-input input-style"
                     checked={selectedOption === "MercadoPago"}
                     onChange={handleOptionChange}
+                    required
                   />
                   <label htmlFor="MercadoPago" className="ms-2">
                     <img

@@ -89,7 +89,9 @@ function CreateProduct() {
                 </div>
 
                 <div className="mb-2">
-                  <label htmlFor="description">Description</label>
+                  <label htmlFor="description" className="form-label">
+                    Description
+                  </label>
                   <textarea
                     className="form-control"
                     id="description"

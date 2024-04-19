@@ -119,7 +119,9 @@ function CreateUser() {
               </div>
 
               <div className="mb-2">
-                <label htmlFor="address">Address</label>
+                <label htmlFor="address " className="form-label">
+                  Address
+                </label>
                 <input
                   className="form-control"
                   id="address"
@@ -130,7 +132,9 @@ function CreateUser() {
                 />
               </div>
               <div className="mb-2">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password" className="form-label">
+                  Password
+                </label>
                 <input
                   type="password"
                   className="form-control"

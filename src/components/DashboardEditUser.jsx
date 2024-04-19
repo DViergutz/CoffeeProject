@@ -141,7 +141,9 @@ function EditUser() {
                 </div>
 
                 <div className="mb-2">
-                  <label htmlFor="address">Address</label>
+                  <label htmlFor="address" className="form-label">
+                    Address
+                  </label>
                   <input
                     className="form-control"
                     id="address"
