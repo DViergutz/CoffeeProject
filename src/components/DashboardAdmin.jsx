@@ -15,7 +15,7 @@ function DashboardAdmin() {
       try {
         const response = await axios({
           method: "GET",
-          url: `http://localhost:3000/admin`,
+          url: `${import.meta.env.VITE_API_URL}/admin`,
           headers: { Authorization: "Bearer " + token },
         });
         setadmins(response.data);
@@ -39,13 +39,16 @@ function DashboardAdmin() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/admin/${id}`, {
+          await axios.delete(`${import.meta.env.VITE_API_URL}/admin/${id}`, {
             headers: { Authorization: "Bearer " + token },
           });
           // Fetch admins again after deletion
-          const response = await axios.get("http://localhost:3000/admin", {
-            headers: { Authorization: "Bearer " + token },
-          });
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/admin`,
+            {
+              headers: { Authorization: "Bearer " + token },
+            }
+          );
           setadmins(response.data);
         } catch (error) {
           console.error("Error:", error);
