@@ -1820,6 +1820,7 @@ h5 {
 }
 
 .admin-card {
+  min-height: 400px;
   height: auto;
   width: 100%;
   background-color: #3881eb;
@@ -1829,7 +1830,8 @@ h5 {
 }
 
 .admin-card-1 {
-  height: 1000px;
+  min-height: 400px;
+  height: auto;
   width: 100%;
   background-color: #36405f;
   border-radius: 10px;
@@ -1838,6 +1840,7 @@ h5 {
 }
 
 .admin-card-2 {
+  min-height: 400px;
   height: auto;
   width: 100%;
   background-color: #eda45c;
