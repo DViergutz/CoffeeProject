@@ -71,7 +71,7 @@ function DashboardAdmin() {
             <h4 className="text-dark fs-4 mb-3">Admins</h4>
           </div>
           <div className="col text-end pb-4">
-            <Link to="/admin/admins/create" className="btn btn-hero">
+            <Link to="/admin/admins/create">
               <button className="btn-hero ">
                 <i className="bi bi-plus"> </i>Add Admin
               </button>
